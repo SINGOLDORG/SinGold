@@ -6,5 +6,5 @@ package com.example.singold;
 
 public class Roza {
     int x;
-    int y;
+    int z;
 }
