@@ -29,7 +29,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity_directing" />
-        <activity android:name=".DirectingActivity"></activity>
+        <activity android:name=".DirectingActivity" />
+        <activity android:name=".EnterActivity" />
+        <activity android:name=".InformationActivity" />
+        <activity android:name=".Sin_goldActivity"></activity>
     </application>
 
 </manifest>
