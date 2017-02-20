@@ -6,6 +6,6 @@ package com.example.singold;
 
 public class Roza {
     int x;
-    int iz;
+    int i;
 
 }
