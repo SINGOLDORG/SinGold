@@ -6,6 +6,8 @@ package com.example.singold;
 
 public class LLL {
     //ljljljljlk
+    //htrui
     //lkjljlj
     int x;
+
 }
