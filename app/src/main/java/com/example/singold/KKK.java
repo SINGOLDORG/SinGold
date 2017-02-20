@@ -7,6 +7,12 @@ package com.example.singold;
 public class KKK {
 //lkjjllkjlkjkljlkjlk
     //hellooo
+    //tyuyutuytiuyi
     //kokokokokoo
+    //kkkkkkkkkkkkkkkkkkk
+    //lkjlkjlkjlkj
     //lllllll
+    //ufuhhh
+    //;;;;;niu
+    ///kjkjkjk
 }
