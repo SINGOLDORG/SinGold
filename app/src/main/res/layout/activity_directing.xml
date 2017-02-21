@@ -3,8 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< Updated upstream
 
     tools:context="com.example.singold.ToDoActivity">
+=======
+    >
+>>>>>>> Stashed changes
 
     <TextView
         android:layout_width="wrap_content"

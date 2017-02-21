@@ -116,7 +116,10 @@
     <orderEntry type="library" exported="" name="support-vector-drawable-25.0.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-25.0.1" level="project" />
     <orderEntry type="library" exported="" name="azure-notifications-handler-1.0.1" level="project" />
+<<<<<<< Updated upstream
     <orderEntry type="library" exported="" name="support-core-utils-25.0.1" level="project" />
+=======
+>>>>>>> Stashed changes
     <orderEntry type="library" exported="" name="android-android-25" level="project" />
   </component>
 </module>
