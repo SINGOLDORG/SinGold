@@ -10,4 +10,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.singold.idActivity">
 
+    <TextView
+        android:text="Create password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
+        android:id="@+id/textView"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="43dp"
+        android:id="@+id/editText4"
+        android:hint="enter your id" />
+
 </RelativeLayout>
