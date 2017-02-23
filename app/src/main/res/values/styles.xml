@@ -17,5 +17,11 @@
 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="colorPrimary">@color/colorPurple</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="textColor">@color/textColor</item>
+    <item name="windowBackground">@color/windowBackground</item>
+    <item name="navigationBarColor">@color/navigationBarColor</item>
 </resources>
