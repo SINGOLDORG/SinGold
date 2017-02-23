@@ -33,7 +33,8 @@
         <activity android:name=".EnterActivity" />
         <activity android:name=".InformationActivity" />
         <activity android:name=".Sin_goldActivity" />
-        <activity android:name=".loginActivity"></activity>
+        <activity android:name=".loginActivity" />
+        <activity android:name=".startActivity"></activity>
     </application>
 
 </manifest>
