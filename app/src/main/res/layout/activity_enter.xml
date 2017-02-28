@@ -16,16 +16,6 @@
         android:layout_alignStart="@+id/help" />
 
     <Button
-        android:text="Sign up to SinGold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/help"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/sign" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="help"
@@ -42,6 +32,18 @@
         android:id="@+id/login"
         android:layout_marginBottom="23dp"
         android:layout_above="@+id/sign"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick" />
+
+    <Button
+        android:text="Sign up to SinGold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:id="@+id/sign"
+        android:onClick="onClick"
+        android:layout_above="@+id/help"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
