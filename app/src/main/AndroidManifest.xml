@@ -34,7 +34,8 @@
         <activity android:name=".InformationActivity" />
         <activity android:name=".Sin_goldActivity" />
         <activity android:name=".loginActivity" />
-        <activity android:name=".startActivity"></activity>
+        <activity android:name=".startActivity" />
+        <activity android:name=".idActivity"></activity>
     </application>
 
 </manifest>
