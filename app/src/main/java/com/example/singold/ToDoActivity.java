@@ -94,7 +94,7 @@ public class ToDoActivity extends Activity {
 
             // Mobile Service URL and key
             mClient = new MobileServiceClient(
-                    "https://singold.azurewebsites.net",
+                    "https://singold2.azurewebsites.net",
                     this).withFilter(new ProgressFilter());
 
             // Extend timeout from default of 10s to 20s
@@ -116,7 +116,7 @@ public class ToDoActivity extends Activity {
             //mToDoTable = mClient.getSyncTable("ToDoItem", ToDoItem.class);
 
             //Init local storage
-            initLocalStore().get();
+            //initLocalStore().get();
 
             mTextNewToDo = (EditText) findViewById(R.id.textNewToDo);
 
