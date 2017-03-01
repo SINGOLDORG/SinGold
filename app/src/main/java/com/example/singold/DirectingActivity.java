@@ -10,13 +10,13 @@ public class DirectingActivity extends AppCompatActivity
 {
     private EditText text;
     private TextView directing;
-    private Button back1;
+    private Button button7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_directing);
         text=(EditText)findViewById(R.id.text);
         directing=(TextView)findViewById(R.id.directing);
-        back1=(Button)findViewById(R.id.back1);
+        button7=(Button)findViewById(R.id.button7);
     }
 }
