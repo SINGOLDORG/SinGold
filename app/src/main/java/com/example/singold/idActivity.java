@@ -1,7 +1,9 @@
 package com.example.singold;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -19,6 +21,12 @@ public class idActivity extends AppCompatActivity
         confirmate=(EditText) findViewById(R.id.confirmate);
         back2= (Button)findViewById(R.id.back2);
         finish=(Button)findViewById(R.id.finish);
-
     }
+    public void onClick (View v)
+    {
+        if (v==back2)
+        {
+            Intent intent=new Intent(getBaseContext(),EnterActivity.class);
+            startActivity(intent);
+
 }
