@@ -9,10 +9,9 @@
         android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -20,23 +19,15 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ToDoActivity"
+            android:name=".ListActivity"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.List" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity_directing" />
-        <activity android:name=".DirectingActivity" />
-        <activity android:name=".EnterActivity" />
-        <activity android:name=".InformationActivity" />
-        <activity android:name=".Sin_goldActivity" />
-        <activity android:name=".loginActivity" />
-        <activity android:name=".startActivity" />
-        <activity android:name=".idActivity" />
-        <activity android:name="com.example.zumoappname.ListActivity" />
+
     </application>
 
 </manifest>
