@@ -19,9 +19,10 @@
     </style>
     <item name="windowNoTitle">true</item>
     <item name="windowActionBar">false</item>
-    <item name="colorPrimary">@color/colorPurple</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    <item name="navigationBarColor">@color/navigationBarColor</item>
+    <color name="colorPrimary">@color/colorPurple</color>
+    <color name="navigationBarColor.">@color/navigationBarColor</color>
+    <color name="textColor.">@color/textColor</color>
+
 
 
 
