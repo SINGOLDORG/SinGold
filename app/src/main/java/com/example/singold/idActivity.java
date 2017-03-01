@@ -20,13 +20,21 @@ public class idActivity extends AppCompatActivity
         enterid=(EditText) findViewById(R.id.enterid);
         confirmate=(EditText) findViewById(R.id.confirmate);
         back2= (Button)findViewById(R.id.back2);
-        finish=(Button)findViewById(R.id.finish);
+        finish=(Button) findViewById(R.id.finish);
+
     }
-    public void onClick (View v)
+    public void onClick(View v)
     {
+        if (v==finish)
+        {
+            Intent intent=new Intent(getBaseContext(),ListActivity.class);
+            startActivity(intent);
+        }
         if (v==back2)
         {
             Intent intent=new Intent(getBaseContext(),EnterActivity.class);
             startActivity(intent);
+        }
 
+    }
 }
