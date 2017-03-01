@@ -12,7 +12,8 @@ public class DirectingActivity extends AppCompatActivity
     private TextView directing;
     private Button back1;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_directing);
         text=(EditText)findViewById(R.id.text);
