@@ -1,7 +1,9 @@
 package com.example.singold;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -18,5 +20,18 @@ public class InformationActivity extends AppCompatActivity
         username=(EditText)findViewById(R.id.username);
         next=(Button)findViewById(R.id.next);
         back=(Button)findViewById(R.id.Back);
+    }
+    public void onClick(View v)
+    {
+        if(v==next)
+        {
+            Intent intent=new Intent(getBaseContext(),idActivity.class);
+            startActivity(intent);
+        }
+        if (v==back)
+        {
+            Intent intent=new Intent(getBaseContext(),EnterActivity.class);
+            startActivity(intent);
+        }
     }
 }
