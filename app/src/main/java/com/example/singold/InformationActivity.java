@@ -17,6 +17,6 @@ public class InformationActivity extends AppCompatActivity
         last=(EditText)findViewById(R.id.last);
         username=(EditText)findViewById(R.id.username);
         next=(Button)findViewById(R.id.next);
-        back=(Button)findViewById(R.id.back);
+//        back=(Button)findViewById(R.id.back);
     }
 }
