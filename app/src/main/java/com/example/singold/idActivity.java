@@ -15,10 +15,10 @@ public class idActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_id);
-        enterid(EditText) = findViewById(R.id.enterid);
-        confirmate(EditText) = findViewById(R.id.confirmate);
-        back2(Button) = findViewById(R.id.back2);
-        finish(Button) = findViewById(R.id.finish);
+        enterid(EditText)= findViewById(R.id.enterid);
+        confirmate(EditText)= findViewById(R.id.confirmate);
+        back2(Button)= findViewById(R.id.back2);
+        finish(Button)= findViewById(R.id.finish);
 
     }
 }

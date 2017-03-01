@@ -10,7 +10,8 @@ public class DirectingActivity extends AppCompatActivity
     private EditText text;
     private TextView directing;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_directing);
         text=(EditText)findViewById(R.id.text);
