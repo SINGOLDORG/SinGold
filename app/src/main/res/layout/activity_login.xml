@@ -57,7 +57,8 @@
         android:minHeight="70dp"
         android:minWidth="125dp"
         android:layout_below="@+id/id"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick" />
 
     <Button
         android:text="Back"
@@ -65,5 +66,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/back4" />
+        android:id="@+id/back4"
+        android:onClick="onClick" />
 </RelativeLayout>
