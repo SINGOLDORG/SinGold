@@ -18,7 +18,7 @@ public class idActivity extends AppCompatActivity
         enterid=(EditText) findViewById(R.id.enterid);
         confirmate=(EditText) findViewById(R.id.confirmate);
         back2= (Button)findViewById(R.id.back2);
-        finish=(Button) findViewById(R.id.finish);
+        finish=(Button)findViewById(R.id.finish);
 
     }
 }
