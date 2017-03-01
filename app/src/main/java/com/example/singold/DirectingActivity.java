@@ -10,7 +10,7 @@ public class DirectingActivity extends AppCompatActivity
 {
     private EditText text;
     private TextView directing;
-    private Button button7;
+    private Button back2;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -18,6 +18,6 @@ public class DirectingActivity extends AppCompatActivity
         setContentView(R.layout.activity_directing);
         text=(EditText)findViewById(R.id.text);
         directing=(TextView)findViewById(R.id.directing);
-        button7=(Button)findViewById(R.id.button7);
+        back2=(Button)findViewById(R.id.back2);
     }
 }
