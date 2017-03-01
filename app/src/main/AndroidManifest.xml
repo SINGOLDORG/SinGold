@@ -35,7 +35,9 @@
         <activity android:name=".Sin_goldActivity" />
         <activity android:name=".loginActivity" />
         <activity android:name=".startActivity" />
-        <activity android:name=".idActivity"></activity>
+        <activity android:name=".idActivity" />
+        <activity android:name="com.example.zumoappname.ListActivity" />
+        <activity android:name=".ListActivity"></activity>
     </application>
 
 </manifest>
