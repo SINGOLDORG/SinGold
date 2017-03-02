@@ -17,4 +17,9 @@
     <string name="id1">confirm your id</string>
     <string name="introduction">introduction</string>
     <string name="intro">intro</string>
+    <string name="Username2">Username</string>
+    <string name="id2">id</string>
+    <string name="confirm_id">confirm id</string>
+    <string name="id3">id</string>
+    <string name="save">save</string>
 </resources>
