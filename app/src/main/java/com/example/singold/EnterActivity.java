@@ -32,7 +32,7 @@ private Button help,login,sign;
         }
         if (v==sign)
         {
-            Intent intent=new Intent(getBaseContext(),startActivity.class);
+            Intent intent=new Intent(getBaseContext(),InformationActivity.class);
             startActivity(intent);
         }
     }
