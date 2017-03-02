@@ -22,11 +22,7 @@
         <activity
             android:name=".MyTabs.ListActivity"
             android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ToDoActivity"/>
         <activity android:name=".DirectingActivity"/>
@@ -34,8 +30,13 @@
         <activity android:name=".idActivity"/>
         <activity android:name=".loginActivity"/>
         <activity android:name=".InformationActivity"/>
-        <activity android:name=".Sin_goldActivity"/>
-        <activity android:name=".startActivity"/>
+        <activity android:name=".Sin_goldActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 

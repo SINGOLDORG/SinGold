@@ -1,5 +1,6 @@
 package com.example.singold;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -9,5 +10,23 @@ public class Sin_goldActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sin_gold);
+        Thread background = new Thread()
+        {
+            @Override
+            public void run() {
+                try {
+                    sleep(5 * 1000);
+                    Intent i = new Intent(getBaseContext(), EnterActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+                catch (Exception e) {
+                }
+
+            }
+        };
+        background.start();
     }
+
+
 }
