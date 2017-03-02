@@ -1,5 +1,6 @@
 package com.example.singold;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,24 @@ private Button help,login,sign;
         help=(Button)findViewById(R.id.text);
         login=(Button)findViewById(R.id.login);
         sign=(Button)findViewById(R.id.sign);
+    }
+    public void onClick(View v)
+    {
+        if(v==login)
+        {
+            Intent intent=new Intent(getBaseContext(),loginActivity.class);
+            startActivity(intent);
+        }
+        if(v==help)
+        {
+            Intent intent=new Intent(getBaseContext(),DirectingActivity.class);
+            startActivity(intent);
+        }
+        if (v==sign)
+        {
+            Intent intent=new Intent(getBaseContext(),startActivity.class);
+            startActivity(intent);
+        }
     }
 
 
