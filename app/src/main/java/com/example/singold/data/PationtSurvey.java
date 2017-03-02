@@ -107,7 +107,9 @@ public class PationtSurvey {
     }
 
     public String getWedding() {
+
         return wedding;
+
     }
 
     public void setWedding(String wedding) {
