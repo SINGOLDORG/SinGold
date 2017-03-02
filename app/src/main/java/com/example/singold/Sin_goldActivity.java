@@ -22,7 +22,6 @@ public class Sin_goldActivity extends AppCompatActivity {
                 }
                 catch (Exception e) {
                 }
-
             }
         };
         background.start();
