@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.singold.MyTabs.ListActivity;
+
 public class idActivity extends AppCompatActivity
 {
     private EditText enterid,confirmate;

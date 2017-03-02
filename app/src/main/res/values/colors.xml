@@ -3,6 +3,8 @@
     <color name="colorPurple">#6A1B9A</color>
     <color name="colorPrimaryDark">#125688</color>
     <color name="textColor">#FFFFFF</color>
+    <color name="colorAccent">#FFFF00</color>
+
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
 </resources>
