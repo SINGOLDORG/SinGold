@@ -54,15 +54,16 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText6"
-            android:hint="@string/Personal_id1" />
+            android:id="@+id/editText7"
+            android:hint="@string/Year_of_birth" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText7"
-            android:hint="@string/Year_of_birth" />
+            android:id="@+id/editText6"
+            android:hint="@string/Personal_id1" />
+
     </LinearLayout>
 </RelativeLayout>
