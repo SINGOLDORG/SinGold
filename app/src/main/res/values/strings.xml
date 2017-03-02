@@ -31,5 +31,11 @@
     <string name="confirm_id">confirm id</string>
     <string name="id3">id</string>
     <string name="save">save</string>
+    <string name="Last_name1">Last name</string>
+    <string name="First_name1">First name</string>
+    <string name="Family_phone1">Family phone</string>
+    <string name="Address1">Address</string>
+    <string name="Personal_id1">Personal id</string>
+    <string name="Year_of_birth">Year of birth</string>
 
 </resources>
