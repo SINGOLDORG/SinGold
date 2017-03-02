@@ -17,18 +17,6 @@
         android:layout_alignEnd="@+id/first"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/save"
-        android:onClick="onClick"
-        android:minHeight="70dp"
-        android:minWidth="125dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:text="@string/save" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,5 +60,18 @@
         android:hint="@string/First_name"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"
+        android:onClick="onClick"
+        android:minHeight="70dp"
+        android:minWidth="125dp"
+        android:text="@string/save"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="37dp" />
 
 </RelativeLayout>
