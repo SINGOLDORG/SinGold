@@ -1,4 +1,4 @@
-package com.example.singold;
+package com.example.singold.MyTabs;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,7 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.zumoappname.R;
+import com.example.singold.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,8 +82,8 @@ public class OneFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
         }
     }
 
@@ -107,10 +108,4 @@ public class OneFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_one, container, false);
-}
 }

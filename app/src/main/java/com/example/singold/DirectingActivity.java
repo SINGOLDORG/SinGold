@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class DirectingActivity extends AppCompatActivity
 {
-    private EditText text;
+    private TextView text;
     private TextView directing;
     private Button back2;
     @Override
@@ -18,7 +18,7 @@ public class DirectingActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_directing);
-        text=(EditText)findViewById(R.id.text);
+        text=(TextView)findViewById(R.id.text);
         directing=(TextView)findViewById(R.id.directing);
         back2=(Button)findViewById(R.id.back2);
     }
