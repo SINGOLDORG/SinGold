@@ -1,4 +1,4 @@
-package com.example.singold;
+package com.example.singold.data;
 
 /**
  * Represents an item in a ToDo list
