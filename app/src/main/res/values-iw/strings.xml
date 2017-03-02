@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="logiin_another">כניסה מחשבון אחר</string>
+    <string name="font_fontFamily_medium">sans-serif</string>
+    <string name="introduction">פרטים על האפליקציה</string>
+    <string name="intro">פרטים</string>
+    <string name="Next">סיום</string>
+    <string name="Password1">סיסמה</string>
+    <string name="Username">שם משתמש</string>
+    <string name="Username1">שם משתמש</string>
+    <string name="help1">הספר על האפליקציה</string>
+    <string name="id">ת.ז</string>
+    <string name="id1">אשר ת.ז</string>
+</resources>
