@@ -9,48 +9,69 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/username"
-        android:layout_marginTop="31dp"
+        android:id="@+id/last"
+        android:inputType="none"
+        android:hint="@string/Last_name"
+        android:layout_marginTop="38dp"
         android:layout_below="@+id/first"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="@string/Username" />
+        android:layout_alignEnd="@+id/first"
+        android:layout_alignParentStart="true" />
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Next"
-        android:id="@+id/next"
-        android:onClick="onClick"
-        android:minHeight="70dp"
-        android:minWidth="125dp"
+        android:id="@+id/username"
+        android:hint="@string/Username"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/last"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
         android:layout_below="@+id/username"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp"
+        android:id="@+id/id"
+        android:hint="@string/id3"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/id"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp"
+        android:id="@+id/confirmid"
+        android:hint="@string/confirm_id"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/first"
-        android:layout_marginTop="27dp"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/next"
-        android:layout_toStartOf="@+id/next"
+        android:layout_marginTop="23dp"
         android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
-        android:hint="@string/First_name" />
+        android:hint="@string/First_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
-    <EditText
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/last"
-        android:layout_alignBaseline="@+id/first"
-        android:layout_alignBottom="@+id/first"
-        android:layout_toRightOf="@+id/next"
-        android:layout_toEndOf="@+id/next"
-        android:inputType="none"
-        android:hint="@string/Last_name" />
+        android:id="@+id/save"
+        android:onClick="onClick"
+        android:minHeight="70dp"
+        android:minWidth="125dp"
+        android:text="@string/save"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="37dp" />
 
 </RelativeLayout>

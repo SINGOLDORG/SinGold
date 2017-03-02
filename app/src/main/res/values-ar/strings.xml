@@ -16,4 +16,9 @@
     <string name="help1">شرح عن التطبيق</string>
     <string name="id">رقم الهوية</string>
     <string name="id1">التاكيد على رقم الهوية</string>
+    <string name="Username2">Username</string>
+    <string name="id2">id</string>
+    <string name="confirm_id">confirm id</string>
+    <string name="id3">id</string>
+    <string name="save">save</string>
 </resources>
