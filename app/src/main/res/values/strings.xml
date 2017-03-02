@@ -21,5 +21,8 @@
     <string name="Password1">Password</string>
     <string name="Login2">Login</string>
     <string name="Text1">Text</string>
+    <string name="help1">recting about the applecation...</string>
+    <string name="id">enter your id</string>
+    <string name="id1">confirm your id</string>
 
 </resources>

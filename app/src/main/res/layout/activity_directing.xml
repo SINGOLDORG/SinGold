@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Directing about the applecation..."
+        android:text="@string/help1"
         android:id="@+id/directing"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/text"

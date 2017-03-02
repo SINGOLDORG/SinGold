@@ -10,13 +10,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/username"
-        android:text="@string/Username"
         android:layout_marginTop="31dp"
         android:layout_below="@+id/first"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:hint="@string/Username" />
 
     <Button
         android:layout_width="wrap_content"
@@ -34,22 +34,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/first"
-        android:text="@string/First_name"
         android:layout_marginTop="27dp"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/next"
         android:layout_toStartOf="@+id/next"
         android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp" />
+        android:layout_marginEnd="13dp"
+        android:hint="@string/First_name" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/last"
-        android:text="@string/Last_name"
         android:layout_alignBaseline="@+id/first"
         android:layout_alignBottom="@+id/first"
         android:layout_toRightOf="@+id/next"
-        android:layout_toEndOf="@+id/next" />
+        android:layout_toEndOf="@+id/next"
+        android:inputType="none"
+        android:hint="@string/Last_name" />
 
 </RelativeLayout>
