@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="logiin_another">Login another account</string>
+    <string name="login">Login another account</string>
+    <string name="sign_up">Sign up to SinGold</string>
+    <string name="help">help</string>
+    <string name="Finish">Finish</string>
+    <string name="First_name">First name</string>
+    <string name="Last_name">Last name</string>
+    <string name="Username">Username</string>
+    <string name="Next">Next</string>
+    <string name="Username1">Username</string>
+    <string name="Password1">Password</string>
+    <string name="Login2">Login</string>
+    <string name="Text1">Text</string>
 </resources>
