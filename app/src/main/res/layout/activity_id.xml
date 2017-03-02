@@ -46,7 +46,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="38dp"
         android:id="@+id/confirmate"
-        android:hint="confirmate your id"
+        android:hint="confirm your id"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -55,20 +55,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/finish"
-        android:layout_below="@+id/confirmate"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
         android:minHeight="70dp"
         android:minWidth="125dp"
-        android:onClick="onClick" />
-
-    <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/back2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
