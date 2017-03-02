@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class InformationActivity extends AppCompatActivity
 {
     private EditText first,last,username;
-    private Button next,back;
+    private Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +19,7 @@ public class InformationActivity extends AppCompatActivity
         last=(EditText)findViewById(R.id.last);
         username=(EditText)findViewById(R.id.username);
         next=(Button)findViewById(R.id.next);
-//        back=(Button)findViewById(R.id.back);
+
     }
     public void onClick(View v)
     {
@@ -28,10 +28,7 @@ public class InformationActivity extends AppCompatActivity
             Intent intent=new Intent(getBaseContext(),idActivity.class);
             startActivity(intent);
         }
-        if (v==back)
-        {
-            Intent intent=new Intent(getBaseContext(),EnterActivity.class);
-            startActivity(intent);
-        }
+
+
     }
 }

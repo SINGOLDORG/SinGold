@@ -29,12 +29,4 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true" />
 
-    <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
-        android:id="@+id/back2" />
 </RelativeLayout>

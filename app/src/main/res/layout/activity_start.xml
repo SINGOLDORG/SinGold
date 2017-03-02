@@ -11,23 +11,13 @@
     tools:context="com.example.singold.startActivity">
 
     <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/back3"
-        android:onClick="onClick" />
-
-    <Button
         android:text="start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/back3"
-        android:layout_alignEnd="@+id/back3"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="177dp"
         android:id="@+id/start"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

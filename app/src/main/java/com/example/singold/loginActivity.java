@@ -12,16 +12,16 @@ import com.example.singold.MyTabs.ListActivity;
 public class loginActivity extends AppCompatActivity
 {
     private EditText Username,password;
-    private Button Login,back4;
+    private Button Login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Username=(EditText)findViewById(R.id.Username);
+        Username=(EditText)findViewById(R.id.username);
         password=(EditText)findViewById(R.id.password);
-        Login=(Button)findViewById(R.id.Login);
-        back4=(Button)findViewById(R.id.back4);
+        Login=(Button)findViewById(R.id.login);
+
     }
     public void onClick(View v)
     {
@@ -30,12 +30,9 @@ public class loginActivity extends AppCompatActivity
             Intent intent=new Intent(getBaseContext(),ListActivity.class);
             startActivity(intent);
         }
-        if (v==back4)
-        {
-            Intent intent=new Intent(getBaseContext(),EnterActivity.class);
-            startActivity(intent);
 
-        }
+
+
 
     }
 }

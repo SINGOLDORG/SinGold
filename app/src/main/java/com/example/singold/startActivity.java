@@ -8,13 +8,13 @@ import android.widget.Button;
 
 public class startActivity extends AppCompatActivity
 {
-    private Button back3,start;
+    private Button start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        back3=(Button)findViewById(R.id.back3);
+
         start=(Button)findViewById(R.id.start);
     }
     public void onClick(View v)
@@ -24,10 +24,6 @@ public class startActivity extends AppCompatActivity
             Intent intent=new Intent(getBaseContext(),InformationActivity.class);
             startActivity(intent);
         }
-        if (v==back3)
-        {
-            Intent intent=new Intent(getBaseContext(),EnterActivity.class);
-            startActivity(intent);
-        }
+
     }
 }
