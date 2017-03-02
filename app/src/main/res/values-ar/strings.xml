@@ -2,4 +2,18 @@
 <resources>
     <string name="font_fontFamily_medium">sans-serif</string>
     <string name="logiin_another">الدخول من حساب اخر</string>
+    <string name="Finish">تم</string>
+    <string name="First_name">الاسم الشخصي</string>
+    <string name="Last_name">اسم العائلة</string>
+    <string name="Login2">تسجيل الدخول</string>
+    <string name="Next">التالي</string>
+    <string name="Password1">كلمة المرور</string>
+    <string name="Text1"></string>
+    <string name="introduction">تفاصيل عن التطبيق</string>
+    <string name="Username">اسم المستخدم</string>
+    <string name="Username1">اسم المستخدم</string>
+    <string name="intro">تفاصيل</string>
+    <string name="help1">شرح عن التطبيق</string>
+    <string name="id">رقم الهوية</string>
+    <string name="id1">التاكيد على رقم الهوية</string>
 </resources>

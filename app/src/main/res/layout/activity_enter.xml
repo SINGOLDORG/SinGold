@@ -18,7 +18,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/help"
+        android:text="@string/introduction"
         android:id="@+id/text"
         android:onClick="onClick"
         android:layout_marginBottom="32dp"

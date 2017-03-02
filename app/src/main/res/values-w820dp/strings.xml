@@ -15,4 +15,6 @@
     <string name="help1">recting about the applecation...</string>
     <string name="id">enter your id</string>
     <string name="id1">confirm your id</string>
+    <string name="introduction">introduction</string>
+    <string name="intro">intro</string>
 </resources>
