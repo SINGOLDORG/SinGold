@@ -33,23 +33,28 @@ public class InformationActivity extends AppCompatActivity {
         String stConfirmid = confirmid.getText().toString();
 
         boolean isok = true;
-        if (stFirst.length() == 0) {
-            username.setError("Wrong first name");
+        if (stFirst.length() == 0)
+        {
+            first.setError("Wrong first name");
             isok = false;
         }
-        if (stLast.length() == 0) {
-            username.setError("Wrong last name");
+        if (stLast.length() == 0)
+        {
+            last.setError("Wrong last name");
             isok = false;
         }
-        if (stUsername.length() == 0) {
+        if (stUsername.length() == 0)
+        {
             username.setError("Wrong username");
             isok = false;
         }
-        if (stId.length() == 0) {
+        if (stId.length() == 0)
+        {
             id.setError("Wrong id");
             isok = false;
         }
-        if (stConfirmid.length() == 0) {
+        if (stConfirmid.length() == 0)
+        {
             id.setError("Wrong confirmate");
             isok = false;
         }

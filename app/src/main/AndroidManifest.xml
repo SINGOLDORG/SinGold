@@ -24,7 +24,6 @@
         <activity android:name=".ToDoActivity" />
         <activity android:name=".DirectingActivity" />
         <activity android:name=".EnterActivity" />
-        <activity android:name=".loginActivity" />
         <activity android:name=".InformationActivity" />
         <activity android:name=".Sin_goldActivity">
             <intent-filter>
