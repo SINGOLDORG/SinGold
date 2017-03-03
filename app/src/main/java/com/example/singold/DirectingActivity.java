@@ -21,6 +21,7 @@ public class DirectingActivity extends AppCompatActivity
         setContentView(R.layout.activity_directing);
         text = (TextView) findViewById(R.id.text);
         directing = (TextView) findViewById(R.id.directing);
+        next=(Button)findViewById(R.id.Next);
     }
     public void onClick(View v)
     {
