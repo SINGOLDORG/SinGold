@@ -4,11 +4,15 @@ package com.example.singold.data;
  * Created by user on 02/03/2017.
  */
 
-public class PationtSurvey {
+public class PatientSurvey {
     @com.google.gson.annotations.SerializedName("id")
     private String id;
     @com.google.gson.annotations.SerializedName("country")
     private String country;
+    @com.google.gson.annotations.SerializedName("city")
+    private String city;
+    @com.google.gson.annotations.SerializedName("year")
+    private String year;
     @com.google.gson.annotations.SerializedName("homeMusic")
     private String homeMusic;
     @com.google.gson.annotations.SerializedName("education")
@@ -17,7 +21,7 @@ public class PationtSurvey {
     private String isMahazot;
     @com.google.gson.annotations.SerializedName("mahazot")
     private String mahazot;
-
+//hkltot,disk,..
     @com.google.gson.annotations.SerializedName("fSinger")
     private String fSinger;
     @com.google.gson.annotations.SerializedName("fSongs")
@@ -39,7 +43,7 @@ public class PationtSurvey {
     @com.google.gson.annotations.SerializedName("relaxing")
     private String relaxing;
 
-    public PationtSurvey(){
+    public PatientSurvey(){
     }
 
     public String getId() {
@@ -56,6 +60,14 @@ public class PationtSurvey {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
     }
 
     public String getHomeMusic() {
