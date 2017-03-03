@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/help1"
+        android:text="@string/directing"
         android:id="@+id/directing"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/text"
@@ -30,5 +30,15 @@
         android:layout_alignParentStart="true"
         android:text="@string/intro"
         android:hint="Directing about the applecation" />
+
+    <Button
+        android:text="@string/Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="33dp"
+        android:id="@+id/Next" />
 
 </RelativeLayout>

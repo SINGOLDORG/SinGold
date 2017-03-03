@@ -37,5 +37,6 @@
     <string name="Address1">Address</string>
     <string name="Personal_id1">Personal id</string>
     <string name="Year_of_birth">Year of birth</string>
+    <string name="directing">directing</string>
 
 </resources>
