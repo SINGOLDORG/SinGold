@@ -34,7 +34,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PatienDetailsActivity"></activity>
+        <activity android:name=".PatienDetailsActivity" />
+        <activity android:name=".introActivity"></activity>
     </application>
 
 </manifest>
