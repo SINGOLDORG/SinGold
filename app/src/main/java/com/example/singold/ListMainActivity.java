@@ -1,4 +1,4 @@
-package com.example.singold.MyTabs;
+package com.example.singold;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,13 +12,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
+import com.example.singold.MyTabs.OneFragment;
+import com.example.singold.MyTabs.ThreeFragment;
+import com.example.singold.MyTabs.TwoFragment;
 import com.example.singold.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ListActivity extends AppCompatActivity {
+public class ListMainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TabLayout tabLayout;

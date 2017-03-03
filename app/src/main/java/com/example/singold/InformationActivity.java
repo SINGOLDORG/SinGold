@@ -1,6 +1,5 @@
 package com.example.singold;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -63,7 +62,7 @@ public class InformationActivity extends AppCompatActivity {
 
     public void onClick(View v) {
         if (v == save) {
-            Intent intent = new Intent(getBaseContext(), ListActivity.class);
+            Intent intent = new Intent(getBaseContext(), ListMainActivity.class);
             startActivity(intent);
         }
 

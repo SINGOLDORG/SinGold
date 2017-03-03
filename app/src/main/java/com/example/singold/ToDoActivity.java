@@ -205,7 +205,7 @@ public class ToDoActivity extends Activity {
     }
 
     /**
-     * Add a new item
+     * Add a newp item
      *
      * @param view
      *            The view that originated the call
@@ -215,13 +215,13 @@ public class ToDoActivity extends Activity {
             return;
         }
 
-        // Create a new item
+        // Create a newp item
         final ToDoItem item = new ToDoItem();
 
         item.setText(mTextNewToDo.getText().toString());
         item.setComplete(false);
 
-        // Insert the new item
+        // Insert the newp item
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
             @Override
             protected Void doInBackground(Void... params) {
@@ -369,7 +369,7 @@ public class ToDoActivity extends Activity {
      */
     /*
     private AsyncTask<Void, Void, Void> sync() {
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
+        AsyncTask<Void, Void, Void> task = newp AsyncTask<Void, Void, Void>(){
             @Override
             protected Void doInBackground(Void... params) {
                 try {
