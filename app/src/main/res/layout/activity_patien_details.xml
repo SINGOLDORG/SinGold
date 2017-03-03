@@ -87,6 +87,6 @@
         android:layout_marginBottom="34dp"
         android:id="@+id/plus"
         android:onClick="onClick"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@drawable/plus1" />
 
 </RelativeLayout>

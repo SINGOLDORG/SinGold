@@ -22,7 +22,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_input_add"
+            app:srcCompat="@drawable/plus1"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:id="@+id/plus"
