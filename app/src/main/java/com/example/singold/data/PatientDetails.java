@@ -4,7 +4,7 @@ package com.example.singold.data;
  * Created by user on 02/03/2017.
  */
 
-public class PationtDetails {
+public class PatientDetails {
     @com.google.gson.annotations.SerializedName("id")
     private String id;
     @com.google.gson.annotations.SerializedName("fName")
@@ -20,7 +20,7 @@ public class PationtDetails {
     @com.google.gson.annotations.SerializedName("year")
     private String year;
 
-    public PationtDetails(){
+    public PatientDetails(){
     }
 
     public String getId() {

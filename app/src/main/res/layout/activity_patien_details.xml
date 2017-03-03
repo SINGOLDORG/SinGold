@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_patien_details"
     android:layout_width="match_parent"
@@ -10,15 +11,82 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.singold.PatienDetailsActivity">
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true">
+        android:layout_marginBottom="196dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
 
-        <ListView
+        <TextView
+            android:text="@string/details"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/list" />
+            android:layout_height="wrap_content"
+            android:id="@+id/details"
+            android:autoText="true"
+            android:textSize="24sp"
+            android:layout_marginBottom="20dp" />
 
-    </RelativeLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/first"
+            android:hint="@string/First_name" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/last"
+            android:hint="@string/Last_name" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/familyphone"
+            android:hint="@string/Family_phone1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/address"
+            android:hint="@string/Address1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/year"
+            android:hint="@string/Year_of_birth" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/personalid"
+            android:hint="@string/Personal_id1" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/plus1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="34dp"
+        android:id="@+id/plus"
+        android:onClick="onClick" />
+
 </RelativeLayout>

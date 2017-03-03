@@ -28,7 +28,7 @@ public class OneFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    ImageButton imgbtn;
+    ImageButton plus;
     ListView list;
 
     // TODO: Rename and change types of parameters
@@ -74,7 +74,7 @@ public class OneFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_one, container, false);
 
-        imgbtn= (ImageButton) view.findViewById(R.id.imageButton);
+        plus= (ImageButton) view.findViewById(R.id.plus);
         list=(ListView)view.findViewById(R.id.List);
 
         return view;
@@ -82,7 +82,7 @@ public class OneFragment extends Fragment {
     }
     public void onClick(View v)
     {
-        if (v==imgbtn)
+        if (v==plus)
         {
             Intent intent=new Intent(getContext(), PatienDetailsActivity.class);
             startActivity(intent);

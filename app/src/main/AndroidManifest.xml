@@ -24,8 +24,6 @@
         <activity android:name=".ToDoActivity" />
         <activity android:name=".DirectingActivity" />
         <activity android:name=".EnterActivity" />
-        <activity android:name=".idActivity" />
-        <activity android:name=".loginActivity" />
         <activity android:name=".InformationActivity" />
         <activity android:name=".Sin_goldActivity">
             <intent-filter>
@@ -34,7 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PatienDetailsActivity"></activity>
+        <activity android:name=".PatienDetailsActivity" />
+        <activity android:name=".introActivity"></activity>
     </application>
 
 </manifest>

@@ -11,7 +11,7 @@ import android.widget.EditText;
 public class EnterActivity extends AppCompatActivity
 {
     private Button login,sign;
-    private EditText username,id1;
+    private EditText username,id;
 
     @Override
 
@@ -22,7 +22,24 @@ public class EnterActivity extends AppCompatActivity
         login=(Button)findViewById(R.id.login);
         sign=(Button)findViewById(R.id.sign);
         username=(EditText)findViewById(R.id.username);
-        id1=(EditText)findViewById(R.id.id1);
+        id=(EditText)findViewById(R.id.id1);
+    }
+    private void dataHandler()
+    {
+        String stUsername = username.getText().toString();
+        String stId = id.getText().toString();
+
+        boolean isok=true;
+        if(stUsername.length()==0)
+        {
+            username.setError("Wrong username");
+            isok=false;
+        }
+        if(stId.length()==0)
+        {
+            id.setError("Wrong id");
+            isok=false;
+        }
     }
     public void onClick(View v)
     {
@@ -38,6 +55,7 @@ public class EnterActivity extends AppCompatActivity
             startActivity(intent);
         }
     }
+
 
 
 }
