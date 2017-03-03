@@ -31,5 +31,6 @@ public class InformationActivity extends AppCompatActivity
             Intent intent=new Intent(getBaseContext(),ListActivity.class);
             startActivity(intent);
         }
+
     }
 }
