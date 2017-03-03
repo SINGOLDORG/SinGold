@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.example.singold.ToDoActivity">
+    tools:context="com.example.singold.ToDoActivity"
+    android:background="@color/colorPurple">
 
     <ImageView
         android:layout_width="300dp"
@@ -14,6 +15,6 @@
         android:layout_gravity="center|bottom"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/ic_launcher" />
+        app:srcCompat="@mipmap/ic_launcher" />
 
 </RelativeLayout>

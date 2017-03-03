@@ -36,7 +36,7 @@ public class ToDoItem {
     }
 
     /**
-     * Initializes a new ToDoItem
+     * Initializes a newp ToDoItem
      *
      * @param text
      *            The item text

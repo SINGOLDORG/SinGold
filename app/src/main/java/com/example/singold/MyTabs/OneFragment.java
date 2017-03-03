@@ -42,12 +42,12 @@ public class OneFragment extends Fragment {
     }
 
     /**
-     * Use this factory method to create a new instance of
+     * Use this factory method to create a newp instance of
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment OneFragment.
+     * @return A newp instance of fragment OneFragment.
      */
     // TODO: Rename and change types and number of parameters
     public static OneFragment newInstance(String param1, String param2) {
@@ -102,7 +102,7 @@ public class OneFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-//            throw new RuntimeException(context.toString()
+//            throw newp RuntimeException(context.toString()
 //                    + " must implement OnFragmentInteractionListener");
         }
     }
