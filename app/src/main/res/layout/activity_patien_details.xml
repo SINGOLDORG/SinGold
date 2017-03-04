@@ -81,12 +81,12 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/plus1"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="34dp"
         android:id="@+id/plus"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        app:srcCompat="@drawable/plus1" />
 
 </RelativeLayout>
