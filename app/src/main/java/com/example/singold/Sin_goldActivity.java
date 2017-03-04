@@ -7,14 +7,16 @@ import android.os.Bundle;
 public class Sin_goldActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sin_gold);
         Thread background = new Thread()
         {
             @Override
             public void run() {
-                try {
+                try
+                {
                     sleep(3 * 1000);
                     Intent i = new Intent(getBaseContext(), DirectingActivity.class);
                     startActivity(i);
@@ -23,7 +25,7 @@ public class Sin_goldActivity extends AppCompatActivity {
                 catch (Exception e) {
                 }
             }
-        };
+        }
         background.start();
     }
 
