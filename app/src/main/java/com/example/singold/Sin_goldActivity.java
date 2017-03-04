@@ -16,7 +16,7 @@ public class Sin_goldActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(3 * 1000);
-                    Intent i = new Intent(getBaseContext(), DirectingActivity.class);
+                    Intent i = new Intent(getBaseContext(), WelcomeActivity.class);
                     startActivity(i);
                     finish();
                 } catch (Exception e) {
