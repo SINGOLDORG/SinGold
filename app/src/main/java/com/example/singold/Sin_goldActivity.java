@@ -23,6 +23,7 @@ public class Sin_goldActivity extends AppCompatActivity {
                 }
             }
         }
+
         background.start();
     }
 
