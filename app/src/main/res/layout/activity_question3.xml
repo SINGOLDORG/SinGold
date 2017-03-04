@@ -118,7 +118,7 @@
             <RadioButton
                 android:text="RadioButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="73dp"
                 android:id="@+id/radioButton36" />
         </RadioGroup>
     </LinearLayout>
