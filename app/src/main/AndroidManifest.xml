@@ -4,8 +4,6 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -23,9 +21,7 @@
         <activity android:name=".DirectingActivity" />
         <activity android:name=".EnterActivity" />
         <activity android:name=".InformationActivity" />
-        <activity android:name=".Sin_goldActivity">
-
-        </activity>
+        <activity android:name=".Sin_goldActivity" />
         <activity android:name=".PatientDetailsActivity" />
         <activity android:name=".introActivity" />
         <activity android:name=".WelcomeActivity">
@@ -35,6 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".QuestionOneActivity"></activity>
     </application>
 
 </manifest>
