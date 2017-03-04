@@ -21,7 +21,7 @@
 
         <ImageButton
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/add"
+            app:srcCompat="@android:drawable/ic_input_add"
             android:id="@+id/plus"
             android:onClick="onClick "
             android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
             android:layout_marginBottom="14dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:background="@color/textColor" />
+            android:background="@color/windowBackground" />
 
     </RelativeLayout>
 </FrameLayout>
