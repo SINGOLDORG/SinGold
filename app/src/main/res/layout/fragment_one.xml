@@ -21,7 +21,7 @@
 
         <ImageButton
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/add"
+            app:srcCompat="@android:drawable/ic_input_add"
             android:id="@+id/plus"
             android:onClick="onClick "
             android:layout_width="wrap_content"
