@@ -62,6 +62,14 @@ public class PatientSurvey {
         this.country = country;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     public String getYear() {
         return year;
     }
