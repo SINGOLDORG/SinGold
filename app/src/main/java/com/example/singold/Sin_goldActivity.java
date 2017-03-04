@@ -11,21 +11,19 @@ public class Sin_goldActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sin_gold);
-        Thread background = new Thread()
-        {
+        Thread background = new Thread() {
             @Override
             public void run() {
-                try
-                {
+                try {
                     sleep(3 * 1000);
-                    Intent i = new Intent(getBaseContext(), DirectingActivity.class);
+                    Intent i = new Intent(getBaseContext(), WelcomeActivity.class);
                     startActivity(i);
                     finish();
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                 }
             }
         };
+
         background.start();
     }
 
