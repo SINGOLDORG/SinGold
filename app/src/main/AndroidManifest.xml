@@ -26,7 +26,7 @@
         <activity android:name=".Sin_goldActivity">
 
         </activity>
-        <activity android:name=".PatienDetailsActivity" />
+        <activity android:name=".PatientDetailsActivity" />
         <activity android:name=".introActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>

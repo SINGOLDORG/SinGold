@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import com.example.singold.PatienDetailsActivity;
+import com.example.singold.PatientDetailsActivity;
 import com.example.singold.R;
 
 
@@ -84,7 +84,7 @@ public class OneFragment extends Fragment {
     {
         if (v==plus)
         {
-            Intent intent=new Intent(getContext(), PatienDetailsActivity.class);
+            Intent intent=new Intent(getContext(), PatientDetailsActivity.class);
             startActivity(intent);
         }
     }
