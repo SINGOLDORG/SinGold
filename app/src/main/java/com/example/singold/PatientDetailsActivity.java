@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class PatienDetailsActivity extends AppCompatActivity {
+public class PatientDetailsActivity extends AppCompatActivity {
     private TextView details;
     private EditText first, last, familyphone, address, year, personalid;
     private ImageButton plus;
@@ -17,7 +17,7 @@ public class PatienDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patien_details);
+        setContentView(R.layout.activity_patient_details);
 
         details = (TextView) findViewById(R.id.details);
         first = (EditText) findViewById(R.id.first);

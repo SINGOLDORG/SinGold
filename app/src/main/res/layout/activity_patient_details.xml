@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.singold.PatienDetailsActivity">
+    tools:context="com.example.singold.PatientDetailsActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -81,12 +81,12 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="34dp"
         android:id="@+id/plus"
         android:onClick="onClick"
-        app:srcCompat="@drawable/plus1" />
+        app:srcCompat="@mipmap/add"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="400dp"
+        android:background="@color/windowBackground" />
 
 </RelativeLayout>
