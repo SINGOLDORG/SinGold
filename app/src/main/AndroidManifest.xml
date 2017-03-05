@@ -18,12 +18,17 @@
             android:name=".ListMainActivity"
             android:label="@string/app_name" />
         <activity android:name=".ToDoActivity" />
-        <activity android:name=".EnterActivity" />
+        <activity android:name=".EnterActivity" >
+
+        </activity>
         <activity android:name=".InformationActivity" />
         <activity android:name=".Sin_goldActivity" />
         <activity android:name=".PatientDetailsActivity" />
         <activity android:name=".introActivity" />
+       <activity android:name=".QuestionaireActivity"/>
+
         <activity android:name=".WelcomeActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
