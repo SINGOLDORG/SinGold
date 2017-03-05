@@ -24,4 +24,9 @@
     <string name="Year_of_birth">Year of birth</string>
     <string name="directing">directing</string>
     <string name="details">Details about the patient</string>
+    <string name="classical_music">classical music</string>
+    <string name="opera">opera</string>
+    <string name="classical">classical</string>
+    <string name="Israel">Israel</string>
+    <string name="army_bands">army bands</string>
 </resources>
