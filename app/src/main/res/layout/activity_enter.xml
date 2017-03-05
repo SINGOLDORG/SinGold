@@ -30,6 +30,11 @@
             android:id="@+id/username"
             android:hint="@string/Username2" />
 
+        <ImageView
+            android:layout_width="@dimen/img_width_height"
+            android:layout_height="@dimen/img_width_height"
+            android:src="@mipmap/ic_info" />
+
         <Button
             android:text="@string/sign_up"
             android:layout_width="match_parent"
