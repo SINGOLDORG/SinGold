@@ -7,6 +7,8 @@ package com.example.singold.data;
 public class PatientSurvey {
     @com.google.gson.annotations.SerializedName("id")
     private String id;
+    @com.google.gson.annotations.SerializedName("idPatient")
+    private String idPatient;
     @com.google.gson.annotations.SerializedName("country")
     private String country;
     @com.google.gson.annotations.SerializedName("city")
@@ -52,6 +54,14 @@ public class PatientSurvey {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getIdPatient() {
+        return idPatient;
+    }
+
+    public void setIdPatient(String idPatient) {
+        this.idPatient = idPatient;
     }
 
     public String getCountry() {
