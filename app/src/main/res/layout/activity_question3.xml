@@ -26,7 +26,7 @@
             android:id="@+id/imageView2" />
 
         <TextView
-            android:text="relaxing music"
+            android:text="relaxing "
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView7" />
