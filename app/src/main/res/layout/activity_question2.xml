@@ -25,7 +25,7 @@
             android:id="@+id/imageView" />
 
         <TextView
-            android:text="dance songs"
+            android:text="dance "
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView4" />
@@ -56,7 +56,7 @@
         </RadioGroup>
 
         <TextView
-            android:text="foreign"
+            android:text="loazi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView5" />
@@ -87,7 +87,7 @@
         </RadioGroup>
 
         <TextView
-            android:text="religious songs"
+            android:text="religion"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:id="@+id/textView12" />
