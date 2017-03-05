@@ -8,6 +8,8 @@ public class User
 {
     @com.google.gson.annotations.SerializedName("id")
     private String id;
+    @com.google.gson.annotations.SerializedName("idInstitute")
+    private String idInstitute;
     @com.google.gson.annotations.SerializedName("fName")
     private String fName;
     @com.google.gson.annotations.SerializedName("lName")
@@ -27,6 +29,14 @@ public class User
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getIdInstitute() {
+        return idInstitute;
+    }
+
+    public void setIdInstitute(String idInstitute) {
+        this.idInstitute = idInstitute;
     }
 
     public String getfName() {

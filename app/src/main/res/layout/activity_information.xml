@@ -6,73 +6,57 @@
 
     tools:context="com.example.singold.ToDoActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/last"
-        android:inputType="none"
-        android:hint="@string/Last_name"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/first"
-        android:layout_alignEnd="@+id/first"
-        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/username"
-        android:hint="@string/Username"
-        android:layout_marginTop="28dp"
-        android:layout_below="@+id/last"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/first"
+            android:hint="@string/First_name" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_below="@+id/username"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="21dp"
-        android:id="@+id/id"
-        android:hint="@string/id3"
-        android:layout_alignParentEnd="true" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/last"
+            android:inputType="none"
+            android:hint="@string/Last_name"
+            android:layout_below="@+id/first" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_below="@+id/id"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="31dp"
-        android:id="@+id/confirmid"
-        android:hint="@string/confirm_id"
-        android:layout_alignParentEnd="true" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:hint="@string/Username"
+            android:layout_below="@+id/last" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/first"
-        android:layout_marginTop="23dp"
-        android:layout_marginRight="13dp"
-        android:hint="@string/First_name"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:layout_below="@+id/username"
+            android:id="@+id/id"
+            android:hint="@string/id3" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/save"
-        android:onClick="onClick"
-        android:minHeight="70dp"
-        android:minWidth="125dp"
-        android:text="@string/save"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="37dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:layout_below="@+id/id"
+            android:id="@+id/confirmid"
+            android:hint="@string/confirm_id" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:onClick="onClick"
+            android:text="@string/save" />
+
+    </LinearLayout>
 
 </RelativeLayout>
