@@ -29,7 +29,7 @@
             android:text="ma7azot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
+            android:id="@+id/ma7azot"
             android:layout_weight="0.12" />
 
         <EditText
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText4"
+            android:id="@+id/answer4"
             android:hint="answer"
             android:layout_weight="0.06" />
 
@@ -45,7 +45,7 @@
             android:text="disk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9"
+            android:id="@+id/disk"
             android:layout_weight="0.08" />
 
         <EditText
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText5"
+            android:id="@+id/answer5"
             android:hint="answer"
             android:layout_weight="0.06" />
 
@@ -61,7 +61,7 @@
             android:text="favorite singer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView14"
+            android:id="@+id/favoritesong"
             android:layout_weight="0.13" />
 
         <EditText
@@ -69,14 +69,14 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText6"
+            android:id="@+id/answer6"
             android:hint="answer" />
 
         <TextView
             android:text="What song played in his weedimg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView15"
+            android:id="@+id/weddingsong"
             android:layout_weight="0.15" />
 
         <EditText
@@ -84,14 +84,14 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText7"
+            android:id="@+id/answer7"
             android:hint="answer" />
 
         <TextView
             android:text="favorite song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView16"
+            android:id="@+id/favorite"
             android:layout_weight="0.13" />
 
         <EditText
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText8"
+            android:id="@+id/answer8"
             android:hint="answer" />
 
     </LinearLayout>
