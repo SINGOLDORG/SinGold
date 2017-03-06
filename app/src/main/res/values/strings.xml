@@ -66,4 +66,24 @@
     <string name="classical">classical</string>
     <string name="Israel">Israel</string>
     <string name="army_bands">army bands</string>
+    <string name="songs">songs</string>
+    <string name="bands">bands</string>
+    <string name="classic">classic</string>
+    <string name="folk_dance">folk dance</string>
+    <string name="languages">languages</string>
+    <string name="yiddish">yiddish</string>
+    <string name="hebrew">hebrew</string>
+    <string name="english">english</string>
+    <string name="russian">russian</string>
+    <string name="arabic">arabic</string>
+    <string name="dance">dance</string>
+    <string name="waltz">waltz</string>
+    <string name="tango">tango</string>
+    <string name="samba">samba</string>
+    <string name="loazi">loazi</string>
+    <string name="jaz">jaz</string>
+    <string name="rock">rock</string>
+    <string name="pollack">pollack</string>
+    <string name="religion">religion</string>
+    <string name="chazanout">chazanout</string>
 </resources>

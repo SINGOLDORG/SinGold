@@ -27,7 +27,7 @@
             android:text="@string/classical_music"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/music"
+            android:id="@+id/textView1"
             android:layout_weight="0.36" />
 
         <RadioGroup
@@ -40,13 +40,13 @@
                 android:text="@string/opera"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/opera" />
+                android:id="@+id/radioButton1" />
 
             <RadioButton
                 android:text="@string/classical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/classical" />
+                android:id="@+id/radioButton2" />
 
         </RadioGroup>
 
@@ -54,7 +54,7 @@
             android:text="@string/Israel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/israel"
+            android:id="@+id/textView2"
             android:layout_weight="0.20" />
 
         <RadioGroup
@@ -67,27 +67,27 @@
                 android:text="@string/army_bands"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/armybands"
+                android:id="@+id/radioButton12"
                 android:layout_weight="1" />
 
             <RadioButton
                 android:text="songs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/songs"
+                android:id="@+id/radioButton49"
                 android:layout_weight="1" />
 
             <RadioButton
                 android:text="bands"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/bands" />
+                android:id="@+id/radioButton3" />
 
             <RadioButton
                 android:text="folk dances"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/folkdances" />
+                android:id="@+id/radioButton4" />
 
         </RadioGroup>
 
@@ -95,7 +95,7 @@
             android:text="languages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/languages"
+            android:id="@+id/textView3"
             android:layout_weight="0.20" />
 
         <RadioGroup
@@ -107,32 +107,32 @@
                 android:text="yiddish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/yiddish" />
+                android:id="@+id/radioButton51" />
 
             <RadioButton
                 android:text="hebrew"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/hebrew" />
+                android:id="@+id/radioButton20" />
 
             <RadioButton
                 android:text="english"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:id="@+id/english" />
+                android:id="@+id/radioButton5" />
 
             <RadioButton
                 android:text="RadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/russian"
+                android:id="@+id/radioButton50"
                 tools:text="russian" />
 
             <RadioButton
                 android:text="arabic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/arabic" />
+                android:id="@+id/radioButton6" />
 
         </RadioGroup>
 
