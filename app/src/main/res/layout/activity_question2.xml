@@ -67,27 +67,27 @@
             android:id="@+id/rgQ5">
 
             <RadioButton
-                android:text="@string/jaz"
+                android:text="jaz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton17" />
 
             <RadioButton
-                android:text="@string/rock"
+                android:text="rock"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton18" />
 
             <RadioButton
-                android:text="@string/pollack"
-                android:layout_width="match_parent"
+                android:text="pollack"
+                android:layout_width="wrap_content"
                 android:layout_height="43dp"
                 android:id="@+id/radioButton19" />
 
         </RadioGroup>
 
         <TextView
-            android:text="@string/religion"
+            android:text="religion"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:id="@+id/textView12" />
@@ -98,19 +98,19 @@
             android:id="@+id/rgQ6">
 
             <RadioButton
-                android:text="@string/chazanout"
+                android:text="chazanout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton10" />
 
             <RadioButton
-                android:text="from prayer"
+                android:text="@string/from_pray"
                 android:layout_width="wrap_content"
                 android:layout_height="53dp"
                 android:id="@+id/radioButton11" />
 
             <RadioButton
-                android:text="propnents"
+                android:text="@string/propnents"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton7" />

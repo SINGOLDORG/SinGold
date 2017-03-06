@@ -26,7 +26,7 @@
             android:id="@+id/imageView3" />
 
         <TextView
-            android:text="ma7azot"
+            android:text="@string/ma7azot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ma7azot"
@@ -38,11 +38,11 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/answer4"
-            android:hint="answer"
+            android:hint="@string/answer"
             android:layout_weight="0.06" />
 
         <TextView
-            android:text="disk"
+            android:text="@string/disk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/disk"
@@ -54,11 +54,11 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/answer5"
-            android:hint="answer"
+            android:hint="@string/answer"
             android:layout_weight="0.06" />
 
         <TextView
-            android:text="favorite singer"
+            android:text="@string/favorite_singer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/favoritesong"
@@ -70,10 +70,10 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/answer6"
-            android:hint="answer" />
+            android:hint="@string/answer" />
 
         <TextView
-            android:text="What song played in his weedimg"
+            android:text="@string/weeding_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/weddingsong"
@@ -85,10 +85,10 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/answer7"
-            android:hint="answer" />
+            android:hint="@string/answer" />
 
         <TextView
-            android:text="favorite song"
+            android:text="@string/favorite_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/favorite"
@@ -100,7 +100,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/answer8"
-            android:hint="answer" />
+            android:hint="@string/answer" />
 
     </LinearLayout>
 </RelativeLayout>

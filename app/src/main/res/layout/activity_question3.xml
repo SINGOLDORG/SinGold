@@ -27,7 +27,7 @@
             android:id="@+id/imageView2" />
 
         <TextView
-            android:text="relaxing "
+            android:text="@string/relaxing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/relaxing"
@@ -40,13 +40,13 @@
             android:layout_weight="0.12">
 
             <RadioButton
-                android:text="runnig water"
+                android:text="@string/runnig_water"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/runningwater" />
 
             <RadioButton
-                android:text="insteumental"
+                android:text="@string/insteumental"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/insteumental" />
@@ -54,7 +54,7 @@
         </RadioGroup>
 
         <TextView
-            android:text="country"
+            android:text="@string/country"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:id="@+id/country"
@@ -66,11 +66,11 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/answer1"
-            android:hint="answer"
+            android:hint="@string/answer"
             android:layout_weight="0.07" />
 
         <TextView
-            android:text="What music did he here in his home?"
+            android:text="@string/homemusic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/homemusic"
@@ -82,11 +82,11 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/answer2"
-            android:layout_weight="0.14"
-            android:hint="answer" />
+            android:layout_weight="0.06"
+            android:hint="@string/answer" />
 
         <TextView
-            android:text="what music he listhened whan he wae young?"
+            android:text="@string/young"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/youngmusic"

@@ -54,4 +54,19 @@
     <string name="pollack">pollack</string>
     <string name="religion">religion</string>
     <string name="chazanout">chazanout</string>
+    <string name="from_pray">from pray</string>
+    <string name="propnrmts">propnrmts</string>
+    <string name="propnents">propnents</string>
+    <string name="relaxing">relaxing</string>
+    <string name="runnig_water">runnig water</string>
+    <string name="insteumental">insteumental</string>
+    <string name="country">country</string>
+    <string name="answer">answer</string>
+    <string name="homemusic">What music did he here in his home?</string>
+    <string name="young">what music he listened whan he wae young?</string>
+    <string name="ma7azot">ma7azot</string>
+    <string name="disk">disk</string>
+    <string name="favorite_singer">favorite singer</string>
+    <string name="weeding_song">weeding song</string>
+    <string name="favorite_song">favorite song</string>
 </resources>
