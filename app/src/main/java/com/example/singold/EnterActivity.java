@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class EnterActivity extends AppCompatActivity
 {
     private Button login,sign;
     private EditText username,id;
+    private ImageView i;
 
     @Override
 
@@ -23,6 +25,7 @@ public class EnterActivity extends AppCompatActivity
         sign=(Button)findViewById(R.id.sign);
         username=(EditText)findViewById(R.id.username);
         id=(EditText)findViewById(R.id.id1);
+        i=(ImageView)findViewById(R.id.i);
     }
     private void dataHandler()
     {
@@ -52,6 +55,11 @@ public class EnterActivity extends AppCompatActivity
         if (v==sign)
         {
             Intent intent=new Intent(getBaseContext(),InformationActivity.class);
+            startActivity(intent);
+        }
+        if (v==i)
+        {
+            Intent intent=new Intent(getBaseContext(),WelcomeActivity.class);
             startActivity(intent);
         }
     }
