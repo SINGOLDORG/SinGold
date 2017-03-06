@@ -76,7 +76,7 @@
             android:text="What song played in his weedimg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView15"
+            android:id="@+id/weddingsong"
             android:layout_weight="0.15" />
 
         <EditText
@@ -84,14 +84,14 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText7"
+            android:id="@+id/answer7"
             android:hint="answer" />
 
         <TextView
             android:text="favorite song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView16"
+            android:id="@+id/favorite"
             android:layout_weight="0.13" />
 
         <EditText
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText8"
+            android:id="@+id/answer8"
             android:hint="answer" />
 
     </LinearLayout>
