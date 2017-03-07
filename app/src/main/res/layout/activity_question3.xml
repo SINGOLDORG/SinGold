@@ -17,7 +17,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:weightSum="1">
 
         <ImageView
             android:layout_width="match_parent"
@@ -26,111 +27,78 @@
             android:id="@+id/imageView2" />
 
         <TextView
-            android:text="TextView"
+            android:text="@string/relaxing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView7" />
+            android:id="@+id/relaxing"
+            android:layout_weight="0.15" />
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rgQ7">
+            android:id="@+id/rgQ7"
+            android:layout_weight="0.12">
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="@string/runnig_water"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton25" />
+                android:id="@+id/runningwater" />
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="@string/insteumental"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton26" />
+                android:id="@+id/insteumental" />
 
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton27" />
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton28" />
         </RadioGroup>
 
         <TextView
-            android:text="TextView"
+            android:text="@string/country"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/country"
+            android:layout_weight="0.20" />
+
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView8" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rgQ8">
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton29" />
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton30" />
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton31" />
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton32" />
-        </RadioGroup>
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/answer1"
+            android:hint="@string/answer"
+            android:layout_weight="0.07" />
 
         <TextView
-            android:text="TextView"
+            android:text="@string/homemusic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9" />
+            android:id="@+id/homemusic"
+            android:layout_weight="0.17" />
 
-        <RadioGroup
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/rgQ9">
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/answer2"
+            android:layout_weight="0.06"
+            android:hint="@string/answer" />
 
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton33" />
+        <TextView
+            android:text="@string/young"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/youngmusic"
+            android:layout_weight="0.18" />
 
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton34" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/answer3"
+            android:hint="answer" />
 
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton35" />
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton36" />
-        </RadioGroup>
     </LinearLayout>
 </RelativeLayout>

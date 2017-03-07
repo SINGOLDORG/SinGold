@@ -7,6 +7,8 @@ package com.example.singold.data;
 public class PatientDetails {
     @com.google.gson.annotations.SerializedName("id")
     private String id;
+    @com.google.gson.annotations.SerializedName("idUser")
+    private String idUser;
     @com.google.gson.annotations.SerializedName("fName")
     private String fName;
     @com.google.gson.annotations.SerializedName("lName")
@@ -29,6 +31,14 @@ public class PatientDetails {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
     }
 
     public String getfName() {

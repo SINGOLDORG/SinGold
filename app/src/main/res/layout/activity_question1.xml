@@ -24,82 +24,79 @@
             android:id="@+id/imageView5" />
 
         <TextView
-            android:text="TextView"
+            android:text="@string/classical_music"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView1" />
+            android:id="@+id/textView1"
+            android:layout_weight="0.36" />
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rgQ1">
+            android:id="@+id/rgQ1"
+            android:layout_weight="0.14">
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="@string/opera"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton1" />
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="@string/classical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton2" />
 
+        </RadioGroup>
+
+        <TextView
+            android:text="@string/Israel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_weight="0.20" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgQ2"
+            android:layout_weight="0.16">
+
             <RadioButton
-                android:text="RadioButton"
+                android:text="@string/army_bands"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton12"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="songs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton49"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="bands"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton3" />
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="folk dances"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton4" />
+
         </RadioGroup>
 
         <TextView
-            android:text="TextView"
+            android:text="languages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rgQ2">
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton5" />
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton6" />
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton7" />
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton8" />
-        </RadioGroup>
-
-        <TextView
-            android:text="TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3" />
+            android:id="@+id/textView3"
+            android:layout_weight="0.20" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -107,28 +104,36 @@
             android:id="@+id/rgQ3">
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="yiddish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton9" />
+                android:id="@+id/radioButton51" />
+
+            <RadioButton
+                android:text="hebrew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton20" />
+
+            <RadioButton
+                android:text="english"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/radioButton5" />
 
             <RadioButton
                 android:text="RadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton10" />
+                android:id="@+id/radioButton50"
+                tools:text="russian" />
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="arabic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton11" />
+                android:id="@+id/radioButton6" />
 
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton12" />
         </RadioGroup>
 
     </LinearLayout>
