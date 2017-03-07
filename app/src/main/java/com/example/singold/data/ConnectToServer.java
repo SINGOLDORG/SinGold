@@ -2,6 +2,7 @@ package com.example.singold.data;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Build;
 
@@ -42,12 +43,15 @@ public  class ConnectToServer {
     private static MobileServiceTable<PatientSurvey> patientSurveyTable;
     private static MobileServiceTable<halfSurvey> HalfSurveyTable;
 
-    private MobileServiceTable<ToDoItem> mToDoTable;
+    private static MobileServiceTable<ToDoItem> mToDoTable;
+    private  static  ProgressDialog dialog;
 
 
     private static Activity context;
 
     public static void connet(Activity context) {
+        dialog=new ProgressDialog(context);
+        dialog.setMessage("Wait...");
         ConnectToServer.context = context;
         try {
             // Create the Mobile Service Client instance, using the provided
@@ -75,7 +79,7 @@ public  class ConnectToServer {
 
     }
 
-    private void createAndShowDialogFromTask(final Exception exception, String title) {
+    private static void createAndShowDialogFromTask(final Exception exception, String title) {
         context.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -119,7 +123,7 @@ public  class ConnectToServer {
      * @param task
      * @return
      */
-    private AsyncTask<Void, Void, Void> runAsyncTask(AsyncTask<Void, Void, Void> task) {
+    public static AsyncTask<Void, Void, Void> runAsyncTask(AsyncTask<Void, Void, Void> task) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             return task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         } else {
@@ -127,7 +131,7 @@ public  class ConnectToServer {
         }
     }
 
-    private static class ProgressFilter implements ServiceFilter {
+    public static class ProgressFilter implements ServiceFilter {
 
         @Override
         public ListenableFuture<ServiceFilterResponse> handleRequest(ServiceFilterRequest request, NextServiceFilterCallback nextServiceFilterCallback) {
@@ -140,6 +144,9 @@ public  class ConnectToServer {
                 @Override
                 public void run() {
                     //  if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.VISIBLE);
+                    if(dialog!=null)
+                        dialog.show();
+
                 }
             });
 
@@ -158,6 +165,8 @@ public  class ConnectToServer {
                         @Override
                         public void run() {
                             //    if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.GONE);
+                            if(dialog!=null)
+                                dialog.dismiss();
                         }
                     });
 
@@ -174,7 +183,7 @@ public  class ConnectToServer {
      *
      * @param item The item to Add
      */
-    public void addInTable(final User item) throws ExecutionException, InterruptedException {
+    public static void addInTable(final User item) throws ExecutionException, InterruptedException {
         final User[] entity = {null};
         if (userTable == null)
             userTable = mClient.getTable(User.class);
@@ -187,9 +196,8 @@ public  class ConnectToServer {
                     context.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-//                            if(!entity.isComplete()){
-//                                ///mAdapter.add(entity);
-//                            }
+                            if(dialog!=null)dialog.show();
+
                         }
                     });
                 } catch (final Exception e) {
@@ -200,13 +208,15 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
+                if(dialog!=null)dialog.dismiss();
+
             }
         };
 
         runAsyncTask(task);
     }
 
-    public void addInTable(final ToDoItem item) throws ExecutionException, InterruptedException {
+    public  static void addInTable(final ToDoItem item) throws ExecutionException, InterruptedException {
         ;
         if (mToDoTable == null)
             mToDoTable = mClient.getTable(ToDoItem.class);
@@ -222,6 +232,8 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
+                            if(dialog!=null)dialog.show();
+
                         }
                     });
                 } catch (final Exception e) {
@@ -232,12 +244,14 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
+                if(dialog!=null)dialog.dismiss();
+
             }
         };
 
         runAsyncTask(task);
     }
-    public void addInTable(final Song item) throws ExecutionException, InterruptedException {
+    public static void addInTable(final Song item) throws ExecutionException, InterruptedException {
         ;
         if (songTable == null)
             songTable = mClient.getTable(Song.class);
@@ -252,6 +266,8 @@ public  class ConnectToServer {
                         public void run() {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
+                            if(dialog!=null)dialog.show();
+
 //                            }
                         }
                     });
@@ -263,12 +279,14 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
+                if(dialog!=null)dialog.dismiss();
+
             }
         };
 
         runAsyncTask(task);
     }
-    public void addInTable(final PatientSurvey item) throws ExecutionException, InterruptedException {
+    public static void addInTable(final PatientSurvey item) throws ExecutionException, InterruptedException {
         ;
         if (patientSurveyTable == null)
             patientSurveyTable = mClient.getTable(PatientSurvey.class);
@@ -284,6 +302,8 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
+                            if(dialog!=null)dialog.show();
+
                         }
                     });
                 } catch (final Exception e) {
@@ -294,13 +314,15 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
+                if(dialog!=null)dialog.dismiss();
+
             }
         };
 
         runAsyncTask(task);
     }
 
-    public void addInTable(final PatientDetails item) throws ExecutionException, InterruptedException {
+    public static void addInTable(final PatientDetails item) throws ExecutionException, InterruptedException {
         ;
         if (patientDetailsTable == null)
             patientDetailsTable = mClient.getTable(PatientDetails.class);
@@ -316,6 +338,8 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
+                            if(dialog!=null)dialog.show();
+
                         }
                     });
                 } catch (final Exception e) {
@@ -326,12 +350,14 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
+                if(dialog!=null)dialog.dismiss();
+
             }
         };
 
         runAsyncTask(task);
     }
-    public void addInTable(final halfSurvey item) throws ExecutionException, InterruptedException {
+    public static void addInTable(final halfSurvey item) throws ExecutionException, InterruptedException {
         ;
         if (HalfSurveyTable == null)
             HalfSurveyTable = mClient.getTable(halfSurvey.class);
@@ -347,6 +373,8 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
+                            if(dialog!=null)dialog.show();
+
                         }
                     });
                 } catch (final Exception e) {
@@ -357,6 +385,8 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
+                if(dialog!=null)dialog.dismiss();
+
             }
         };
 

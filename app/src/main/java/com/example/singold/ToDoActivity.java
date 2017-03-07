@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.ToDoItem;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -93,7 +94,7 @@ public class ToDoActivity extends Activity {
             // Mobile Service URL and key
             mClient = new MobileServiceClient(
                     "https://singold2.azurewebsites.net",
-                    this).withFilter(new ProgressFilter());
+                    this).withFilter(new ConnectToServer.ProgressFilter());
 
             // Extend timeout from default of 10s to 20s
             mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
@@ -220,32 +221,40 @@ public class ToDoActivity extends Activity {
 
         item.setText(mTextNewToDo.getText().toString());
         item.setComplete(false);
+        ConnectToServer.connet(this);
+        try {
+            ConnectToServer.addInTable(item);
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-        // Insert the newp item
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected Void doInBackground(Void... params) {
-                try {
-                    final ToDoItem entity = addItemInTable(item);
-
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if(!entity.isComplete()){
-                                mAdapter.add(entity);
-                            }
-                        }
-                    });
-                } catch (final Exception e) {
-                    createAndShowDialogFromTask(e, "Error");
-                }
-                return null;
-            }
-        };
-
-        runAsyncTask(task);
-
-        mTextNewToDo.setText("");
+//        // Insert the newp item
+//        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
+//            @Override
+//            protected Void doInBackground(Void... params) {
+//                try {
+//                    final ToDoItem entity = addItemInTable(item);
+//
+//                    runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            if(!entity.isComplete()){
+//                                mAdapter.add(entity);
+//                            }
+//                        }
+//                    });
+//                } catch (final Exception e) {
+//                    createAndShowDialogFromTask(e, "Error");
+//                }
+//                return null;
+//            }
+//        };
+//
+//        runAsyncTask(task);
+//
+//        mTextNewToDo.setText("");
     }
 
     /**
