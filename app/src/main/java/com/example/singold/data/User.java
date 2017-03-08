@@ -22,8 +22,9 @@ public class User
     private String save;
 
     public User()
+
     {
-       User u=new User();
+
     }
 
     public String getId() {
