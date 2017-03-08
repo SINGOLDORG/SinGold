@@ -20,7 +20,10 @@ public class User
     private String confId;
     @com.google.gson.annotations.SerializedName("save")
     private String save;
-    public User() {
+
+    public User()
+    {
+       User u=new User();
     }
 
     public String getId() {

@@ -57,6 +57,10 @@ public class InformationActivity extends AppCompatActivity {
             confirmid.setError("Wrong confirmate");
             isok = false;
         }
+        if (isok==true)
+        {
+
+        }
 
     }
 
