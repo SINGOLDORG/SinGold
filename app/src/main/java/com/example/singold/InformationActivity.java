@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.singold.data.User;
+
 public class InformationActivity extends AppCompatActivity {
     private EditText first, last, username, id, confirmid;
     private Button save;
@@ -56,6 +58,16 @@ public class InformationActivity extends AppCompatActivity {
         {
             confirmid.setError("Wrong confirmate");
             isok = false;
+        }
+
+        if(isok==true)
+        {
+            User u=new User();
+            u.setfName(stFirst);
+            u.setlName(stLast);
+            u.setUsername(stUsername);
+            u.setEnterId(stId);
+            u.setConfId(stConfirmid);
         }
 
     }

@@ -14,14 +14,15 @@ public class User
     private String fName;
     @com.google.gson.annotations.SerializedName("lName")
     private String lName;
+    @com.google.gson.annotations.SerializedName("username")
+    private String username;
     @com.google.gson.annotations.SerializedName("EnterId")
     private String EnterId;
     @com.google.gson.annotations.SerializedName("confId")
     private String confId;
-    @com.google.gson.annotations.SerializedName("save")
-    private String save;
-    public User() {
-    }
+
+
+    public User() {}
 
     public String getId() {
         return id;
@@ -55,6 +56,14 @@ public class User
         this.lName = lName;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getEnterId() {
         return EnterId;
     }
@@ -71,11 +80,4 @@ public class User
         this.confId = confId;
     }
 
-    public String getSave() {
-        return save;
-    }
-
-    public void setSave(String save) {
-        this.save = save;
-    }
 }

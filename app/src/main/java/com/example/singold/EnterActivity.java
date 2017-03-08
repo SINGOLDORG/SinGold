@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.example.singold.data.Login;
+import com.example.singold.data.User;
+
 public class EnterActivity extends AppCompatActivity
 {
     private Button login,sign;
@@ -43,7 +46,13 @@ public class EnterActivity extends AppCompatActivity
             id.setError("Wrong id");
             isok=false;
         }
-    }
+        if (isok==true)
+        {
+            Login login=new Login();
+            login.setUsername(stUsername);
+            login.setId(stId);
+        }
+}
     public void onClick(View v)
     {
         if(v==login)
