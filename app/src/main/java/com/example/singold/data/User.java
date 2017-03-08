@@ -21,7 +21,6 @@ public class User
     @com.google.gson.annotations.SerializedName("confId")
     private String confId;
 
-
     public User() {}
 
     public String getId() {

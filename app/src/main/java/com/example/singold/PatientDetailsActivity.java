@@ -9,6 +9,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.singold.data.ConnectToServer;
+import com.example.singold.data.PatientDetails;
+
 public class PatientDetailsActivity extends AppCompatActivity {
     private TextView details;
     private EditText first, last, familyphone, address, year, personalid;
@@ -61,6 +64,19 @@ public class PatientDetailsActivity extends AppCompatActivity {
         if (stPersonalid.length() == 0) {
             personalid.setError("Wrong personal id");
             isok = false;
+        }
+        if (isok==true)
+        {
+            PatientDetails patientDetails=new PatientDetails();
+            patientDetails.setId(stPersonalid);
+            patientDetails.setfName(stFirst);
+            patientDetails.setlName(stLast);
+            patientDetails.setFamilyPhone(stFamilyphone);
+            patientDetails.setAddress(stAddress);
+            patientDetails.setYear(stYear);
+            ConnectToServer.addInTable(patientDetails);
+
+
         }
     }
 }
