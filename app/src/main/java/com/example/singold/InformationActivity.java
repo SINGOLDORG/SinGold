@@ -1,5 +1,6 @@
 package com.example.singold;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.User;
 
 public class InformationActivity extends AppCompatActivity {
@@ -68,6 +70,8 @@ public class InformationActivity extends AppCompatActivity {
             u.setUsername(stUsername);
             u.setEnterId(stId);
             u.setConfId(stConfirmid);
+            ConnectToServer.addInTable(u);
+
         }
 
     }
