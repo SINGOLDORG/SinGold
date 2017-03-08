@@ -24,7 +24,7 @@
             android:id="@+id/imageView5" />
 
         <TextView
-            android:text="@string/classical_music"
+            android:text="@string/classic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView1"
@@ -76,12 +76,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton49"
                 android:layout_weight="1" />
-
-            <RadioButton
-                android:text="bands"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton3" />
 
             <RadioButton
                 android:text="folk dances"
