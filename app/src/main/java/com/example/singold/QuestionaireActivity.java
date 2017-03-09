@@ -15,7 +15,11 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class QuestionaireActivity extends AppCompatActivity {
@@ -28,19 +32,26 @@ public class QuestionaireActivity extends AppCompatActivity {
     private Button btnSkip, btnNext;
     private PrefManager prefManager;
 
+    private ImageView image1;
+    private ImageView image2;
+    private ImageView image3;
+    private ImageView image4;
+    private TextView Q1;
+    private RadioGroup rgQ1;
+    private RadioButton opera;
+    private RadioButton classical;
+    private TextView Q2;
+    private RadioGroup rgQ2;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         viewPager=(ViewPager)findViewById(R.id.viewpager);
-        myViewPagerAdapter=(myViewPagerAdapter)findViewById(R.id.myViewPageAdapter);
-        dotsLayout=(linearLayout)findViewById(R.id.layoutDots);
-        dots=(TextView[])findViewById(R.id.dots);
-        layouts=(int[])findViewById(R.id.layouts);
-        btnNext=(Button)findViewById(R.id.btn_next);
-        btnSkip=(Button)findViewById(R.id.btn_skip);
-        prefManager=(prefManager)findViewById(R.id.prefManager);
+
 
 
         // Checking for first time launch - before calling setContentView()

@@ -9,26 +9,27 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.zumoappname.Question1Activity">
+    tools:context="com.example.singold.QuestionaireActivity">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearlayout2">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/name"
-            android:id="@+id/11" />
+            android:id="@+id/image2" />
 
         <TextView
             android:text="@string/dance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/dance" />
+            android:id="@+id/textView4" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -39,19 +40,19 @@
                 android:text="@string/waltz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/waltz" />
+                android:id="@+id/radioButton13" />
 
             <RadioButton
                 android:text="@string/tango"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tango" />
+                android:id="@+id/radioButton14" />
 
             <RadioButton
                 android:text="@string/samba"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/samba" />
+                android:id="@+id/radioButton15" />
 
         </RadioGroup>
 

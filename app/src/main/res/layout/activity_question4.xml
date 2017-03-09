@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.singold.Question4Activity">
+    tools:context="com.example.singold.QuestionaireActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -17,13 +17,14 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:id="@+id/linearlayout4">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/name"
-            android:id="@+id/imageView3" />
+            android:id="@+id/image4" />
 
         <TextView
             android:text="@string/ma7azot"
