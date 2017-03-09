@@ -49,7 +49,7 @@ public  class ConnectToServer {
     private  static  ProgressDialog dialog;
 
 
-    private static Activity context;
+    public static Activity context;
 
     public static void connet(Activity context) {
         dialog=new ProgressDialog(context);
@@ -61,7 +61,7 @@ public  class ConnectToServer {
             // Mobile Service URL and key
             mClient = new MobileServiceClient(
                     "https://singold2.azurewebsites.net",
-                    context).withFilter(new ProgressFilter());
+                    context).withFilter(new ProgressFilter(context));
 
             // Extend timeout from default of 10s to 20s
             mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
@@ -134,6 +134,11 @@ public  class ConnectToServer {
     }
 
     public static class ProgressFilter implements ServiceFilter {
+
+        public ProgressFilter(Activity activity)
+        {
+            context=activity;
+        }
 
         @Override
         public ListenableFuture<ServiceFilterResponse> handleRequest(ServiceFilterRequest request, NextServiceFilterCallback nextServiceFilterCallback) {
