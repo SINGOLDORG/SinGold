@@ -76,14 +76,14 @@
                 android:text="@string/songs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/songs1"
+                android:id="@+id/songs"
                 android:layout_weight="1" />
 
             <RadioButton
                 android:text="@string/folk_dance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/folk_dances" />
+                android:id="@+id/folkDances" />
 
         </RadioGroup>
 
