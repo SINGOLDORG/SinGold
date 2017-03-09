@@ -28,9 +28,20 @@ public class QuestionaireActivity extends AppCompatActivity {
     private Button btnSkip, btnNext;
     private PrefManager prefManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        viewPager=(ViewPager)findViewById(R.id.viewpager);
+        myViewPagerAdapter=(myViewPagerAdapter)findViewById(R.id.myViewPageAdapter);
+        dotsLayout=(linearLayout)findViewById(R.id.layoutDots);
+        dots=(TextView[])findViewById(R.id.dots);
+        layouts=(int[])findViewById(R.id.layouts);
+        btnNext=(Button)findViewById(R.id.btn_next);
+        btnSkip=(Button)findViewById(R.id.btn_skip);
+        prefManager=(prefManager)findViewById(R.id.prefManager);
+
 
         // Checking for first time launch - before calling setContentView()
 //        prefManager = new PrefManager(this);
