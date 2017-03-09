@@ -11,6 +11,8 @@ import android.widget.EditText;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.User;
 
+import java.util.concurrent.ExecutionException;
+
 public class InformationActivity extends AppCompatActivity {
     private EditText first, last, username, id, confirmid;
     private Button save;
@@ -70,7 +72,13 @@ public class InformationActivity extends AppCompatActivity {
             u.setUsername(stUsername);
             u.setEnterId(stId);
             u.setConfId(stConfirmid);
-            ConnectToServer.addInTable(u);
+            try {
+                ConnectToServer.addInTable(u);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
         }
 
