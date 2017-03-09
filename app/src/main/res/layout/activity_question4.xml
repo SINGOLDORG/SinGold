@@ -92,7 +92,7 @@
             android:text="@string/favorite_song"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/favorite"
+            android:id="@+id/favoriteSong"
             android:layout_weight="0.13" />
 
         <EditText
