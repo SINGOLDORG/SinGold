@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -45,6 +46,41 @@ public class QuestionaireActivity extends AppCompatActivity {
     private RadioButton russian;
     private RadioButton arabic;
     private TextView Q4;
+    private RadioGroup rgQ4;
+    private RadioButton waltz;
+    private RadioButton tango;
+    private RadioButton samba;
+    private TextView Q5;
+    private RadioGroup rgQ5;
+    private RadioButton jaz;
+    private RadioButton rock;
+    private RadioButton pollack;
+    private TextView Q6;
+    private RadioGroup rgQ6;
+    private RadioButton chazanout;
+    private RadioButton frompray;
+    private RadioButton propnents;
+    private TextView Q7;
+    private RadioGroup rgQ7;
+    private RadioButton runningwater;
+    private RadioButton insteumental;
+    private TextView country;
+    private EditText answer1;
+    private TextView homemusic;
+    private EditText answer2;
+    private TextView youngmusic;
+    private EditText answer3;
+    private TextView ma7azot;
+    private EditText answer4;
+    private TextView disk;
+    private EditText answer5;
+    private TextView favoritesinger;
+    private EditText answer6;
+    private TextView weddingsong;
+    private EditText answer7;
+    private TextView favoritesong;
+    private EditText answer8;
+
 
 
 
