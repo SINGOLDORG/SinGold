@@ -22,8 +22,16 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
+            android:id="@+id/editText4"
+            android:hint="patient id" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
             android:id="@+id/theSongName"
-            android:hint="@string/The_Song_Name" />
+            android:hint="the_song_name" />
 
         <EditText
             android:layout_width="match_parent"
@@ -31,7 +39,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/singer"
-            android:hint="@string/singer" />
+            android:hint="singer" />
 
         <EditText
             android:layout_width="match_parent"
@@ -39,12 +47,12 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/link"
-            android:hint="@string/Link" />
+            android:hint="link" />
 
         <Button
             android:text="save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button2" />
+            android:id="@+id/save" />
     </LinearLayout>
 </RelativeLayout>
