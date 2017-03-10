@@ -70,4 +70,6 @@
     <string name="favorite_singer">favorite singer</string>
     <string name="weeding_song">weeding song</string>
     <string name="favorite_song">favorite song</string>
+    <string name="songs1">songs</string>
+    <string name="folk_dances">folk dances</string>
 </resources>

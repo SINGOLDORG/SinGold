@@ -4,7 +4,7 @@ package com.example.singold.data;
  * Created by user on 02/03/2017.
  */
 
-public class halfSurvey {
+public class HalfSurvey {
     @com.google.gson.annotations.SerializedName("id")
     private String id;
     @com.google.gson.annotations.SerializedName("country")
@@ -18,7 +18,7 @@ public class halfSurvey {
 
     //religion??
 
-    public halfSurvey(){}
+    public HalfSurvey(){}
 
     public String getId() {
         return id;

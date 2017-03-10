@@ -12,6 +12,8 @@ import android.widget.TextView;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.PatientDetails;
 
+import java.util.concurrent.ExecutionException;
+
 public class PatientDetailsActivity extends AppCompatActivity {
     private TextView details;
     private EditText first, last, familyphone, address, year, personalid;
@@ -74,7 +76,13 @@ public class PatientDetailsActivity extends AppCompatActivity {
             patientDetails.setFamilyPhone(stFamilyphone);
             patientDetails.setAddress(stAddress);
             patientDetails.setYear(stYear);
-            ConnectToServer.addInTable(patientDetails);
+            try {
+                ConnectToServer.addInTable(patientDetails);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
 
         }

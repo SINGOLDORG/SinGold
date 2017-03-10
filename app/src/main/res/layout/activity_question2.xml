@@ -9,111 +9,115 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.zumoappname.Question1Activity">
+    tools:context="com.example.singold.QuestionaireActivity">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearlayout2">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/name"
-            android:id="@+id/imageView" />
+            android:id="@+id/image2" />
 
         <TextView
             android:text="@string/dance"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4" />
+            android:layout_height="46dp"
+            android:id="@+id/Q4" />
 
         <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rgQ4">
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:id="@+id/rgQ4"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:text="@string/waltz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton13" />
+                android:id="@+id/waltz" />
 
             <RadioButton
                 android:text="@string/tango"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton14" />
+                android:id="@+id/tango" />
 
             <RadioButton
                 android:text="@string/samba"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton15" />
+                android:id="@+id/samba" />
 
         </RadioGroup>
 
         <TextView
             android:text="@string/loazi"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView5" />
+            android:layout_height="42dp"
+            android:id="@+id/Q5" />
 
         <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rgQ5">
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:id="@+id/rgQ5"
+            android:orientation="horizontal">
 
             <RadioButton
-                android:text="jaz"
+                android:text="@string/jaz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton17" />
+                android:id="@+id/jaz" />
 
             <RadioButton
-                android:text="rock"
+                android:text="@string/rock"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton18" />
+                android:id="@+id/rock" />
 
             <RadioButton
-                android:text="pollack"
+                android:text="@string/pollack"
                 android:layout_width="wrap_content"
                 android:layout_height="43dp"
-                android:id="@+id/radioButton19" />
+                android:id="@+id/pollack" />
 
         </RadioGroup>
 
         <TextView
             android:text="religion"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:id="@+id/textView12" />
+            android:layout_height="69dp"
+            android:id="@+id/Q6" />
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/rgQ6">
+            android:id="@+id/rgQ6"
+            android:orientation="horizontal">
 
             <RadioButton
-                android:text="chazanout"
+                android:text="@string/chazanout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton10" />
+                android:id="@+id/chazanout" />
 
             <RadioButton
                 android:text="@string/from_pray"
                 android:layout_width="wrap_content"
                 android:layout_height="53dp"
-                android:id="@+id/radioButton11" />
+                android:id="@+id/fromPray" />
 
             <RadioButton
                 android:text="@string/propnents"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioButton7" />
+                android:id="@+id/propnents" />
 
         </RadioGroup>
     </LinearLayout>

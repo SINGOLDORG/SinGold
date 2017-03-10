@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.zumoappname.Question1Activity">
+    tools:context="com.example.singold.QuestionaireActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,25 +18,27 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:id="@+id/linearlayout3">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/name"
-            android:id="@+id/imageView2" />
+            android:id="@+id/image3" />
 
         <TextView
             android:text="@string/relaxing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/relaxing"
+            android:id="@+id/Q7"
             android:layout_weight="0.15" />
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/rgQ7"
+            android:orientation="horizontal"
             android:layout_weight="0.12">
 
             <RadioButton
@@ -58,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:id="@+id/country"
-            android:layout_weight="0.20" />
+            android:layout_weight="0.22" />
 
         <EditText
             android:layout_width="match_parent"
