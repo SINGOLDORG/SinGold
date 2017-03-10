@@ -24,14 +24,6 @@ import android.widget.TextView;
 
 public class QuestionaireActivity extends AppCompatActivity {
 
-    private ViewPager viewPager;
-    private MyViewPagerAdapter myViewPagerAdapter;
-    private LinearLayout dotsLayout;
-    private TextView[] dots;
-    private int[] layouts;
-    private Button btnSkip, btnNext;
-    private PrefManager prefManager;
-
     private ImageView image1;
     private ImageView image2;
     private ImageView image3;
@@ -52,11 +44,19 @@ public class QuestionaireActivity extends AppCompatActivity {
     private RadioButton english;
     private RadioButton russian;
     private RadioButton arabic;
+    private TextView Q4;
 
 
 
 
 
+    private ViewPager viewPager;
+    private MyViewPagerAdapter myViewPagerAdapter;
+    private LinearLayout dotsLayout;
+    private TextView[] dots;
+    private int[] layouts;
+    private Button btnSkip, btnNext;
+    private PrefManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
