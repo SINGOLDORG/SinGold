@@ -41,13 +41,15 @@ public  class ConnectToServer {
     private static MobileServiceTable<Song> songTable;
     private static MobileServiceTable<PatientDetails> patientDetailsTable;
     private static MobileServiceTable<PatientSurvey> patientSurveyTable;
-    private static MobileServiceTable<halfSurvey> HalfSurveyTable;
+    private static MobileServiceTable<HalfSurvey> HalfSurveyTable;
+    private static MobileServiceTable<Login> loginTable;
+
 
     private static MobileServiceTable<ToDoItem> mToDoTable;
     private  static  ProgressDialog dialog;
 
 
-    private static Activity context;
+    public static Activity context;
 
     public static void connet(Activity context) {
         dialog=new ProgressDialog(context);
@@ -59,7 +61,7 @@ public  class ConnectToServer {
             // Mobile Service URL and key
             mClient = new MobileServiceClient(
                     "https://singold2.azurewebsites.net",
-                    context).withFilter(new ProgressFilter());
+                    context).withFilter(new ProgressFilter(context));
 
             // Extend timeout from default of 10s to 20s
             mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
@@ -132,6 +134,11 @@ public  class ConnectToServer {
     }
 
     public static class ProgressFilter implements ServiceFilter {
+
+        public ProgressFilter(Activity activity)
+        {
+            context=activity;
+        }
 
         @Override
         public ListenableFuture<ServiceFilterResponse> handleRequest(ServiceFilterRequest request, NextServiceFilterCallback nextServiceFilterCallback) {
@@ -225,6 +232,41 @@ public  class ConnectToServer {
             protected Void doInBackground(Void... params) {
                 try {
                     final ToDoItem entity = mToDoTable.insert(item).get();
+
+                    context.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+//                            if(!entity.isComplete()){
+//                                ///mAdapter.add(entity);
+//                            }
+                            if(dialog!=null)dialog.show();
+
+                        }
+                    });
+                } catch (final Exception e) {
+                    createAndShowDialogFromTask(e, "Error");
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                if(dialog!=null)dialog.dismiss();
+
+            }
+        };
+
+        runAsyncTask(task);
+    }
+    public  static void addInTable(final Login item) throws ExecutionException, InterruptedException {
+        ;
+        if (loginTable == null)
+            loginTable = mClient.getTable(Login.class);
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                try {
+                    final Login entity = loginTable.insert(item).get();
 
                     context.runOnUiThread(new Runnable() {
                         @Override
@@ -357,15 +399,15 @@ public  class ConnectToServer {
 
         runAsyncTask(task);
     }
-    public static void addInTable(final halfSurvey item) throws ExecutionException, InterruptedException {
+    public static void addInTable(final HalfSurvey item) throws ExecutionException, InterruptedException {
         ;
         if (HalfSurveyTable == null)
-            HalfSurveyTable = mClient.getTable(halfSurvey.class);
+            HalfSurveyTable = mClient.getTable(HalfSurvey.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 try {
-                    final halfSurvey entity = HalfSurveyTable.insert(item).get();
+                    final HalfSurvey entity = HalfSurveyTable.insert(item).get();
 
                     context.runOnUiThread(new Runnable() {
                         @Override

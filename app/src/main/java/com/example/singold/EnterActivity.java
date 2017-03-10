@@ -13,6 +13,8 @@ import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.Login;
 import com.example.singold.data.User;
 
+import java.util.concurrent.ExecutionException;
+
 public class EnterActivity extends AppCompatActivity
 {
     private Button login,sign;
@@ -52,7 +54,13 @@ public class EnterActivity extends AppCompatActivity
             Login login=new Login();
             login.setUsername(stUsername);
             login.setId(stId);
-            ConnectToServer.addInTable();
+            try {
+                ConnectToServer.addInTable(login);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
         }
 }
