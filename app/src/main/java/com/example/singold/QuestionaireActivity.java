@@ -25,63 +25,40 @@ import android.widget.TextView;
 
 public class QuestionaireActivity extends AppCompatActivity {
 
-    private ImageView image1;
-    private ImageView image2;
-    private ImageView image3;
-    private ImageView image4;
-    private TextView Q1;
-    private RadioGroup rgQ1;
-    private RadioButton opera;
-    private RadioButton classical;
-    private TextView Q2;
-    private RadioGroup rgQ2;
-    private RadioButton armyBands;
-    private RadioButton songs;
-    private RadioButton folkDances;
-    private TextView Q3;
-    private RadioGroup rgQ3;
-    private RadioButton yiddish;
-    private RadioButton hebrew;
-    private RadioButton english;
-    private RadioButton russian;
-    private RadioButton arabic;
-    private TextView Q4;
-    private RadioGroup rgQ4;
-    private RadioButton waltz;
-    private RadioButton tango;
-    private RadioButton samba;
-    private TextView Q5;
-    private RadioGroup rgQ5;
-    private RadioButton jaz;
-    private RadioButton rock;
-    private RadioButton pollack;
-    private TextView Q6;
-    private RadioGroup rgQ6;
-    private RadioButton chazanout;
-    private RadioButton frompray;
-    private RadioButton propnents;
-    private TextView Q7;
-    private RadioGroup rgQ7;
-    private RadioButton runningwater;
-    private RadioButton insteumental;
-    private TextView country;
-    private EditText answer1;
-    private TextView homemusic;
-    private EditText answer2;
-    private TextView youngmusic;
-    private EditText answer3;
-    private TextView ma7azot;
-    private EditText answer4;
-    private TextView disk;
-    private EditText answer5;
-    private TextView favoritesinger;
-    private EditText answer6;
-    private TextView weddingsong;
-    private EditText answer7;
-    private TextView favoritesong;
-    private EditText answer8;
+    private ImageView image1,image2,image3,image4;
+    private TextView Q1,Q2,Q3,Q4,Q5,Q6,Q7;
+    private RadioGroup rgQ1,rgQ2,rgQ3,rgQ4,rgQ5,rgQ6,rgQ7;
+    private RadioButton opera,classical,armyBands,songs,folkDances,yiddish,hebrew,english,russian,arabic,waltz,tango,samba;
+    private RadioButton jaz,rock,pollack,chazanout,frompray,propnents,runningwater,insteumental;
+    private TextView country,homemusic,youngmusic,ma7azot,disk,favoritesinger,weddingsong,favoritesong;
+    private EditText answer1,answer2,answer3,answer4,answer5,answer6,answer7,answer8;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_question1);
 
+        image1=(ImageView)findViewById(R.id.image1);
+        Q1=(TextView)findViewById(R.id.Q1);
+        rgQ1=(RadioGroup)findViewById(R.id.rgQ1);
+        rgQ2=(RadioGroup)findViewById(R.id.rgQ2);
+        rgQ3=(RadioGroup)findViewById(R.id.rgQ3);
+        opera=(RadioButton)findViewById(R.id.opera);
+        classical=(RadioButton)findViewById(R.id.classical);
+        armyBands=(RadioButton)findViewById(R.id.armyBands);
+        folkDances=(RadioButton)findViewById(R.id.folkDances);
+        yiddish=(RadioButton)findViewById(R.id.yiddish);
+        hebrew=(RadioButton)findViewById(R.id.hebrew);
+        english=(RadioButton)findViewById(R.id.english);
+        russian=(RadioButton)findViewById(R.id.russian);
+        arabic=(RadioButton)findViewById(R.id.arabic);
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_question2);
+
+            image1=(ImageView)findViewById(R.id.image2);
 
 
 
