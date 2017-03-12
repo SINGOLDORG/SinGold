@@ -16,7 +16,7 @@ public class HalfSurvey {
     @com.google.gson.annotations.SerializedName("city")
     private String city;
 
-    //religion??
+
 
     public HalfSurvey(){}
 
