@@ -1,4 +1,4 @@
-package com.example.singold;
+package com.example.singold.data;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 
+import com.example.singold.R;
+import com.example.singold.ToDoActivity;
 import com.example.singold.data.ToDoItem;
 
 /**

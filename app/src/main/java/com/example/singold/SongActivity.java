@@ -22,7 +22,7 @@ public class SongActivity extends AppCompatActivity {
         theSongName = (EditText) findViewById(R.id.theSongName);
         singer = (EditText) findViewById(R.id.singer);
         link = (EditText) findViewById(R.id.link);
-        idPatient =(EditText) findViewById(R.id.idPatient);
+       // idPatient =(EditText) findViewById(R.id.idPatient);
 
         save = (Button) findViewById(R.id.save);
     }

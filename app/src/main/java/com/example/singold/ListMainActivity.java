@@ -1,5 +1,6 @@
 package com.example.singold;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -10,6 +11,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.singold.MyTabs.OneFragment;
@@ -38,7 +40,7 @@ public class ListMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -104,5 +106,10 @@ public class ListMainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+    }
+    public void onClick(View view)
+    {
+        Intent intent=new Intent(this, QuestionaireActivity.class);
+        startActivity(intent);
     }
 }

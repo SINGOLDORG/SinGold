@@ -25,6 +25,14 @@ import android.widget.TextView;
 
 public class QuestionaireActivity extends AppCompatActivity {
 
+    private ViewPager viewPager;
+    private MyViewPagerAdapter myViewPagerAdapter;
+    private LinearLayout dotsLayout;
+    private TextView[] dots;
+    private int[] layouts;
+    private Button btnSkip, btnNext;
+  //  private PrefManager prefManager;
+
     private ImageView image1, image2, image3, image4;
     private TextView Q1, Q2, Q3, Q4, Q5, Q6, Q7;
     private RadioGroup rgQ1, rgQ2, rgQ3, rgQ4, rgQ5, rgQ6, rgQ7;
@@ -37,6 +45,69 @@ public class QuestionaireActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question1);
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+
+        // Checking for first time launch - before calling setContentView()
+//        prefManager = new PrefManager(this);
+//        if (!prefManager.isFirstTimeLaunch()) {
+//            launchHomeScreen();
+//            finish();
+//        }
+
+        // Making notification bar transparent
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
+
+        setContentView(R.layout.activity_welcome);
+
+        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
+        btnSkip = (Button) findViewById(R.id.btn_skip);
+        btnNext = (Button) findViewById(R.id.btn_next);
+
+
+        // layouts of all welcome sliders
+        // add few more layouts if you want
+        layouts = new int[]{
+                R.layout.activity_question1,
+                R.layout.activity_question2,
+                R.layout.activity_question3,
+                R.layout.activity_question4};
+
+        // adding bottom dots
+        addBottomDots(0);
+
+        // making notification bar transparent
+        changeStatusBarColor();
+
+        myViewPagerAdapter = new MyViewPagerAdapter();
+        viewPager.setAdapter(myViewPagerAdapter);
+        viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+
+        btnSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchHomeScreen();
+            }
+        });
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // checking for last page
+                // if last page home screen will be launched
+                int current = getItem(+1);
+                if (current < layouts.length) {
+                    // move to next screen
+                    viewPager.setCurrentItem(current);
+                } else {
+                    launchHomeScreen();
+                }
+            }
+        });
 
         image1 = (ImageView) findViewById(R.id.image1);
         Q1 = (TextView) findViewById(R.id.Q1);
@@ -92,7 +163,7 @@ public class QuestionaireActivity extends AppCompatActivity {
         disk = (TextView) findViewById(R.id.disk);
         favoritesinger = (TextView) findViewById(R.id.favoritesinger);
         weddingsong = (TextView) findViewById(R.id.weddingsong);
-        favoritesong = (TextView) findViewById(R.id.favoriteSong);
+       // favoritesong = (TextView) findViewById(R.id.favoritesong);
         answer4 = (EditText) findViewById(R.id.answer4);
         answer5 = (EditText) findViewById(R.id.answer5);
         answer6 = (EditText) findViewById(R.id.answer6);
@@ -100,84 +171,77 @@ public class QuestionaireActivity extends AppCompatActivity {
         answer8 = (EditText) findViewById(R.id.answer8);
     }
 
-    public class QuestionaireActivity extends AppCompatActivity
-    {
-
-            private ViewPager viewPager;
-            private MyViewPagerAdapter myViewPagerAdapter;
-            private LinearLayout dotsLayout;
-            private TextView[] dots;
-            private int[] layouts;
-            private Button btnSkip, btnNext;
-            private PrefManager prefManager;
-
-            @Override
-            protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-
-                viewPager = (ViewPager) findViewById(R.id.viewpager);
 
 
-                // Checking for first time launch - before calling setContentView()
-//        prefManager = new PrefManager(this);
-//        if (!prefManager.isFirstTimeLaunch()) {
-//            launchHomeScreen();
-//            finish();
-//        }
-
-                // Making notification bar transparent
-                if (Build.VERSION.SDK_INT >= 21) {
-                    getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-                }
-
-                setContentView(R.layout.activity_welcome);
-
-                viewPager = (ViewPager) findViewById(R.id.view_pager);
-                dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-                btnSkip = (Button) findViewById(R.id.btn_skip);
-                btnNext = (Button) findViewById(R.id.btn_next);
 
 
-                // layouts of all welcome sliders
-                // add few more layouts if you want
-                layouts = new int[]{
-                        R.layout.activity_question1,
-                        R.layout.activity_question2,
-                        R.layout.activity_question3,
-                        R.layout.activity_question4};
-
-                // adding bottom dots
-                addBottomDots(0);
-
-                // making notification bar transparent
-                changeStatusBarColor();
-
-                myViewPagerAdapter = new MyViewPagerAdapter();
-                viewPager.setAdapter(myViewPagerAdapter);
-                viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
-
-                btnSkip.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        launchHomeScreen();
-                    }
-                });
-
-                btnNext.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // checking for last page
-                        // if last page home screen will be launched
-                        int current = getItem(+1);
-                        if (current < layouts.length) {
-                            // move to next screen
-                            viewPager.setCurrentItem(current);
-                        } else {
-                            launchHomeScreen();
-                        }
-                    }
-                });
-            }
+//            @Override
+//            protected void onCreate(Bundle savedInstanceState) {
+//                super.onCreate(savedInstanceState);
+//
+//                viewPager = (ViewPager) findViewById(R.id.viewpager);
+//
+//
+//                // Checking for first time launch - before calling setContentView()
+////        prefManager = new PrefManager(this);
+////        if (!prefManager.isFirstTimeLaunch()) {
+////            launchHomeScreen();
+////            finish();
+////        }
+//
+//                // Making notification bar transparent
+//                if (Build.VERSION.SDK_INT >= 21) {
+//                    getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+//                }
+//
+//                setContentView(R.layout.activity_welcome);
+//
+//                viewPager = (ViewPager) findViewById(R.id.view_pager);
+//                dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
+//                btnSkip = (Button) findViewById(R.id.btn_skip);
+//                btnNext = (Button) findViewById(R.id.btn_next);
+//
+//
+//                // layouts of all welcome sliders
+//                // add few more layouts if you want
+//                layouts = new int[]{
+//                        R.layout.activity_question1,
+//                        R.layout.activity_question2,
+//                        R.layout.activity_question3,
+//                        R.layout.activity_question4};
+//
+//                // adding bottom dots
+//                addBottomDots(0);
+//
+//                // making notification bar transparent
+//                changeStatusBarColor();
+//
+//                myViewPagerAdapter = new MyViewPagerAdapter();
+//                viewPager.setAdapter(myViewPagerAdapter);
+//                viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+//
+//                btnSkip.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        launchHomeScreen();
+//                    }
+//                });
+//
+//                btnNext.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        // checking for last page
+//                        // if last page home screen will be launched
+//                        int current = getItem(+1);
+//                        if (current < layouts.length) {
+//                            // move to next screen
+//                            viewPager.setCurrentItem(current);
+//                        } else {
+//                            launchHomeScreen();
+//                        }
+//                    }
+//                });
+//            }
 
             private void addBottomDots(int currentPage) {
                 dots = new TextView[layouts.length];
@@ -203,8 +267,8 @@ public class QuestionaireActivity extends AppCompatActivity {
             }
 
             private void launchHomeScreen() {
-                prefManager.setFirstTimeLaunch(false);
-                startActivity(new Intent(QuestionaireActivity.this, Sin_goldActivity.class));
+             //   prefManager.setFirstTimeLaunch(false);
+               // startActivity(new Intent(QuestionaireActivity.this, Sin_goldActivity.class));
                 finish();
             }
 
@@ -285,5 +349,5 @@ public class QuestionaireActivity extends AppCompatActivity {
                     container.removeView(view);
                 }
             }
-        }
+
     }

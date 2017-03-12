@@ -20,8 +20,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.ToDoItem;
+import com.example.singold.data.ToDoItemAdapter;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -405,6 +405,7 @@ public class ToDoActivity extends Activity {
      *            The dialog title
      */
     private void createAndShowDialogFromTask(final Exception exception, String title) {
+        exception.printStackTrace();
         runOnUiThread(new Runnable() {
             @Override
             public void run() {

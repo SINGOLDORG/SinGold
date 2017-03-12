@@ -56,31 +56,36 @@ public  class ConnectToServer {
   //  private static List<ToDoItem> results;
 
     public static void connet(Activity context) {
-        dialog=new ProgressDialog(context);
-        dialog.setMessage("Wait...");
+        if(dialog==null) {
+            dialog = new ProgressDialog(context);
+
+            dialog.setMessage("Wait...");
+        }
         ConnectToServer.context = context;
-        try {
-            // Create the Mobile Service Client instance, using the provided
+        if(mClient==null) {
+            try {
+                // Create the Mobile Service Client instance, using the provided
 
-            // Mobile Service URL and key
-            mClient = new MobileServiceClient(
-                    "https://singold2.azurewebsites.net",
-                    context).withFilter(new ProgressFilter(context));
+                // Mobile Service URL and key
+                mClient = new MobileServiceClient(
+                        "https://singold2.azurewebsites.net",
+                        context).withFilter(new ProgressFilter(context));
 
-            // Extend timeout from default of 10s to 20s
-            mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
-                @Override
-                public OkHttpClient createOkHttpClient() {
-                    OkHttpClient client = new OkHttpClient();
-                    client.setReadTimeout(20, TimeUnit.SECONDS);
-                    client.setWriteTimeout(20, TimeUnit.SECONDS);
-                    return client;
-                }
-            });
-        } catch (MalformedURLException e) {
-            createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
-        } catch (Exception e) {
-            createAndShowDialog(e, "Error");
+                // Extend timeout from default of 10s to 20s
+                mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
+                    @Override
+                    public OkHttpClient createOkHttpClient() {
+                        OkHttpClient client = new OkHttpClient();
+                        client.setReadTimeout(20, TimeUnit.SECONDS);
+                        client.setWriteTimeout(20, TimeUnit.SECONDS);
+                        return client;
+                    }
+                });
+            } catch (MalformedURLException e) {
+                createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
+            } catch (Exception e) {
+                createAndShowDialog(e, "Error");
+            }
         }
 
     }
@@ -226,17 +231,23 @@ public  class ConnectToServer {
 
         runAsyncTask(task);
     }
-    public static void refreshItemsFromTable(L) {
+    public static void refreshItemsFromTable(final ToDoItemAdapter adapter) {
 
         // Get the items that weren't marked as completed and add them in the
         // adapter
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
             @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                dialog.show();
+            }
+
+            @Override
             protected Void doInBackground(Void... params) {
 
                 try {
                  //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
-                  results=  mToDoTable.where().field("complete").
+                    final List<ToDoItem> results = mToDoTable.where().field("complete").
                             eq(val(false)).execute().get();
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
@@ -244,10 +255,10 @@ public  class ConnectToServer {
                     context.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                           // mAdapter.clear();
+                            adapter.clear();
 
                             for (ToDoItem item : results) {
-                               // mAdapter.add(item);
+                                adapter.add(item);
                             }
                         }
                     });
@@ -261,6 +272,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
+                dialog.dismiss();
             }
         };
 

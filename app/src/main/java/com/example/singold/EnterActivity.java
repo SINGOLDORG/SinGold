@@ -68,7 +68,7 @@ public class EnterActivity extends AppCompatActivity
     {
         if(v==login)
         {
-            Intent intent=new Intent(getBaseContext(),ListActivity.class);
+            Intent intent=new Intent(getBaseContext(),ListMainActivity.class);
             startActivity(intent);
         }
 
