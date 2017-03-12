@@ -92,7 +92,7 @@ public class QuestionaireActivity extends AppCompatActivity {
         disk = (TextView) findViewById(R.id.disk);
         favoritesinger = (TextView) findViewById(R.id.favoritesinger);
         weddingsong = (TextView) findViewById(R.id.weddingsong);
-        favoritesong = (TextView) findViewById(R.id.favoritesong);
+        favoritesong = (TextView) findViewById(R.id.favoriteSong);
         answer4 = (EditText) findViewById(R.id.answer4);
         answer5 = (EditText) findViewById(R.id.answer5);
         answer6 = (EditText) findViewById(R.id.answer6);
