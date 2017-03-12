@@ -20,8 +20,11 @@ import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 import com.squareup.okhttp.OkHttpClient;
 
 import java.net.MalformedURLException;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
+
+import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.val;
 
 /**
  * Created by samih on 05/03/2017.
@@ -50,6 +53,7 @@ public  class ConnectToServer {
 
 
     public static Activity context;
+  //  private static List<ToDoItem> results;
 
     public static void connet(Activity context) {
         dialog=new ProgressDialog(context);
@@ -217,6 +221,46 @@ public  class ConnectToServer {
             protected void onPostExecute(Void aVoid) {
                 if(dialog!=null)dialog.dismiss();
 
+            }
+        };
+
+        runAsyncTask(task);
+    }
+    public static void refreshItemsFromTable(L) {
+
+        // Get the items that weren't marked as completed and add them in the
+        // adapter
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
+            @Override
+            protected Void doInBackground(Void... params) {
+
+                try {
+                 //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
+                  results=  mToDoTable.where().field("complete").
+                            eq(val(false)).execute().get();
+                    //Offline Sync
+                    //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
+
+                    context.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                           // mAdapter.clear();
+
+                            for (ToDoItem item : results) {
+                               // mAdapter.add(item);
+                            }
+                        }
+                    });
+                } catch (final Exception e){
+                    createAndShowDialogFromTask(e, "Error");
+                }
+
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
             }
         };
 
