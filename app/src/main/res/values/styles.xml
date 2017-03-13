@@ -29,6 +29,7 @@
         <item name="colorPrimary">@color/colorPurple</item>
         <item name="android:statusBarColor">@color/colorPurple</item>
         <item name="android:navigationBarColor">@color/colorPurple</item>
+        <item name="android:textColorPrimary">@color/textColor</item>
     </style>
 
     //intro//
