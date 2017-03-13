@@ -16,6 +16,8 @@ public class HalfSurvey {
     @com.google.gson.annotations.SerializedName("city")
     private String city;
 
+//fgffddfgfglklkl;
+    ///zxczxczx
 
 
     public HalfSurvey(){}
