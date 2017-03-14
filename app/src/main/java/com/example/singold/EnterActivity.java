@@ -19,7 +19,6 @@ public class EnterActivity extends AppCompatActivity
 {
     private Button login,sign;
     private EditText username,id;
-    private ImageView i;
 
     @Override
 
