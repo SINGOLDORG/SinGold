@@ -13,20 +13,19 @@ import java.util.ArrayList;
  * Created by user on 14/03/2017.
  */
 
-public class UserAdapter extends ArrayAdapter<User>
-{
+public class UserAdapter extends ArrayAdapter<User> {
 
-    public UserAdapter(Context context, int resource)
-    {
+    public UserAdapter(Context context, int resource) {
         super(context, resource);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        View row = convertView;
         final User User = getItem(position);
     }
-
-
 }
+
+
 
 
