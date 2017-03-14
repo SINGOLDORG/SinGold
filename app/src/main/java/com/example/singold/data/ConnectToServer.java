@@ -455,15 +455,15 @@ public  class ConnectToServer {
 
         runAsyncTask(task);
     }
-    public static void addInTable(final MatchingSurvey item) throws ExecutionException, InterruptedException {
+    public static void addInTable(final HalfSurvey item) throws ExecutionException, InterruptedException {
         ;
         if (HalfSurveyTable == null)
-            HalfSurveyTable = mClient.getTable(MatchingSurvey.class);
+            HalfSurveyTable = mClient.getTable(HalfSurvey.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 try {
-                    final MatchingSurvey entity = HalfSurveyTable.insert(item).get();
+                    final HalfSurvey entity = HalfSurveyTable.insert(item).get();
 
                     context.runOnUiThread(new Runnable() {
                         @Override
