@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import com.example.singold.R;
+
 /**
  * Created by user on 16/03/2017.
  */

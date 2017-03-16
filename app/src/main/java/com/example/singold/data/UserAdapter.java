@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import com.example.singold.R;
 import com.google.gson.internal.bind.ArrayTypeAdapter;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class UserAdapter extends ArrayAdapter<User> {
         {
             convertView= LayoutInflater.from(getContext()).inflate(R.layout.Useritem,parent,false);
         }
+
 
 
 
