@@ -23,7 +23,7 @@ public class SongAdapter extends ArrayAdapter<Song>
 
         if(convertView==null)
         {
-            convertView= LayoutInflater.from(getContext()).inflate(R.layout.)
+            convertView= LayoutInflater.from(getContext()).inflate(R.layout.Songitem,parent,false);
         }
 
 

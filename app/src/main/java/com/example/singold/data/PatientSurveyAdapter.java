@@ -23,7 +23,7 @@ public class PatientSurveyAdapter extends ArrayAdapter<PatientSurvey>
 
         if(convertView==null)
         {
-            convertView= LayoutInflater.from(getContext()).inflate(R.layout.)
+            convertView= LayoutInflater.from(getContext()).inflate(R.layout.PatientSurveyitem,parent,false);
         }
     }
 }

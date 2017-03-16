@@ -22,6 +22,6 @@ public class MatchingSurveyAdapter extends ArrayAdapter<MatchingSurvey> {
 
         if(convertView==null)
         {
-            convertView= LayoutInflater.from(getContext()).inflate(R.layout.MatchingSurveyitem)
+            convertView= LayoutInflater.from(getContext()).inflate(R.layout.MatchingSurveyitem,parent,false);
         }
 }

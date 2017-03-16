@@ -23,5 +23,5 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails>
 
         if(convertView==null)
         {
-            convertView= LayoutInflater.from(getContext()).inflate(R.layout.PatientDetailsitem)
+            convertView= LayoutInflater.from(getContext()).inflate(R.layout.PatientDetailsitem,parent,false);
         }

@@ -22,5 +22,5 @@ public class LoginAdapter extends ArrayAdapter<Login>
 
         if(convertView==null)
         {
-            convertView= LayoutInflater.from(getContext()).inflate(R.layout.Loginitem)
+            convertView= LayoutInflater.from(getContext()).inflate(R.layout.Loginitem,parent,false);
         }

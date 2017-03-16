@@ -27,7 +27,7 @@ public class UserAdapter extends ArrayAdapter<User> {
 
         if(convertView==null)
         {
-            convertView= LayoutInflater.from(getContext()).inflate(R.layout.)
+            convertView= LayoutInflater.from(getContext()).inflate(R.layout.Useritem,parent,false);
         }
 
 
