@@ -18,7 +18,7 @@ public class LoginAdapter extends ArrayAdapter<Login>
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        final Logon Login = getItem(position);
+        final Login Login = getItem(position);
 
         if(convertView==null)
         {
