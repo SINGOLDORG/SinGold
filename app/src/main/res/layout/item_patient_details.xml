@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textId" />
+
+    <TextView
+        android:text="IdUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textIdUser" />
+
+    <TextView
+        android:text="First_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFName" />
+
+    <TextView
+        android:text="Last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textLName" />
+
+    <TextView
+        android:text="Family_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFamilyPhone" />
+
+    <TextView
+        android:text="Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textAddress" />
+
+    <TextView
+        android:text="PId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textPid" />
+
+    <TextView
+        android:text="Year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textYear" />
+</LinearLayout>
