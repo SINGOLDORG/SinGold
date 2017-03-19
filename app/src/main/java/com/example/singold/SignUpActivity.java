@@ -1,7 +1,5 @@
 package com.example.singold;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.singold.data.ConnectToServer;
-import com.example.singold.data.User;
+import com.example.singold.data.MyUser;
+import com.example.singold.data.ToDoItem;
 
 import java.util.concurrent.ExecutionException;
 
@@ -71,7 +70,17 @@ public class SignUpActivity extends AppCompatActivity {
 
         if(isok==true)
         {
-            User u=new User();
+//            ToDoItem toDoItem=new ToDoItem();
+//            toDoItem.setText(stFirst);
+//            ConnectToServer.connet(this);
+//            try {
+//                ConnectToServer.addInTable(toDoItem);
+//            } catch (ExecutionException e) {
+//                e.printStackTrace();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+            MyUser u=new MyUser();
             u.setfName(stFirst);
             u.setlName(stLast);
             u.setUsername(stUsername);

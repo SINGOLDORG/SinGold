@@ -4,10 +4,10 @@ package com.example.singold.data;
  * Created by user on 02/03/2017.
  */
 
-public class User
+public class MyUser
 {
     @com.google.gson.annotations.SerializedName("id")
-    private String id;
+    private String mid;
     @com.google.gson.annotations.SerializedName("idInstitute")
     private String idInstitute;
     @com.google.gson.annotations.SerializedName("fName")
@@ -20,14 +20,14 @@ public class User
     private String EnterId;
 
 
-    public User() {}
+    public MyUser() {}
 
     public String getId() {
-        return id;
+        return mid;
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.mid = id;
     }
 
     public String getIdInstitute() {

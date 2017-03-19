@@ -8,15 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.singold.R;
-import com.google.gson.internal.bind.ArrayTypeAdapter;
-
-import java.util.ArrayList;
 
 /**
  * Created by user on 14/03/2017.
  */
 
-public class UserAdapter extends ArrayAdapter<User> {
+public class UserAdapter extends ArrayAdapter<MyUser> {
 
     public UserAdapter(Context context, int resource) {
         super(context, resource);
@@ -25,7 +22,7 @@ public class UserAdapter extends ArrayAdapter<User> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final User User = getItem(position);
+        final MyUser user = getItem(position);
 
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_user, parent, false);
@@ -39,13 +36,12 @@ public class UserAdapter extends ArrayAdapter<User> {
         TextView textEnterId = (TextView) convertView.findViewById(R.id.textEnterId);
         TextView textConfirmId = (TextView) convertView.findViewById(R.id.textConfirmId);
 
-        textId.setText(User.getId());
-        textIdInstitute.setText(User.getIdInstitute());
-        textFN.setText(User.getfName());
-        textLN.setText(User.getlName());
-        textUsername.setText(User.getUsername());
-        textEnterId.setText(User.getEnterId());
-        textConfirmId.setText(User.getConfId());
+        textId.setText(user.getId());
+        textIdInstitute.setText(user.getIdInstitute());
+        textFN.setText(user.getfName());
+        textLN.setText(user.getlName());
+        textUsername.setText(user.getUsername());
+        textEnterId.setText(user.getEnterId());
 
         return convertView;
     }

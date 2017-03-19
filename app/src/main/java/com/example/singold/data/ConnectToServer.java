@@ -40,7 +40,7 @@ public  class ConnectToServer {
     /**
      * Mobile Service Table used to access data
      */
-    private static MobileServiceTable<User> userTable;
+    private static MobileServiceTable<MyUser> userTable;
     private static MobileServiceTable<Song> songTable;
     private static MobileServiceTable<PatientDetails> patientDetailsTable;
     private static MobileServiceTable<PatientSurvey> patientSurveyTable;
@@ -59,7 +59,7 @@ public  class ConnectToServer {
         if(dialog==null) {
             dialog = new ProgressDialog(context);
 
-            dialog.setMessage("Wait...");
+            dialog.setMessage("Connecting...Wait...");
         }
         ConnectToServer.context = context;
         if(mClient==null) {
@@ -199,10 +199,10 @@ public  class ConnectToServer {
      *
      * @param item The item to Add
      */
-    public static void addInTable(final User item) throws ExecutionException, InterruptedException {
-        final User[] entity = {null};
+    public static void addInTable(final MyUser item) throws ExecutionException, InterruptedException {
+        final MyUser[] entity = {null};
         if (userTable == null)
-            userTable = mClient.getTable(User.class);
+            userTable = mClient.getTable(MyUser.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -212,7 +212,10 @@ public  class ConnectToServer {
                     context.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            if(dialog!=null)dialog.show();
+                            if(dialog!=null){
+                                dialog.setMessage("Saving...");
+                                dialog.show();
+                            }
 
                         }
                     });
@@ -225,7 +228,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 if(dialog!=null)dialog.dismiss();
-                context.finish();
+              //  context.finish();
 
 
             }
