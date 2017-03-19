@@ -1,21 +1,18 @@
 package com.example.singold;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.Login;
-import com.example.singold.data.User;
 
 import java.util.concurrent.ExecutionException;
 
-public class EnterActivity extends AppCompatActivity
+public class LogInActivity extends AppCompatActivity
 {
     private Button login,sign;
     private EditText username,id;
@@ -72,7 +69,7 @@ public class EnterActivity extends AppCompatActivity
 
         if (v==sign)
         {
-            Intent intent=new Intent(getBaseContext(),InformationActivity.class);
+            Intent intent=new Intent(getBaseContext(),SignUpActivity.class);
             startActivity(intent);
         }
 

@@ -13,7 +13,7 @@ import com.example.singold.data.User;
 
 import java.util.concurrent.ExecutionException;
 
-public class InformationActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
     private EditText first, last, username, id, confirmid;
     private Button save;
 
@@ -38,9 +38,9 @@ public class InformationActivity extends AppCompatActivity {
         String stConfirmid = confirmid.getText().toString();
 
         boolean isok = true;
-        if (stFirst.length() == 0)
+        if (stFirst.length() < 3)
         {
-            first.setError("Wrong first name");
+            first.setError("At Least 3 chars");
             isok = false;
         }
         if (stLast.length() == 0)
@@ -58,9 +58,14 @@ public class InformationActivity extends AppCompatActivity {
             id.setError("Wrong id");
             isok = false;
         }
-        if (stConfirmid.length() == 0)
+        if (stConfirmid.length() == 0 )
         {
             confirmid.setError("Wrong confirmate");
+            isok = false;
+        }
+        if (!stConfirmid.equals(stId) )
+        {
+            confirmid.setError("Must Be the Same id");
             isok = false;
         }
 
@@ -71,8 +76,8 @@ public class InformationActivity extends AppCompatActivity {
             u.setlName(stLast);
             u.setUsername(stUsername);
             u.setEnterId(stId);
-            u.setConfId(stConfirmid);
             try {
+                ConnectToServer.connet(this);
                 ConnectToServer.addInTable(u);
             } catch (ExecutionException e) {
                 e.printStackTrace();
@@ -86,8 +91,9 @@ public class InformationActivity extends AppCompatActivity {
 
     public void onClick(View v) {
         if (v == save) {
-            Intent intent = new Intent(getBaseContext(), ListMainActivity.class);
-            startActivity(intent);
+            dataHandler();
+//            Intent intent = new Intent(getBaseContext(), ListMainActivity.class);
+//            startActivity(intent);
         }
 
     }

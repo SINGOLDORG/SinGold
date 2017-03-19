@@ -18,8 +18,7 @@ public class User
     private String username;
     @com.google.gson.annotations.SerializedName("EnterId")
     private String EnterId;
-    @com.google.gson.annotations.SerializedName("confId")
-    private String confId;
+
 
     public User() {}
 
@@ -71,12 +70,5 @@ public class User
         EnterId = enterId;
     }
 
-    public String getConfId() {
-        return confId;
-    }
-
-    public void setConfId(String confId) {
-        this.confId = confId;
-    }
 
 }
