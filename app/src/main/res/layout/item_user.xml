@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textId" />
+
+    <TextView
+        android:text="Id Institute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textidInstitute" />
+
+    <TextView
+        android:text="First Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFN" />
+
+    <TextView
+        android:text="Last Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textLN" />
+
+    <TextView
+        android:text="Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textUsername" />
+
+    <TextView
+        android:text="Enter Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEnterId" />
+
+    <TextView
+        android:text="Confirm Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textConfirmId" />
+
+</LinearLayout>

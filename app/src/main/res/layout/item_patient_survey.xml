@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textId" />
+
+    <TextView
+        android:text="patient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textIdPatient" />
+
+    <TextView
+        android:text="country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textcountry" />
+
+    <TextView
+        android:text="city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textCity" />
+
+    <TextView
+        android:text="Year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textYear" />
+
+    <TextView
+        android:text="Home Music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textHomeMusic" />
+
+    <TextView
+        android:text="Education"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEducation" />
+
+    <TextView
+        android:text="Is Mahazot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textIsMahazot" />
+
+    <TextView
+        android:text="Mahazot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textMahazot" />
+
+    <TextView
+        android:text="Favorite singer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFsinger" />
+
+    <TextView
+        android:text="Favorite Songs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFSongs" />
+
+    <TextView
+        android:text="Wedding Song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textWedding" />
+
+    <TextView
+        android:text="Classic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClassic" />
+
+    <TextView
+        android:text="Israel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textIsrael" />
+
+    <TextView
+        android:text="Language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textLanguage" />
+
+    <TextView
+        android:text="Dance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textDance" />
+
+    <TextView
+        android:text="Loazi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textLoazi" />
+
+    <TextView
+        android:text="Religion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textReligion" />
+
+    <TextView
+        android:text="Relaxing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textRelaxing" />
+</LinearLayout>
