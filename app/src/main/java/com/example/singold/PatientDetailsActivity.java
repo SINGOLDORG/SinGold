@@ -88,4 +88,9 @@ public class PatientDetailsActivity extends AppCompatActivity {
 
         }
     }
+    public void OnClick(View v){
+        if (v==plus)
+            dataHandler();
+    }
+
 }

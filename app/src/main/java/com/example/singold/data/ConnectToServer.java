@@ -252,8 +252,7 @@ public  class ConnectToServer {
 
                 try {
                  //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
-                    final List<ToDoItem> results = mToDoTable.where().field("complete").
-                            eq(val(false)).execute().get();
+                    final List<ToDoItem> results = mToDoTable.where().execute().get();
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
 
