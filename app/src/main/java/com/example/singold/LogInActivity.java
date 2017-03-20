@@ -50,6 +50,7 @@ public class LogInActivity extends AppCompatActivity
             login.setUsername(stUsername);
             login.setId(stId);
             try {
+                ConnectToServer.connet(this);
                 ConnectToServer.addInTable(login);
             } catch (ExecutionException e) {
                 e.printStackTrace();

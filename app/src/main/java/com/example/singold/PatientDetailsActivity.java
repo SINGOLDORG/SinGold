@@ -77,6 +77,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
             patientDetails.setAddress(stAddress);
             patientDetails.setYear(stYear);
             try {
+                ConnectToServer.connet(this);
                 ConnectToServer.addInTable(patientDetails);
             } catch (ExecutionException e) {
                 e.printStackTrace();

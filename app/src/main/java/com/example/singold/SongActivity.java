@@ -60,6 +60,7 @@ public class SongActivity extends AppCompatActivity {
             song.setSinger(stSinger);
             song.setLink(stLink);
             try {
+                ConnectToServer.connet(this);
                 ConnectToServer.addInTable(song);
             } catch (ExecutionException e) {
                 e.printStackTrace();
