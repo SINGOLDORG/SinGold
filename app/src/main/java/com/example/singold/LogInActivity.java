@@ -45,17 +45,7 @@ public class LogInActivity extends AppCompatActivity
         }
         if (isok==true)
         {
-            Login login=new Login();
-            login.setUsername(stUsername);
-            login.setId(stId);
-            try {
-                ConnectToServer.connet(this);
-                ConnectToServer.addInTable(login);
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
 
         }
 }
