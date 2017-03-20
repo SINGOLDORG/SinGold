@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.singold.data.ConnectToServer;
-import com.example.singold.data.Login;
 
 import java.util.concurrent.ExecutionException;
 
