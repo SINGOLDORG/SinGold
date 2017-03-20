@@ -34,7 +34,7 @@ public class LogInActivity extends AppCompatActivity
         String stId = id.getText().toString();
 
         boolean isok=true;
-        if(stUsername.length()==0)
+        if(stUsername.length()<3)
         {
             username.setError("Wrong username");
             isok=false;
