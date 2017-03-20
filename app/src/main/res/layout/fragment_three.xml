@@ -10,4 +10,11 @@
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
 
+    <Button
+        android:text="add song"
+        android:onClick="OnClick"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn" />
+
 </FrameLayout>

@@ -45,7 +45,7 @@ public  class ConnectToServer {
     private static MobileServiceTable<PatientDetails> patientDetailsTable;
     private static MobileServiceTable<PatientSurvey> patientSurveyTable;
     private static MobileServiceTable<MatchingSurvey> HalfSurveyTable;
-    private static MobileServiceTable<Login> loginTable;
+
 
 
     private static MobileServiceTable<ToDoItem> mToDoTable;
@@ -597,41 +597,7 @@ public  class ConnectToServer {
 
         runAsyncTask(task);
     }
-    public  static void addInTable(final Login item) throws ExecutionException, InterruptedException {
-        ;
-        if (loginTable == null)
-            loginTable = mClient.getTable(Login.class);
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                try {
-                    final Login entity = loginTable.insert(item).get();
 
-                    context.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-//                            if(!entity.isComplete()){
-//                                ///mAdapter.add(entity);
-//                            }
-                            if(dialog!=null)dialog.show();
-
-                        }
-                    });
-                } catch (final Exception e) {
-                    createAndShowDialogFromTask(e, "Error");
-                }
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
-
-            }
-        };
-
-        runAsyncTask(task);
-    }
     public static void addInTable(final Song item) throws ExecutionException, InterruptedException {
         ;
         if (songTable == null)
