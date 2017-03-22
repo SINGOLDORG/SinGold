@@ -39,22 +39,22 @@ public class SignUpActivity extends AppCompatActivity {
         boolean isok = true;
         if (stFirst.length() < 3)
         {
-            first.setError("At Least 3 chars");
+            first.setError(getResources().getString(R.string.atLeast3));
             isok = false;
         }
-        if (stLast.length() == 0)
+        if (stLast.length() < 3)
         {
-            last.setError("Wrong last name");
+            last.setError(getResources().getString(R.string.atLeast3));
             isok = false;
         }
         if (stUsername.length() == 0)
         {
-            username.setError("Wrong username");
+            username.setError(getResources().getString(R.string.UsernameIsAlredyThere));
             isok = false;
         }
-        if (stId.length() == 0)
+        if (stId.length() < 9)
         {
-            id.setError("Wrong id");
+            id.setError(getResources().getString(R.string.AtLeast10Number));
             isok = false;
         }
         if (stConfirmid.length() == 0 )

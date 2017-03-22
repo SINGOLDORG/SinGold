@@ -61,7 +61,7 @@
     <string name="insteumental">الالات موسيقية</string>
     <string name="country">دولة</string>
     <string name="answer">جواب</string>
-    <string name="homemusic">ما هي الموسيقلا التي سمعتها في البيت؟</string>
+    <string name="homemusic">ما هي الموسيقى التي سمعتها في البيت؟</string>
     <string name="young">ما هي الموسيقى التي سمعها عندماكان صغيرا؟</string>
     <string name="ma7azot">مسرحيات موسيقية</string>
     <string name="disk">ديسك</string>
@@ -74,4 +74,7 @@
     <string name="Login">login7</string>
     <string name="Login7">Login</string>
     <string name="slide_1_title">اهلا الى SinGold!</string>
+    <string name="atLeast3">على الاقل 3 احرف</string>
+    <string name="UsernameIsAlredyThere">اسم المسخدم هذا مستعمل</string>
+    <string name="AtLeast10Number">على الاقل 9  ارقام</string>
 </resources>
