@@ -11,6 +11,7 @@ import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.authentication.LoginManager;
 import com.microsoft.windowsazure.mobileservices.http.NextServiceFilterCallback;
 import com.microsoft.windowsazure.mobileservices.http.OkHttpClientFactory;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilter;
@@ -53,7 +54,7 @@ public  class ConnectToServer {
 
 
     public static Activity context;
-  //  private static List<ToDoItem> results;
+    //  private static List<ToDoItem> results;
 
     public static void connet(Activity context) {
         if(dialog==null) {
@@ -494,52 +495,6 @@ public  class ConnectToServer {
                             adapter.clear();
 
                             for (MatchingSurvey item  : results) {
-                                adapter.add(item);
-                            }
-                        }
-                    });
-                } catch (final Exception e){
-                    createAndShowDialogFromTask(e, "Error");
-                }
-
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(Void aVoid) {
-                super.onPostExecute(aVoid);
-                dialog.dismiss();
-            }
-        };
-
-        runAsyncTask(task);
-    }
-    public static void refreshItemsFromTable(final LoginAdapter adapter) {
-
-        // Get the items that weren't marked as completed and add them in the
-        // adapter
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-                dialog.show();
-            }
-
-            @Override
-            protected Void doInBackground(Void... params) {
-
-                try {
-                    //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
-                    final List<Login> results = loginTable.where().execute().get();
-                    //Offline Sync
-                    //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
-
-                    context.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            adapter.clear();
-
-                            for (Login item  : results) {
                                 adapter.add(item);
                             }
                         }
