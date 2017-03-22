@@ -159,7 +159,7 @@ public class QuestionaireActivity extends AppCompatActivity {
 
 
         image4 = (ImageView) findViewById(R.id.image4);
-        ma7azot = (TextView) findViewById(R.id.ma7azot);
+      //  ma7azot = (TextView) findViewById(R.id.ma7azot);
         disk = (TextView) findViewById(R.id.disk);
         favoritesinger = (TextView) findViewById(R.id.favoritesinger);
         weddingsong = (TextView) findViewById(R.id.weddingsong);
