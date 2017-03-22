@@ -1,14 +1,18 @@
 package com.example.singold.MyTabs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.singold.QuestionaireActivity;
 import com.example.singold.R;
+import com.example.singold.SongActivity;
 
 
 /**
@@ -30,6 +34,7 @@ public class ThreeFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private Button addSong;
 
     public ThreeFragment() {
         // Required empty public constructor
@@ -66,8 +71,18 @@ public class ThreeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_three, container, false);
-    }
+        View v= inflater.inflate(R.layout.fragment_three, container, false);
+               Button btn= (Button) v.findViewById(R.id.addSong) ;
+        btn.setOnClickListener(new View.OnClickListener() {
+                                   @Override
+                                   public void onClick(View view) {
+                                       if (view == addSong) ;
+                                       Intent intent=new Intent(getContext(), SongActivity.class);
+                                       startActivity(intent);
+                                   }
+        });
+        return v;
+        }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -106,5 +121,8 @@ public class ThreeFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+    public void onClick(View view){
+
     }
 }
