@@ -170,7 +170,59 @@ public class QuestionaireActivity extends AppCompatActivity {
         answer7 = (EditText) findViewById(R.id.answer7);
         answer8 = (EditText) findViewById(R.id.answer8);
     }
+    private void dataHandler()
+    {
+        String stAnswer1 = answer1.getText().toString();
+        String stAnswer2 = answer2.getText().toString();
+        String stAnswer3 = answer3.getText().toString();
+        String stAnswer4 = answer4.getText().toString();
+        String stAnswer5 = answer5.getText().toString();
+        String stAnswer6 = answer6.getText().toString();
+        String stAnswer7 = answer7.getText().toString();
+        String stAnswer8 = answer8.getText().toString();
 
+        boolean isok=true;
+        if(stAnswer1.length()==0)
+        {
+           answer1.setError("answer the question");
+            isok=false;
+        }
+        if(stAnswer2.length()==0)
+        {
+            answer2.setError("answer the question");
+            isok=false;
+        }
+        if(stAnswer3.length()==0)
+        {
+            answer3.setError("answer the question");
+            isok=false;
+        }
+        if(stAnswer4.length()==0)
+        {
+            answer4.setError("answer the question");
+            isok=false;
+        }
+        if(stAnswer5.length()==0)
+        {
+            answer5.setError("answer the question");
+            isok=false;
+        }
+        if(stAnswer6.length()==0)
+        {
+            answer6.setError("answer the question");
+            isok=false;
+        }
+        if(stAnswer7.length()==0)
+        {
+            answer7.setError("answer the question");
+            isok=false;
+        }
+        if(stAnswer8.length()==0)
+        {
+            answer8.setError("answer the question");
+            isok=false;
+        }
+    }
 
 
 
