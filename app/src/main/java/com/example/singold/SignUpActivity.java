@@ -1,5 +1,6 @@
 package com.example.singold;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -39,22 +40,22 @@ public class SignUpActivity extends AppCompatActivity {
         boolean isok = true;
         if (stFirst.length() < 3)
         {
-            first.setError(getResources().getString(R.string.atLeast3));
+            first.setError("At Least 3");
             isok = false;
         }
         if (stLast.length() < 3)
         {
-            last.setError(getResources().getString(R.string.atLeast3));
+            last.setError("At Least 3");
             isok = false;
         }
         if (stUsername.length() == 0)
         {
-            username.setError(getResources().getString(R.string.UsernameIsAlredyThere));
+            username.setError("Wrong Username");
             isok = false;
         }
         if (stId.length() < 9)
         {
-            id.setError(getResources().getString(R.string.AtLeast10Number));
+            id.setError("The id is 9 Numbers");
             isok = false;
         }
         if (stConfirmid.length() == 0 )
@@ -101,8 +102,8 @@ public class SignUpActivity extends AppCompatActivity {
     public void onClick(View v) {
         if (v == save) {
             dataHandler();
-//            Intent intent = new Intent(getBaseContext(), ListMainActivity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(getBaseContext(), ListMainActivity.class);
+            startActivity(intent);
         }
 
     }
