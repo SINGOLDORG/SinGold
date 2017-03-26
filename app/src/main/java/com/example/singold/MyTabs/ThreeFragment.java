@@ -73,9 +73,9 @@ public class ThreeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_three, container, false);
-
         // TODO: Rename method, update argument and hook method into UI event
-
+        return v;
+    }
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
