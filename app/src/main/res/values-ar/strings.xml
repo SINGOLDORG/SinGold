@@ -77,4 +77,8 @@
     <string name="atLeast3">على الاقل 3 احرف</string>
     <string name="UsernameIsAlredyThere">اسم المسخدم هذا مستعمل</string>
     <string name="AtLeast10Number">على الاقل 9  ارقام</string>
+    <string name="slide_2_title">كيف يعمل هذا التطبيق؟</string>
+    <string name="slide_3_desc"></string>
+    <string name="slide_1_desc">هذا التطبيق بساعد على تبطيء مرض الزهايمر بمساعدة الموسيقى</string>
+    <string name="slide_2_desc"></string>
 </resources>

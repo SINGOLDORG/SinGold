@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.singold.data.ConnectToServer;
+import com.example.singold.data.Song;
 
 import java.util.concurrent.ExecutionException;
 
@@ -45,7 +46,6 @@ public class LogInActivity extends AppCompatActivity
         }
         if (isok==true)
         {
-
 
         }
 }
