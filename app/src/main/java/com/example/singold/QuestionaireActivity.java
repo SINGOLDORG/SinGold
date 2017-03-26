@@ -184,42 +184,42 @@ public class QuestionaireActivity extends AppCompatActivity {
         boolean isok=true;
         if(stAnswer1.length()==0)
         {
-           answer1.setError("answer the question");
+           answer1.setError("please answer the question!");
             isok=false;
         }
         if(stAnswer2.length()==0)
         {
-            answer2.setError("answer the question");
+            answer2.setError("please answer the question!");
             isok=false;
         }
         if(stAnswer3.length()==0)
         {
-            answer3.setError("answer the question");
+            answer3.setError("please answer the question!");
             isok=false;
         }
         if(stAnswer4.length()==0)
         {
-            answer4.setError("answer the question");
+            answer4.setError("please answer the question!");
             isok=false;
         }
         if(stAnswer5.length()==0)
         {
-            answer5.setError("answer the question");
+            answer5.setError("please answer the question!");
             isok=false;
         }
         if(stAnswer6.length()==0)
         {
-            answer6.setError("answer the question");
+            answer6.setError("please answer the question!");
             isok=false;
         }
         if(stAnswer7.length()==0)
         {
-            answer7.setError("answer the question");
+            answer7.setError("please answer the question!");
             isok=false;
         }
         if(stAnswer8.length()==0)
         {
-            answer8.setError("answer the question");
+            answer8.setError("please answer the question!");
             isok=false;
         }
     }
