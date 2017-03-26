@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.example.singold.QuestionaireActivity;
 import com.example.singold.R;
+import com.example.singold.SignUpActivity;
 import com.example.singold.SongActivity;
 
 
@@ -71,20 +72,10 @@ public class ThreeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v= inflater.inflate(R.layout.fragment_three, container, false);
-               Button btn= (Button) v.findViewById(R.id.addSong) ;
-        btn.setOnClickListener(new View.OnClickListener() {
-                                   @Override
-                                   public void onClick(View view) {
-                                       if (view == addSong) ;
-                                       Intent intent=new Intent(getContext(), SongActivity.class);
-                                       startActivity(intent);
-                                   }
-        });
-        return v;
-        }
+        View v = inflater.inflate(R.layout.fragment_three, container, false);
 
-    // TODO: Rename method, update argument and hook method into UI event
+        // TODO: Rename method, update argument and hook method into UI event
+
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -122,7 +113,12 @@ public class ThreeFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-    public void onClick(View view){
+    public void onClick(View v){
+        if (v==addSong)
+        {
+            Intent intent=new Intent(getBaseContext(),SongActivity.class);
+            startActivity(intent);
+        }
 
     }
 }
