@@ -116,7 +116,7 @@ public class ThreeFragment extends Fragment {
     public void onClick(View v){
         if (v==addSong)
         {
-            Intent intent=new Intent(getBaseContext(),SongActivity.class);
+            Intent intent=new Intent(getContext(),SongActivity.class);
             startActivity(intent);
         }
 
