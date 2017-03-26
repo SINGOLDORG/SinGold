@@ -74,4 +74,5 @@
     <string name="atLeast3">לפחות 3 תווים</string>
     <string name="UsernameIsAlredyThere">שם משתמש הוא כבר נמצא</string>
     <string name="AtLeast10Number">לפחות 9 מספרים</string>
+    <string name="pleaseAnswerTheQuestion">אנא תעני על השאלה!</string>
 </resources>

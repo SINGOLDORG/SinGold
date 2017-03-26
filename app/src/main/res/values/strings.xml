@@ -109,4 +109,5 @@
     <string name="hhh">kkkk</string>
     <string name="UsernameIsAlredyThere">username is already there</string>
     <string name="AtLeast10Number">at least 9 number</string>
+    <string name="pleaseAnswerTheQuestion">please answer the question!</string>
 </resources>
