@@ -21,7 +21,7 @@
         <activity android:name=".LogInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".Sin_goldActivity" />
-        <activity android:name=".PatientDetailsActivity" />
+        <activity android:name=".AddPatientActivity" />
         <activity android:name=".QuestionaireActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>
