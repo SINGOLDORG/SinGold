@@ -30,18 +30,6 @@
         android:id="@+id/search1"
         android:layout_toStartOf="@+id/Saerch" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:layout_below="@+id/Saerch"
-        android:id="@+id/patient"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:text="Button"
         android:layout_width="wrap_content"
@@ -51,5 +39,12 @@
         android:id="@+id/addPatient"
         android:background="@drawable/newp"
         android:onClick="onClick" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search1"
+        android:layout_alignParentStart="true"
+        android:id="@+id/patient" />
 
 </RelativeLayout>

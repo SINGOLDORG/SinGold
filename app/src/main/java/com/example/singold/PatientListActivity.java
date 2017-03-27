@@ -24,7 +24,7 @@ public class PatientListActivity extends AppCompatActivity
 
         search1 = (EditText) findViewById(R.id.search1);
         Search = (Button) findViewById(R.id.Saerch);
-        patient = (ListView) findViewById(R.id.patient);
+        patient=(ListView)findViewById(R.id.patient);
         addPatient=(Button)findViewById(R.id.addPatient);
 
     }
