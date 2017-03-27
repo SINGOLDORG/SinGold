@@ -32,6 +32,7 @@ public class AddPatientActivity extends AppCompatActivity {
         year = (EditText) findViewById(R.id.year);
         personalid = (EditText) findViewById(R.id.personalid);
         plus = (ImageButton) findViewById(R.id.plus);
+
     }
 
     private void dataHandler() {
@@ -88,7 +89,7 @@ public class AddPatientActivity extends AppCompatActivity {
 
         }
     }
-    public void OnClick(View v){
+    public void onClick(View v){
         if (v==plus)
             dataHandler();
     }
