@@ -15,10 +15,10 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:weightSum="1"
-        android:id="@+id/linearlayout4">
+        android:id="@+id/linearlayout4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <ImageView
             android:layout_width="match_parent"
@@ -26,82 +26,80 @@
             app:srcCompat="@drawable/name"
             android:id="@+id/image4" />
 
-        <TextView
-            android:text="@string/ma7azot"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/MusicalPlays"
-            android:layout_weight="0.12" />
-
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/ma7azotrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/answer4"
-            android:hint="@string/answer"
-            android:layout_weight="0.06" />
+            android:id="@+id/ma7azot"
+            android:hint="@string/ma7azot"
+            android:layout_weight="0.13" />
+        </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:text="@string/disk"
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/diskrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
             android:id="@+id/disk"
-            android:layout_weight="0.08" />
+            android:hint="@string/disk"
+            android:layout_weight="0.13" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/favoritesingerrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/answer5"
-            android:hint="@string/answer"
-            android:layout_weight="0.06" />
-
-        <TextView
-            android:text="@string/favorite_singer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/favoritesinger"
-            android:layout_weight="0.13" />
+            android:hint="@string/favorite_singer"
+            android:layout_weight="0.14" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/weddingsongrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/answer6"
-            android:hint="@string/answer" />
-
-        <TextView
-            android:text="@string/weeding_song"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/weddingsong"
-            android:layout_weight="0.15" />
+            android:hint="@string/weeding_song"
+            android:layout_weight="0.12" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/favoriteSongrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/answer7"
-            android:hint="@string/answer" />
-
-        <TextView
-            android:text="@string/favorite_song"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/favoriteSong"
-            android:layout_weight="0.13" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/answer8"
-            android:hint="@string/answer" />
+            android:hint="@string/favorite_song"
+            android:layout_weight="0.15" />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 </RelativeLayout>

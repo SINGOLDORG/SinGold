@@ -38,8 +38,7 @@ public class QuestionaireActivity extends AppCompatActivity {
     private RadioGroup rgQ1, rgQ2, rgQ3, rgQ4, rgQ5, rgQ6, rgQ7;
     private RadioButton opera, classical, armyBands, songs, folkDances, yiddish, hebrew, english, russian, arabic, waltz, tango, samba;
     private RadioButton jaz, rock, pollack, chazanout, frompray, propnents, runningwater, insteumental;
-    private TextView country, homemusic, youngmusic, ma7azot, disk, favoritesinger, weddingsong, favoritesong;
-    private EditText answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8;
+    private EditText country, homemusic, youngmusic, ma7azot, disk, favoritesinger, weddingsong, favoritesong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,76 +149,72 @@ public class QuestionaireActivity extends AppCompatActivity {
         rgQ7 = (RadioGroup) findViewById(R.id.rgQ7);
         runningwater = (RadioButton) findViewById(R.id.runningwater);
         insteumental = (RadioButton) findViewById(R.id.insteumental);
-        country = (TextView) findViewById(R.id.country);
-        homemusic = (TextView) findViewById(R.id.homemusic);
-        youngmusic = (TextView) findViewById(R.id.youngmusic);
-        answer1 = (EditText) findViewById(R.id.answer1);
-        answer2 = (EditText) findViewById(R.id.answer2);
-        answer3 = (EditText) findViewById(R.id.answer3);
+
+
+        country = (EditText) findViewById(R.id.country);
+        homemusic = (EditText) findViewById(R.id.homemusic);
+        youngmusic = (EditText) findViewById(R.id.youngmusic);
 
 
         image4 = (ImageView) findViewById(R.id.image4);
-      //  ma7azot = (TextView) findViewById(R.id.ma7azot);
-        disk = (TextView) findViewById(R.id.disk);
-        favoritesinger = (TextView) findViewById(R.id.favoritesinger);
-        weddingsong = (TextView) findViewById(R.id.weddingsong);
-       // favoritesong = (TextView) findViewById(R.id.favoritesong);
-        answer4 = (EditText) findViewById(R.id.answer4);
-        answer5 = (EditText) findViewById(R.id.answer5);
-        answer6 = (EditText) findViewById(R.id.answer6);
-        answer7 = (EditText) findViewById(R.id.answer7);
-        answer8 = (EditText) findViewById(R.id.answer8);
+
+        ma7azot = (EditText) findViewById(R.id.ma7azot);
+        disk = (EditText) findViewById(R.id.disk);
+        favoritesinger = (EditText) findViewById(R.id.favoritesinger);
+        weddingsong = (EditText) findViewById(R.id.weddingsong);
+        favoritesong = (EditText) findViewById(R.id.favoriteSong);
     }
+
     private void dataHandler()
     {
-        String stAnswer1 = answer1.getText().toString();
-        String stAnswer2 = answer2.getText().toString();
-        String stAnswer3 = answer3.getText().toString();
-        String stAnswer4 = answer4.getText().toString();
-        String stAnswer5 = answer5.getText().toString();
-        String stAnswer6 = answer6.getText().toString();
-        String stAnswer7 = answer7.getText().toString();
-        String stAnswer8 = answer8.getText().toString();
+        String stCountry = country.getText().toString();
+        String stHomemusic = homemusic.getText().toString();
+        String stYoungmusic = youngmusic.getText().toString();
+        String stMa7azot = ma7azot.getText().toString();
+        String stDisk = disk.getText().toString();
+        String stFavoritesinger = favoritesinger.getText().toString();
+        String stWeddingsong = weddingsong.getText().toString();
+        String stFavoritesong = favoritesong.getText().toString();
 
         boolean isok=true;
-        if(stAnswer1.length()==0)
+        if(stCountry.length()==0)
         {
-           answer1.setError("please answer the question!");
+            country.setError("please answer the question!");
             isok=false;
         }
-        if(stAnswer2.length()==0)
+        if(stHomemusic.length()==0)
         {
-            answer2.setError("please answer the question!");
+            homemusic.setError("please answer the question!");
             isok=false;
         }
-        if(stAnswer3.length()==0)
+        if(stYoungmusic.length()==0)
         {
-            answer3.setError("please answer the question!");
+            youngmusic.setError("please answer the question!");
             isok=false;
         }
-        if(stAnswer4.length()==0)
+        if(stMa7azot.length()==0)
         {
-            answer4.setError("please answer the question!");
+            ma7azot.setError("please answer the question!");
             isok=false;
         }
-        if(stAnswer5.length()==0)
+        if(stDisk.length()==0)
         {
-            answer5.setError("please answer the question!");
+            disk.setError("please answer the question!");
             isok=false;
         }
-        if(stAnswer6.length()==0)
+        if(stFavoritesinger.length()==0)
         {
-            answer6.setError("please answer the question!");
+            favoritesinger.setError("please answer the question!");
             isok=false;
         }
-        if(stAnswer7.length()==0)
+        if(stWeddingsong.length()==0)
         {
-            answer7.setError("please answer the question!");
+            weddingsong.setError("please answer the question!");
             isok=false;
         }
-        if(stAnswer8.length()==0)
+        if(stFavoritesong.length()==0)
         {
-            answer8.setError("please answer the question!");
+           favoritesong.setError("please answer the question!");
             isok=false;
         }
     }
