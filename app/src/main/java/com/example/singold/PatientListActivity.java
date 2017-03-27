@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.singold.data.PatientDetails;
-
 public class PatientListActivity extends AppCompatActivity
 {
     private EditText search1;
@@ -24,14 +22,14 @@ public class PatientListActivity extends AppCompatActivity
 
         search1 = (EditText) findViewById(R.id.search1);
         Search = (Button) findViewById(R.id.Saerch);
-        patient = (ListView) findViewById(R.id.patient);
+        patient=(ListView)findViewById(R.id.patient);
         addPatient=(Button)findViewById(R.id.addPatient);
 
     }
     public void onClick (View v)
     {
         if(v==addPatient){
-            Intent intent= new Intent(getBaseContext(), PatientDetails.class);
+            Intent intent= new Intent(getBaseContext(), AddPatientActivity.class);
             startActivity(intent);
         }
 
