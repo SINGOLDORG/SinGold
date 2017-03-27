@@ -11,12 +11,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/firstrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/first"
             android:hint="@string/First_name" />
+</android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/lastper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,13 +35,20 @@
             android:inputType="none"
             android:hint="@string/Last_name"
             android:layout_below="@+id/first" />
+</android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/id1rapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/username"
             android:hint="@string/Username"
             android:layout_below="@+id/last" />
+</android.support.design.widget.TextInputLayout>
 
         <EditText
             android:layout_width="match_parent"
