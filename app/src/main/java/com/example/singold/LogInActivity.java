@@ -53,7 +53,7 @@ public class LogInActivity extends AppCompatActivity
     {
         if(v==login)
         {
-            Intent intent=new Intent(getBaseContext(),ListMainActivity.class);
+            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
             startActivity(intent);
         }
 
