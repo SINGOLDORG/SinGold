@@ -28,8 +28,12 @@ public class PatientListActivity extends AppCompatActivity
         addPatient=(Button)findViewById(R.id.addPatient);
 
     }
-    public void onClick (View v){
-        Intent intent= new Intent(getBaseContext(), PatientDetails.class);
-        startActivity(intent);
+    public void onClick (View v)
+    {
+        if(v==addPatient){
+            Intent intent= new Intent(getBaseContext(), PatientDetails.class);
+            startActivity(intent);
+        }
+
     }
 }
