@@ -56,7 +56,7 @@
     <string name="from_pray">من الصلاة</string>
     <string name="propnrmts">propnrmts</string>
     <string name="propnents">تراتيل</string>
-    <string name="relaxing">relaxing</string>
+    <string name="relaxing">موسيقى مهديء</string>
     <string name="runnig_water">جريان الماء</string>
     <string name="insteumental">الالات موسيقية</string>
     <string name="country">دولة</string>
@@ -82,5 +82,5 @@
     <string name="slide_1_desc">هذا التطبيق بساعد على تبطيء مرض الزهايمر بمساعدة الموسيقى</string>
     <string name="slide_2_desc"></string>
     <string name="pleaseAnswerTheQuestion">الرجاء الاجابة على السؤال!</string>
-    <string name="search">search</string>
+    <string name="search">بحث</string>
 </resources>

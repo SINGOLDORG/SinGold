@@ -75,5 +75,5 @@
     <string name="UsernameIsAlredyThere">שם משתמש הוא כבר נמצא</string>
     <string name="AtLeast10Number">לפחות 9 מספרים</string>
     <string name="pleaseAnswerTheQuestion">אנא תעני על השאלה!</string>
-    <string name="search">search</string>
+    <string name="search">חפש</string>
 </resources>
