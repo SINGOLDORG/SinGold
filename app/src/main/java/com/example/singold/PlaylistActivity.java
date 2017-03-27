@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.singold.data.PatientDetails;
+
 public class PlaylistActivity extends AppCompatActivity {
     private ListView ListView;
     private Button add;
@@ -22,8 +24,9 @@ public class PlaylistActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        if (v == add) {
-            Intent intent = new Intent(getBaseContext(), SongActivity.class);
+        if (v == add)
+        {
+            Intent intent = new Intent(getBaseContext(), PatientDetailsActivity.class);
             startActivity(intent);
 
         }
