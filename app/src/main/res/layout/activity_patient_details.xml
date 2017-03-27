@@ -15,8 +15,6 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="196dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
 
         <TextView
@@ -28,6 +26,11 @@
             android:textSize="24sp"
             android:layout_marginBottom="20dp" />
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/firstrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,7 +38,13 @@
             android:ems="10"
             android:id="@+id/first"
             android:hint="@string/First_name" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/lastrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,7 +52,13 @@
             android:ems="10"
             android:id="@+id/last"
             android:hint="@string/Last_name" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/familyphonerapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +66,13 @@
             android:ems="10"
             android:id="@+id/familyphone"
             android:hint="@string/Family_phone1" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/addressrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,7 +80,13 @@
             android:ems="10"
             android:id="@+id/address"
             android:hint="@string/Address1" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/yearrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,7 +94,13 @@
             android:ems="10"
             android:id="@+id/year"
             android:hint="@string/Year_of_birth" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/personalidrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,6 +108,7 @@
             android:ems="10"
             android:id="@+id/personalid"
             android:hint="@string/Personal_id1" />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 

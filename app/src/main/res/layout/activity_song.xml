@@ -17,6 +17,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/idPatientrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +29,13 @@
             android:ems="10"
             android:id="@+id/idPatient"
             android:hint="patient id" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/theSongNamerapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +43,13 @@
             android:ems="10"
             android:id="@+id/theSongName"
             android:hint="the_song_name" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/singerrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +57,13 @@
             android:ems="10"
             android:id="@+id/singer"
             android:hint="singer" />
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/linkrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,6 +71,7 @@
             android:ems="10"
             android:id="@+id/link"
             android:hint="link" />
+        </android.support.design.widget.TextInputLayout>
 
         <Button
             android:text="save"

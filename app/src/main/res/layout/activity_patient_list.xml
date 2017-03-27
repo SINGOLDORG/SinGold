@@ -19,17 +19,6 @@
         android:layout_alignParentEnd="true"
         android:onClick="onClick" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/search1"
-        android:layout_toStartOf="@+id/Saerch"
-        android:hint="@string/search" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,8 +31,28 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/search1"
         android:layout_alignParentStart="true"
-        android:id="@+id/patient" />
+        android:id="@+id/patient"
+        android:layout_toStartOf="@+id/Saerch"
+        android:layout_below="@+id/Saerch" />
+
+    <android.support.design.widget.TextInputLayout
+        android:paddingTop="0dp"
+        android:id="@+id/search1rapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/patient"
+        android:layout_alignParentStart="true">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/search1"
+        android:layout_toStartOf="@+id/Saerch"
+        android:hint="@string/search" />
+    </android.support.design.widget.TextInputLayout>
 
 </RelativeLayout>
