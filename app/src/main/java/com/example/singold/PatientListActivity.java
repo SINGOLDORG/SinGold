@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.singold.data.PatientDetails;
-
 public class PatientListActivity extends AppCompatActivity
 {
     private EditText search1;
@@ -31,7 +29,7 @@ public class PatientListActivity extends AppCompatActivity
     public void onClick (View v)
     {
         if(v==addPatient){
-            Intent intent= new Intent(getBaseContext(), PatientDetailsActivity.class);
+            Intent intent= new Intent(getBaseContext(), AddPatientActivity.class);
             startActivity(intent);
         }
 
