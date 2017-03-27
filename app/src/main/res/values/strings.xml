@@ -110,4 +110,5 @@
     <string name="UsernameIsAlredyThere">username is already there</string>
     <string name="AtLeast10Number">at least 9 number</string>
     <string name="pleaseAnswerTheQuestion">please answer the question!</string>
+    <string name="search">search</string>
 </resources>
