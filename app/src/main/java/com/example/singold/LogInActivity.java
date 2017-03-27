@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.singold.data.ConnectToServer;
+import com.example.singold.data.MyUser;
 import com.example.singold.data.Song;
 
 import java.util.concurrent.ExecutionException;
+import java.util.logging.Logger;
 
 public class LogInActivity extends AppCompatActivity
 {
@@ -28,33 +31,31 @@ public class LogInActivity extends AppCompatActivity
         username=(EditText)findViewById(R.id.username);
         id=(EditText)findViewById(R.id.id1);
     }
-    private void dataHandler()
-    {
+    private void dataHandler() {
         String stUsername = username.getText().toString();
         String stId = id.getText().toString();
 
-        boolean isok=true;
-        if(stUsername.length()<3)
-        {
+        boolean isok = true;
+        if (stUsername.length() < 3) {
             username.setError("Wrong username");
-            isok=false;
-        }
-        if(stId.length()==0)
-        {
-            id.setError("Wrong id");
-            isok=false;
-        }
-        if (isok==true)
-        {
+            isok = false;
 
         }
-}
+        if (stId.length() <= 3) {
+            id.setError("Wrong id");
+            isok = false;
+        }
+        if (isok == true) {
+
+        }
+    }
     public void onClick(View v)
     {
         if(v==login)
         {
-            Intent intent=new Intent(getBaseContext(),ListMainActivity.class);
+            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
             startActivity(intent);
+
         }
 
         if (v==sign)
