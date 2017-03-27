@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/playList" />
+        android:id="@+id/playList"
+        android:onClick="onClick" />
 
     <Button
         android:text="New Matching"
@@ -25,5 +26,6 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/playList"
         android:layout_marginStart="188dp"
-        android:id="@+id/newMatching" />
+        android:id="@+id/newMatching"
+        android:onClick="onClick" />
 </RelativeLayout>
