@@ -102,8 +102,7 @@ public class SignUpActivity extends AppCompatActivity {
     public void onClick(View v) {
         if (v == save) {
             dataHandler();
-            Intent intent = new Intent(getBaseContext(), PatientListActivity.class);
-            startActivity(intent);
+
         }
 
     }
