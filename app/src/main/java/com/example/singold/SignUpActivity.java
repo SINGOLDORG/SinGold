@@ -40,12 +40,12 @@ public class SignUpActivity extends AppCompatActivity {
         boolean isok = true;
         if (stFirst.length() < 3)
         {
-            first.setError("At Least 3");
+            first.setError(getResources().getString(R.string.atLeast3));
             isok = false;
         }
         if (stLast.length() < 3)
         {
-            last.setError("At Least 3");
+            last.setError(getResources().getString(R.string.atLeast3));
             isok = false;
         }
         if (stUsername.length() == 0)
