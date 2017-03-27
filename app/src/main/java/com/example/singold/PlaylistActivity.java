@@ -10,7 +10,7 @@ import android.widget.ListView;
 import com.example.singold.data.PatientDetails;
 
 public class PlaylistActivity extends AppCompatActivity {
-    private ListView ListView;
+    private ListView list;
     private Button add;
 
     @Override
@@ -19,7 +19,7 @@ public class PlaylistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playlist);
 
-        ListView = (ListView) findViewById(R.id.ListView);
+        list = (ListView) findViewById(R.id.list);
         add = (Button) findViewById(R.id.add);
     }
 
