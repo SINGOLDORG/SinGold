@@ -17,10 +17,8 @@
         <activity
             android:name=".ListMainActivity"
             android:label="@string/app_name" />
-        <activity android:name=".ToDoActivity">
-
-        </activity>
-        <activity android:name=".LogInActivity"></activity>
+        <activity android:name=".ToDoActivity"></activity>
+        <activity android:name=".LogInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".Sin_goldActivity" />
         <activity android:name=".PatientDetailsActivity" />
@@ -32,7 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SongActivity"></activity>
+        <activity android:name=".SongActivity" />
+        <activity android:name=".PatientListActivity"></activity>
     </application>
 
 </manifest>
