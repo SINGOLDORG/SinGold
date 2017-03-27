@@ -14,6 +14,7 @@ public class PatientListActivity extends AppCompatActivity
     private Button Search;
     private ListView patient;
     private Button addPatient;
+    private Button button4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class PatientListActivity extends AppCompatActivity
             Intent intent= new Intent(getBaseContext(), AddPatientActivity.class);
             startActivity(intent);
         }
+        
+        }
 
-    }
 }
