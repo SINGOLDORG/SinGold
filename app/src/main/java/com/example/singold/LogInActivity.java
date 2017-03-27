@@ -19,7 +19,6 @@ public class LogInActivity extends AppCompatActivity
 {
     private Button login,sign;
     private EditText username,id;
-    private  e;
 
     @Override
 
@@ -32,37 +31,24 @@ public class LogInActivity extends AppCompatActivity
         username=(EditText)findViewById(R.id.username);
         id=(EditText)findViewById(R.id.id1);
     }
-    private void dataHandler()
-    {
+    private void dataHandler() {
         String stUsername = username.getText().toString();
         String stId = id.getText().toString();
 
-        boolean isok=true;
-        if(stUsername.length()<3)
-        {
+        boolean isok = true;
+        if (stUsername.length() < 3) {
             username.setError("Wrong username");
-            isok=false;
+            isok = false;
 
         }
-        if(stId.length()<=3)
-        {
+        if (stId.length() <= 3) {
             id.setError("Wrong id");
-            isok=false;
+            isok = false;
         }
-        if (isok==true)
-        {
-            MyUser myUser=new MyUser();
-            myUser.setUsername(stUsername);
-            myUser.setId(stId);
-            ConnectToServer.connet(this);
-            ConnectToServer.addInTable(MyUser);
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        if (isok == true) {
 
         }
+    }
     public void onClick(View v)
     {
         if(v==login)
