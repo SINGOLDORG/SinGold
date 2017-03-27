@@ -19,7 +19,8 @@
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:id="@+id/ListView" />
     </LinearLayout>
 
     <Button
@@ -29,5 +30,6 @@
         android:id="@+id/add"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@android:drawable/ic_menu_add" />
+        android:background="@android:drawable/ic_menu_add"
+        android:onClick="onClick" />
 </RelativeLayout>
