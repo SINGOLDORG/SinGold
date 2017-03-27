@@ -17,7 +17,7 @@
         <activity
             android:name=".ListMainActivity"
             android:label="@string/app_name" />
-        <activity android:name=".ToDoActivity"></activity>
+        <activity android:name=".ToDoActivity" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".Sin_goldActivity" />
@@ -31,7 +31,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SongActivity" />
-        <activity android:name=".PatientListActivity"></activity>
+        <activity android:name=".PatientListActivity" />
+        <activity android:name=".PatientActivity"></activity>
     </application>
 
 </manifest>
