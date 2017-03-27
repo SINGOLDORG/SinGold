@@ -30,7 +30,7 @@
             android:text="@string/ma7azot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ma7zaot"
+            android:id="@+id/MusicalPlays"
             android:layout_weight="0.12" />
 
         <EditText

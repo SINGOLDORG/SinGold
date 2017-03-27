@@ -3,9 +3,11 @@ package com.example.singold.data;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 
+import com.example.singold.PatientListActivity;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -184,6 +186,8 @@ public  class ConnectToServer {
                             //    if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.GONE);
                             if(dialog!=null)
                                 dialog.dismiss();
+                            Intent intent = new Intent(context, PatientListActivity.class);
+                            context.startActivity(intent);
                         }
                     });
 
