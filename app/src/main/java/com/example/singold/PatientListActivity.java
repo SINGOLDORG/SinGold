@@ -31,7 +31,7 @@ public class PatientListActivity extends AppCompatActivity
     public void onClick (View v)
     {
         if(v==addPatient){
-            Intent intent= new Intent(getBaseContext(), PatientDetails.class);
+            Intent intent= new Intent(getBaseContext(), PatientDetailsActivity.class);
             startActivity(intent);
         }
 
