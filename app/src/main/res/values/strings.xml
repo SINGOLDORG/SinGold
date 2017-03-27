@@ -111,4 +111,7 @@
     <string name="AtLeast10Number">at least 9 number</string>
     <string name="pleaseAnswerTheQuestion">please answer the question!</string>
     <string name="search">search</string>
+    <string name="AtLeast10Numbers">at least 10 numbers</string>
+    <string name="enterYourAdress">enter your adress</string>
+    <string name="enterYourYearOfBirth">enter your year of birth</string>
 </resources>

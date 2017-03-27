@@ -83,4 +83,7 @@
     <string name="slide_2_desc"></string>
     <string name="pleaseAnswerTheQuestion">الرجاء الاجابة على السؤال!</string>
     <string name="search">بحث</string>
+    <string name="AtLeast10Numbers">على الاقل 10 ارقام</string>
+    <string name="enterYourAdress">ادخل عنوانك</string>
+    <string name="enterYourYearOfBirth">ادخل سنة الولادة</string>
 </resources>

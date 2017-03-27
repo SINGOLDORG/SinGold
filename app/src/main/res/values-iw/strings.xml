@@ -76,4 +76,7 @@
     <string name="AtLeast10Number">לפחות 9 מספרים</string>
     <string name="pleaseAnswerTheQuestion">אנא תעני על השאלה!</string>
     <string name="search">חפש</string>
+    <string name="AtLeast10Numbers">לפחות 10 מספרים</string>
+    <string name="enterYourAdress">הכנס את המיקום שלך</string>
+    <string name="enterYourYearOfBirth">הכנס שנה לידה</string>
 </resources>

@@ -43,28 +43,28 @@ public class AddPatientActivity extends AppCompatActivity {
         String stPersonalid = personalid.getText().toString();
 
         boolean isok = true;
-        if (stFirst.length() == 0) {
-            first.setError("Wrong first name");
+        if (stFirst.length() < 3) {
+            first.setError(getResources().getString(R.string.atLeast3));
             isok = false;
         }
-        if (stLast.length() == 0) {
-            last.setError("Wrong last name");
+        if (stLast.length() < 3) {
+            last.setError(getResources().getString(R.string.atLeast3));
             isok = false;
         }
-        if (stFamilyphone.length() == 0) {
-            familyphone.setError("Wrong family phone");
+        if (stFamilyphone.length() != 10) {
+            familyphone.setError(getResources().getString(R.string.AtLeast10Numbers));
             isok = false;
         }
-        if (stAddress.length() == 0) {
-            address.setError("Wrong address");
+        if (stAddress.length() < 3) {
+            address.setError(getResources().getString(R.string.enterYourAdress));
             isok = false;
         }
-        if (stYear.length() == 0) {
-            year.setError("Wrong year of born");
+        if (stYear.length() < 1880) {
+            year.setError(getResources().getString(R.string.enterYourYearOfBirth));
             isok = false;
         }
-        if (stPersonalid.length() == 0) {
-            personalid.setError("Wrong personal id");
+        if (stPersonalid.length() != 9) {
+            personalid.setError(getResources().getString(R.string.AtLeast10Number));
             isok = false;
         }
         if (isok==true)
