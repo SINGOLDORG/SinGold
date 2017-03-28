@@ -14,7 +14,7 @@ public class PatientListActivity extends AppCompatActivity
     private Button Search;
     private ListView patient;
     private Button addPatient;
-    private Button button4;
+    private Button patientX;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +25,17 @@ public class PatientListActivity extends AppCompatActivity
         Search = (Button) findViewById(R.id.Saerch);
         patient=(ListView)findViewById(R.id.patient);
         addPatient=(Button)findViewById(R.id.addPatient);
+        patientX=(Button)findViewById(R.id.patientX);
 
     }
-    public void onClick (View v)
-    {
-        if(v==addPatient){
-            Intent intent= new Intent(getBaseContext(), AddPatientActivity.class);
+    public void onClick (View v) {
+        if (v == addPatient) {
+            Intent intent = new Intent(getBaseContext(), AddPatientActivity.class);
             startActivity(intent);
         }
-        
+        if(v==patientX){
+                Intent intent = new Intent(getBaseContext(), PatientDetailsActivity.class);
+                startActivity(intent);
+            }
         }
-
-}
+    }
