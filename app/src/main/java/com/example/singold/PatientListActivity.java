@@ -34,7 +34,7 @@ public class PatientListActivity extends AppCompatActivity
             startActivity(intent);
         }
         if(v==patientX){
-                Intent intent = new Intent(getBaseContext(), PatientDetailsActivity.class);
+                Intent intent = new Intent(getBaseContext(), PatientActivity.class);
                 startActivity(intent);
             }
         }
