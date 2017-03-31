@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class PatientListActivity extends AppCompatActivity {
+public class PatientListActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText search1;
     private Button Search;
     private ListView patient;
@@ -25,6 +25,8 @@ public class PatientListActivity extends AppCompatActivity {
         patient = (ListView) findViewById(R.id.patient);
         addPatient = (Button) findViewById(R.id.addPatient);
         patientX = (Button) findViewById(R.id.patientX);
+        patientX.setOnClickListener(this);
+        addPatient.setOnClickListener(this);
 
     }
 
