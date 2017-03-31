@@ -77,7 +77,7 @@
             android:text="save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="OnClick"
+            android:onClick="OnClick (SongActivity)"
             android:id="@+id/save" />
     </LinearLayout>
 </RelativeLayout>
