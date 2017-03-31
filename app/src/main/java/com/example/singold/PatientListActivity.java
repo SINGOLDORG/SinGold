@@ -8,13 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class PatientListActivity extends AppCompatActivity
-{
+public class PatientListActivity extends AppCompatActivity {
     private EditText search1;
     private Button Search;
     private ListView patient;
     private Button addPatient;
-    private Button button4;
+    private Button patientX;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +22,22 @@ public class PatientListActivity extends AppCompatActivity
 
         search1 = (EditText) findViewById(R.id.search1);
         Search = (Button) findViewById(R.id.Saerch);
-        patient=(ListView)findViewById(R.id.patient);
-        addPatient=(Button)findViewById(R.id.addPatient);
+        patient = (ListView) findViewById(R.id.patient);
+        addPatient = (Button) findViewById(R.id.addPatient);
+        patientX = (Button) findViewById(R.id.patientX);
 
     }
-    public void onClick (View v)
-    {
-        if(v==addPatient){
-            Intent intent= new Intent(getBaseContext(), AddPatientActivity.class);
+
+    public void onClick(View v) {
+        if (v == addPatient) {
+            Intent intent = new Intent(getBaseContext(), AddPatientActivity.class);
             startActivity(intent);
         }
-        
+        if (v == patientX) {
+            Intent intent = new Intent(getBaseContext(), PatientActivity.class);
+            startActivity(intent);
         }
-
+    }
 }
+
+

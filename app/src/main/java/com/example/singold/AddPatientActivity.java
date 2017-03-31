@@ -60,7 +60,7 @@ public class AddPatientActivity extends AppCompatActivity {
             address.setError(getResources().getString(R.string.enterYourAdress));
             isok = false;
         }
-        if (stYear.length() < 1880) {
+        if (stYear.length() !=4) {
             year.setError(getResources().getString(R.string.enterYourYearOfBirth));
             isok = false;
         }
