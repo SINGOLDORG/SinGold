@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.widget.Toast;
 
 import com.example.singold.PatientListActivity;
 import com.google.common.util.concurrent.FutureCallback;
@@ -20,6 +21,7 @@ import com.microsoft.windowsazure.mobileservices.http.ServiceFilter;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterRequest;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
+import com.microsoft.windowsazure.mobileservices.table.TableQueryCallback;
 import com.squareup.okhttp.OkHttpClient;
 
 import java.net.MalformedURLException;
@@ -59,14 +61,15 @@ public  class ConnectToServer {
     //  private static List<ToDoItem> results;
 
     public static void connet(Activity context) {
-        if(dialog==null) {
-            dialog = new ProgressDialog(context);
 
-            dialog.setMessage("Connecting...Wait...");
-        }
         ConnectToServer.context = context;
         if(mClient==null) {
             try {
+                if(dialog==null) {
+                    dialog = new ProgressDialog(context);
+
+                    dialog.setMessage("Connecting...Wait...");
+                }
                 // Create the Mobile Service Client instance, using the provided
 
                 // Mobile Service URL and key
@@ -84,6 +87,7 @@ public  class ConnectToServer {
                         return client;
                     }
                 });
+
             } catch (MalformedURLException e) {
                 createAndShowDialog(new Exception("There was an error creating the Mobile Service. Verify the URL"), "Error");
             } catch (Exception e) {
@@ -186,8 +190,8 @@ public  class ConnectToServer {
                             //    if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.GONE);
                             if(dialog!=null)
                                 dialog.dismiss();
-                            Intent intent = new Intent(context, PatientListActivity.class);
-                            context.startActivity(intent);
+//                            Intent intent = new Intent(context, PatientListActivity.class);
+//                            context.startActivity(intent);
                         }
                     });
 
@@ -232,7 +236,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
+                if(dialog!=null && dialog.isShowing())dialog.dismiss();
               //  context.finish();
 
 
@@ -240,6 +244,32 @@ public  class ConnectToServer {
         };
 
         runAsyncTask(task);
+    }
+
+    public static  void login(String user,String passw)
+    {
+        userTable.where().field("username").eq(user).and().field("EnterId").eq(passw).execute(new TableQueryCallback<MyUser>() {
+            @Override
+            public void onCompleted(List<MyUser> result, int count, Exception exception, ServiceFilterResponse response) {
+
+                // it appears for me and error here, ** remember to ask about it
+                if (result!=null && result.size() > 0) {
+               //     DataBaseMngr.saveLogIn(result.get(0), getBaseContext());
+                 //   signinDialog.dismiss();
+                    Intent intent=new Intent(context, PatientListActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    context.startActivity(intent);
+                    Toast.makeText(context, "WELCOME, " , Toast.LENGTH_LONG).show();
+                    //    finish();
+
+                } else {
+                    //signinDialog.dismiss();
+                    createAndShowDialog("EMAIL OR PASSWORD WRONG", "");
+
+                }
+            }
+        });
     }
     public static void refreshItemsFromTable(final ToDoItemAdapter adapter) {
 
