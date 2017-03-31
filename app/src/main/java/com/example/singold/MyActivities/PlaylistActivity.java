@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 import com.example.singold.R;
 
-public class PlaylistActivity extends AppCompatActivity {
+public class PlaylistActivity extends AppCompatActivity implements View.OnClickListener {
     private ListView list;
     private Button add;
 
@@ -21,6 +21,7 @@ public class PlaylistActivity extends AppCompatActivity {
 
         list = (ListView) findViewById(R.id.list);
         add = (Button) findViewById(R.id.add);
+        add.setOnClickListener(this);
     }
 
     public void onClick(View v) {
