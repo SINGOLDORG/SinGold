@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import com.example.singold.AddPatientActivity;
+import com.example.singold.MyActivities.AddPatientActivity;
 import com.example.singold.R;
 
 

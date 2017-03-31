@@ -10,10 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.singold.QuestionaireActivity;
 import com.example.singold.R;
-import com.example.singold.SignUpActivity;
-import com.example.singold.SongActivity;
+import com.example.singold.MyActivities.SongActivity;
 
 
 /**

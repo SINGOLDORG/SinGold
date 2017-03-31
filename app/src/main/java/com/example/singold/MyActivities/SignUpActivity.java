@@ -1,4 +1,4 @@
-package com.example.singold;
+package com.example.singold.MyActivities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.MyUser;
 import com.example.singold.data.ToDoItem;

@@ -1,4 +1,4 @@
-package com.example.singold;
+package com.example.singold.MyActivities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,14 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.singold.data.ConnectToServer;
-import com.example.singold.data.MyUser;
-import com.example.singold.data.Song;
-
-import java.util.concurrent.ExecutionException;
-import java.util.logging.Logger;
+import com.example.singold.R;
 
 public class LogInActivity extends AppCompatActivity
 {

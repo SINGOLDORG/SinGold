@@ -5,13 +5,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.ButtonBarLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.singold.QuestionaireActivity;
+import com.example.singold.MyActivities.QuestionaireActivity;
 import com.example.singold.R;
 
 

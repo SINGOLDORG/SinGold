@@ -1,7 +1,9 @@
-package com.example.singold;
+package com.example.singold.MyActivities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.singold.R;
 
 public class PatientDetailsActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.singold;
+package com.example.singold.MyActivities;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.PatientDetails;
 

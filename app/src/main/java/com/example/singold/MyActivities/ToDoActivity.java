@@ -1,4 +1,4 @@
-package com.example.singold;
+package com.example.singold.MyActivities;
 
 
 import java.net.MalformedURLException;
@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.example.singold.R;
 import com.example.singold.data.ToDoItem;
 import com.example.singold.data.ToDoItemAdapter;
 import com.google.common.util.concurrent.FutureCallback;

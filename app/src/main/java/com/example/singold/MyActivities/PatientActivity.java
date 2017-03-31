@@ -1,4 +1,4 @@
-package com.example.singold;
+package com.example.singold.MyActivities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.singold.data.MatchingSurvey;
+import com.example.singold.R;
 
-public class PatientActivity extends AppCompatActivity
+public class PatientActivity extends AppCompatActivity implements View.OnClickListener
 {
     private Button playList;
     private Button newMatching;
@@ -21,6 +21,8 @@ public class PatientActivity extends AppCompatActivity
 
         playList = (Button) findViewById(R.id.playList);
         newMatching = (Button) findViewById(R.id.newMatching);
+        newMatching.setOnClickListener(this);
+        playList.setOnClickListener(this);
     }
     public void onClick(View v)
     {
@@ -30,8 +32,8 @@ public class PatientActivity extends AppCompatActivity
 
         }
         if (v == newMatching) {
-            Intent intent = new Intent(getBaseContext(), MatchingSurvey.class);
-            startActivity(intent);
+//            Intent intent = new Intent(getBaseContext(), MatchingSurvey.class);
+//            startActivity(intent);
 
         }
     }

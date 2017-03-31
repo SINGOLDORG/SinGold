@@ -1,4 +1,4 @@
-package com.example.singold;
+package com.example.singold.MyActivities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,6 +22,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.singold.R;
 
 public class QuestionaireActivity extends AppCompatActivity {
 

@@ -9,8 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 
 import com.example.singold.R;
-import com.example.singold.ToDoActivity;
-import com.example.singold.data.ToDoItem;
+import com.example.singold.MyActivities.ToDoActivity;
 
 /**
  * Adapter to bind a ToDoItem List to a view
