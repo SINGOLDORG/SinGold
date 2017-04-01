@@ -45,7 +45,9 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
 
         }
         if (v == newMatching) {
-            Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
+          //  Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
+            Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
+
             startActivity(intent);
         }
     }

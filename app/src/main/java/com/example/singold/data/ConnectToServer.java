@@ -627,6 +627,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 dismissProProgressDialog();
+                context.finish();
 
             }
         };
