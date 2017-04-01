@@ -28,4 +28,12 @@
         android:layout_marginStart="188dp"
         android:id="@+id/newMatching"
         android:onClick="onClick" />
+
+    <TextView
+        android:text="tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tvname" />
 </RelativeLayout>
