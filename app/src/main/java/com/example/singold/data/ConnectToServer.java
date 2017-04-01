@@ -290,7 +290,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("ToDOItems..");
             }
 
             @Override
@@ -322,8 +322,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
-            }
+                dismissProProgressDialog();            }
         };
 
         runAsyncTask(task);
@@ -369,7 +368,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
+                dismissProProgressDialog();
             }
         };
 
@@ -415,7 +414,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
+                dismissProProgressDialog();
             }
         };
 
@@ -431,7 +430,7 @@ public  class ConnectToServer {
             protected void onPreExecute() {
                 super.onPreExecute();
 
-                showProProgressDialog("Down....");
+                showProProgressDialog("Downloading Details..");
             }
 
             @Override
@@ -476,7 +475,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("Filling the questions..");
             }
 
             @Override
@@ -508,7 +507,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
+                dismissProProgressDialog();
             }
         };
 
@@ -522,7 +521,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("Matching..");
             }
 
             @Override
@@ -554,7 +553,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
+                dismissProProgressDialog();
             }
         };
 
