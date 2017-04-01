@@ -39,7 +39,7 @@ public  class ConnectToServer {
     /**
      * Mobile Service Client reference
      */
-    private static MobileServiceClient mClient;
+    private static MobileServiceClient azureDBClient;
 
     /**
      * Mobile Service Table used to access data
@@ -62,17 +62,17 @@ public  class ConnectToServer {
     public static void connect(Activity context) {
 
         ConnectToServer.context = context;
-        if(mClient==null) {
+        if(azureDBClient ==null) {
             try {
                 // Create the Mobile Service Client instance, using the provided
 
                 // Mobile Service URL and key
-                mClient = new MobileServiceClient(
+                azureDBClient = new MobileServiceClient(
                         "https://singold2.azurewebsites.net",
                         context).withFilter(new ProgressFilter(context));
 
                 // Extend timeout from default of 10s to 20s
-                mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
+                azureDBClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
                     @Override
                     public OkHttpClient createOkHttpClient() {
                         OkHttpClient client = new OkHttpClient();
@@ -222,7 +222,7 @@ public  class ConnectToServer {
     public static void addInTable(final MyUser item) throws ExecutionException, InterruptedException {
         final MyUser[] entity = {null};
         if (userTable == null)
-            userTable = mClient.getTable(MyUser.class);
+            userTable = azureDBClient.getTable(MyUser.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -438,6 +438,8 @@ public  class ConnectToServer {
 
                 try {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
+                    if (patientDetailsTable == null)
+                        patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
                     final List<PatientDetails> results = patientDetailsTable.where().execute().get();
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
@@ -564,7 +566,7 @@ public  class ConnectToServer {
     public  static void addInTable(final ToDoItem item) throws ExecutionException, InterruptedException {
         ;
         if (mToDoTable == null)
-            mToDoTable = mClient.getTable(ToDoItem.class);
+            mToDoTable = azureDBClient.getTable(ToDoItem.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -600,7 +602,7 @@ public  class ConnectToServer {
     public static void addInTable(final Song item) throws ExecutionException, InterruptedException {
         ;
         if (songTable == null)
-            songTable = mClient.getTable(Song.class);
+            songTable = azureDBClient.getTable(Song.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -634,7 +636,7 @@ public  class ConnectToServer {
     public static void addInTable(final PatientSurvey item) throws ExecutionException, InterruptedException {
         ;
         if (patientSurveyTable == null)
-            patientSurveyTable = mClient.getTable(PatientSurvey.class);
+            patientSurveyTable = azureDBClient.getTable(PatientSurvey.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -670,7 +672,7 @@ public  class ConnectToServer {
     public static void addInTable(final PatientDetails item) throws ExecutionException, InterruptedException {
         ;
         if (patientDetailsTable == null)
-            patientDetailsTable = mClient.getTable(PatientDetails.class);
+            patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -705,7 +707,7 @@ public  class ConnectToServer {
     public static void addInTable(final MatchingSurvey item) throws ExecutionException, InterruptedException {
         ;
         if (HalfSurveyTable == null)
-            HalfSurveyTable = mClient.getTable(MatchingSurvey.class);
+            HalfSurveyTable = azureDBClient.getTable(MatchingSurvey.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
