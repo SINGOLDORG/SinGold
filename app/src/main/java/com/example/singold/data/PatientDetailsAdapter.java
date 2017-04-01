@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.singold.R;
@@ -30,6 +31,8 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
         TextView textAddress = (TextView) convertView.findViewById(R.id.textAddress);
         TextView textPId = (TextView) convertView.findViewById(R.id.textPid);
         TextView textYear = (TextView) convertView.findViewById(R.id.textYear);
+        ImageButton btnInfo=(ImageButton) convertView.findViewById(R.id.btnInfo);
+        ImageButton btnMusic=(ImageButton) convertView.findViewById(R.id.btnMusic);
 
         textFamilyPhone.setText(PatientDetails.getFamilyPhone());
         textAddress.setText(PatientDetails.getAddress());
@@ -38,6 +41,7 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
 
         return convertView;
     }
+
 }
 
 

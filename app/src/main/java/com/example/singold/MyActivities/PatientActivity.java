@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.singold.R;
+import com.example.singold.data.MatchingSurvey;
 
 public class PatientActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -32,8 +33,8 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
 
         }
         if (v == newMatching) {
-//            Intent intent = new Intent(getBaseContext(), MatchingSurvey.class);
-//            startActivity(intent);
+            Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
+            startActivity(intent);
 
         }
     }
