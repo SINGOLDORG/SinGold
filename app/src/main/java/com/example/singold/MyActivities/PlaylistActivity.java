@@ -27,7 +27,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if (v == add)
         {
-            Intent intent = new Intent(getBaseContext(), PatientDetailsActivity.class);
+            Intent intent = new Intent(getBaseContext(), SongActivity.class);
             startActivity(intent);
 
         }

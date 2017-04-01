@@ -42,7 +42,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/theSongName"
-            android:hint="the_song_name" />
+            android:hint="the song name" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -77,7 +77,7 @@
             android:text="save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="OnClick"
+            android:onClick="OnClick (SongActivity)"
             android:id="@+id/save" />
     </LinearLayout>
 </RelativeLayout>
