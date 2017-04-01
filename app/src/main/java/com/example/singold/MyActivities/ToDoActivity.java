@@ -222,7 +222,7 @@ public class ToDoActivity extends Activity {
 //
 //        item.setText(mTextNewToDo.getText().toString());
 //        item.setComplete(false);
-//        ConnectToServer.connet(this);
+//        ConnectToServer.connect(this);
 //        try {
 //            ConnectToServer.addInTable(item);
 //        } catch (ExecutionException e) {

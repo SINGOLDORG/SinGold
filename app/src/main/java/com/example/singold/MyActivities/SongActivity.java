@@ -13,7 +13,7 @@ import com.example.singold.data.Song;
 
 import java.util.concurrent.ExecutionException;
 
-public class SongActivity extends AppCompatActivity {
+public class SongActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText theSongName, singer, link, idPatient;
     private Button save;
 
@@ -24,13 +24,14 @@ public class SongActivity extends AppCompatActivity {
         theSongName = (EditText) findViewById(R.id.theSongName);
         singer = (EditText) findViewById(R.id.singer);
         link = (EditText) findViewById(R.id.link);
-       idPatient =(EditText) findViewById(R.id.idPatient);
+       // idPatient =(EditText) findViewById(R.id.idPatient);
 
         save = (Button) findViewById(R.id.save);
+        save.setOnClickListener(this);
     }
 
     private void dataHandler() {
-        String stIdPatient = idPatient.getText().toString();
+        String stIdPatient=idPatient.getText().toString();
         String stTheSongName = theSongName.getText().toString();
         String stSinger = singer.getText().toString();
         String stLink = link.getText().toString();
@@ -56,22 +57,25 @@ public class SongActivity extends AppCompatActivity {
 
 
         if (isok == true) {
-            Song s = new Song();
-            s.setIdPatient(stIdPatient);
-            s.setName(stTheSongName);
-            s.setSinger(stSinger);
-            s.setLink(stLink);
+            Song song = new Song();
+            song.setIdPatient(stIdPatient);
+            song.setName(stTheSongName);
+            song.setSinger(stSinger);
+            song.setLink(stLink);
             try {
-                ConnectToServer.connet(this);
-                ConnectToServer.addInTable(s);
+                ConnectToServer.connect(this);
+                ConnectToServer.addInTable(song);
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
+
+
         }
-    }
-    public void OnClick(View v){
+        }
+    public void onClick(View v){
         if (v==save)
             dataHandler();
     }

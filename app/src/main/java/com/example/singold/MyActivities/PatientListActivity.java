@@ -9,13 +9,17 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.singold.R;
+import com.example.singold.data.ConnectToServer;
+import com.example.singold.data.PatientDetailsAdapter;
 
 public class PatientListActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText search1;
     private Button Search;
+    private ListView patientList;
     private Button addPatient;
-    private ListView patient;
     private Button patientX;
+    private PatientDetailsAdapter detailsAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +28,29 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
 
         search1 = (EditText) findViewById(R.id.search1);
         Search = (Button) findViewById(R.id.Saerch);
-        patient = (ListView) findViewById(R.id.patient);
         addPatient = (Button) findViewById(R.id.addPatient);
         patientX = (Button) findViewById(R.id.patientX);
         patientX.setOnClickListener(this);
         addPatient.setOnClickListener(this);
+        patientList = (ListView) findViewById(R.id.patientList);
+
+
+
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        initListView();
+    }
+
+    private void initListView() {
+        if(detailsAdapter==null)
+            detailsAdapter=new PatientDetailsAdapter(this, R.layout.item_patient_details);
+        patientList.setAdapter(detailsAdapter);
+        ConnectToServer.connect(this);
+        ConnectToServer.refreshItemsFromTable(detailsAdapter);
 
     }
 

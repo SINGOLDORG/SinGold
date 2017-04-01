@@ -75,4 +75,6 @@
     <string name="Login">login7</string>
     <string name="Login7">Login</string>
     <string name="search">search</string>
+    <string name="language1">language</string>
+    <string name="City">city</string>
 </resources>

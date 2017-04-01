@@ -1,7 +1,5 @@
 package com.example.singold.MyActivities;
 
-import android.app.ListActivity;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -79,7 +77,7 @@ public class AddPatientActivity extends AppCompatActivity {
             patientDetails.setAddress(stAddress);
             patientDetails.setYear(stYear);
             try {
-                ConnectToServer.connet(this);
+                ConnectToServer.connect(this);
                 ConnectToServer.addInTable(patientDetails);
             } catch (ExecutionException e) {
                 e.printStackTrace();

@@ -39,7 +39,7 @@ public  class ConnectToServer {
     /**
      * Mobile Service Client reference
      */
-    private static MobileServiceClient mClient;
+    private static MobileServiceClient azureDBClient;
 
     /**
      * Mobile Service Table used to access data
@@ -59,25 +59,20 @@ public  class ConnectToServer {
     public static Activity context;
     //  private static List<ToDoItem> results;
 
-    public static void connet(Activity context) {
+    public static void connect(Activity context) {
 
         ConnectToServer.context = context;
-        if(mClient==null) {
+        if(azureDBClient ==null) {
             try {
-                if(dialog==null) {
-                    dialog = new ProgressDialog(context);
-
-                    dialog.setMessage("Connecting...Wait...");
-                }
                 // Create the Mobile Service Client instance, using the provided
 
                 // Mobile Service URL and key
-                mClient = new MobileServiceClient(
+                azureDBClient = new MobileServiceClient(
                         "https://singold2.azurewebsites.net",
                         context).withFilter(new ProgressFilter(context));
 
                 // Extend timeout from default of 10s to 20s
-                mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
+                azureDBClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
                     @Override
                     public OkHttpClient createOkHttpClient() {
                         OkHttpClient client = new OkHttpClient();
@@ -134,6 +129,25 @@ public  class ConnectToServer {
         builder.create().show();
     }
 
+    private static void  showProProgressDialog(String msg)
+    {
+        if(dialog==null)
+        {
+            dialog=new ProgressDialog(context);
+        }
+        dialog.setMessage(msg);
+        dialog.show();
+    }
+    private static void  dismissProProgressDialog()
+    {
+        if(dialog!=null)
+        {
+            dialog.dismiss();
+        }
+
+    }
+
+
     /**
      * Run an ASync task on the corresponding executor
      *
@@ -166,8 +180,7 @@ public  class ConnectToServer {
                 @Override
                 public void run() {
                     //  if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.VISIBLE);
-                    if(dialog!=null)
-                        dialog.show();
+                    showProProgressDialog("Connecting...Wait...");
 
                 }
             });
@@ -187,8 +200,7 @@ public  class ConnectToServer {
                         @Override
                         public void run() {
                             //    if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.GONE);
-                            if(dialog!=null)
-                                dialog.dismiss();
+                            dismissProProgressDialog();
 //                            Intent intent = new Intent(context, PatientListActivity.class);
 //                            context.startActivity(intent);
                         }
@@ -210,7 +222,7 @@ public  class ConnectToServer {
     public static void addInTable(final MyUser item) throws ExecutionException, InterruptedException {
         final MyUser[] entity = {null};
         if (userTable == null)
-            userTable = mClient.getTable(MyUser.class);
+            userTable = azureDBClient.getTable(MyUser.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -235,8 +247,8 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null && dialog.isShowing())dialog.dismiss();
-              //  context.finish();
+                dismissProProgressDialog();
+                //  context.finish();
 
 
             }
@@ -278,7 +290,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("ToDOItems..");
             }
 
             @Override
@@ -310,8 +322,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
-            }
+                dismissProProgressDialog();            }
         };
 
         runAsyncTask(task);
@@ -325,7 +336,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("Downloading Users...");
             }
 
             @Override
@@ -357,7 +368,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
+                dismissProProgressDialog();
             }
         };
 
@@ -371,7 +382,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("Reading Songs");
             }
 
             @Override
@@ -403,7 +414,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
+                dismissProProgressDialog();
             }
         };
 
@@ -418,7 +429,8 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+
+                showProProgressDialog("Downloading Details..");
             }
 
             @Override
@@ -426,6 +438,8 @@ public  class ConnectToServer {
 
                 try {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
+                    if (patientDetailsTable == null)
+                        patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
                     final List<PatientDetails> results = patientDetailsTable.where().execute().get();
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
@@ -450,8 +464,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
-            }
+                dismissProProgressDialog();            }
         };
 
         runAsyncTask(task);
@@ -464,7 +477,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("Filling the questions..");
             }
 
             @Override
@@ -496,7 +509,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
+                dismissProProgressDialog();
             }
         };
 
@@ -510,7 +523,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("Matching..");
             }
 
             @Override
@@ -542,7 +555,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
+                dismissProProgressDialog();
             }
         };
 
@@ -553,7 +566,7 @@ public  class ConnectToServer {
     public  static void addInTable(final ToDoItem item) throws ExecutionException, InterruptedException {
         ;
         if (mToDoTable == null)
-            mToDoTable = mClient.getTable(ToDoItem.class);
+            mToDoTable = azureDBClient.getTable(ToDoItem.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -566,7 +579,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            if(dialog!=null)dialog.show();
+                            showProProgressDialog("Saving TODOITEM");
 
                         }
                     });
@@ -578,7 +591,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
+                dismissProProgressDialog();
 
             }
         };
@@ -589,7 +602,7 @@ public  class ConnectToServer {
     public static void addInTable(final Song item) throws ExecutionException, InterruptedException {
         ;
         if (songTable == null)
-            songTable = mClient.getTable(Song.class);
+            songTable = azureDBClient.getTable(Song.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -601,8 +614,7 @@ public  class ConnectToServer {
                         public void run() {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
-                            if(dialog!=null)dialog.show();
-
+                    showProProgressDialog("Saving Song");
 //                            }
                         }
                     });
@@ -614,7 +626,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
+                dismissProProgressDialog();
 
             }
         };
@@ -624,7 +636,7 @@ public  class ConnectToServer {
     public static void addInTable(final PatientSurvey item) throws ExecutionException, InterruptedException {
         ;
         if (patientSurveyTable == null)
-            patientSurveyTable = mClient.getTable(PatientSurvey.class);
+            patientSurveyTable = azureDBClient.getTable(PatientSurvey.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -637,7 +649,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            if(dialog!=null)dialog.show();
+                            showProProgressDialog("Saving PatientSurvey");
 
                         }
                     });
@@ -649,7 +661,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
+                dismissProProgressDialog();
 
             }
         };
@@ -660,7 +672,7 @@ public  class ConnectToServer {
     public static void addInTable(final PatientDetails item) throws ExecutionException, InterruptedException {
         ;
         if (patientDetailsTable == null)
-            patientDetailsTable = mClient.getTable(PatientDetails.class);
+            patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -673,7 +685,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            if(dialog!=null)dialog.show();
+                            showProProgressDialog("Saving PatientDetails");
 
                         }
                     });
@@ -685,7 +697,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
+                dismissProProgressDialog();
 
             }
         };
@@ -695,7 +707,7 @@ public  class ConnectToServer {
     public static void addInTable(final MatchingSurvey item) throws ExecutionException, InterruptedException {
         ;
         if (HalfSurveyTable == null)
-            HalfSurveyTable = mClient.getTable(MatchingSurvey.class);
+            HalfSurveyTable = azureDBClient.getTable(MatchingSurvey.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -708,7 +720,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            if(dialog!=null)dialog.show();
+                            showProProgressDialog("Saving MatchingSurvey");
 
                         }
                     });
@@ -720,8 +732,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
-
+                    dismissProProgressDialog();
             }
         };
 
