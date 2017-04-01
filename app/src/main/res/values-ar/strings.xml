@@ -73,17 +73,18 @@
     <string name="folk_dances">folk dances</string>
     <string name="Login">login7</string>
     <string name="Login7">Login</string>
-    <string name="slide_1_title">اهلا الى SinGold!</string>
+    <string name="slide_1_title">اهلا وسهلا الى SinGold!</string>
     <string name="atLeast3">على الاقل 3 احرف</string>
     <string name="UsernameIsAlredyThere">اسم المسخدم هذا مستعمل</string>
     <string name="AtLeast10Number">على الاقل 9  ارقام</string>
-    <string name="slide_2_title">كيف يعمل هذا التطبيق؟</string>
-    <string name="slide_3_desc"></string>
-    <string name="slide_1_desc">هذا التطبيق بساعد على تبطيء مرض الزهايمر بمساعدة الموسيقى</string>
-    <string name="slide_2_desc"></string>
+    <string name="slide_3_desc">عندما نختار الموسيقى لمريض الزهايمر,نختار الموسيقى التي كان يسمعها فترة شيايه.</string>
+    <string name="slide_2_desc">وفقا لدراسات في مجال تاريخ الموسيقى,الموسيقى الاكثر تاثيرا في حياتنا هي التي نسمعها في فترة المراهقة حتى العشرينات.</string>
     <string name="pleaseAnswerTheQuestion">الرجاء الاجابة على السؤال!</string>
     <string name="search">بحث</string>
     <string name="AtLeast10Numbers">على الاقل 10 ارقام</string>
     <string name="enterYourAdress">ادخل عنوانك</string>
     <string name="enterYourYearOfBirth">ادخل سنة الولادة</string>
+    <string name="slide_1_desc">التي تساعد في العثور على الموسيقى الملائمة بشكل شخصي لكل مريض زهايمر.</string>
+    <string name="slide_2_title">ما هي الموسيقى الاكثر تاثيرا في حياتنا؟</string>
+    <string name="slide_3_title">ما هي الموسيقى التي يجب ان تختارها لمريض الزهايمر؟</string>
 </resources>

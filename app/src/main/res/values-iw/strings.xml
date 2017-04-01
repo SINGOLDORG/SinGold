@@ -70,7 +70,7 @@
     <string name="songs1">שירים</string>
     <string name="Login">login7</string>
     <string name="Login7">Login</string>
-    <string name="slide_1_title">שלום ל SinGold!</string>
+    <string name="slide_1_title">ברוכים הבאים ל SinGold!</string>
     <string name="atLeast3">לפחות 3 תווים</string>
     <string name="UsernameIsAlredyThere">שם משתמש הוא כבר נמצא</string>
     <string name="AtLeast10Number">לפחות 9 מספרים</string>
@@ -79,4 +79,11 @@
     <string name="AtLeast10Numbers">לפחות 10 מספרים</string>
     <string name="enterYourAdress">הכנס את המיקום שלך</string>
     <string name="enterYourYearOfBirth">הכנס שנה לידה</string>
+    <string name="slide_1_desc">שעוזרת במציאת מוזיקה מותאמת אישית לחולי דמנציה</string>
+    <string name="slide_2_desc">על פי מחקרים בתחום ההיסטוריה התרבותית-מוזיקלית, המוזיקה המשמעותית ביותר  היא המוזיקה שנהגנו לשמוע בגיל ההתבגרות ועד שנות העשרים המאוחרות של חיינו.</string>
+    <string name="slide_3_desc">באנו לבחור מוזיקה עבור האדם עם דמנציה,נחפש  מוזיקה ששמע כשהיה צעיר.</string>
+    <string name="slide_2_title">מה המוזיקה היותר משמעותיתבחיינו?</string>
+    <string name="slide_4_desc">אפליקציה שמסתמכת על עיקרון חכמת ההמונים שדרכה מתבצע בניית מאגר נתונים שמאחסן נתוני חולי דמנציה שאובחנה להם מוזיקה מותאמת אישית שמזינים מטפלים ברחבי הארץ, אותה אפליקציה מספקת  מנגנון חיפוש ואיתור למטופלים חדשים לפי מאפייני מפתח מינימליים לכל מטופל.</string>
+    <string name="slide_3_title">מה המוזיקה שתצריך לבחור לחולי אלצהיימר?</string>
+    <string name="slide_4_title">איך האפליקציה עובדת?</string>
 </resources>
