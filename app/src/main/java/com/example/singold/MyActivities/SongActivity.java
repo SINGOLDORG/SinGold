@@ -30,7 +30,7 @@ public class SongActivity extends AppCompatActivity {
     }
 
     private void dataHandler() {
-        String stIdPatient=idPatient.getText().toString();
+        String stIdPatient = idPatient.getText().toString();
         String stTheSongName = theSongName.getText().toString();
         String stSinger = singer.getText().toString();
         String stLink = link.getText().toString();
@@ -56,21 +56,21 @@ public class SongActivity extends AppCompatActivity {
 
 
         if (isok == true) {
-            Song song = new Song();
-            song.setIdPatient(stIdPatient);
-            song.setName(stTheSongName);
-            song.setSinger(stSinger);
-            song.setLink(stLink);
+            Song s = new Song();
+            s.setIdPatient(stIdPatient);
+            s.setName(stTheSongName);
+            s.setSinger(stSinger);
+            s.setLink(stLink);
             try {
                 ConnectToServer.connet(this);
-                ConnectToServer.addInTable(song);
+                ConnectToServer.addInTable(s);
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        }
+    }
     public void OnClick(View v){
         if (v==save)
             dataHandler();

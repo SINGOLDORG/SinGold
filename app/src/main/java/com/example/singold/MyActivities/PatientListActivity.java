@@ -13,8 +13,8 @@ import com.example.singold.R;
 public class PatientListActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText search1;
     private Button Search;
-    private ListView patient;
     private Button addPatient;
+    private ListView patient;
     private Button patientX;
 
     @Override
