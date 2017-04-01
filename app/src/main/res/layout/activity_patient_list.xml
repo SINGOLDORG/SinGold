@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:id="@+id/patient"
+        android:id="@+id/patientList"
         android:layout_toStartOf="@+id/Saerch"
         android:layout_below="@+id/Saerch"
         android:layout_alignParentEnd="true"
@@ -44,7 +44,7 @@
         android:id="@+id/search1rapper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/patient"
+        android:layout_above="@+id/patientList"
         android:layout_alignParentStart="true">
     <EditText
         android:layout_width="wrap_content"

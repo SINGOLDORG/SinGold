@@ -59,16 +59,11 @@ public  class ConnectToServer {
     public static Activity context;
     //  private static List<ToDoItem> results;
 
-    public static void connet(Activity context) {
+    public static void connect(Activity context) {
 
         ConnectToServer.context = context;
         if(mClient==null) {
             try {
-                if(dialog==null) {
-                    dialog = new ProgressDialog(context);
-
-                    dialog.setMessage("Connecting...Wait...");
-                }
                 // Create the Mobile Service Client instance, using the provided
 
                 // Mobile Service URL and key
@@ -134,6 +129,25 @@ public  class ConnectToServer {
         builder.create().show();
     }
 
+    private static void  showProProgressDialog(String msg)
+    {
+        if(dialog==null)
+        {
+            dialog=new ProgressDialog(context);
+        }
+        dialog.setMessage(msg);
+        dialog.show();
+    }
+    private static void  dismissProProgressDialog()
+    {
+        if(dialog!=null)
+        {
+            dialog.dismiss();
+        }
+
+    }
+
+
     /**
      * Run an ASync task on the corresponding executor
      *
@@ -166,8 +180,7 @@ public  class ConnectToServer {
                 @Override
                 public void run() {
                     //  if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.VISIBLE);
-                    if(dialog!=null)
-                        dialog.show();
+                    showProProgressDialog("Connecting...Wait...");
 
                 }
             });
@@ -187,8 +200,7 @@ public  class ConnectToServer {
                         @Override
                         public void run() {
                             //    if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.GONE);
-                            if(dialog!=null)
-                                dialog.dismiss();
+                            dismissProProgressDialog();
 //                            Intent intent = new Intent(context, PatientListActivity.class);
 //                            context.startActivity(intent);
                         }
@@ -235,8 +247,8 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null && dialog.isShowing())dialog.dismiss();
-              //  context.finish();
+                dismissProProgressDialog();
+                //  context.finish();
 
 
             }
@@ -325,7 +337,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("Downloading Users...");
             }
 
             @Override
@@ -371,7 +383,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+                showProProgressDialog("Reading Songs");
             }
 
             @Override
@@ -418,7 +430,8 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                dialog.show();
+
+                showProProgressDialog("Down....");
             }
 
             @Override
@@ -450,8 +463,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dialog.dismiss();
-            }
+                dismissProProgressDialog();            }
         };
 
         runAsyncTask(task);
@@ -566,7 +578,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            if(dialog!=null)dialog.show();
+                            showProProgressDialog("Saving TODOITEM");
 
                         }
                     });
@@ -578,7 +590,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
+                dismissProProgressDialog();
 
             }
         };
@@ -601,8 +613,7 @@ public  class ConnectToServer {
                         public void run() {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
-                            if(dialog!=null)dialog.show();
-
+                    showProProgressDialog("Saving Song");
 //                            }
                         }
                     });
@@ -614,7 +625,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
+                dismissProProgressDialog();
 
             }
         };
@@ -637,7 +648,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            if(dialog!=null)dialog.show();
+                            showProProgressDialog("Saving PatientSurvey");
 
                         }
                     });
@@ -649,7 +660,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
+                dismissProProgressDialog();
 
             }
         };
@@ -673,7 +684,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            if(dialog!=null)dialog.show();
+                            showProProgressDialog("Saving PatientDetails");
 
                         }
                     });
@@ -685,7 +696,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
+                dismissProProgressDialog();
 
             }
         };
@@ -708,7 +719,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            if(dialog!=null)dialog.show();
+                            showProProgressDialog("Saving MatchingSurvey");
 
                         }
                     });
@@ -720,8 +731,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                if(dialog!=null)dialog.dismiss();
-
+                    dismissProProgressDialog();
             }
         };
 
