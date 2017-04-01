@@ -178,7 +178,15 @@ public class QuestionaireActivity extends AppCompatActivity {
         String stWeddingsong = weddingsong.getText().toString();
         String stFavoritesong = favoritesong.getText().toString();
 
+       // int rgQ1 = RadioGroup.getChekedRadioButtonId();
+
+
+
+
+
         boolean isok=true;
+
+
         if(stCountry.length()==0)
         {
             country.setError("please answer the question!");
