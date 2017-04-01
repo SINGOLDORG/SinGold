@@ -86,4 +86,6 @@
     <string name="AtLeast10Numbers">على الاقل 10 ارقام</string>
     <string name="enterYourAdress">ادخل عنوانك</string>
     <string name="enterYourYearOfBirth">ادخل سنة الولادة</string>
+    <string name="language1">language</string>
+    <string name="City">city</string>
 </resources>

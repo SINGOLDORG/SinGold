@@ -32,9 +32,10 @@
         </activity>
         <activity android:name=".MyActivities.SongActivity" />
         <activity android:name=".MyActivities.PatientListActivity" />
-        <activity android:name=".MyActivities.PatientActivity"/>
-        <activity android:name=".MyActivities.PatientDetailsActivity"/>
-        <activity android:name=".MyActivities.PlaylistActivity"></activity>
+        <activity android:name=".MyActivities.PatientActivity" />
+        <activity android:name=".MyActivities.PatientDetailsActivity" />
+        <activity android:name=".MyActivities.PlaylistActivity" />
+        <activity android:name="com.example.zumoappname.MatchingSurveyActivity" />
     </application>
 
 </manifest>

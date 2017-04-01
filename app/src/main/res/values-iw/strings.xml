@@ -79,4 +79,6 @@
     <string name="AtLeast10Numbers">לפחות 10 מספרים</string>
     <string name="enterYourAdress">הכנס את המיקום שלך</string>
     <string name="enterYourYearOfBirth">הכנס שנה לידה</string>
+    <string name="language1">language</string>
+    <string name="City">city</string>
 </resources>

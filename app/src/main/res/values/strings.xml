@@ -114,4 +114,7 @@
     <string name="AtLeast10Numbers">at least 10 numbers</string>
     <string name="enterYourAdress">enter your adress</string>
     <string name="enterYourYearOfBirth">enter your year of birth</string>
+    <string name="language">language</string>
+    <string name="language1">language</string>
+    <string name="City">city</string>
 </resources>
