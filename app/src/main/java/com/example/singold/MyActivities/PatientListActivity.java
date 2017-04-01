@@ -28,11 +28,11 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
 
         search1 = (EditText) findViewById(R.id.search1);
         Search = (Button) findViewById(R.id.Saerch);
-        patientList = (ListView) findViewById(R.id.patientList);
         addPatient = (Button) findViewById(R.id.addPatient);
         patientX = (Button) findViewById(R.id.patientX);
         patientX.setOnClickListener(this);
         addPatient.setOnClickListener(this);
+        patientList = (ListView) findViewById(R.id.patientList);
 
 
 
