@@ -13,7 +13,7 @@ import com.example.singold.data.Song;
 
 import java.util.concurrent.ExecutionException;
 
-public class SongActivity extends AppCompatActivity {
+public class SongActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText theSongName, singer, link, idPatient;
     private Button save;
 
@@ -27,6 +27,7 @@ public class SongActivity extends AppCompatActivity {
        // idPatient =(EditText) findViewById(R.id.idPatient);
 
         save = (Button) findViewById(R.id.save);
+        save.setOnClickListener(this);
     }
 
     private void dataHandler() {
@@ -62,7 +63,7 @@ public class SongActivity extends AppCompatActivity {
             song.setSinger(stSinger);
             song.setLink(stLink);
             try {
-                ConnectToServer.connet(this);
+                ConnectToServer.connect(this);
                 ConnectToServer.addInTable(song);
             } catch (ExecutionException e) {
                 e.printStackTrace();
@@ -74,7 +75,7 @@ public class SongActivity extends AppCompatActivity {
 
         }
         }
-    public void OnClick(View v){
+    public void onClick(View v){
         if (v==save)
             dataHandler();
     }
