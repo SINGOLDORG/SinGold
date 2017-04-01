@@ -26,6 +26,7 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
     private ImageButton btnMusic, btnInfo;
 
     @Override
+
     public View getView(int position, View convertView, ViewGroup parent) {
         final PatientDetails patientDetails = getItem(position);
 
