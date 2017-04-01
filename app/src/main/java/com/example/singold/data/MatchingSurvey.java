@@ -16,9 +16,6 @@ public class MatchingSurvey {
     @com.google.gson.annotations.SerializedName("city")
     private String city;
 
-//fgffddfgfglklkl;
-    ///zxczxczx
-
 
     public MatchingSurvey(){}
 
