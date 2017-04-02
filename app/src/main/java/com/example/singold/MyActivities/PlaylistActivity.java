@@ -14,7 +14,7 @@ import com.example.singold.data.SongAdapter;
 
 public class PlaylistActivity extends AppCompatActivity implements View.OnClickListener {
     private ListView list;
-    private Button add;
+    private Button add,BTNmatching;
 
     private SongAdapter songAdapter;
 
@@ -27,6 +27,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
         list = (ListView) findViewById(R.id.list);
         add = (Button) findViewById(R.id.add);
         add.setOnClickListener(this);
+        BTNmatching=(Button)findViewById(R.id.BTNmatching);
     }
     private void initListView() {
         if(songAdapter==null)
@@ -50,6 +51,10 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
             Intent intent = new Intent(getBaseContext(), AddSongActivity.class);
             startActivity(intent);
 
+        }
+        if(v==BTNmatching){
+            Intent intent=new Intent(getBaseContext(),MatchingSurveyActivity.class);
+            startActivity(intent);
         }
     }
 }
