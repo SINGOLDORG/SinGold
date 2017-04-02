@@ -18,8 +18,6 @@
         android:layout_alignParentStart="true">
     <LinearLayout
         android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:id="@+id/linearlayout2"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
@@ -27,26 +25,26 @@
 
         <TextView
             android:text="@string/dance"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/Q4"
-            android:layout_marginTop="30dp" />
+             />
 
         <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="52dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/rgQ4"
             android:orientation="horizontal">
 
             <RadioButton
                 android:text="@string/waltz"
-                android:layout_width="81dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/waltz" />
 
             <RadioButton
                 android:text="@string/tango"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tango" />
 
@@ -60,13 +58,13 @@
 
         <TextView
             android:text="@string/relaxing"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/Q7" />
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:id="@+id/rgQ7"
             android:orientation="horizontal">
 
@@ -87,13 +85,13 @@
 
         <TextView
             android:text="@string/loazi"
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/Q5" />
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:id="@+id/rgQ5"
             android:orientation="horizontal">
 
@@ -105,27 +103,27 @@
 
             <RadioButton
                 android:text="@string/rock"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/rock" />
 
             <RadioButton
                 android:text="@string/pollack"
                 android:layout_width="wrap_content"
-                android:layout_height="43dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/pollack" />
 
         </RadioGroup>
 
         <TextView
             android:text="@string/r1"
-            android:layout_width="match_parent"
-            android:layout_height="31dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/Q6" />
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="wrap_content"
             android:id="@+id/rgQ6"
             android:orientation="horizontal">
 
@@ -138,7 +136,7 @@
             <RadioButton
                 android:text="@string/from_pray"
                 android:layout_width="wrap_content"
-                android:layout_height="53dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/fromPray" />
 
             <RadioButton
