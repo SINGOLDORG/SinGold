@@ -11,6 +11,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.singold.MyActivities.AddPatientActivity">
 
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/plus"
+        android:onClick="onClick"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        android:layout_alignParentEnd="true"
+        android:background="@color/shafaf"
+        android:layout_alignParentTop="true"
+        android:elevation="0dp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -119,14 +130,5 @@
 
 
     </ScrollView>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/plus"
-        android:onClick="onClick"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="400dp"
-        android:background="@color/windowBackground" />
+
 </RelativeLayout>
