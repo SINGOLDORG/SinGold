@@ -1,10 +1,13 @@
 package com.example.singold.data;
 
+import java.io.Serializable;
+
 /**
  * Created by user on 02/03/2017.
  */
 
-public class Song {
+public class Song implements Serializable
+{
     @com.google.gson.annotations.SerializedName("id")
     private String id;
     @com.google.gson.annotations.SerializedName("idPatient")

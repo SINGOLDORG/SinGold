@@ -1,10 +1,17 @@
 package com.example.singold.data;
 
+import android.widget.Button;
+import android.widget.RadioGroup;
+
+import com.example.singold.R;
+
 /**
  * Created by user on 02/03/2017.
  */
 
 public class PatientSurvey {
+
+
     @com.google.gson.annotations.SerializedName("id")
     private String id;
     @com.google.gson.annotations.SerializedName("idPatient")
@@ -23,7 +30,7 @@ public class PatientSurvey {
     private String isMahazot;
     @com.google.gson.annotations.SerializedName("mahazot")
     private String mahazot;
-//hkltot,disk,..
+    //hkltot,disk,..
     @com.google.gson.annotations.SerializedName("fSinger")
     private String fSinger;
     @com.google.gson.annotations.SerializedName("fSongs")
@@ -35,9 +42,9 @@ public class PatientSurvey {
     @com.google.gson.annotations.SerializedName("israel")
     private String israel;
     @com.google.gson.annotations.SerializedName("language")
-    private String language ;
+    private String language;
     @com.google.gson.annotations.SerializedName("dance")
-    private String dance ;
+    private String dance;
     @com.google.gson.annotations.SerializedName("loazi")
     private String loazi;
     @com.google.gson.annotations.SerializedName("religion")
@@ -45,7 +52,8 @@ public class PatientSurvey {
     @com.google.gson.annotations.SerializedName("relaxing")
     private String relaxing;
 
-    public PatientSurvey(){
+
+    public PatientSurvey() {
     }
 
     public String getId() {
@@ -201,4 +209,7 @@ public class PatientSurvey {
     public void setRelaxing(String relaxing) {
         this.relaxing = relaxing;
     }
+
+
 }
+

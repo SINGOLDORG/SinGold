@@ -35,7 +35,7 @@
         <activity android:name=".MyActivities.PatientActivity" />
         <activity android:name=".MyActivities.PatientDetailsActivity" />
         <activity android:name=".MyActivities.PlaylistActivity" />
-        <activity android:name="com.example.zumoappname.MatchingSurveyActivity" />
+        <activity android:name=".MyActivities.MatchingSurveyActivity" />
     </application>
 
 </manifest>

@@ -26,6 +26,7 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
     private ImageButton btnMusic, btnInfo;
 
     @Override
+
     public View getView(int position, View convertView, ViewGroup parent) {
         final PatientDetails patientDetails = getItem(position);
 
@@ -43,15 +44,15 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), PatientActivity.class);
-               intent.putExtra("patient",patientDetails);
+                intent.putExtra("patient", patientDetails);
                 getContext().startActivity(intent);
             }
         });
         btnMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(),PlaylistActivity.class);
-                intent.putExtra("patient",patientDetails);
+                Intent intent = new Intent(getContext(), PlaylistActivity.class);
+                intent.putExtra("patient", patientDetails);
                 getContext().startActivity(intent);
             }
         });
@@ -63,19 +64,4 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
 
         return convertView;
     }
-
-
-//        View.OnClickListener clickListener =new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//        if (v == btnMusic) {
-//            Intent intent = new Intent(getBaseContext(), PatientActivity.class);
-//            startActivity(intent);
-//        }
-//        if (v == btnInfo) {
-//            Intent intent = new Intent(getBaseContext(), PatientActivity.class);
-//            startActivity(intent);
-//        }
-//    }
 }
-

@@ -13,7 +13,7 @@ import com.example.singold.R;
  * Created by user on 16/03/2017.
  */
 
-public class PatientSurveyAdapter extends ArrayAdapter<PatientSurvey> {
+public class  PatientSurveyAdapter extends ArrayAdapter<PatientSurvey> {
     public PatientSurveyAdapter(Context context, int resource) {
         super(context, resource);
     }

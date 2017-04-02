@@ -31,17 +31,17 @@ public class SongActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void dataHandler() {
-        String stIdPatient=idPatient.getText().toString();
+       // String stIdPatient=idPatient.getText().toString();
         String stTheSongName = theSongName.getText().toString();
         String stSinger = singer.getText().toString();
         String stLink = link.getText().toString();
 
 
         boolean isok = true;
-        if (stIdPatient.length() == 0) {
-            idPatient.setError("Enter the patient id");
-            isok = false;
-        }
+//        if (stIdPatient.length() == 0) {
+//            idPatient.setError("Enter the patient id");
+//            isok = false;
+//        }
         if (stTheSongName.length() == 0) {
             theSongName.setError("Enter the song name");
             isok = false;
@@ -58,7 +58,7 @@ public class SongActivity extends AppCompatActivity implements View.OnClickListe
 
         if (isok == true) {
             Song song = new Song();
-            song.setIdPatient(stIdPatient);
+         //   song.setIdPatient(stIdPatient);
             song.setName(stTheSongName);
             song.setSinger(stSinger);
             song.setLink(stLink);

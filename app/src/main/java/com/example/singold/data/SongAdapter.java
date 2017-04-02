@@ -18,6 +18,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         super(context, resource);
     }
 
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         final Song Song = getItem(position);
