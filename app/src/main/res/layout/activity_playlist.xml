@@ -11,14 +11,15 @@
     tools:context="com.example.singold.MyActivities.PlaylistActivity">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/add"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:background="@android:drawable/ic_menu_add"
         android:onClick="onClick "
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        style="@style/imagebuttonStyle" />
 
     <LinearLayout
         android:orientation="horizontal"

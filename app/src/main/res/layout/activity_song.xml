@@ -20,7 +20,7 @@
         <android.support.design.widget.TextInputLayout
             android:paddingTop="0dp"
             android:id="@+id/idPatientrapper"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
@@ -34,15 +34,16 @@
         <android.support.design.widget.TextInputLayout
             android:paddingTop="0dp"
             android:id="@+id/theSongNamerapper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/theSongName"
-            android:hint="@string/songN" />
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/theSongName"
+                android:hint="@string/songN" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -50,19 +51,20 @@
             android:id="@+id/singerrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/singer"
-            android:hint="@string/singer" />
+
+            <EditText
+                android:layout_width="770dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/singer"
+                android:hint="@string/singer" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:paddingTop="0dp"
             android:id="@+id/linkrapper"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"

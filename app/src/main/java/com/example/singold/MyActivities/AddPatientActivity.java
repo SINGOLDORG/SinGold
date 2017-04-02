@@ -3,6 +3,7 @@ package com.example.singold.MyActivities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import java.util.concurrent.ExecutionException;
 public class AddPatientActivity extends AppCompatActivity {
     private TextView details;
     private EditText first, last, familyphone, address, year, personalid;
-    private ImageButton plus;
+    private Button plus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class AddPatientActivity extends AppCompatActivity {
         address = (EditText) findViewById(R.id.address);
         year = (EditText) findViewById(R.id.year);
         personalid = (EditText) findViewById(R.id.personalid);
-        plus = (ImageButton) findViewById(R.id.plus);
+        plus = (Button) findViewById(R.id.plus);
         plus.setOnClickListener(clickListener);
     }
 
