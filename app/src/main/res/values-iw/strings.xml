@@ -35,11 +35,11 @@
     <string name="languages">שפות</string>
     <string name="yiddish">יידיש</string>
     <string name="hebrew">עברית</string>
-    <string name="english">אינלית</string>
+    <string name="english">אנגלית</string>
     <string name="russian">רוסית</string>
     <string name="arabic">ערבית</string>
     <string name="dance">ריקוד</string>
-    <string name="waltz">ןאלס</string>
+    <string name="waltz">ואלס</string>
     <string name="tango">טנגו</string>
     <string name="samba">סמבה</string>
     <string name="loazi">לועזי</string>
@@ -81,7 +81,7 @@
     <string name="slide_1_desc">שעוזרת במציאת מוזיקה מותאמת אישית לחולי דמנציה</string>
     <string name="slide_2_desc">על פי מחקרים בתחום ההיסטוריה התרבותית-מוזיקלית, המוזיקה המשמעותית ביותר  היא המוזיקה שנהגנו לשמוע בגיל ההתבגרות ועד שנות העשרים המאוחרות של חיינו.</string>
     <string name="slide_3_desc">באנו לבחור מוזיקה עבור האדם עם דמנציה,נחפש  מוזיקה ששמע כשהיה צעיר.</string>
-    <string name="slide_2_title">מה המוזיקה היותר משמעותיתבחיינו?</string>
+    <string name="slide_2_title">מה המוזיקה היותר משמעותית בחיינו?</string>
     <string name="slide_4_desc">אפליקציה שמסתמכת על עיקרון חכמת ההמונים שדרכה מתבצע בניית מאגר נתונים שמאחסן נתוני חולי דמנציה שאובחנה להם מוזיקה מותאמת אישית שמזינים מטפלים ברחבי הארץ, אותה אפליקציה מספקת  מנגנון חיפוש ואיתור למטופלים חדשים לפי מאפייני מפתח מינימליים לכל מטופל.</string>
     <string name="slide_3_title">מה המוזיקה שתצריך לבחור לחולי אלצהיימר?</string>
     <string name="slide_4_title">איך האפליקציה עובדת?</string>
@@ -91,4 +91,10 @@
     <string name="City">עיר</string>
     <string name="sign_up">חשבון חדש</string>
     <string name="r1">דת</string>
+    <string name="l1">שפות</string>
+    <string name="skip">לדלג</string>
+    <string name="idP">"ת.ז לחולה "</string>
+    <string name="songN">שם השיר</string>
+    <string name="singer">זמר</string>
+    <string name="link">כישור</string>
 </resources>

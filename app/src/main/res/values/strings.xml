@@ -118,4 +118,9 @@
     <string name="language1">language</string>
     <string name="City">city</string>
     <string name="r1">religion</string>
+    <string name="l1">languages</string>
+    <string name="idP">patient id</string>
+    <string name="songN">the song name</string>
+    <string name="singer">singer</string>
+    <string name="link">link</string>
 </resources>
