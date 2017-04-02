@@ -22,53 +22,18 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/name"
-            android:id="@+id/image3" />
-
-        <TextView
-            android:text="@string/relaxing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Q7"
-            android:layout_weight="0.15" />
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rgQ7"
-            android:orientation="horizontal"
-            android:layout_weight="0.12">
-
-            <RadioButton
-                android:text="@string/runnig_water"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/runningwater" />
-
-            <RadioButton
-                android:text="@string/insteumental"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/insteumental" />
-
-        </RadioGroup>
-
         <android.support.design.widget.TextInputLayout
             android:paddingTop="0dp"
             android:id="@+id/countryrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
             android:hint="@string/favorite_singer"
-            android:layout_weight="0.16"
-            android:id="@+id/favoritesinger" />
+            android:id="@+id/favoritesinger"
+            android:layout_width="352dp"
+            android:layout_height="75dp" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -77,12 +42,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         <EditText
-            android:layout_width="362dp"
-            android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/weddingsong"
-            android:hint="@string/weeding_song" />
+            android:hint="@string/weeding_song"
+            android:layout_width="352dp"
+            android:layout_height="75dp" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -90,13 +55,14 @@
             android:id="@+id/youngmusicrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="381dp"
-            android:layout_height="51dp"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/favoritesong"
-            android:hint="@string/favorite_song" />
+
+            <EditText
+                android:layout_height="75dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/favoritesong"
+                android:hint="@string/favorite_song"
+                android:layout_width="352dp" />
         </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
