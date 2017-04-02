@@ -11,10 +11,10 @@
     <string name="id">ת.ז</string>
     <string name="id1">אשר ת.ז</string>
     <string name="Username2">שם משתמש</string>
-    <string name="id2">id</string>
+    <string name="id2">ת.ז</string>
     <string name="Finish">סיום</string>
     <string name="confirm_id">אישור ת.ז</string>
-    <string name="id3">id</string>
+    <string name="id3">ת.ז</string>
     <string name="save">שמירה</string>
     <string name="Last_name1">שם משפחה</string>
     <string name="First_name1">שם פרטי</string>
@@ -65,11 +65,10 @@
     <string name="favorite_song">שיר הכי אהוב</string>
     <string name="army_bands">להקות צבאיות</string>
     <string name="Last_name">שם משפחה</string>
-    <string name="Login2"></string>
+    <string name="Login2">התחבר</string>
     <string name="folk_dances">folk dances</string>
     <string name="songs1">שירים</string>
-    <string name="Login">login7</string>
-    <string name="Login7">Login</string>
+    <string name="Login">התחבר</string>
     <string name="slide_1_title">ברוכים הבאים ל SinGold!</string>
     <string name="atLeast3">לפחות 3 תווים</string>
     <string name="UsernameIsAlredyThere">שם משתמש הוא כבר נמצא</string>
@@ -86,4 +85,8 @@
     <string name="slide_4_desc">אפליקציה שמסתמכת על עיקרון חכמת ההמונים שדרכה מתבצע בניית מאגר נתונים שמאחסן נתוני חולי דמנציה שאובחנה להם מוזיקה מותאמת אישית שמזינים מטפלים ברחבי הארץ, אותה אפליקציה מספקת  מנגנון חיפוש ואיתור למטופלים חדשים לפי מאפייני מפתח מינימליים לכל מטופל.</string>
     <string name="slide_3_title">מה המוזיקה שתצריך לבחור לחולי אלצהיימר?</string>
     <string name="slide_4_title">איך האפליקציה עובדת?</string>
+    <string name="Login7">התחבר</string>
+    <string name="Next">הבא</string>
+    <string name="First_name">שם משתמש</string>
+    <string name="City">עיר</string>
 </resources>

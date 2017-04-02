@@ -17,7 +17,7 @@
     <string name="id">رقم الهوية</string>
     <string name="id1">التاكيد على رقم الهوية</string>
     <string name="Username2">اسم المستخدم</string>
-    <string name="id2">ת.ז</string>
+    <string name="id2">رقم الهوية</string>
     <string name="confirm_id">اكد رقم الهوية</string>
     <string name="id3">ת.ז</string>
     <string name="save">احفظ</string>
@@ -71,8 +71,8 @@
     <string name="classical">كلاسيكي</string>
     <string name="songs1">اغاني</string>
     <string name="folk_dances">folk dances</string>
-    <string name="Login">login7</string>
-    <string name="Login7">Login</string>
+    <string name="Login">تسجيل الدخول</string>
+    <string name="Login7">تسحيل الدخول</string>
     <string name="slide_1_title">اهلا وسهلا الى SinGold!</string>
     <string name="atLeast3">على الاقل 3 احرف</string>
     <string name="UsernameIsAlredyThere">اسم المسخدم هذا مستعمل</string>
@@ -87,4 +87,6 @@
     <string name="slide_1_desc">التي تساعد في العثور على الموسيقى الملائمة بشكل شخصي لكل مريض زهايمر.</string>
     <string name="slide_2_title">ما هي الموسيقى الاكثر تاثيرا في حياتنا؟</string>
     <string name="slide_3_title">ما هي الموسيقى التي يجب ان تختارها لمريض الزهايمر؟</string>
+    <string name="City">مدينة</string>
+    <string name="add_button_text">اضافة</string>
 </resources>
