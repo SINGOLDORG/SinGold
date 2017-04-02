@@ -117,4 +117,5 @@
     <string name="language">language</string>
     <string name="language1">language</string>
     <string name="City">city</string>
+    <string name="r1">religion</string>
 </resources>
