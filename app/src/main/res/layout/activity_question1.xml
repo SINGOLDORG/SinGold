@@ -100,7 +100,7 @@
                 android:orientation="vertical"
                 android:id="@+id/rgQ3">
                 <TextView
-                    android:text="languages"
+                    android:text="@string/l1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/Q3"

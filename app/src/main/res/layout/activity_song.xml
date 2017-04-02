@@ -28,7 +28,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/idPatient"
-            android:hint="patient id" />
+            android:hint="@string/idP" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -42,7 +42,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/theSongName"
-            android:hint="the song name" />
+            android:hint="@string/songN" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -56,7 +56,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/singer"
-            android:hint="singer" />
+            android:hint="@string/singer" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -70,7 +70,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/link"
-            android:hint="link" />
+            android:hint="@string/link" />
         </android.support.design.widget.TextInputLayout>
 
         <Button

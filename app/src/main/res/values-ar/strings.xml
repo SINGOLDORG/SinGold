@@ -19,7 +19,7 @@
     <string name="Username2">اسم المستخدم</string>
     <string name="id2">رقم الهوية</string>
     <string name="confirm_id">اكد رقم الهوية</string>
-    <string name="id3">ת.ז</string>
+    <string name="id3">رقم الهوية</string>
     <string name="save">احفظ</string>
     <string name="Last_name1">اسم العائلة</string>
     <string name="First_name1">الاسم الشخصي</string>
@@ -91,4 +91,10 @@
     <string name="add_button_text">اضافة</string>
     <string name="sign_up">حساب جديد</string>
     <string name="r1">دين</string>
+    <string name="l1">لغات</string>
+    <string name="skip">تخطي</string>
+    <string name="idP">رقم هوية المريض</string>
+    <string name="songN">اسم الاغنية</string>
+    <string name="singer">المغني</string>
+    <string name="link">رايط</string>
 </resources>
