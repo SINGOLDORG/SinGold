@@ -21,6 +21,11 @@
         android:layout_height="80dp"
          />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -31,9 +36,11 @@
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="397dp"
             android:id="@+id/list" />
     </LinearLayout>
+
+    </ScrollView>
 
     <Button
         android:text="Button"
@@ -45,3 +52,4 @@
         android:onClick="onClick" />
 
 </RelativeLayout>
+
