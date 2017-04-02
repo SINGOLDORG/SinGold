@@ -18,10 +18,12 @@ public class PatientSurvey {
     private String idPatient;
     @com.google.gson.annotations.SerializedName("country")
     private String country;
-    @com.google.gson.annotations.SerializedName("city")
-    private String city;
     @com.google.gson.annotations.SerializedName("year")
     private String year;
+    @com.google.gson.annotations.SerializedName("youngMusic")
+    private String youngMusic;
+    @com.google.gson.annotations.SerializedName("disk")
+    private String disk;
     @com.google.gson.annotations.SerializedName("homeMusic")
     private String homeMusic;
     @com.google.gson.annotations.SerializedName("education")
@@ -80,12 +82,20 @@ public class PatientSurvey {
         this.country = country;
     }
 
-    public String getCity() {
-        return city;
+    public String getDisk() {
+        return disk;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setDisk(String disk) {
+        this.disk = disk;
+    }
+
+    public String getYoungMusic() {
+        return youngMusic;
+    }
+
+    public void setYoungMusic(String youngMusic) {
+        this.youngMusic = youngMusic;
     }
 
     public String getYear() {
