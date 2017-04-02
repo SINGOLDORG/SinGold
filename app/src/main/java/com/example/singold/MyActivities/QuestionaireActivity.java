@@ -112,7 +112,6 @@ public class QuestionaireActivity extends AppCompatActivity {
             }
         });
 
-        image1 = (ImageView) findViewById(R.id.image1);
         Q1 = (TextView) findViewById(R.id.Q1);
         Q2 = (TextView) findViewById(R.id.Q2);
         Q3 = (TextView) findViewById(R.id.Q3);
@@ -130,7 +129,6 @@ public class QuestionaireActivity extends AppCompatActivity {
         arabic = (RadioButton) findViewById(R.id.arabic);
 
 
-        image2 = (ImageView) findViewById(R.id.image2);
         Q4 = (TextView) findViewById(R.id.Q4);
         Q5 = (TextView) findViewById(R.id.Q5);
         Q6 = (TextView) findViewById(R.id.Q6);
@@ -148,7 +146,6 @@ public class QuestionaireActivity extends AppCompatActivity {
         propnents = (RadioButton) findViewById(R.id.propnents);
 
 
-        image3 = (ImageView) findViewById(R.id.image3);
         Q7 = (TextView) findViewById(R.id.Q7);
         rgQ7 = (RadioGroup) findViewById(R.id.rgQ7);
         runningwater = (RadioButton) findViewById(R.id.runningwater);
@@ -159,8 +156,6 @@ public class QuestionaireActivity extends AppCompatActivity {
         homemusic = (EditText) findViewById(R.id.homemusic);
         youngmusic = (EditText) findViewById(R.id.youngmusic);
 
-
-        image4 = (ImageView) findViewById(R.id.image4);
 
         ma7azot = (EditText) findViewById(R.id.ma7azot);
         disk = (EditText) findViewById(R.id.disk);
