@@ -13,7 +13,7 @@ import com.example.singold.data.Song;
 
 import java.util.concurrent.ExecutionException;
 
-public class SongActivity extends AppCompatActivity implements View.OnClickListener{
+public class AddSongActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText theSongName, singer, link, idPatient;
     private Button save;
 
