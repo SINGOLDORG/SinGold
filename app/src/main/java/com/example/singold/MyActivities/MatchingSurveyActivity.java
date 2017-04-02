@@ -7,6 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.singold.R;
+import com.example.singold.data.ConnectToServer;
+import com.example.singold.data.MatchingSurvey;
+import com.example.singold.data.Song;
+
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by user on 01/04/2017.
@@ -56,6 +61,20 @@ public class MatchingSurveyActivity extends AppCompatActivity {
             isok = false;
         }
         if (isok == true) {
+            MatchingSurvey matchingSurvey = new MatchingSurvey();
+            matchingSurvey.setCountry(stCountry);
+            matchingSurvey.setYear(stYear);
+            matchingSurvey.setReligion(stReligion);
+            matchingSurvey.setLanguage(stLanguage);
+            try {
+                ConnectToServer.connect(this);
+                ConnectToServer.addInTable(matchingSurvey);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
 
         }
     }
