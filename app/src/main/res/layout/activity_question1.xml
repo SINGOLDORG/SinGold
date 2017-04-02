@@ -24,13 +24,13 @@
             <TextView
                 android:text="@string/classic"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/Q1"
-                android:layout_marginTop="30dp" />
+                 />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/rgQ1"
                 android:orientation="horizontal">
 
@@ -50,13 +50,13 @@
 
             <TextView
                 android:text="@string/Israel"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:id="@+id/Q2"
-                android:layout_height="46dp" />
+                android:layout_height="wrap_content" />
 
             <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="63dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/rgQ2"
                 android:orientation="horizontal">
 
@@ -65,18 +65,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/armyBands"
-                    android:layout_weight="1" />
+                     />
 
                 <RadioButton
                     android:text="@string/songs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/songs"
-                    android:layout_weight="1" />
+                     />
 
                 <RadioButton
                     android:text="@string/folk_dance"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/folkDances" />
 
@@ -91,8 +91,8 @@
                 android:id="@+id/rgQ3">
                 <TextView
                     android:text="@string/languages"
-                    android:layout_width="match_parent"
-                    android:layout_height="46dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/Q3"
                     />
                 <RadioButton
