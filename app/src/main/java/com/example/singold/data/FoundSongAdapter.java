@@ -28,7 +28,7 @@ public class FoundSongAdapter extends ArrayAdapter<Song> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_found_song, parent, false);
         }
 
-        CheckBox checkBox=(CheckBox)convertView.findViewById(R.id.checkBox);
+        CheckBox checkBox=(CheckBox)convertView.findViewById(R.id.check);
         TextView textName = (TextView) convertView.findViewById(R.id.textName);
         TextView textSinger = (TextView) convertView.findViewById(R.id.textSinger);
         TextView textLink = (TextView) convertView.findViewById(R.id.textLink);
