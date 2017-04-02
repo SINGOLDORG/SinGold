@@ -35,7 +35,7 @@
         <activity android:name=".MyActivities.PatientActivity" />
         <activity android:name=".MyActivities.PlaylistActivity" />
         <activity android:name=".MyActivities.MatchingSurveyActivity" />
-        <activity android:name=".MyActivities.FoundSongListActivity"></activity>
+        <activity android:name=".MyActivities.FoundSongActivity"></activity>
     </application>
 
 </manifest>
