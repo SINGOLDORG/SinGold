@@ -48,16 +48,8 @@
     <string name="start">GOT IT</string>
 
     <string name="slide_1_title">Welcome To SinGold!</string>
-    <string name="slide_1_desc"></string>
 
-    <string name="slide_2_title">Movie Tickets</string>
-    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
-
-    <string name="slide_3_title">Great Discounts</string>
-    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
-
-    <string name="slide_4_title">World Travel</string>
-    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+    <string name="slide_4_title">how is the app work?</string>
 
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
@@ -123,4 +115,10 @@
     <string name="songN">the song name</string>
     <string name="singer">singer</string>
     <string name="link">link</string>
+    <string name="slide_1_desc">That help finding approprite song personlly for every Alzheimer \'s patient.</string>
+    <string name="slide_2_desc">According to studies In the field of music history, The most influential music is the music we hear in the time we were teenagers until  the twenties.</string>
+    <string name="slide_2_title">" What is the most influential music in our lives?"</string>
+    <string name="slide_3_desc">When we   choose music for an  Alzheimer \'s patient, we choose the music he heard in his youth.</string>
+    <string name="slide_3_title">what music should we choose for an Alzheimer \'s patient?</string>
+    <string name="slide_4_desc">This application is based on the principle of crowds by building a database that stores information about patients diagnosed with appropriate personal music called therapists from across the country. The application provides search engine and find new patients as per minimum for each patient</string>
 </resources>
