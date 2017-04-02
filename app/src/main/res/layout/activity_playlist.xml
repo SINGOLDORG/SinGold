@@ -19,7 +19,7 @@
         android:layout_weight="1"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        style="@style/imagebuttonStyle" />
+         />
 
     <LinearLayout
         android:orientation="horizontal"
