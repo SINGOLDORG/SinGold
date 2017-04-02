@@ -15,8 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentStart="true">
     <LinearLayout
         android:orientation="vertical"
         android:layout_alignParentTop="true"
@@ -26,21 +25,15 @@
         android:layout_width="match_parent"
         tools:layout_width="match_parent">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/name"
-            android:id="@+id/image2" />
-
         <TextView
             android:text="@string/dance"
-            android:layout_width="172dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
             android:id="@+id/Q4" />
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="52dp"
             android:id="@+id/rgQ4"
             android:orientation="horizontal">
 
@@ -64,22 +57,42 @@
 
         </RadioGroup>
 
-        <ImageView
+        <TextView
+            android:text="@string/relaxing"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/name"
-            android:id="@+id/image3" />
+            android:layout_height="38dp"
+            android:id="@+id/Q7" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/rgQ7"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:text="@string/runnig_water"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/runningwater" />
+
+            <RadioButton
+                android:text="@string/insteumental"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/insteumental" />
+
+        </RadioGroup>
 
 
         <TextView
             android:text="@string/loazi"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
+            android:layout_height="37dp"
             android:id="@+id/Q5" />
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="52dp"
             android:id="@+id/rgQ5"
             android:orientation="horizontal">
 
@@ -106,12 +119,12 @@
         <TextView
             android:text="@string/r1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="31dp"
             android:id="@+id/Q6" />
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="42dp"
             android:id="@+id/rgQ6"
             android:orientation="horizontal">
 
@@ -134,35 +147,6 @@
                 android:id="@+id/propnents" />
 
         </RadioGroup>
-
-        <TextView
-            android:text="@string/relaxing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Q7"
-            android:layout_weight="0.15" />
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rgQ7"
-            android:orientation="horizontal"
-            android:layout_weight="0.12">
-
-            <RadioButton
-                android:text="@string/runnig_water"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/runningwater" />
-
-            <RadioButton
-                android:text="@string/insteumental"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/insteumental" />
-
-        </RadioGroup>
-
     </LinearLayout>
 </ScrollView>
 
