@@ -39,12 +39,6 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
     }
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        initListView();
-    }
-
     private void initListView() {
         if(detailsAdapter==null)
             detailsAdapter=new PatientDetailsAdapter(this, R.layout.item_patient_details);
@@ -53,6 +47,13 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
         ConnectToServer.refreshItemsFromTable(detailsAdapter);
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        initListView();
+    }
+
 
     public void onClick(View v) {
         if (v == addPatient) {
