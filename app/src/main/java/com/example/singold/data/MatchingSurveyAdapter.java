@@ -32,11 +32,11 @@ public class MatchingSurveyAdapter extends ArrayAdapter<MatchingSurvey> {
         TextView textLanguage = (TextView) convertView.findViewById(R.id.textLanguage);
         TextView textCity = (TextView) convertView.findViewById(R.id.textCity);
 
-        textId.setText(MatchingSurvey.getId());
+
         textCountry.setText(MatchingSurvey.getCountry());
         textYear.setText(MatchingSurvey.getYear());
         textLanguage.setText(MatchingSurvey.getLanguage());
-        textCity.setText(MatchingSurvey.getCity());
+        textCity.setText(MatchingSurvey.getReligion());
 
         return convertView;
     }
