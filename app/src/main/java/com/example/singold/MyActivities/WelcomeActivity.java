@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.singold.R;
+import com.example.singold.data.PrefManager;
 
 public class WelcomeActivity extends AppCompatActivity {
 
