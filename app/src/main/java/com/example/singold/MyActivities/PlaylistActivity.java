@@ -36,6 +36,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
         ConnectToServer.refreshItemsFromTable(songAdapter);
 
     }
+
     @Override
     protected void onStart() {
         super.onStart();
