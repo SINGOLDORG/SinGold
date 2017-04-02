@@ -97,4 +97,10 @@
     <string name="songN">שם השיר</string>
     <string name="singer">זמר</string>
     <string name="link">כישור</string>
+    <string name="next">הבא</string>
+    <string name="start">סיים</string>
+    <string name="language">שפה</string>
+    <string name="language1">שפה</string>
+    <string name="help">עזרה</string>
+    <string name="login">כניסה</string>
 </resources>

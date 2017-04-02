@@ -99,4 +99,10 @@
     <string name="link">رايط</string>
     <string name="slide_4_desc">"هذه التطبيق ميني على مبدا الحشود عن طريق بناء قاعدة بيانات الذي يخزن معلومات عن مرضى التي تشخص لهم موسيقى ملائمة يشكل شخصي يدعون معالجين من انحاء البلاد.يوفر التطبيق محرك البحث والعثور على مرضى جدد حسب الحد الادنى لكل مريض. "</string>
     <string name="slide_4_title">كيف تعمل التطبيق؟</string>
+    <string name="next">التالي</string>
+    <string name="start">انتهى</string>
+    <string name="language">لغة</string>
+    <string name="language1">لغة</string>
+    <string name="help">مساعدة</string>
+    <string name="login">دخول</string>
 </resources>
