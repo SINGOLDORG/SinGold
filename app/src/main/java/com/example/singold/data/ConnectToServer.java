@@ -390,6 +390,8 @@ public  class ConnectToServer {
 
                 try {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
+                    if (songTable == null)
+                        songTable = azureDBClient.getTable(Song.class);
                     final List<Song> results = songTable.where().execute().get();
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
