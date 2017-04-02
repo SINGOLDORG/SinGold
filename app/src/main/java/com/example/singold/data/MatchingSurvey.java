@@ -5,27 +5,20 @@ package com.example.singold.data;
  */
 
 public class MatchingSurvey {
-    @com.google.gson.annotations.SerializedName("id")
-    private String id;
+
     @com.google.gson.annotations.SerializedName("country")
     private String country;
     @com.google.gson.annotations.SerializedName("year")
     private String year;
     @com.google.gson.annotations.SerializedName("language")
     private String language;
-    @com.google.gson.annotations.SerializedName("city")
-    private String city;
+    @com.google.gson.annotations.SerializedName("religion")
+    private String religion;
 
 
     public MatchingSurvey(){}
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getCountry() {
         return country;
@@ -51,11 +44,11 @@ public class MatchingSurvey {
         this.language = language;
     }
 
-    public String getCity() {
-        return city;
+    public String getReligion() {
+        return religion;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setReligion(String religion) {
+        this.religion = religion;
     }
 }
