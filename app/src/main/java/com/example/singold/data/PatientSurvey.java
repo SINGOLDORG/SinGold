@@ -18,37 +18,34 @@ public class PatientSurvey {
     private String idPatient;
     @com.google.gson.annotations.SerializedName("country")
     private String country;
-    @com.google.gson.annotations.SerializedName("city")
-    private String city;
     @com.google.gson.annotations.SerializedName("year")
     private String year;
+    @com.google.gson.annotations.SerializedName("youngMusic")
+    private String youngMusic;
+
     @com.google.gson.annotations.SerializedName("homeMusic")
     private String homeMusic;
     @com.google.gson.annotations.SerializedName("education")
     private String education;
-    @com.google.gson.annotations.SerializedName("isMahazot")
-    private String isMahazot;
-    @com.google.gson.annotations.SerializedName("mahazot")
-    private String mahazot;
-    //hkltot,disk,..
+    @com.google.gson.annotations.SerializedName("language")
+    private String language;
+    @com.google.gson.annotations.SerializedName("religion")
+    private String religion;
     @com.google.gson.annotations.SerializedName("fSinger")
     private String fSinger;
     @com.google.gson.annotations.SerializedName("fSongs")
     private String fSongs;
-    @com.google.gson.annotations.SerializedName("wedding")
-    private String wedding;
+
     @com.google.gson.annotations.SerializedName("classic")
     private String classic;
     @com.google.gson.annotations.SerializedName("israel")
     private String israel;
-    @com.google.gson.annotations.SerializedName("language")
-    private String language;
+
     @com.google.gson.annotations.SerializedName("dance")
     private String dance;
     @com.google.gson.annotations.SerializedName("loazi")
     private String loazi;
-    @com.google.gson.annotations.SerializedName("religion")
-    private String religion;
+
     @com.google.gson.annotations.SerializedName("relaxing")
     private String relaxing;
 
@@ -80,12 +77,14 @@ public class PatientSurvey {
         this.country = country;
     }
 
-    public String getCity() {
-        return city;
+
+
+    public String getYoungMusic() {
+        return youngMusic;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setYoungMusic(String youngMusic) {
+        this.youngMusic = youngMusic;
     }
 
     public String getYear() {
@@ -112,21 +111,7 @@ public class PatientSurvey {
         this.education = education;
     }
 
-    public String getIsMahazot() {
-        return isMahazot;
-    }
 
-    public void setIsMahazot(String isMahazot) {
-        this.isMahazot = isMahazot;
-    }
-
-    public String getMahazot() {
-        return mahazot;
-    }
-
-    public void setMahazot(String mahazot) {
-        this.mahazot = mahazot;
-    }
 
     public String getfSinger() {
         return fSinger;
@@ -144,15 +129,7 @@ public class PatientSurvey {
         this.fSongs = fSongs;
     }
 
-    public String getWedding() {
 
-        return wedding;
-
-    }
-
-    public void setWedding(String wedding) {
-        this.wedding = wedding;
-    }
 
     public String getClassic() {
         return classic;
