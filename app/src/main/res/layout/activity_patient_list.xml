@@ -18,10 +18,38 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:onClick="onClick (PatientListActivity)" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true">
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/search1rapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/patientList"
+            android:layout_alignParentStart="true">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/search1"
+                android:layout_toStartOf="@+id/Saerch"
+                android:hint="@string/search" />
+        </android.support.design.widget.TextInputLayout>
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="332dp"
         android:layout_alignParentStart="true"
         android:id="@+id/patientList"
         android:layout_toStartOf="@+id/Saerch"
@@ -29,24 +57,10 @@
         android:layout_alignParentEnd="true"
         android:layout_above="@+id/addPatient" />
 
-    <android.support.design.widget.TextInputLayout
-        android:paddingTop="0dp"
-        android:id="@+id/search1rapper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/patientList"
-        android:layout_alignParentStart="true">
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/search1"
-        android:layout_toStartOf="@+id/Saerch"
-        android:hint="@string/search" />
-    </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
 
     <Button
         android:text="patient_x"
@@ -66,5 +80,6 @@
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>
