@@ -92,7 +92,7 @@
     <string name="sign_up">חשבון חדש</string>
     <string name="r1">דת</string>
     <string name="l1">שפות</string>
-    <string name="skip">לדלג</string>
+    <string name="skip">דלג</string>
     <string name="idP">"ת.ז לחולה "</string>
     <string name="songN">שם השיר</string>
     <string name="singer">זמר</string>
@@ -103,4 +103,7 @@
     <string name="language1">שפה</string>
     <string name="help">עזרה</string>
     <string name="login">כניסה</string>
+    <string name="questionaire">שאלון</string>
+    <string name="new_matching">התאמת שיר</string>
+    <string name="play_list">רשימת שירים</string>
 </resources>

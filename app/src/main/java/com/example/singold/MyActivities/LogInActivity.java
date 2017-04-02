@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.singold.R;
+import com.example.singold.data.ConnectToServer;
 
 public class LogInActivity extends AppCompatActivity
 {
@@ -41,6 +42,7 @@ public class LogInActivity extends AppCompatActivity
             isok = false;
         }
         if (isok == true) {
+            ConnectToServer.connect(this);
 
         }
     }

@@ -105,4 +105,7 @@
     <string name="language1">لغة</string>
     <string name="help">مساعدة</string>
     <string name="login">دخول</string>
+    <string name="questionaire">استمارة</string>
+    <string name="new_matching">ملاءمة اغنية</string>
+    <string name="play_list">قائمة اغاني</string>
 </resources>

@@ -121,4 +121,7 @@
     <string name="slide_3_desc">When we   choose music for an  Alzheimer \'s patient, we choose the music he heard in his youth.</string>
     <string name="slide_3_title">what music should we choose for an Alzheimer \'s patient?</string>
     <string name="slide_4_desc">This application is based on the principle of crowds by building a database that stores information about patients diagnosed with appropriate personal music called therapists from across the country. The application provides search engine and find new patients as per minimum for each patient</string>
+    <string name="questionaire">Questionaire</string>
+    <string name="new_matching">New Matching</string>
+    <string name="play_list">Play List</string>
 </resources>

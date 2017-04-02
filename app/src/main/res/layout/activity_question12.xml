@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_question1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MyActivities.QuestionaireActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:text="@string/classic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Q1"
+                 />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rgQ1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:text="@string/opera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/opera" />
+
+                <RadioButton
+                    android:text="@string/classical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/classical" />
+
+            </RadioGroup>
+
+            <TextView
+                android:text="@string/Israel"
+                android:layout_width="match_parent"
+                android:id="@+id/Q2"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rgQ2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:text="@string/army_bands"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/armyBands"
+                     />
+
+                <RadioButton
+                    android:text="@string/songs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/songs"
+                     />
+
+                <RadioButton
+                    android:text="@string/folk_dance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/folkDances" />
+
+            </RadioGroup>
+
+
+            <RadioGroup
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/rgQ3">
+                <TextView
+                    android:text="@string/languages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Q3"
+                    />
+                <RadioButton
+                    android:text="@string/yiddish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yiddish" />
+
+                <RadioButton
+                    android:text="@string/hebrew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hebrew" />
+
+                <RadioButton
+                    android:text="@string/english"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/english" />
+
+                <RadioButton
+                    android:text="@string/russian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/russian" />
+
+                <RadioButton
+                    android:text="@string/arabic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/arabic" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
