@@ -34,6 +34,7 @@ public class FoundSongAdapter extends ArrayAdapter<Song> {
         TextView textLink = (TextView) convertView.findViewById(R.id.textLink);
 
 
+
         textName.setText(Song.getName());
         textSinger.setText(Song.getSinger());
         textLink.setText(Song.getLink());
