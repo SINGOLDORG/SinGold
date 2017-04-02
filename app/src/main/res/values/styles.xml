@@ -30,7 +30,7 @@
         <item name="android:statusBarColor">@color/colorPurple</item>
         <item name="android:navigationBarColor">@color/colorPurple</item>
         <item name="android:textColorPrimary">@android:color/primary_text_dark</item>
-        <item name="colorButtonNormal">#9b26af</item>
+        <item name="colorButtonNormal">#6a1b9a</item>
         <item name="android:textColorSecondaryInverse">@color/dot_light_screen4</item>
         <item name="android:windowBackground">@android:color/darker_gray</item>
 
