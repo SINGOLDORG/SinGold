@@ -25,7 +25,7 @@
 
         <TextView
             android:text="@string/dance"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Q4"
              />
@@ -58,7 +58,7 @@
 
         <TextView
             android:text="@string/relaxing"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Q7" />
 
@@ -85,7 +85,7 @@
 
         <TextView
             android:text="@string/loazi"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Q5" />
 
@@ -117,7 +117,7 @@
 
         <TextView
             android:text="@string/r1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Q6" />
 
@@ -125,6 +125,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rgQ6"
+            android:textDirection="locale"
             android:orientation="horizontal">
 
             <RadioButton

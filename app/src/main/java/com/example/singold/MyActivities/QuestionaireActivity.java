@@ -77,7 +77,7 @@ public class QuestionaireActivity extends AppCompatActivity {
         addBottomDots(0);
 
         // making notification bar transparent
-        changeStatusBarColor();
+        //changeStatusBarColor();
 
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
@@ -93,6 +93,7 @@ public class QuestionaireActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // checking for last page
                 // if last page home screen will be launched
                 int current = getItem(+1);
@@ -100,7 +101,8 @@ public class QuestionaireActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    launchHomeScreen();
+                  //  launchHomeScreen();
+                    dataHandler();
                 }
             }
         });

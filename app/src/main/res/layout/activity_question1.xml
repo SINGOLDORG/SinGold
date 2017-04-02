@@ -50,7 +50,7 @@
 
             <TextView
                 android:text="@string/Israel"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:id="@+id/Q2"
                 android:layout_height="wrap_content" />
 
@@ -91,37 +91,37 @@
                 android:id="@+id/rgQ3">
                 <TextView
                     android:text="@string/languages"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/Q3"
                     />
                 <RadioButton
                     android:text="@string/yiddish"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/yiddish" />
 
                 <RadioButton
                     android:text="@string/hebrew"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/hebrew" />
 
                 <RadioButton
                     android:text="@string/english"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/english" />
 
                 <RadioButton
                     android:text="@string/russian"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/russian" />
 
                 <RadioButton
                     android:text="@string/arabic"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/arabic" />
 
