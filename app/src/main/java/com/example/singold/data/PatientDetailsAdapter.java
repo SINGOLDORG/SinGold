@@ -10,7 +10,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.singold.MyActivities.PatientActivity;
-import com.example.singold.MyActivities.PatientDetailsActivity;
 import com.example.singold.MyActivities.PlaylistActivity;
 import com.example.singold.R;
 

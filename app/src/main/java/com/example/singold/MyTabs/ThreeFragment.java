@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.singold.R;
-import com.example.singold.MyActivities.SongActivity;
+import com.example.singold.MyActivities.AddSongActivity;
 
 
 /**
@@ -114,7 +114,7 @@ public class ThreeFragment extends Fragment {
     public void onClick(View v){
         if (v==addSong)
         {
-            Intent intent=new Intent(getContext(),SongActivity.class);
+            Intent intent=new Intent(getContext(),AddSongActivity.class);
             startActivity(intent);
         }
 
