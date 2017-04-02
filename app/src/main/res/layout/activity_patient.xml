@@ -10,25 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.singold.MyActivities.PatientActivity">
 
-    <Button
-        android:text="Play List"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/playList"
-         />
-
-    <Button
-        android:text="New Matching"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/playList"
-        android:layout_marginStart="188dp"
-        android:id="@+id/newMatching"
-        android:onClick="onClick" />
-
     <TextView
         android:text="tvname"
         android:layout_width="wrap_content"
@@ -36,4 +17,37 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/tvname" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="Play List"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/playList"
+            />
+
+        <Button
+            android:text="New Matching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newMatching"
+            android:onClick="onClick"
+
+            />
+
+        <Button
+            android:text="Questionaire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/Questionaire"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
 </RelativeLayout>

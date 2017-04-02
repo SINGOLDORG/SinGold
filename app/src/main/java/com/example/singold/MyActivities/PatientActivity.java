@@ -17,6 +17,8 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private Button newMatching;
     private PatientDetails patientDetails;
     private TextView tvname;
+    private Button Questionaire;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -27,6 +29,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         playList = (Button) findViewById(R.id.playList);
         newMatching = (Button) findViewById(R.id.newMatching);
         tvname= (TextView) findViewById(R.id.tvname);
+        Questionaire=(Button)findViewById(R.id.Questionaire);
         newMatching.setOnClickListener(this);
         playList.setOnClickListener(this);
         Intent i=getIntent();
@@ -46,6 +49,12 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         }
         if (v == newMatching) {
           //  Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
+            Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
+
+            startActivity(intent);
+        }
+        if (v == Questionaire) {
+            //  Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
             Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
 
             startActivity(intent);
