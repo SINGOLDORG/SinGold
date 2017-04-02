@@ -1,6 +1,5 @@
 package com.example.singold.MyActivities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,12 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.singold.R;
-import com.example.singold.data.ConnectToServer;
-import com.example.singold.data.MatchingSurveyAdapter;
-import com.example.singold.data.PatientDetails;
-import com.example.singold.data.Song;
-
-import java.util.concurrent.ExecutionException;
 
 /**
  * Created by user on 01/04/2017.
@@ -28,7 +21,7 @@ public class MatchingSurveyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matching_survey);
 
-        id = (EditText) findViewById(R.id.id);
+        id = (EditText) findViewById(R.id.ma7azot);
         country = (EditText) findViewById(R.id.country);
         year = (EditText) findViewById(R.id.year);
         city = (EditText) findViewById(R.id.city);

@@ -38,8 +38,8 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/ma7azot"
-            android:hint="@string/ma7azot"
+            android:id="@+id/country"
+            android:hint="@string/country"
             android:layout_weight="0.13" />
         </android.support.design.widget.TextInputLayout>
 
@@ -49,13 +49,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="366dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/disk"
-            android:hint="@string/disk"
-            android:layout_weight="0.13" />
+            android:id="@+id/homemusic"
+            android:hint="@string/homemusic" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -64,13 +63,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="373dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/favoritesinger"
-            android:hint="@string/favorite_singer"
-            android:layout_weight="0.14" />
+            android:id="@+id/youngmusic"
+            android:hint="@string/young" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -83,8 +81,8 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/weddingsong"
-            android:hint="@string/weeding_song"
+            android:id="@+id/ma7azot"
+            android:hint="@string/ma7azot"
             android:layout_weight="0.12" />
         </android.support.design.widget.TextInputLayout>
 
@@ -98,8 +96,8 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/favoriteSong"
-            android:hint="@string/favorite_song"
+            android:id="@+id/disk"
+            android:hint="@string/disk"
             android:layout_weight="0.15" />
         </android.support.design.widget.TextInputLayout>
 

@@ -66,9 +66,9 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/country"
-            android:hint="@string/country"
-            android:layout_weight="0.16" />
+            android:hint="@string/favorite_singer"
+            android:layout_weight="0.16"
+            android:id="@+id/favoritesinger" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -77,13 +77,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="362dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/homemusic"
-            android:layout_weight="0.15"
-            android:hint="@string/homemusic" />
+            android:id="@+id/weddingsong"
+            android:hint="@string/weeding_song" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -93,12 +92,11 @@
             android:layout_height="wrap_content">
         <EditText
             android:layout_width="381dp"
-            android:layout_height="wrap_content"
+            android:layout_height="51dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/youngmusic"
-            android:hint="@string/young"
-            android:layout_weight="0.16" />
+            android:id="@+id/favoritesong"
+            android:hint="@string/favorite_song" />
         </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>

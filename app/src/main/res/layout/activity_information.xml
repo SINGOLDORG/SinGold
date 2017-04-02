@@ -63,7 +63,7 @@
             android:inputType="textPassword"
             android:ems="10"
             android:layout_below="@+id/username"
-            android:id="@+id/id"
+            android:id="@+id/ma7azot"
             android:hint="@string/id3" />
         </android.support.design.widget.TextInputLayout>
 
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:layout_below="@+id/id"
+            android:layout_below="@+id/ma7azot"
             android:id="@+id/confirmid"
             android:hint="@string/confirm_id" />
         </android.support.design.widget.TextInputLayout>

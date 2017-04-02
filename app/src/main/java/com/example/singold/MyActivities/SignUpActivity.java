@@ -23,7 +23,7 @@ public class SignUpActivity extends AppCompatActivity {
         first = (EditText) findViewById(R.id.first);
         last = (EditText) findViewById(R.id.last);
         username = (EditText) findViewById(R.id.username);
-        id = (EditText) findViewById(R.id.id);
+        id = (EditText) findViewById(R.id.ma7azot);
         confirmid = (EditText) findViewById(R.id.confirmid);
         save = (Button) findViewById(R.id.save);
     }
