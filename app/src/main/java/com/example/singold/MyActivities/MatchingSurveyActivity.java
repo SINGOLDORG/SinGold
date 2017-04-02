@@ -13,7 +13,7 @@ import com.example.singold.R;
  */
 
 public class MatchingSurveyActivity extends AppCompatActivity {
-    private EditText id, country, year, city, language;
+    private EditText  country, year, religion, language;
     private Button btnSearch;
 
     @Override
@@ -21,27 +21,24 @@ public class MatchingSurveyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matching_survey);
 
-        id = (EditText) findViewById(R.id.ma7azot);
+
         country = (EditText) findViewById(R.id.country);
         year = (EditText) findViewById(R.id.year);
-        city = (EditText) findViewById(R.id.city);
+        religion = (EditText) findViewById(R.id.religin);
         language = (EditText) findViewById(R.id.language);
         btnSearch = (Button) findViewById(R.id.btnSearch);
     }
 
     private void dataHandler() {
-        String stId = id.getText().toString();
+
         String stCountry = country.getText().toString();
         String stYear = year.getText().toString();
-        String stCity = city.getText().toString();
+        String stReligion = religion.getText().toString();
         String stLanguage = language.getText().toString();
 
         boolean isok = true;
 
-        if (stId.length() < 9) {
-            id.setError("Wrong id");
-            isok = false;
-        }
+
         if (stCountry.length() == 0) {
             country.setError("Enter your country");
             isok = false;
@@ -50,8 +47,8 @@ public class MatchingSurveyActivity extends AppCompatActivity {
             year.setError("Enter your year of birth");
             isok = false;
         }
-        if (stCity.length() == 0) {
-            city.setError("Enter your city");
+        if (stReligion.length() == 0) {
+            religion.setError("Enter your city");
             isok = false;
         }
         if (stLanguage.length() == 0) {
@@ -59,6 +56,7 @@ public class MatchingSurveyActivity extends AppCompatActivity {
             isok = false;
         }
         if (isok == true) {
+
         }
     }
 

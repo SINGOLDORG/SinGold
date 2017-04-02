@@ -8,15 +8,7 @@
         android:paddingTop="0dp"
         android:id="@+id/id1rapper"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/ma7azot"
-        android:hint="id" />
-    </android.support.design.widget.TextInputLayout>
+        android:layout_height="wrap_content"></android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:paddingTop="0dp"
@@ -70,8 +62,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/city"
-        android:hint="@string/City" />
+        android:id="@+id/religin"
+        android:hint="@string/religion" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
