@@ -259,6 +259,8 @@ public  class ConnectToServer {
 
     public static  void login(String user,String passw)
     {
+        if (userTable == null)
+            userTable = azureDBClient.getTable(MyUser.class);
         userTable.where().field("username").eq(user).and().field("EnterId").eq(passw).execute(new TableQueryCallback<MyUser>() {
             @Override
             public void onCompleted(List<MyUser> result, int count, Exception exception, ServiceFilterResponse response) {
@@ -267,6 +269,34 @@ public  class ConnectToServer {
                 if (result!=null && result.size() > 0) {
                //     DataBaseMngr.saveLogIn(result.get(0), getBaseContext());
                  //   signinDialog.dismiss();
+                    Intent intent=new Intent(context, PatientListActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    context.startActivity(intent);
+                    Toast.makeText(context, "WELCOME, " , Toast.LENGTH_LONG).show();
+                    //    finish();
+
+                } else {
+                    //signinDialog.dismiss();
+                    createAndShowDialog("EMAIL OR PASSWORD WRONG", "");
+
+                }
+            }
+        });
+    }
+    public static  void searchAndMatch(MatchingSurvey matchingSurvey)
+    {
+        if (patientSurveyTable == null)
+            patientSurveyTable = azureDBClient.getTable(PatientSurvey.class);
+
+        patientSurveyTable.where().field("country").eq(matchingSurvey.getCountry()).and().field("language").eq(matchingSurvey.getLanguage()).execute(new TableQueryCallback<PatientSurvey>() {
+            @Override
+            public void onCompleted(List<PatientSurvey> result, int count, Exception exception, ServiceFilterResponse response) {
+
+                // it appears for me and error here, ** remember to ask about it
+                if (result!=null && result.size() > 0) {
+                    //     DataBaseMngr.saveLogIn(result.get(0), getBaseContext());
+                    //   signinDialog.dismiss();
                     Intent intent=new Intent(context, PatientListActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
