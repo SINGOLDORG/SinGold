@@ -166,7 +166,7 @@ public class QuestionaireActivity extends AppCompatActivity {
         disk = (EditText) findViewById(R.id.disk);
         favoritesinger = (EditText) findViewById(R.id.favoritesinger);
         weddingsong = (EditText) findViewById(R.id.weddingsong);
-        favoritesong = (EditText) findViewById(R.id.favoriteSong);
+        favoritesong = (EditText) findViewById(R.id.favoritesong);
     }
 
     private void dataHandler() {

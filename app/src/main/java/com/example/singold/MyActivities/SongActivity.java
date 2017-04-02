@@ -42,11 +42,11 @@ public class SongActivity extends AppCompatActivity implements View.OnClickListe
 //            idPatient.setError("Enter the patient id");
 //            isok = false;
 //        }
-        if (stTheSongName.length() == 0) {
+        if (stTheSongName.length() < 3) {
             theSongName.setError("Enter the song name");
             isok = false;
         }
-        if (stSinger.length() == 0) {
+        if (stSinger.length() < 3) {
             singer.setError("Enter the singer name");
             isok = false;
         }
