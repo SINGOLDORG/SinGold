@@ -170,8 +170,6 @@ public class QuestionaireActivity extends AppCompatActivity {
         String stFavoritesinger = favoritesinger.getText().toString();
         String stFavoritesong = favoritesong.getText().toString();
 
-        // int rgQ1 = RadioGroup.getChekedRadioButtonId();
-
 
         boolean isok = true;
 

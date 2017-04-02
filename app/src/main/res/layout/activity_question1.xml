@@ -25,7 +25,8 @@
                 android:text="@string/classic"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
-                android:id="@+id/Q1" />
+                android:id="@+id/Q1"
+                android:layout_marginTop="30dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"

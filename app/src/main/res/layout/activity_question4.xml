@@ -26,7 +26,8 @@
             android:paddingTop="0dp"
             android:id="@+id/ma7azotrapper"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
         <EditText
             android:layout_width="352dp"
             android:inputType="textPersonName"

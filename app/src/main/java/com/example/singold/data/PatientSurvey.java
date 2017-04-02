@@ -22,7 +22,6 @@ public class PatientSurvey {
     private String year;
     @com.google.gson.annotations.SerializedName("youngMusic")
     private String youngMusic;
-
     @com.google.gson.annotations.SerializedName("homeMusic")
     private String homeMusic;
     @com.google.gson.annotations.SerializedName("education")
@@ -35,17 +34,14 @@ public class PatientSurvey {
     private String fSinger;
     @com.google.gson.annotations.SerializedName("fSongs")
     private String fSongs;
-
     @com.google.gson.annotations.SerializedName("classic")
     private String classic;
     @com.google.gson.annotations.SerializedName("israel")
     private String israel;
-
     @com.google.gson.annotations.SerializedName("dance")
     private String dance;
     @com.google.gson.annotations.SerializedName("loazi")
     private String loazi;
-
     @com.google.gson.annotations.SerializedName("relaxing")
     private String relaxing;
 
@@ -111,8 +107,6 @@ public class PatientSurvey {
         this.education = education;
     }
 
-
-
     public String getfSinger() {
         return fSinger;
     }
@@ -128,8 +122,6 @@ public class PatientSurvey {
     public void setfSongs(String fSongs) {
         this.fSongs = fSongs;
     }
-
-
 
     public String getClassic() {
         return classic;

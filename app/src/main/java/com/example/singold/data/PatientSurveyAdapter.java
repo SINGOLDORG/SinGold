@@ -28,7 +28,8 @@ public class  PatientSurveyAdapter extends ArrayAdapter<PatientSurvey> {
 
         TextView textId = (TextView) convertView.findViewById(R.id.textId);
         TextView textIdPatient = (TextView) convertView.findViewById(R.id.textIdPatient);
-        TextView textCountry = (TextView) convertView.findViewById(R.id.textCountry);TextView textYear = (TextView) convertView.findViewById(R.id.textYear);
+        TextView textCountry = (TextView) convertView.findViewById(R.id.textCountry);
+        TextView textYear = (TextView) convertView.findViewById(R.id.textYear);
         TextView textHomeMusic = (TextView) convertView.findViewById(R.id.textHomeMusic);
         TextView textEducation = (TextView) convertView.findViewById(R.id.textEducation);
         TextView textFsinger = (TextView) convertView.findViewById(R.id.textFsinger);
