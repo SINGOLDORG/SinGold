@@ -19,6 +19,9 @@ public class FoundSongAdapter extends ArrayAdapter<Song> {
         super(context, resource);
     }
 
+    private CheckBox check;
+    private TextView textName,textSinger,textLink;
+
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -28,7 +31,7 @@ public class FoundSongAdapter extends ArrayAdapter<Song> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_found_song, parent, false);
         }
 
-        CheckBox checkBox=(CheckBox)convertView.findViewById(R.id.check);
+        check checkBox=(CheckBox)convertView.findViewById(R.id.check);
         TextView textName = (TextView) convertView.findViewById(R.id.textName);
         TextView textSinger = (TextView) convertView.findViewById(R.id.textSinger);
         TextView textLink = (TextView) convertView.findViewById(R.id.textLink);
