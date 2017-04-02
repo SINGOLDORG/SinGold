@@ -41,6 +41,8 @@ public class QuestionaireActivity extends AppCompatActivity {
     private RadioButton opera, classical, armyBands, songs, folkDances, yiddish, hebrew, english, russian, arabic, waltz, tango, samba;
     private RadioButton jaz, rock, pollack, chazanout, frompray, propnents, runningwater, insteumental;
     private EditText country, homemusic, youngmusic, ma7azot, disk, favoritesinger, weddingsong, favoritesong;
+    private String ans1,ans2,ans3,ans4,ans5,ans6,ans7;
+    private RadioButton rb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,12 +75,12 @@ public class QuestionaireActivity extends AppCompatActivity {
         // layouts of all welcome sliders
         // add few more layouts if you want
         layouts = new int[]{
-                R.layout.activity_question1,
-                R.layout.activity_question2,
+                R.layout.activity_question4,
                 R.layout.activity_question3,
-                R.layout.activity_question4};
+                R.layout.activity_question1,
+                R.layout.activity_question2};
 
-        // adding bottom dots
+        // adding bottom dot
         addBottomDots(0);
 
         // making notification bar transparent
@@ -167,8 +169,7 @@ public class QuestionaireActivity extends AppCompatActivity {
         favoritesong = (EditText) findViewById(R.id.favoriteSong);
     }
 
-    private void dataHandler()
-    {
+    private void dataHandler() {
         String stCountry = country.getText().toString();
         String stHomemusic = homemusic.getText().toString();
         String stYoungmusic = youngmusic.getText().toString();
@@ -178,56 +179,97 @@ public class QuestionaireActivity extends AppCompatActivity {
         String stWeddingsong = weddingsong.getText().toString();
         String stFavoritesong = favoritesong.getText().toString();
 
-       // int rgQ1 = RadioGroup.getChekedRadioButtonId();
+        // int rgQ1 = RadioGroup.getChekedRadioButtonId();
 
 
+        boolean isok = true;
 
 
-
-        boolean isok=true;
-
-
-        if(stCountry.length()==0)
-        {
+        if (stCountry.length() == 0) {
             country.setError("please answer the question!");
-            isok=false;
+            isok = false;
         }
-        if(stHomemusic.length()==0)
-        {
+        if (stHomemusic.length() == 0) {
             homemusic.setError("please answer the question!");
-            isok=false;
+            isok = false;
         }
-        if(stYoungmusic.length()==0)
-        {
+        if (stYoungmusic.length() == 0) {
             youngmusic.setError("please answer the question!");
-            isok=false;
+            isok = false;
         }
-        if(stMa7azot.length()==0)
-        {
+        if (stMa7azot.length() == 0) {
             ma7azot.setError("please answer the question!");
-            isok=false;
+            isok = false;
         }
-        if(stDisk.length()==0)
-        {
+        if (stDisk.length() == 0) {
             disk.setError("please answer the question!");
-            isok=false;
+            isok = false;
         }
-        if(stFavoritesinger.length()==0)
-        {
+        if (stFavoritesinger.length() == 0) {
             favoritesinger.setError("please answer the question!");
-            isok=false;
+            isok = false;
         }
-        if(stWeddingsong.length()==0)
-        {
+        if (stWeddingsong.length() == 0) {
             weddingsong.setError("please answer the question!");
-            isok=false;
+            isok = false;
         }
-        if(stFavoritesong.length()==0)
-        {
-           favoritesong.setError("please answer the question!");
-            isok=false;
+        if (stFavoritesong.length() == 0) {
+            favoritesong.setError("please answer the question!");
+            isok = false;
         }
+
+        int rdid1 = rgQ1.getCheckedRadioButtonId();
+        if (rdid1 != -1) {
+            RadioButton rb1 = (RadioButton) findViewById(rdid1);
+            String ans1 = rb1.getText().toString();
+        } else
+            ans1 = "";
+
+        int rdid2 = rgQ2.getCheckedRadioButtonId();
+        if (rdid2 != -1) {
+            RadioButton rb2 = (RadioButton) findViewById(rdid2);
+            String ans2 = rb2.getText().toString();
+        } else
+            ans2 = "";
+
+        int rdid3 = rgQ3.getCheckedRadioButtonId();
+        if (rdid3 != -1) {
+            RadioButton rb3 = (RadioButton) findViewById(rdid3);
+            String ans3 = rb3.getText().toString();
+        } else
+            ans3 = "";
+
+        int rdid4=rgQ4.getCheckedRadioButtonId();
+        if(rdid4!=-1) {
+            RadioButton rb4 = (RadioButton) findViewById(rdid4);
+            String ans4 = rb4.getText().toString();
+        }else
+            ans4="";
+
+        int rdid5=rgQ5.getCheckedRadioButtonId();
+        if(rdid5!=-1) {
+            RadioButton rb5 = (RadioButton) findViewById(rdid5);
+            String ans5 = rb5.getText().toString();
+        }else
+            ans5="";
+
+        int rdid6=rgQ6.getCheckedRadioButtonId();
+        if(rdid6!=-1) {
+            RadioButton rb6 = (RadioButton) findViewById(rdid6);
+            String ans6 = rb6.getText().toString();
+        }else
+            ans6="";
+
+        int rdid7=rgQ7.getCheckedRadioButtonId();
+        if(rdid7!=-1) {
+            RadioButton rb7 = (RadioButton) findViewById(rdid7);
+            String ans7 = rb7.getText().toString();
+        }else
+            ans7="";
+
+
     }
+
 
 
 
