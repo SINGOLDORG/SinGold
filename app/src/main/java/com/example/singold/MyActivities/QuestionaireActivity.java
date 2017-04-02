@@ -40,7 +40,7 @@ public class QuestionaireActivity extends AppCompatActivity {
     private RadioGroup rgQ1, rgQ2, rgQ3, rgQ4, rgQ5, rgQ6, rgQ7;
     private RadioButton opera, classical, armyBands, songs, folkDances, yiddish, hebrew, english, russian, arabic, waltz, tango, samba;
     private RadioButton jaz, rock, pollack, chazanout, frompray, propnents, runningwater, insteumental;
-    private EditText country, homemusic, youngmusic, ma7azot, disk, favoritesinger, weddingsong, favoritesong;
+    private EditText country, homemusic, youngmusic, favoritesinger, favoritesong;
     private String ans1,ans2,ans3,ans4,ans5,ans6,ans7;
     private RadioButton rb;
 
@@ -76,7 +76,6 @@ public class QuestionaireActivity extends AppCompatActivity {
         // add few more layouts if you want
         layouts = new int[]{
                 R.layout.activity_question4,
-                R.layout.activity_question3,
                 R.layout.activity_question1,
                 R.layout.activity_question2};
 
@@ -160,12 +159,7 @@ public class QuestionaireActivity extends AppCompatActivity {
         youngmusic = (EditText) findViewById(R.id.youngmusic);
 
 
-
-
-        ma7azot = (EditText) findViewById(R.id.ma7azot);
-        disk = (EditText) findViewById(R.id.disk);
         favoritesinger = (EditText) findViewById(R.id.favoritesinger);
-        weddingsong = (EditText) findViewById(R.id.weddingsong);
         favoritesong = (EditText) findViewById(R.id.favoritesong);
     }
 
@@ -173,10 +167,7 @@ public class QuestionaireActivity extends AppCompatActivity {
         String stCountry = country.getText().toString();
         String stHomemusic = homemusic.getText().toString();
         String stYoungmusic = youngmusic.getText().toString();
-        String stMa7azot = ma7azot.getText().toString();
-        String stDisk = disk.getText().toString();
         String stFavoritesinger = favoritesinger.getText().toString();
-        String stWeddingsong = weddingsong.getText().toString();
         String stFavoritesong = favoritesong.getText().toString();
 
         // int rgQ1 = RadioGroup.getChekedRadioButtonId();
@@ -197,20 +188,9 @@ public class QuestionaireActivity extends AppCompatActivity {
             youngmusic.setError("please answer the question!");
             isok = false;
         }
-        if (stMa7azot.length() == 0) {
-            ma7azot.setError("please answer the question!");
-            isok = false;
-        }
-        if (stDisk.length() == 0) {
-            disk.setError("please answer the question!");
-            isok = false;
-        }
+
         if (stFavoritesinger.length() == 0) {
             favoritesinger.setError("please answer the question!");
-            isok = false;
-        }
-        if (stWeddingsong.length() == 0) {
-            weddingsong.setError("please answer the question!");
             isok = false;
         }
         if (stFavoritesong.length() == 0) {

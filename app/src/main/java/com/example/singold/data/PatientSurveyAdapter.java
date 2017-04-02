@@ -49,15 +49,11 @@ public class  PatientSurveyAdapter extends ArrayAdapter<PatientSurvey> {
         textId.setText(PatientSurvey.getId());
         textIdPatient.setText(PatientSurvey.getIdPatient());
         textCountry.setText(PatientSurvey.getCountry());
-        textCity.setText(PatientSurvey.getCity());
         textYear.setText(PatientSurvey.getYear());
         textHomeMusic.setText(PatientSurvey.getHomeMusic());
         textEducation.setText(PatientSurvey.getEducation());
-        textIsMahazot.setText(PatientSurvey.getIsMahazot());
-        textMahazot.setText(PatientSurvey.getMahazot());
         textFsinger.setText(PatientSurvey.getfSinger());
         textFsongs.setText(PatientSurvey.getfSongs());
-        textWedding.setText(PatientSurvey.getWedding());
         textClassic.setText(PatientSurvey.getClassic());
         textIsrael.setText(PatientSurvey.getIsrael());
         textLanguage.setText(PatientSurvey.getLanguage());
