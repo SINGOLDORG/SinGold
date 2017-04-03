@@ -92,6 +92,7 @@ public  class ConnectToServer {
     }
 
     private static void createAndShowDialogFromTask(final Exception exception, String title) {
+        exception.printStackTrace();
         context.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -248,7 +249,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 dismissProProgressDialog();
-                //  context.finish();
+                context.finish();
 
 
             }

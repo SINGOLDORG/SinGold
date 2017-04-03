@@ -12,7 +12,7 @@ import com.example.singold.data.MyUser;
 
 import java.util.concurrent.ExecutionException;
 
-public class SignUpActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText first, last, username, id, confirmid;
     private Button save;
 
@@ -26,6 +26,7 @@ public class SignUpActivity extends AppCompatActivity {
         id = (EditText) findViewById(R.id.ma7azot);
         confirmid = (EditText) findViewById(R.id.confirmid);
         save = (Button) findViewById(R.id.save);
+        save.setOnClickListener(this);
     }
 
 
