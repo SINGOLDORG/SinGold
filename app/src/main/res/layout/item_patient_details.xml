@@ -58,12 +58,11 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="48dp"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_info"
+            app:srcCompat="@drawable/ic_action_name"
             android:id="@+id/btnInfo"
             android:background="@color/shafaf"
-            android:layout_weight="1"
             android:onClick="onClick" />
 
         <ImageButton
