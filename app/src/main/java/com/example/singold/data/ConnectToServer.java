@@ -258,7 +258,7 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
-    public static  void login(String user,String passw)
+    public static  void login(final String user, String passw)
     {
         if (userTable == null)
             userTable = azureDBClient.getTable(MyUser.class);
@@ -273,8 +273,10 @@ public  class ConnectToServer {
                     Intent intent=new Intent(context, PatientListActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    PrefManager.setFirstTimeLaunch(context,true,user);
                     context.startActivity(intent);
                     Toast.makeText(context, "WELCOME, " , Toast.LENGTH_LONG).show();
+
                     //    finish();
 
                 } else {
@@ -405,7 +407,7 @@ public  class ConnectToServer {
 
         runAsyncTask(task);
     }
-    public static void refreshItemsFromTable(final SongAdapter adapter) {
+    public static void refreshItemsFromTable(final SongAdapter adapter, final String id) {
 
         // Get the items that weren't marked as completed and add them in the
         // adapter
@@ -423,7 +425,7 @@ public  class ConnectToServer {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
                     if (songTable == null)
                         songTable = azureDBClient.getTable(Song.class);
-                    final List<Song> results = songTable.where().execute().get();
+                    final List<Song> results = songTable.where().field("idPatient").eq(id).execute().get();
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
 
@@ -454,7 +456,7 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
-    public static void refreshItemsFromTable(final PatientDetailsAdapter adapter) {
+    public static void refreshItemsFromTable(final PatientDetailsAdapter adapter, final String userId) {
 
         // Get the items that weren't marked as completed and add them in the
         // adapter
@@ -473,7 +475,7 @@ public  class ConnectToServer {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
                     if (patientDetailsTable == null)
                         patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
-                    final List<PatientDetails> results = patientDetailsTable.where().execute().get();
+                    final List<PatientDetails> results = patientDetailsTable.where().field("idUser").eq(userId).execute().get();
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
 

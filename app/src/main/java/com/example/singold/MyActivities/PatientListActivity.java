@@ -11,6 +11,7 @@ import android.widget.ListView;
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.PatientDetailsAdapter;
+import com.example.singold.data.PrefManager;
 
 public class PatientListActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText search1;
@@ -44,7 +45,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
             detailsAdapter=new PatientDetailsAdapter(this, R.layout.item_patient_details);
         patientList.setAdapter(detailsAdapter);
         ConnectToServer.connect(this);
-        ConnectToServer.refreshItemsFromTable(detailsAdapter);
+        ConnectToServer.refreshItemsFromTable(detailsAdapter, PrefManager.getUserId(this));
 
     }
 

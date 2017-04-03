@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
+import com.example.singold.data.PatientDetails;
 import com.example.singold.data.PatientDetailsAdapter;
 import com.example.singold.data.SongAdapter;
 
@@ -17,6 +18,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
     private Button add,BTNmatching;
 
     private SongAdapter songAdapter;
+    PatientDetails patientDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,13 +30,18 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
         add = (Button) findViewById(R.id.add);
         add.setOnClickListener(this);
         BTNmatching=(Button)findViewById(R.id.BTNmatching);
+        Intent i=getIntent();
+        if(i!=null)
+        {
+            patientDetails= (PatientDetails) i.getExtras().get("patient");
+        }
     }
     private void initListView() {
         if(songAdapter==null)
             songAdapter=new SongAdapter(this, R.layout.item_song);
         list.setAdapter(songAdapter);
         ConnectToServer.connect(this);
-        ConnectToServer.refreshItemsFromTable(songAdapter);
+        ConnectToServer.refreshItemsFromTable(songAdapter,patientDetails.getId());
 
     }
 
@@ -49,6 +56,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
         if (v == add)
         {
             Intent intent = new Intent(getBaseContext(), AddSongActivity.class);
+            intent.putExtra("patientID",patientDetails.getId());
             startActivity(intent);
 
         }

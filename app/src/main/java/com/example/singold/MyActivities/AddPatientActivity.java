@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.PatientDetails;
+import com.example.singold.data.PrefManager;
 
 import java.util.concurrent.ExecutionException;
 
@@ -71,6 +72,7 @@ public class AddPatientActivity extends AppCompatActivity {
         if (isok==true)
         {
             PatientDetails patientDetails=new PatientDetails();
+            patientDetails.setIdUser(PrefManager.getUserId(this));
             patientDetails.setId(stPersonalid);
             patientDetails.setfName(stFirst);
             patientDetails.setlName(stLast);
