@@ -21,6 +21,7 @@ public class LogInActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter);
 
+
         login=(Button)findViewById(R.id.login);
         sign=(Button)findViewById(R.id.sign);
         username=(EditText)findViewById(R.id.username);

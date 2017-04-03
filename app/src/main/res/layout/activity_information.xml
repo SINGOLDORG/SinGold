@@ -18,24 +18,21 @@
         android:layout_alignParentStart="true">
 
         <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
             android:id="@+id/firstrapper"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <EditText
-            android:layout_width="385dp"
-            android:layout_height="42dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/first"
             android:hint="@string/First_name" />
 </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
-            android:id="@+id/lastrapper"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <EditText
-            android:layout_width="387dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/last"
             android:inputType="none"
@@ -44,12 +41,11 @@
 </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
             android:id="@+id/lastrapper"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <EditText
-            android:layout_width="389dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/username"
             android:hint="@string/Username"
@@ -57,13 +53,12 @@
 </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
             android:id="@+id/usernamerapper"
-            android:layout_width="396dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:layout_width="382dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
