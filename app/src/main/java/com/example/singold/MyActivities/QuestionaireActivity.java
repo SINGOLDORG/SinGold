@@ -1,6 +1,7 @@
 package com.example.singold.MyActivities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
+import com.example.singold.data.PatientDetails;
 import com.example.singold.data.PatientSurvey;
 
 import java.util.concurrent.ExecutionException;
@@ -46,6 +48,7 @@ public class QuestionaireActivity extends AppCompatActivity {
     private EditText country, homemusic, youngmusic, favoritesinger, favoritesong;
     private String ans1Clasic, ans2Isaeli, ans3Language, ans4Dance, ans5Loazi, ans6Religion, ans7Relaxing;
     private RadioButton rb;
+    private PatientDetails patientDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,11 @@ public class QuestionaireActivity extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
+        Intent i=getIntent();
+        if(i!=null)
+        {
+            patientDetails= (PatientDetails) i.getExtras().get("patient");
+        }
         patientSurvey=new PatientSurvey();
 //
 //        // Making notification bar transparent
@@ -240,6 +248,8 @@ public class QuestionaireActivity extends AppCompatActivity {
             patientSurvey.setLoazi(ans5Loazi);
             patientSurvey.setReligion(ans6Religion);
             patientSurvey.setRelaxing(ans7Relaxing);
+
+            patientSurvey.setIdPatient(patientDetails.getId());
 
             ConnectToServer.connect(this);
             try {

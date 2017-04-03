@@ -44,19 +44,20 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     {
         if (v == playList) {
             Intent intent = new Intent(getBaseContext(), PlaylistActivity.class);
+            intent.putExtra("patient", patientDetails);
             startActivity(intent);
 
         }
         if (v == newMatching) {
           //  Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
             Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
-
+            intent.putExtra("patient", patientDetails);
             startActivity(intent);
         }
         if (v == Questionaire) {
             //  Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
             Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
-
+            intent.putExtra("patient", patientDetails);
             startActivity(intent);
         }
     }

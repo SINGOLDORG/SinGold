@@ -1,5 +1,6 @@
 package com.example.singold.MyActivities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +36,12 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
         String stTheSongName = theSongName.getText().toString();
         String stSinger = singer.getText().toString();
         String stLink = link.getText().toString();
+        String patientID="";
+        Intent i=getIntent();
+        if(i!=null)
+        {
+            patientID=i.getExtras().getString("patientID");
+        }
 
 
         boolean isok = true;
@@ -59,6 +66,7 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
         if (isok == true) {
             Song song = new Song();
          //   song.setIdPatient(stIdPatient);
+            song.setIdPatient(patientID);
             song.setName(stTheSongName);
             song.setSinger(stSinger);
             song.setLink(stLink);
