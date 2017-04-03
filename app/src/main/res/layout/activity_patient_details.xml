@@ -13,123 +13,118 @@
 
     <Button
         android:id="@+id/plus"
-        android:onClick="onClick"
-        app:srcCompat="@android:drawable/ic_menu_add"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:elevation="0dp"
-        android:background="@android:drawable/ic_menu_add"
-        android:layout_width="70dp"
-        android:layout_height="70dp" />
+        android:background="@drawable/ic_save2"
+        android:onClick="onClick"
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/plus">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:text="@string/details"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/details"
-            android:autoText="true"
-            android:textSize="24sp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="15dp" />
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
 
-        <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
-            android:id="@+id/firstrapper"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/first"
-            android:hint="@string/First_name" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
-            android:id="@+id/lastrapper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/last"
-            android:hint="@string/Last_name" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
-            android:id="@+id/familyphonerapper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/familyphone"
-            android:hint="@string/Family_phone1" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
-            android:id="@+id/addressrapper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <EditText
+            <TextView
+                android:id="@+id/details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/address"
-                android:hint="@string/Address1" />
-        </android.support.design.widget.TextInputLayout>
+                android:text="@string/details"
+                android:textSize="24sp" />
 
-        <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
-            android:id="@+id/yearrapper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/year"
-            android:hint="@string/Year_of_birth" />
-        </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/firstrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
-            android:id="@+id/personalidrapper"
-            android:layout_width="336dp"
-            android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/personalid"
-            android:hint="@string/Personal_id1" />
-        </android.support.design.widget.TextInputLayout>
+                <EditText
+                    android:id="@+id/first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/First_name"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
 
-    </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lastrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <EditText
+                    android:id="@+id/last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Last_name"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/personalidrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/personalid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Personal_id1"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/familyphonerapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/familyphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Family_phone1"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/addressrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Address1"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/yearrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp">
+
+                <EditText
+                    android:id="@+id/year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Year_of_birth"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
 
 
     </ScrollView>

@@ -73,7 +73,7 @@ public class AddPatientActivity extends AppCompatActivity {
         {
             PatientDetails patientDetails=new PatientDetails();
             patientDetails.setIdUser(PrefManager.getUserId(this));
-            patientDetails.setId(stPersonalid);
+            patientDetails.setpId(stPersonalid);
             patientDetails.setfName(stFirst);
             patientDetails.setlName(stLast);
             patientDetails.setFamilyPhone(stFamilyphone);

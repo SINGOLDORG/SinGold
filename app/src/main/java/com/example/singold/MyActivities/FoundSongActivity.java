@@ -34,8 +34,8 @@ public class FoundSongActivity extends AppCompatActivity implements View.OnClick
         if (FoundSongAdapter == null)
             FoundSongAdapter = new SongAdapter(this, R.layout.item_found_song);
         foundList.setAdapter(FoundSongAdapter);
-        ConnectToServer.connect(this);
-        ConnectToServer.refreshItemsFromTable(FoundSongAdapter);
+//        ConnectToServer.connect(this);
+//        ConnectToServer.refreshItemsFromTable(FoundSongAdapter);
 
     }
 

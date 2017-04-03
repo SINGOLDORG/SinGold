@@ -18,7 +18,7 @@
     <string name="save">שמירה</string>
     <string name="Last_name1">שם משפחה</string>
     <string name="First_name1">שם פרטי</string>
-    <string name="Family_phone1">מספר משפחה</string>
+    <string name="Family_phone1">טלפון המשפחה</string>
     <string name="Address1">מיקום</string>
     <string name="Personal_id1">ת.ז</string>
     <string name="Year_of_birth">שנת לידה</string>
@@ -96,7 +96,7 @@
     <string name="idP">"ת.ז לחולה "</string>
     <string name="songN">שם השיר</string>
     <string name="singer">זמר</string>
-    <string name="link">כישור</string>
+    <string name="link">קישור</string>
     <string name="next">הבא</string>
     <string name="start">סיים</string>
     <string name="language">שפה</string>

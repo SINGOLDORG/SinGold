@@ -15,7 +15,7 @@ import com.example.singold.data.Song;
 import java.util.concurrent.ExecutionException;
 
 public class AddSongActivity extends AppCompatActivity implements View.OnClickListener{
-    private EditText theSongName, singer, link, idPatient;
+    private EditText theSongName, singer, link;
     private Button save;
 
     @Override
