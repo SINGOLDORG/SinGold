@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.singold.R;
+import com.example.singold.data.ConnectToServer;
 
 public class LogInActivity extends AppCompatActivity
 {
@@ -41,16 +42,17 @@ public class LogInActivity extends AppCompatActivity
             isok = false;
         }
         if (isok == true) {
-
+            ConnectToServer.connect(this);
+            ConnectToServer.login(stUsername,stId);
         }
     }
     public void onClick(View v)
     {
         if(v==login)
         {
-            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
-            startActivity(intent);
-
+//            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
+//            startActivity(intent);
+                dataHandler();
         }
 
         if (v==sign)
