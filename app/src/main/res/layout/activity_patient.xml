@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_patient"
     android:layout_width="match_parent"
@@ -9,10 +10,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.singold.MyActivities.PatientActivity">
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="50dp" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
     <LinearLayout
@@ -28,38 +38,43 @@
         android:layout_alignParentStart="true"
         android:id="@+id/tvname" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
-        <Button
-            android:text="@string/play_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:id="@+id/playList"
-            />
-
-        <Button
-            android:text="@string/new_matching"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/newMatching"
-            android:onClick="onClick"
-
-            />
-
-        <Button
-            android:text="@string/questionaire"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
 
-            android:id="@+id/Questionaire"
-            android:onClick="onClick"
-            />
-    </LinearLayout>
+            <ImageButton
+                android:text="@string/play_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/playList"
+                app:srcCompat="@mipmap/ic_launcher"
+                android:background="@color/shafaf" />
+
+            <ImageButton
+                android:text="@string/new_matching"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/newMatching"
+                android:onClick="onClick"
+
+                app:srcCompat="@drawable/ic_search2"
+                android:background="@color/shafaf"
+                android:elevation="0dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false" />
+
+            <Button
+                android:text="@string/questionaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/Questionaire"
+                android:onClick="onClick"
+                />
+        </LinearLayout>
 
     </LinearLayout>
 

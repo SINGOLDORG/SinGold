@@ -6,6 +6,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.singold.MyActivities.PatientListActivity;
@@ -268,10 +270,11 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
-    public static  void login(final String user, String passw)
+    public static  void login(final String user, String passw, final ProgressBar progressBar)
     {
         if (userTable == null)
             userTable = azureDBClient.getTable(MyUser.class);
+        progressBar.setVisibility(View.VISIBLE);
         userTable.where().field("username").eq(user).and().field("EnterId").eq(passw).execute(new TableQueryCallback<MyUser>() {
             @Override
             public void onCompleted(List<MyUser> result, int count, Exception exception, ServiceFilterResponse response) {
@@ -285,7 +288,9 @@ public  class ConnectToServer {
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     PrefManager.setFirstTimeLaunch(context,true,user);
                     context.startActivity(intent);
-                    Toast.makeText(context, "WELCOME, " , Toast.LENGTH_LONG).show();
+                    progressBar.setVisibility(View.GONE);
+
+                    Toast.makeText(context, "WELCOME " , Toast.LENGTH_SHORT).show();
 
                     //    finish();
 

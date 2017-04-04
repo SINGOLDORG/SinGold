@@ -9,7 +9,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.singold.MyActivities.PatientListActivity">
-
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="50dp" />
     <Button
         android:text="@string/search"
         android:layout_width="wrap_content"
@@ -44,7 +51,8 @@
                 android:layout_alignParentStart="true"
                 android:id="@+id/search1"
                 android:layout_toStartOf="@+id/Saerch"
-                android:hint="@string/search" />
+                android:hint="@string/search" >
+            </EditText>
         </android.support.design.widget.TextInputLayout>
 
     <ListView
@@ -55,7 +63,9 @@
         android:layout_toStartOf="@+id/Saerch"
         android:layout_below="@+id/Saerch"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/addPatient" />
+        android:layout_above="@+id/addPatient" >
+        <requestFocus/>
+        </ListView>
 
 
     </LinearLayout>

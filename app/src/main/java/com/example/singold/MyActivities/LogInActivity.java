@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
@@ -20,12 +21,11 @@ public class LogInActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter);
-
-
         login=(Button)findViewById(R.id.login);
         sign=(Button)findViewById(R.id.sign);
         username=(EditText)findViewById(R.id.username);
         id=(EditText)findViewById(R.id.id1);
+
     }
     private void dataHandler() {
         String stUsername = username.getText().toString();
@@ -44,7 +44,7 @@ public class LogInActivity extends AppCompatActivity
         }
         if (isok == true) {
             ConnectToServer.connect(this);
-            ConnectToServer.login(stUsername,stId);
+            ConnectToServer.login(stUsername,stId,(ProgressBar)findViewById(R.id.progressBar));
         }
     }
     public void onClick(View v)

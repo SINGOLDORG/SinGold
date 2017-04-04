@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.singold.MyActivities.PatientActivity;
 import com.example.singold.MyActivities.PlaylistActivity;
+import com.example.singold.MyActivities.QuestionaireActivity;
 import com.example.singold.R;
 
 /**
@@ -40,24 +41,44 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
         TextView textAddress = (TextView) convertView.findViewById(R.id.textAddress);
         TextView textPId = (TextView) convertView.findViewById(R.id.textPid);
         TextView textYear = (TextView) convertView.findViewById(R.id.textYear);
-        ImageButton btnInfo = (ImageButton) convertView.findViewById(R.id.btnInfo);
-        ImageButton btnMusic = (ImageButton) convertView.findViewById(R.id.btnMusic);
-        btnInfo.setOnClickListener(new View.OnClickListener() {
+        final ImageButton btnInfo = (ImageButton) convertView.findViewById(R.id.btnInfo);
+        final ImageButton btnMusic = (ImageButton) convertView.findViewById(R.id.btnMusic);
+        final ImageButton btnMatch = (ImageButton) convertView.findViewById(R.id.newMatching);
+        final ImageButton btnQuest = (ImageButton) convertView.findViewById(R.id.Questionaire);
+        View.OnClickListener onClickListener=new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), PatientActivity.class);
-                intent.putExtra("patient", patientDetails);
-                getContext().startActivity(intent);
+            public void onClick(View v) {
+                if(v==btnInfo)
+                {
+                    Intent intent = new Intent(getContext(), PatientActivity.class);
+                    intent.putExtra("patient", patientDetails);
+                    getContext().startActivity(intent);
+                }
+                if(v==btnMusic)
+                {
+                    Intent intent = new Intent(getContext(), PlaylistActivity.class);
+                    intent.putExtra("patient", patientDetails);
+                    getContext().startActivity(intent);
+                }
+                if(v==btnMatch)
+                {
+                    Intent intent = new Intent(getContext(), MatchingSurvey.class);
+                    intent.putExtra("patient", patientDetails);
+                    getContext().startActivity(intent);
+                }
+                if(v==btnQuest)
+                {
+                    Intent intent = new Intent(getContext(), QuestionaireActivity.class);
+                    intent.putExtra("patient", patientDetails);
+                    getContext().startActivity(intent);
+
+                }
             }
-        });
-        btnMusic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), PlaylistActivity.class);
-                intent.putExtra("patient", patientDetails);
-                getContext().startActivity(intent);
-            }
-        });
+        };
+        btnInfo.setOnClickListener(onClickListener);
+        btnMusic.setOnClickListener(onClickListener);
+        btnMatch.setOnClickListener(onClickListener);
+        btnQuest.setOnClickListener(onClickListener);
 
         textFamilyPhone.setText(patientDetails.getFamilyPhone());
         textAddress.setText(patientDetails.getAddress());
