@@ -10,86 +10,95 @@
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        card_view:contentPadding="5dp"
-        android:layout_margin="8dp"
+        card_view:contentPadding="15dp"
+        android:layout_margin="5dp"
         card_view:cardElevation="5dp"
         card_view:cardBackgroundColor="@color/shafaf"
         card_view:cardCornerRadius="5dp"
         >
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="wrap_content">
 
-    <TextView
-        android:text="Id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textId" />
 
-    <TextView
-        android:text="IdUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textIdUser" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <TextView
-        android:text="First_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textFName" />
+                <TextView
+            android:text="Last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textLName"
+                    android:layout_weight="1" />
 
-    <TextView
-        android:text="Last_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textLName" />
+                <TextView
+            android:text="First_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textFName"
+                    android:layout_weight="1" />
+            </LinearLayout>
 
-    <TextView
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+            android:text="Year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textYear"
+                    android:layout_weight="1" />
+
+                <TextView
+            android:text="PId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textPid"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
         android:text="Family_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textFamilyPhone" />
+        android:id="@+id/textFamilyPhone"
+                android:layout_weight="1" />
 
-    <TextView
+            <TextView
         android:text="Address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textAddress" />
+        android:id="@+id/textAddress"
+                android:layout_weight="1" />
 
-    <TextView
-        android:text="PId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textPid" />
-
-    <TextView
-        android:text="Year"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textYear" />
-
-    <LinearLayout
+            <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton
-            android:layout_width="48dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_info1"
-            android:id="@+id/btnInfo"
-            android:background="@color/shafaf"
-            android:onClick="onClick" />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_info1"
+                    android:id="@+id/btnInfo"
+                    android:background="@color/shafaf"
+                    android:onClick="onClick"
+                    android:layout_gravity="left" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher"
-            android:id="@+id/btnMusic"
-            android:background="#00000000"
-            android:onClick="onClick" />
-    </LinearLayout>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/btnMusic"
+                    android:background="#00000000"
+                    android:onClick="onClick"
+                    android:layout_gravity="right" />
+            </LinearLayout>
  </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

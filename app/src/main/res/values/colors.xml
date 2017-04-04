@@ -28,6 +28,7 @@
     <color name="dot_light_screen3">#6a1b9a</color>
     <color name="dot_light_screen4">#6a1b9a</color>
     <color name="shafaf">#00000000</color>
+    <color name="secondary_text_material_light">#8ac7a0de</color>
 
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>

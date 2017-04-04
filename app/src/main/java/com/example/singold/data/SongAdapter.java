@@ -27,14 +27,10 @@ public class SongAdapter extends ArrayAdapter<Song> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_song, parent, false);
         }
 
-        TextView textId = (TextView) convertView.findViewById(R.id.textId);
-        TextView textIdPatient = (TextView) convertView.findViewById(R.id.textIdPatient);
         TextView textName = (TextView) convertView.findViewById(R.id.textName);
         TextView textSinger = (TextView) convertView.findViewById(R.id.textSinger);
         TextView textLink = (TextView) convertView.findViewById(R.id.textLink);
 
-        textId.setText(Song.getId());
-        textIdPatient.setText(Song.getIdPatient());
         textName.setText(Song.getName());
         textSinger.setText(Song.getSinger());
         textLink.setText(Song.getLink());

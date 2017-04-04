@@ -32,8 +32,11 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_patient_details, parent, false);
         }
+        TextView textLName = (TextView) convertView.findViewById(R.id.textLName);
+        TextView textFName = (TextView) convertView.findViewById(R.id.textFName);
 
         TextView textFamilyPhone = (TextView) convertView.findViewById(R.id.textFamilyPhone);
+
         TextView textAddress = (TextView) convertView.findViewById(R.id.textAddress);
         TextView textPId = (TextView) convertView.findViewById(R.id.textPid);
         TextView textYear = (TextView) convertView.findViewById(R.id.textYear);
@@ -59,6 +62,8 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
         textFamilyPhone.setText(patientDetails.getFamilyPhone());
         textAddress.setText(patientDetails.getAddress());
         textPId.setText(patientDetails.getpId());
+        textFName.setText(patientDetails.getfName());
+        textLName.setText(patientDetails.getlName());
         textYear.setText(patientDetails.getYear());
 
         return convertView;

@@ -28,14 +28,21 @@
         <item name="colorAccent">@color/accent_material_light_1</item>
         <item name="colorPrimary">@color/colorPurple</item>
         <item name="android:statusBarColor">@color/colorPurple</item>
+
         <item name="android:navigationBarColor">@color/colorPurple</item>
-        <item name="android:textColorPrimary">@android:color/primary_text_dark</item>
+        <item name="android:textColorPrimary">@color/cardview_light_background</item>
         <item name="colorButtonNormal">#6a1b9a</item>
         <item name="android:textColorSecondaryInverse">@color/dot_light_screen4</item>
-        <item name="android:windowBackground">@android:color/darker_gray</item>
-
+        <item name="android:windowBackground">@color/cardview_light_background</item>
+        <item name="colorPrimaryDark">@color/background_material_light</item>
+        <item name="android:colorBackground">@color/background_material_light</item>
+        <item name="editTextStyle">@style/editTextStyle</item>
     </style>
-
+    <style name="editTextStyle" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
     //intro//
 
 

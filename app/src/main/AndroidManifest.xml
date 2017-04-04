@@ -16,7 +16,7 @@
         android:theme="@style/MyTheme">
         <activity
             android:name=".MyActivities.ListMainActivity"
-            android:label="@string/app_name" />
+             />
         <activity android:name=".MyActivities.ToDoActivity" />
         <activity android:name=".MyActivities.LogInActivity" />
         <activity android:name=".MyActivities.SignUpActivity" />

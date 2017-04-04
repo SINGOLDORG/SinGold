@@ -9,8 +9,8 @@
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        card_view:contentPadding="5dp"
-        android:layout_margin="8dp"
+        card_view:contentPadding="10dp"
+        android:layout_margin="5dp"
         card_view:cardElevation="5dp"
         card_view:cardBackgroundColor="@color/cardview_shadow_end_color"
         card_view:cardCornerRadius="5dp">
@@ -19,23 +19,21 @@
             android:orientation="vertical"
             android:layout_height="wrap_content">
 
-    <TextView
-        android:text="Id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textId" />
 
-    <TextView
-        android:text="IdPatient"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textIdPatient" />
 
-    <TextView
+
+<android.support.design.widget.TextInputLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <EditText
         android:text="Name"
+        android:hint="@string/songN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        android:enabled="false"
         android:id="@+id/textName" />
+</android.support.design.widget.TextInputLayout>
 
     <TextView
         android:text="Singer"
@@ -45,6 +43,7 @@
 
     <TextView
         android:text="Link"
+        android:autoLink="web"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textLink" />
