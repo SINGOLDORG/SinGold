@@ -7,11 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
-import com.example.singold.data.FoundSongAdapter;
 import com.example.singold.data.PatientDetails;
 import com.example.singold.data.PatientProfile;
 import com.example.singold.data.SongAdapter;
@@ -42,7 +40,7 @@ public class FoundSongActivity extends AppCompatActivity implements View.OnClick
 
     private void initListView() {
         if (FoundSongAdapter == null)
-            FoundSongAdapter = new SongAdapter(this, R.layout.item_song);
+            FoundSongAdapter = new SongAdapter(this, R.layout.item_song,true);
         foundList.setAdapter(FoundSongAdapter);
        ConnectToServer.connect(this);
         ConnectToServer.refreshItemsFromTable(FoundSongAdapter,patientProfile,(ProgressBar)findViewById(R.id.progressBar));
@@ -60,8 +58,10 @@ public class FoundSongActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View view) {
         if(view==save)
         {
-            Intent intent = new Intent(getBaseContext(), PlaylistActivity.class);
-            startActivity(intent);
+
+            ConnectToServer.connect(this);
+            ConnectToServer.addInTable(FoundSongAdapter.getSelectedSongs(),patientDetails,(ProgressBar)findViewById(R.id.progressBar));
+//
 
         }
     }

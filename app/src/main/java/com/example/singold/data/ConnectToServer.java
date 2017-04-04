@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.singold.MyActivities.PatientListActivity;
+import com.example.singold.MyActivities.PlaylistActivity;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -26,6 +27,7 @@ import com.microsoft.windowsazure.mobileservices.table.TableQueryCallback;
 import com.squareup.okhttp.OkHttpClient;
 
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
@@ -172,6 +174,7 @@ public  class ConnectToServer {
             return task.execute();
         }
     }
+
 
 
 
@@ -718,6 +721,7 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
+
     public static void addInTable(final Song item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
         if(progressBar!=null)
             progressBar.setVisibility(View.VISIBLE);
@@ -755,6 +759,53 @@ public  class ConnectToServer {
         };
 
         runAsyncTask(task);
+    }
+    public static void addInTable(final ArrayList<Song> selectedSongs, final PatientDetails patientDetails, final ProgressBar progressBar)
+    {
+        if(progressBar!=null)
+            progressBar.setVisibility(View.VISIBLE);
+        if (songTable == null)
+            songTable = azureDBClient.getTable(Song.class);
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                try {
+                    for (Song item:selectedSongs) {
+                        item.setId("");
+                        item.setIdPatient(patientDetails.getId());
+                      songTable.insert(item).get();
+                    }
+
+//                    context.runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+////                            if(!entity.isComplete()){
+////                                ///mAdapter.add(entity);
+//                            //showProProgressDialog("Saving Song");
+////                            }
+//                        }
+//                    });
+                } catch (final Exception e) {
+                    createAndShowDialogFromTask(e, "Error");
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                //dismissProProgressDialog();
+                if(progressBar!=null)
+                    progressBar.setVisibility(View.GONE);
+                Intent intent = new Intent(context, PlaylistActivity.class);
+            intent.putExtra("patient", patientDetails);
+                context.finish();
+                context.startActivity(intent);
+
+            }
+        };
+
+        runAsyncTask(task);
+
     }
     public static void addInTable(final PatientProfile item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
         if(progressBar!=null)

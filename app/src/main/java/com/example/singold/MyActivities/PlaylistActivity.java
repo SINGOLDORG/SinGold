@@ -40,7 +40,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
     }
     private void initListView() {
         if(songAdapter==null)
-            songAdapter=new SongAdapter(this, R.layout.item_song);
+            songAdapter=new SongAdapter(this, R.layout.item_song,false);
         list.setAdapter(songAdapter);
         ConnectToServer.connect(this);
         ConnectToServer.refreshItemsFromTable(songAdapter,patientDetails.getId(),(ProgressBar)findViewById(R.id.progressBar));

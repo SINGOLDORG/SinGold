@@ -53,15 +53,15 @@ public class MatchingSurveyActivity extends AppCompatActivity implements View.On
 
         String stCountry = country.getText().toString();
         String stCulture = etCultutre.getText().toString();
-        int id=rgQ3language.getCheckedRadioButtonId();
-        if(id!=-1)
-        {
-            stCulture=((RadioButton)findViewById(id)).getText().toString();
-        }
+
         String stYear = year.getText().toString();
         String stReligion = religion.getText().toString();
         String stLanguage = language.getText().toString();
-
+        int id=rgQ3language.getCheckedRadioButtonId();
+        if(id!=-1)
+        {
+            stLanguage=((RadioButton)findViewById(id)).getText().toString();
+        }
         boolean isok = true;
 
 
