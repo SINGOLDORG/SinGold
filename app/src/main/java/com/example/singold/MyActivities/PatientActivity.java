@@ -29,6 +29,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient);
+        tvname= (TextView) findViewById(R.id.tvname);
 
          btnMusic = (ImageButton) findViewById(R.id.btnMusic);
          btnMatch = (ImageButton) findViewById(R.id.newMatching);
@@ -44,7 +45,6 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         btnMusic.setOnClickListener(this);
         btnMatch.setOnClickListener(this);
         btnQuest.setOnClickListener(this);
-        tvname= (TextView) findViewById(R.id.tvname);
 
     }
     public void onClick(View v)

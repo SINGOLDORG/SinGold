@@ -40,11 +40,11 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/id1"
                 android:hint="@string/id2"
-                android:layout_below="@+id/username" />
+                android:layout_below="@+id/username"
+                android:inputType="textPassword|number" />
         </android.support.design.widget.TextInputLayout>
 
         <Button
