@@ -132,6 +132,10 @@ public  class ConnectToServer {
 
     private static void  showProProgressDialog(String msg)
     {
+        if(((Activity) context).isFinishing())
+        {
+            return;
+        }
         if(dialog==null)
         {
             dialog=new ProgressDialog(context);
@@ -141,6 +145,10 @@ public  class ConnectToServer {
     }
     private static void  dismissProProgressDialog()
     {
+        if(((Activity) context).isFinishing())
+        {
+            return;
+        }
         if(dialog!=null)
         {
             dialog.dismiss();
@@ -176,12 +184,14 @@ public  class ConnectToServer {
             final SettableFuture<ServiceFilterResponse> resultFuture = SettableFuture.create();
 
 
+
+
             context.runOnUiThread(new Runnable() {
 
                 @Override
                 public void run() {
                     //  if (mProgressBar != null) mProgressBar.setVisibility(ProgressBar.VISIBLE);
-                    showProProgressDialog("Connecting...Wait...");
+                    //showProProgressDialog("Connecting...Wait...");
 
                 }
             });
@@ -415,7 +425,8 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                showProProgressDialog("Reading Songs");
+//                showProProgressDialog("Reading Songs");
+                Toast.makeText(context,"Reading Songs",Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -449,7 +460,9 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dismissProProgressDialog();
+               // dismissProProgressDialog();
+                Toast.makeText(context,"finished Reading Songs",Toast.LENGTH_LONG).show();
+
             }
         };
 
@@ -465,7 +478,7 @@ public  class ConnectToServer {
             protected void onPreExecute() {
                 super.onPreExecute();
 
-                showProProgressDialog("Downloading Details..");
+//                showProProgressDialog("Downloading Details..");
             }
 
             @Override
@@ -512,7 +525,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                showProProgressDialog("Filling the questions..");
+               // showProProgressDialog("Filling the questions..");
             }
 
             @Override
@@ -544,7 +557,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dismissProProgressDialog();
+               // dismissProProgressDialog();
             }
         };
 
@@ -558,7 +571,7 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                showProProgressDialog("Matching..");
+              //  showProProgressDialog("Matching..");
             }
 
             @Override
@@ -590,7 +603,7 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dismissProProgressDialog();
+              //  dismissProProgressDialog();
             }
         };
 
@@ -619,14 +632,14 @@ public  class ConnectToServer {
                         }
                     });
                 } catch (final Exception e) {
-                    createAndShowDialogFromTask(e, "Error");
+                  //  createAndShowDialogFromTask(e, "Error");
                 }
                 return null;
             }
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                dismissProProgressDialog();
+               // dismissProProgressDialog();
 
             }
         };
