@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.singold.R;
@@ -17,7 +18,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
     private EditText search1;
     private Button Search;
     private ListView patientList;
-    private Button addPatient;
+    private ImageButton addPatient;
     private Button patientX;
     private PatientDetailsAdapter detailsAdapter;
 
@@ -29,7 +30,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
 
         search1 = (EditText) findViewById(R.id.search1);
         Search = (Button) findViewById(R.id.Saerch);
-        addPatient = (Button) findViewById(R.id.addPatient);
+        addPatient = (ImageButton) findViewById(R.id.addPatient);
 //        patientX = (Button) findViewById(R.id.patientX);
 //        patientX.setOnClickListener(this);
         addPatient.setOnClickListener(this);

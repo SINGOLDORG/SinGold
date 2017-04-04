@@ -108,6 +108,8 @@ public class WelcomeActivity extends AppCompatActivity {
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
             dots[i].setTextColor(colorsInactive[currentPage]);
+            btnNext.setTextColor(colorsActive[currentPage]);
+            btnSkip.setTextColor(colorsActive[currentPage]);
             dotsLayout.addView(dots[i]);
         }
 

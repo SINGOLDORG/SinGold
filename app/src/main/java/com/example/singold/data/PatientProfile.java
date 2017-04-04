@@ -5,11 +5,14 @@ import android.widget.RadioGroup;
 
 import com.example.singold.R;
 
+import java.io.Serializable;
+
 /**
  * Created by user on 02/03/2017.
  */
 
-public class PatientSurvey {
+public class PatientProfile implements Serializable {
+
 
 
     @com.google.gson.annotations.SerializedName("id")
@@ -19,13 +22,13 @@ public class PatientSurvey {
     @com.google.gson.annotations.SerializedName("country")
     private String country;
     @com.google.gson.annotations.SerializedName("year")
-    private String year;
+    private int year;
     @com.google.gson.annotations.SerializedName("youngMusic")
     private String youngMusic;
     @com.google.gson.annotations.SerializedName("homeMusic")
     private String homeMusic;
-    @com.google.gson.annotations.SerializedName("education")
-    private String education;
+    @com.google.gson.annotations.SerializedName("culture")
+    private String culture;
     @com.google.gson.annotations.SerializedName("language")
     private String language;
     @com.google.gson.annotations.SerializedName("religion")
@@ -46,7 +49,7 @@ public class PatientSurvey {
     private String relaxing;
 
 
-    public PatientSurvey() {
+    public PatientProfile() {
     }
 
     public String getId() {
@@ -83,11 +86,11 @@ public class PatientSurvey {
         this.youngMusic = youngMusic;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
@@ -99,12 +102,12 @@ public class PatientSurvey {
         this.homeMusic = homeMusic;
     }
 
-    public String getEducation() {
-        return education;
+    public String getCulture() {
+        return culture;
     }
 
-    public void setEducation(String education) {
-        this.education = education;
+    public void setCulture(String culture) {
+        this.culture = culture;
     }
 
     public String getfSinger() {

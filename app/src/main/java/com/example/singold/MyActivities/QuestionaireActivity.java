@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -25,7 +26,7 @@ import android.widget.TextView;
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.PatientDetails;
-import com.example.singold.data.PatientSurvey;
+import com.example.singold.data.PatientProfile;
 
 import java.util.concurrent.ExecutionException;
 
@@ -38,7 +39,7 @@ public class QuestionaireActivity extends AppCompatActivity {
     private int[] layouts;
     private Button btnSkip, btnNext;
     //  private PrefManager prefManager;
-    private PatientSurvey patientSurvey;
+    private PatientProfile patientProfile;
 
     private ImageView image1, image2, image3, image4;
     private TextView Q1, Q2, Q3, Q4, Q5, Q6, Q7;
@@ -49,6 +50,7 @@ public class QuestionaireActivity extends AppCompatActivity {
     private String ans1Clasic, ans2Isaeli, ans3Language, ans4Dance, ans5Loazi, ans6Religion, ans7Relaxing;
     private RadioButton rb;
     private PatientDetails patientDetails;
+    private EditText etCultutre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,12 +59,11 @@ public class QuestionaireActivity extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-        Intent i=getIntent();
-        if(i!=null)
-        {
-            patientDetails= (PatientDetails) i.getExtras().get("patient");
+        Intent i = getIntent();
+        if (i != null) {
+            patientDetails = (PatientDetails) i.getExtras().get("patient");
         }
-        patientSurvey=new PatientSurvey();
+        patientProfile = new PatientProfile();
 //
 //        // Making notification bar transparent
 //        if (Build.VERSION.SDK_INT >= 21) {
@@ -111,7 +112,7 @@ public class QuestionaireActivity extends AppCompatActivity {
 
                 if (current <= layouts.length) {
                     // move to next screen
-                    if( dataHandler(current)) {
+                    if (dataHandler(current)) {
                         if (current < layouts.length) {
 
                             viewPager.setCurrentItem(current);
@@ -122,7 +123,7 @@ public class QuestionaireActivity extends AppCompatActivity {
                 } else {
                     //  launchHomeScreen();
                     //dataHandler();
-                   // finish();
+                    // finish();
                 }
             }
         });
@@ -131,22 +132,30 @@ public class QuestionaireActivity extends AppCompatActivity {
     }
 
     private boolean dataHandler(int page) {
-        if(page==1)//page 1
+        if (page == 1)//page 1
         {
             country = (EditText) findViewById(R.id.country);
             homemusic = (EditText) findViewById(R.id.homemusic);
             youngmusic = (EditText) findViewById(R.id.youngmusic);
             favoritesinger = (EditText) findViewById(R.id.favoritesinger);
             favoritesong = (EditText) findViewById(R.id.favoritesong);
+            etCultutre = (EditText) findViewById(R.id.etCultutre);
+
             String stCountry = country.getText().toString();
             String stHomemusic = homemusic.getText().toString();
             String stYoungmusic = youngmusic.getText().toString();
             String stFavoritesinger = favoritesinger.getText().toString();
             String stFavoritesong = favoritesong.getText().toString();
+            String stCultre = etCultutre.getText().toString();
+
 
             boolean isok = true;
 
 
+            if (stCultre.length() == 0) {
+                etCultutre.setError("please answer the question!");
+                isok = false;
+            }
             if (stCountry.length() == 0) {
                 country.setError("please answer the question!");
                 isok = false;
@@ -168,18 +177,17 @@ public class QuestionaireActivity extends AppCompatActivity {
                 favoritesong.setError("please answer the question!");
                 isok = false;
             }
-            if(isok)
-            {
-                patientSurvey.setCountry(stCountry);
-                patientSurvey.setHomeMusic(stHomemusic);
-                patientSurvey.setYoungMusic(stYoungmusic);
-                patientSurvey.setfSinger(stFavoritesinger);
-                patientSurvey.setfSongs(stFavoritesong);
+            if (isok) {
+                patientProfile.setCountry(stCountry);
+                patientProfile.setHomeMusic(stHomemusic);
+                patientProfile.setYoungMusic(stYoungmusic);
+                patientProfile.setfSinger(stFavoritesinger);
+                patientProfile.setfSongs(stFavoritesong);
+                patientProfile.setCulture(stCultre);
             }
             return isok;
         }
-        if(page==2)
-        {
+        if (page == 2) {
             rgQ1Classic = (RadioGroup) findViewById(R.id.rgQ1);
             rgQ2Israeli = (RadioGroup) findViewById(R.id.rgQ2);
             rgQ3Language = (RadioGroup) findViewById(R.id.rgQ3);
@@ -193,25 +201,24 @@ public class QuestionaireActivity extends AppCompatActivity {
             int rdid2 = rgQ2Israeli.getCheckedRadioButtonId();
             if (rdid2 != -1) {
                 RadioButton rb2 = (RadioButton) findViewById(rdid2);
-                 ans2Isaeli = rb2.getText().toString();
+                ans2Isaeli = rb2.getText().toString();
             } else
                 ans2Isaeli = "";
 
             int rdid3 = rgQ3Language.getCheckedRadioButtonId();
             if (rdid3 != -1) {
                 RadioButton rb3 = (RadioButton) findViewById(rdid3);
-                 ans3Language = rb3.getText().toString();
+                ans3Language = rb3.getText().toString();
             } else
                 ans3Language = "";
 
-            patientSurvey.setClassic(ans1Clasic);
-            patientSurvey.setIsrael(ans2Isaeli);
-            patientSurvey.setLanguage(ans3Language);
+            patientProfile.setClassic(ans1Clasic);
+            patientProfile.setIsrael(ans2Isaeli);
+            patientProfile.setLanguage(ans3Language);
 
 
         }
-        if(page==3)
-        {
+        if (page == 3) {
             rgQ4Dance = (RadioGroup) findViewById(R.id.rgQ4);
             rgQ5Loazi = (RadioGroup) findViewById(R.id.rgQ5);
             rgQ6ReLigion = (RadioGroup) findViewById(R.id.rgQ6);
@@ -220,40 +227,40 @@ public class QuestionaireActivity extends AppCompatActivity {
             int rdid4 = rgQ4Dance.getCheckedRadioButtonId();
             if (rdid4 != -1) {
                 RadioButton rb4 = (RadioButton) findViewById(rdid4);
-                 ans4Dance = rb4.getText().toString();
+                ans4Dance = rb4.getText().toString();
             } else
                 ans4Dance = "";
 
             int rdid5 = rgQ5Loazi.getCheckedRadioButtonId();
             if (rdid5 != -1) {
                 RadioButton rb5 = (RadioButton) findViewById(rdid5);
-                 ans5Loazi = rb5.getText().toString();
+                ans5Loazi = rb5.getText().toString();
             } else
                 ans5Loazi = "";
 
             int rdid6 = rgQ6ReLigion.getCheckedRadioButtonId();
             if (rdid6 != -1) {
                 RadioButton rb6 = (RadioButton) findViewById(rdid6);
-                 ans6Religion = rb6.getText().toString();
+                ans6Religion = rb6.getText().toString();
             } else
                 ans6Religion = "";
 
             int rdid7 = rgQ7Relaxing.getCheckedRadioButtonId();
             if (rdid7 != -1) {
                 RadioButton rb7 = (RadioButton) findViewById(rdid7);
-                 ans7Relaxing = rb7.getText().toString();
+                ans7Relaxing = rb7.getText().toString();
             } else
                 ans7Relaxing = "";
-            patientSurvey.setDance(ans4Dance);
-            patientSurvey.setLoazi(ans5Loazi);
-            patientSurvey.setReligion(ans6Religion);
-            patientSurvey.setRelaxing(ans7Relaxing);
+            patientProfile.setDance(ans4Dance);
+            patientProfile.setLoazi(ans5Loazi);
+            patientProfile.setReligion(ans6Religion);
+            patientProfile.setRelaxing(ans7Relaxing);
 
-            patientSurvey.setIdPatient(patientDetails.getId());
+            patientProfile.setIdPatient(patientDetails.getId());
 
             ConnectToServer.connect(this);
             try {
-                ConnectToServer.addInTable(patientSurvey);
+                ConnectToServer.addInTable(patientProfile,(ProgressBar)findViewById(R.id.progressBar));
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
@@ -300,15 +307,10 @@ public class QuestionaireActivity extends AppCompatActivity {
         insteumental = (RadioButton) findViewById(R.id.insteumental);
 
 
-
     }
 
     private void dataHandler() {
         //initAllObkects();
-
-
-
-
 
 
     }
@@ -351,7 +353,7 @@ public class QuestionaireActivity extends AppCompatActivity {
             addBottomDots(position);
 
             // changing the next button text 'NEXT' / 'GOT IT'
-            if (position == layouts.length - 1) {
+           if (position == layouts.length - 1) {
                 // last page. make button text to GOT IT
                 btnNext.setText(getString(R.string.save));
                 btnSkip.setVisibility(View.GONE);
@@ -364,7 +366,12 @@ public class QuestionaireActivity extends AppCompatActivity {
 
         @Override
         public void onPageScrolled(int arg0, float arg1, int arg2) {
+            if (arg0 == 0) {
+                if (dataHandler(arg0+1) == false)
+                    viewPager.setCurrentItem(arg0);
 
+
+            }
         }
 
         @Override

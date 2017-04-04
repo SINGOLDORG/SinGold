@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
@@ -15,7 +17,7 @@ import com.example.singold.data.SongAdapter;
 
 public class PlaylistActivity extends AppCompatActivity implements View.OnClickListener {
     private ListView list;
-    private Button add,BTNmatching;
+    private ImageButton add,BTNmatching;
 
     private SongAdapter songAdapter;
     PatientDetails patientDetails;
@@ -27,9 +29,9 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_playlist);
 
         list = (ListView) findViewById(R.id.list);
-        add = (Button) findViewById(R.id.add);
+        add = (ImageButton) findViewById(R.id.add);
         add.setOnClickListener(this);
-        BTNmatching=(Button)findViewById(R.id.BTNmatching);
+        BTNmatching=(ImageButton) findViewById(R.id.BTNmatching);
         Intent i=getIntent();
         if(i!=null)
         {
@@ -41,7 +43,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
             songAdapter=new SongAdapter(this, R.layout.item_song);
         list.setAdapter(songAdapter);
         ConnectToServer.connect(this);
-        ConnectToServer.refreshItemsFromTable(songAdapter,patientDetails.getId());
+        ConnectToServer.refreshItemsFromTable(songAdapter,patientDetails.getId(),(ProgressBar)findViewById(R.id.progressBar));
 
     }
 

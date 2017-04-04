@@ -32,6 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/rgQ1"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -58,6 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/rgQ2"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -88,6 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:gravity="center"
                 android:id="@+id/rgQ3">
                 <TextView
                     android:text="@string/languages"

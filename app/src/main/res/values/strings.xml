@@ -124,4 +124,6 @@
     <string name="questionaire">Questionaire</string>
     <string name="new_matching">New Matching</string>
     <string name="play_list">Play List</string>
+    <string name="eduction">culture</string>
+    <string name="culture">culture</string>
 </resources>

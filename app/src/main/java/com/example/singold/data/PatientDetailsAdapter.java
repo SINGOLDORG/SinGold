@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.singold.MyActivities.MatchingSurveyActivity;
 import com.example.singold.MyActivities.PatientActivity;
 import com.example.singold.MyActivities.PlaylistActivity;
 import com.example.singold.MyActivities.QuestionaireActivity;
@@ -62,7 +63,7 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
                 }
                 if(v==btnMatch)
                 {
-                    Intent intent = new Intent(getContext(), MatchingSurvey.class);
+                    Intent intent = new Intent(getContext(), MatchingSurveyActivity.class);
                     intent.putExtra("patient", patientDetails);
                     getContext().startActivity(intent);
                 }

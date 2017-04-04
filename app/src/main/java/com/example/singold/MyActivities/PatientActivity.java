@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.singold.R;
@@ -18,6 +19,9 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private PatientDetails patientDetails;
     private TextView tvname;
     private Button Questionaire;
+    private ImageButton btnMatch;
+    private ImageButton btnMusic;
+    private ImageButton btnQuest;
 
 
     @Override
@@ -26,12 +30,9 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient);
 
-        playList = (Button) findViewById(R.id.playList);
-        newMatching = (Button) findViewById(R.id.newMatching);
-        tvname= (TextView) findViewById(R.id.tvname);
-        Questionaire=(Button)findViewById(R.id.Questionaire);
-        newMatching.setOnClickListener(this);
-        playList.setOnClickListener(this);
+         btnMusic = (ImageButton) findViewById(R.id.btnMusic);
+         btnMatch = (ImageButton) findViewById(R.id.newMatching);
+         btnQuest = (ImageButton) findViewById(R.id.Questionaire);
         Intent i=getIntent();
         if(i!=null)
         {
@@ -39,26 +40,33 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             tvname.setText(patientDetails.getfName());
 
         }
+
+        btnMusic.setOnClickListener(this);
+        btnMatch.setOnClickListener(this);
+        btnQuest.setOnClickListener(this);
+        tvname= (TextView) findViewById(R.id.tvname);
+
     }
     public void onClick(View v)
     {
-        if (v == playList) {
+        if(v==btnMusic)
+        {
             Intent intent = new Intent(getBaseContext(), PlaylistActivity.class);
             intent.putExtra("patient", patientDetails);
             startActivity(intent);
-
         }
-        if (v == newMatching) {
-          //  Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
+        if(v==btnMatch)
+        {
             Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
             intent.putExtra("patient", patientDetails);
             startActivity(intent);
         }
-        if (v == Questionaire) {
-            //  Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
+        if(v==btnQuest)
+        {
             Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
             intent.putExtra("patient", patientDetails);
             startActivity(intent);
+
         }
     }
 }

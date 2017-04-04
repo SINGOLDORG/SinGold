@@ -49,7 +49,7 @@ public  class ConnectToServer {
     private static MobileServiceTable<MyUser> userTable;
     private static MobileServiceTable<Song> songTable;
     private static MobileServiceTable<PatientDetails> patientDetailsTable;
-    private static MobileServiceTable<PatientSurvey> patientSurveyTable;
+    private static MobileServiceTable<PatientProfile> patientProfileTable;
     private static MobileServiceTable<MatchingSurvey> HalfSurveyTable;
 
 
@@ -172,6 +172,8 @@ public  class ConnectToServer {
             return task.execute();
         }
     }
+
+
 
     public static class ProgressFilter implements ServiceFilter {
 
@@ -304,12 +306,12 @@ public  class ConnectToServer {
     }
     public static  void searchAndMatch(MatchingSurvey matchingSurvey)
     {
-        if (patientSurveyTable == null)
-            patientSurveyTable = azureDBClient.getTable(PatientSurvey.class);
+        if (patientProfileTable == null)
+            patientProfileTable = azureDBClient.getTable(PatientProfile.class);
 
-        patientSurveyTable.where().field("country").eq(matchingSurvey.getCountry()).and().field("language").eq(matchingSurvey.getLanguage()).execute(new TableQueryCallback<PatientSurvey>() {
+        patientProfileTable.where().field("country").eq(matchingSurvey.getCountry()).and().field("language").eq(matchingSurvey.getLanguage()).execute(new TableQueryCallback<PatientProfile>() {
             @Override
-            public void onCompleted(List<PatientSurvey> result, int count, Exception exception, ServiceFilterResponse response) {
+            public void onCompleted(List<PatientProfile> result, int count, Exception exception, ServiceFilterResponse response) {
 
                 // it appears for me and error here, ** remember to ask about it
                 if (result!=null && result.size() > 0) {
@@ -329,6 +331,68 @@ public  class ConnectToServer {
                 }
             }
         });
+    }
+    public static void refreshItemsFromTable(final SongAdapter adapter, final PatientProfile patientProfile, final ProgressBar progressBar) {
+        // Get the items that weren't marked as completed and add them in the
+        // adapter
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                if (patientProfileTable == null)
+                    patientProfileTable = azureDBClient.getTable(PatientProfile.class);
+                if(progressBar!=null)
+                    progressBar.setVisibility(View.VISIBLE);
+//                showProProgressDialog("Downloading Details..");
+            }
+
+            @Override
+            protected Void doInBackground(Void... params) {
+
+                try {
+                    //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
+
+                    final List<PatientProfile> results =
+                            patientProfileTable.where().
+                                    field("language").eq(patientProfile.getLanguage())
+                                    //.and().field("culture").eq(patientProfile.getCulture())
+                                    .execute().get();
+                    //Offline Sync
+                    //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
+                    for (PatientProfile item  : results) {
+                        refreshItemsFromTable(adapter,item.getIdPatient(),progressBar);
+
+                    }
+                    context.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                           // adapter.clear();
+
+                            for (PatientProfile item  : results) {
+                               // adapter.add(item);
+
+                            }
+                        }
+                    });
+                } catch (final Exception e){
+                    createAndShowDialogFromTask(e, "Error");
+                }
+
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
+                if(progressBar!=null)
+                    progressBar.setVisibility(View.GONE);
+                //dismissProProgressDialog();
+                        }
+        };
+
+        runAsyncTask(task);
+
+
     }
     public static void refreshItemsFromTable(final ToDoItemAdapter adapter) {
 
@@ -422,8 +486,9 @@ public  class ConnectToServer {
 
         runAsyncTask(task);
     }
-    public static void refreshItemsFromTable(final SongAdapter adapter, final String id) {
-
+    public static void refreshItemsFromTable(final SongAdapter adapter, final String id, final ProgressBar progressBar) {
+        if(progressBar!=null)
+            progressBar.setVisibility(View.VISIBLE);
         // Get the items that weren't marked as completed and add them in the
         // adapter
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
@@ -431,7 +496,7 @@ public  class ConnectToServer {
             protected void onPreExecute() {
                 super.onPreExecute();
 //                showProProgressDialog("Reading Songs");
-                Toast.makeText(context,"Reading Songs",Toast.LENGTH_LONG).show();
+                //Toast.makeText(context,"Reading Songs",Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -466,8 +531,9 @@ public  class ConnectToServer {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
                // dismissProProgressDialog();
-                Toast.makeText(context,"finished Reading Songs",Toast.LENGTH_LONG).show();
-
+               // Toast.makeText(context,"finished Reading Songs",Toast.LENGTH_LONG).show();
+                if(progressBar!=null)
+                    progressBar.setVisibility(View.GONE);
             }
         };
 
@@ -482,7 +548,8 @@ public  class ConnectToServer {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-
+                if (patientDetailsTable == null)
+                    patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
 //                showProProgressDialog("Downloading Details..");
             }
 
@@ -491,8 +558,7 @@ public  class ConnectToServer {
 
                 try {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
-                    if (patientDetailsTable == null)
-                        patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
+
                     final List<PatientDetails> results = patientDetailsTable.where().field("idUser").eq(userId).execute().get();
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
@@ -538,7 +604,7 @@ public  class ConnectToServer {
 
                 try {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
-                    final List<PatientSurvey> results = patientSurveyTable.where().execute().get();
+                    final List<PatientProfile> results = patientProfileTable.where().execute().get();
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
 
@@ -547,7 +613,7 @@ public  class ConnectToServer {
                         public void run() {
                             adapter.clear();
 
-                            for (PatientSurvey item  : results) {
+                            for (PatientProfile item  : results) {
                                 adapter.add(item);
                             }
                         }
@@ -652,8 +718,9 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
-    public static void addInTable(final Song item) throws ExecutionException, InterruptedException {
-        ;
+    public static void addInTable(final Song item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
+        if(progressBar!=null)
+            progressBar.setVisibility(View.VISIBLE);
         if (songTable == null)
             songTable = azureDBClient.getTable(Song.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
@@ -667,7 +734,7 @@ public  class ConnectToServer {
                         public void run() {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
-                    showProProgressDialog("Saving Song");
+                    //showProProgressDialog("Saving Song");
 //                            }
                         }
                     });
@@ -679,7 +746,9 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                dismissProProgressDialog();
+                //dismissProProgressDialog();
+                if(progressBar!=null)
+                    progressBar.setVisibility(View.GONE);
                 context.finish();
 
             }
@@ -687,15 +756,16 @@ public  class ConnectToServer {
 
         runAsyncTask(task);
     }
-    public static void addInTable(final PatientSurvey item) throws ExecutionException, InterruptedException {
-        ;
-        if (patientSurveyTable == null)
-            patientSurveyTable = azureDBClient.getTable(PatientSurvey.class);
+    public static void addInTable(final PatientProfile item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
+        if(progressBar!=null)
+            progressBar.setVisibility(View.VISIBLE);
+        if (patientProfileTable == null)
+            patientProfileTable = azureDBClient.getTable(PatientProfile.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
                 try {
-                    final PatientSurvey entity = patientSurveyTable.insert(item).get();
+                    final PatientProfile entity = patientProfileTable.insert(item).get();
 
                     context.runOnUiThread(new Runnable() {
                         @Override
@@ -703,7 +773,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            showProProgressDialog("Saving PatientSurvey");
+                         //   showProProgressDialog("Saving PatientProfile");
 
                         }
                     });
@@ -715,7 +785,9 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                dismissProProgressDialog();
+               // dismissProProgressDialog();
+                if(progressBar!=null)
+                    progressBar.setVisibility(View.GONE);
                 context.finish();
 
             }
@@ -724,8 +796,9 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
-    public static void addInTable(final PatientDetails item) throws ExecutionException, InterruptedException {
-        ;
+    public static void addInTable(final PatientDetails item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
+        if(progressBar!=null)
+            progressBar.setVisibility(View.VISIBLE);
         if (patientDetailsTable == null)
             patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
@@ -740,7 +813,7 @@ public  class ConnectToServer {
 //                            if(!entity.isComplete()){
 //                                ///mAdapter.add(entity);
 //                            }
-                            showProProgressDialog("Saving PatientDetails");
+                            ///showProProgressDialog("Saving PatientDetails");
 
                         }
                     });
@@ -752,8 +825,10 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-                dismissProProgressDialog();
-
+               // dismissProProgressDialog();
+                if(progressBar!=null)
+                    progressBar.setVisibility(View.GONE);
+                context.finish();
             }
         };
 

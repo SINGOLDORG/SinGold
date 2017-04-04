@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_patient_list"
     android:layout_width="match_parent"
@@ -25,9 +26,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:onClick="onClick" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -57,29 +56,29 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="371dp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:id="@+id/patientList"
         android:layout_toStartOf="@+id/Saerch"
         android:layout_below="@+id/Saerch"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/addPatient" >
-        <requestFocus/>
-        </ListView>
+        android:layout_above="@+id/addPatient" ></ListView>
 
 
     </LinearLayout>
 
-    </ScrollView>
 
-    <Button
+    <ImageButton
         android:id="@+id/addPatient"
-        android:background="@drawable/newp"
+
         android:onClick="onClick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/newp"
+        android:background="@color/shafaf"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop" />
 
 
 </RelativeLayout>

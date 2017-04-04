@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
@@ -72,7 +73,7 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
             song.setLink(stLink);
             try {
                 ConnectToServer.connect(this);
-                ConnectToServer.addInTable(song);
+                ConnectToServer.addInTable(song,(ProgressBar)findViewById(R.id.progressBar));
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {

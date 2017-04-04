@@ -30,7 +30,7 @@
     <string name="Israel">ישראל</string>
     <string name="songs">שירים</string>
     <string name="bands">bands</string>
-    <string name="classic">קלאסיק</string>
+    <string name="classic">מוזיקה קלאסית</string>
     <string name="folk_dance">ריקוד עם</string>
     <string name="languages">שפות</string>
     <string name="yiddish">יידיש</string>
@@ -38,7 +38,7 @@
     <string name="english">אנגלית</string>
     <string name="russian">רוסית</string>
     <string name="arabic">ערבית</string>
-    <string name="dance">ריקוד</string>
+    <string name="dance">שירי ריקודים</string>
     <string name="waltz">ואלס</string>
     <string name="tango">טנגו</string>
     <string name="samba">סמבה</string>
@@ -54,7 +54,7 @@
     <string name="relaxing">מוזיקה מרגיעה</string>
     <string name="runnig_water">מים זורמים</string>
     <string name="insteumental">אינסטרימנטלי</string>
-    <string name="country">מדינה</string>
+    <string name="country">ארץ לידה</string>
     <string name="answer">תשובה</string>
     <string name="homemusic">לאיזו מוזיקה האזינו בבית?</string>
     <string name="young">לאיזו מוזיקה האזין כשהיה צעיר?</string>
@@ -73,7 +73,7 @@
     <string name="atLeast3">לפחות 3 תווים</string>
     <string name="UsernameIsAlredyThere">שם משתמש הוא כבר נמצא</string>
     <string name="AtLeast10Number">לפחות 9 מספרים</string>
-    <string name="pleaseAnswerTheQuestion">אנא תעני על השאלה!</string>
+    <string name="pleaseAnswerTheQuestion">צריך לכתוב תשובה</string>
     <string name="search">חפש</string>
     <string name="AtLeast10Numbers">לפחות 10 מספרים</string>
     <string name="enterYourAdress">הכנס את המיקום שלך</string>
@@ -90,8 +90,8 @@
     <string name="First_name">שם משתמש</string>
     <string name="City">עיר</string>
     <string name="sign_up">חשבון חדש</string>
-    <string name="r1">דת</string>
-    <string name="l1">שפות</string>
+    <string name="r1">שירים דתיים</string>
+    <string name="l1">שפה</string>
     <string name="skip">דלג</string>
     <string name="idP">"ת.ז לחולה "</string>
     <string name="songN">שם השיר</string>
@@ -106,4 +106,5 @@
     <string name="questionaire">שאלון</string>
     <string name="new_matching">התאמת שיר</string>
     <string name="play_list">רשימת שירים</string>
+    <string name="culture">רק תרבותי (מזרחי, אשכנזי, בידווי...)</string>
 </resources>

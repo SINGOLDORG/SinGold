@@ -13,14 +13,14 @@ import com.example.singold.R;
  * Created by user on 16/03/2017.
  */
 
-public class  PatientSurveyAdapter extends ArrayAdapter<PatientSurvey> {
+public class  PatientSurveyAdapter extends ArrayAdapter<PatientProfile> {
     public PatientSurveyAdapter(Context context, int resource) {
         super(context, resource);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final PatientSurvey PatientSurvey = getItem(position);
+        final PatientProfile PatientProfile = getItem(position);
 
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_patient_survey, parent, false);
@@ -42,21 +42,21 @@ public class  PatientSurveyAdapter extends ArrayAdapter<PatientSurvey> {
         TextView textReligion = (TextView) convertView.findViewById(R.id.textReligion);
         TextView textRelaxing = (TextView) convertView.findViewById(R.id.textRelaxing);
 
-        textId.setText(PatientSurvey.getId());
-        textIdPatient.setText(PatientSurvey.getIdPatient());
-        textCountry.setText(PatientSurvey.getCountry());
-        textYear.setText(PatientSurvey.getYear());
-        textHomeMusic.setText(PatientSurvey.getHomeMusic());
-        textEducation.setText(PatientSurvey.getEducation());
-        textFsinger.setText(PatientSurvey.getfSinger());
-        textFsongs.setText(PatientSurvey.getfSongs());
-        textClassic.setText(PatientSurvey.getClassic());
-        textIsrael.setText(PatientSurvey.getIsrael());
-        textLanguage.setText(PatientSurvey.getLanguage());
-        textDance.setText(PatientSurvey.getDance());
-        textLoazi.setText(PatientSurvey.getLoazi());
-        textReligion.setText(PatientSurvey.getReligion());
-        textRelaxing.setText(PatientSurvey.getRelaxing());
+        textId.setText(PatientProfile.getId());
+        textIdPatient.setText(PatientProfile.getIdPatient());
+        textCountry.setText(PatientProfile.getCountry());
+        textYear.setText(PatientProfile.getYear());
+        textHomeMusic.setText(PatientProfile.getHomeMusic());
+        textEducation.setText(PatientProfile.getCulture());
+        textFsinger.setText(PatientProfile.getfSinger());
+        textFsongs.setText(PatientProfile.getfSongs());
+        textClassic.setText(PatientProfile.getClassic());
+        textIsrael.setText(PatientProfile.getIsrael());
+        textLanguage.setText(PatientProfile.getLanguage());
+        textDance.setText(PatientProfile.getDance());
+        textLoazi.setText(PatientProfile.getLoazi());
+        textReligion.setText(PatientProfile.getReligion());
+        textRelaxing.setText(PatientProfile.getRelaxing());
 
         return convertView;
     }

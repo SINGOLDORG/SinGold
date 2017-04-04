@@ -90,4 +90,16 @@ public class PatientDetails implements Serializable {
     public void setYear(String year) {
         this.year = year;
     }
+
+    @Override
+    public String toString() {
+        return "PatientDetails{" +
+                "year='" + year + '\'' +
+                ", pId='" + pId + '\'' +
+                ", address='" + address + '\'' +
+                ", familyPhone='" + familyPhone + '\'' +
+                ", lName='" + lName + '\'' +
+                ", fName='" + fName + '\'' +
+                '}';
+    }
 }

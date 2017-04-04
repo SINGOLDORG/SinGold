@@ -1,14 +1,19 @@
 package com.example.singold.MyActivities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.MatchingSurvey;
+import com.example.singold.data.PatientDetails;
+import com.example.singold.data.PatientProfile;
 import com.example.singold.data.Song;
 
 import java.util.concurrent.ExecutionException;
@@ -17,26 +22,42 @@ import java.util.concurrent.ExecutionException;
  * Created by user on 01/04/2017.
  */
 
-public class MatchingSurveyActivity extends AppCompatActivity {
-    private EditText  country, year, religion, language;
+public class MatchingSurveyActivity extends AppCompatActivity implements View.OnClickListener {
+    private EditText  country, year, religion, language,etCultutre;
     private Button btnSearch;
+    private PatientDetails patientDetails;
+    private RadioGroup rgQ3language;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matching_survey);
 
-
+        etCultutre=(EditText)findViewById(R.id.etCultutre) ;
+        rgQ3language=(RadioGroup)findViewById(R.id.rgQ3language);
         country = (EditText) findViewById(R.id.country);
         year = (EditText) findViewById(R.id.year);
         religion = (EditText) findViewById(R.id.religin);
         language = (EditText) findViewById(R.id.language);
         btnSearch = (Button) findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(this);
+        Intent i=getIntent();
+        if(i!=null)
+        {
+            patientDetails= (PatientDetails) i.getExtras().get("patient");
+        }
     }
 
     private void dataHandler() {
 
         String stCountry = country.getText().toString();
+        String stCulture = etCultutre.getText().toString();
+        int id=rgQ3language.getCheckedRadioButtonId();
+        if(id!=-1)
+        {
+            stCulture=((RadioButton)findViewById(id)).getText().toString();
+        }
         String stYear = year.getText().toString();
         String stReligion = religion.getText().toString();
         String stLanguage = language.getText().toString();
@@ -46,6 +67,10 @@ public class MatchingSurveyActivity extends AppCompatActivity {
 
         if (stCountry.length() == 0) {
             country.setError("Enter your country");
+            isok = false;
+        }
+        if (stCulture.length() == 0) {
+            etCultutre.setError("Enter your country");
             isok = false;
         }
         if (stYear.length() == 0) {
@@ -61,19 +86,17 @@ public class MatchingSurveyActivity extends AppCompatActivity {
             isok = false;
         }
         if (isok == true) {
-            MatchingSurvey matchingSurvey = new MatchingSurvey();
-            matchingSurvey.setCountry(stCountry);
-            matchingSurvey.setYear(stYear);
-            matchingSurvey.setReligion(stReligion);
-            matchingSurvey.setLanguage(stLanguage);
-            try {
-                ConnectToServer.connect(this);
-                ConnectToServer.addInTable(matchingSurvey);
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
+            PatientProfile patientProfile=new PatientProfile();
+            patientProfile.setCulture(stCulture);
+            patientProfile.setCountry(stCountry);
+            patientProfile.setLanguage(stLanguage);
+            patientProfile.setReligion(stReligion);
+            patientProfile.setYear(Integer.parseInt(stYear));
+            Intent i=new Intent(this,FoundSongActivity.class);
+            i.putExtra("patientProfile",patientProfile);
+            i.putExtra("patient",patientDetails);
+            startActivity(i);
 
 
         }
