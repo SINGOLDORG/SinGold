@@ -28,6 +28,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_list);
 
+
         search1 = (EditText) findViewById(R.id.search1);
         Search = (Button) findViewById(R.id.Saerch);
         addPatient = (ImageButton) findViewById(R.id.addPatient);
@@ -46,7 +47,15 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
             detailsAdapter=new PatientDetailsAdapter(this, R.layout.item_patient_details);
         patientList.setAdapter(detailsAdapter);
         ConnectToServer.connect(this);
-        ConnectToServer.refreshItemsFromTable(detailsAdapter, PrefManager.getUserId(this));
+        ConnectToServer.refreshPatientDetailsFromTable(detailsAdapter, PrefManager.getUserId(this), "");
+
+    }
+    private void searchPatientDetails(String toSearch) {
+        if(detailsAdapter==null)
+            detailsAdapter=new PatientDetailsAdapter(this, R.layout.item_patient_details);
+        patientList.setAdapter(detailsAdapter);
+        ConnectToServer.connect(this);
+        ConnectToServer.refreshPatientDetailsFromTable(detailsAdapter, PrefManager.getUserId(this),toSearch);
 
     }
 

@@ -24,6 +24,7 @@ import com.microsoft.windowsazure.mobileservices.http.ServiceFilterRequest;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 import com.microsoft.windowsazure.mobileservices.table.TableQueryCallback;
+import com.microsoft.windowsazure.mobileservices.table.query.Query;
 import com.squareup.okhttp.OkHttpClient;
 
 import java.net.MalformedURLException;
@@ -32,6 +33,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
+import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.field;
 import static com.microsoft.windowsazure.mobileservices.table.query.QueryOperations.val;
 
 /**
@@ -543,7 +545,7 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
-    public static void refreshItemsFromTable(final PatientDetailsAdapter adapter, final String userId) {
+    public static void refreshPatientDetailsFromTable(final PatientDetailsAdapter adapter, final String userId, final String toSearch) {
 
         // Get the items that weren't marked as completed and add them in the
         // adapter
@@ -561,8 +563,18 @@ public  class ConnectToServer {
 
                 try {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
+                    final List<PatientDetails> results;
+                    if(toSearch.length()==0) {
+                         results = patientDetailsTable.where().field("idUser").eq(userId).execute().get();
+                    }
+                    else
+                    {
+                        results = patientDetailsTable.where().field("idUser").eq(userId)
+                                .and(field("fName")
+                                        .eq(toSearch).or().field("pId").eq(toSearch))
+                                .execute().get();
 
-                    final List<PatientDetails> results = patientDetailsTable.where().field("idUser").eq(userId).execute().get();
+                    }
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
 
