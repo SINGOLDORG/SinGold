@@ -38,7 +38,12 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
         patientList = (ListView) findViewById(R.id.patientList);
 
 
-
+        Search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                searchPatientDetails(search1.getText().toString());
+            }
+        });
     }
 
 
