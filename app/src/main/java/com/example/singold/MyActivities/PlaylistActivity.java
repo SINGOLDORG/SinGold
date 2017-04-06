@@ -1,13 +1,18 @@
 package com.example.singold.MyActivities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
@@ -18,9 +23,10 @@ import com.example.singold.data.SongAdapter;
 public class PlaylistActivity extends AppCompatActivity implements View.OnClickListener {
     private ListView list;
     private ImageButton add,BTNmatching;
+    private TextView textView;
 
     private SongAdapter songAdapter;
-    PatientDetails patientDetails;
+    private PatientDetails patientDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,6 +34,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playlist);
 
+        textView=(TextView) findViewById(R.id.textView);
         list = (ListView) findViewById(R.id.list);
         add = (ImageButton) findViewById(R.id.add);
         add.setOnClickListener(this);
@@ -36,6 +43,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
         if(i!=null)
         {
             patientDetails= (PatientDetails) i.getExtras().get("patient");
+            textView.setText(patientDetails.getfName()+" "+patientDetails.getlName());
         }
     }
     private void initListView() {
@@ -63,8 +71,32 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
 
         }
         if(v==BTNmatching){
-            Intent intent=new Intent(getBaseContext(),MatchingSurveyActivity.class);
+                Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
+                intent.putExtra("patient", patientDetails);
+                startActivity(intent);
+            }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.logout, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.mnItmLogOutOut)
+        {
+            SharedPreferences preferences=getSharedPreferences("myfile",MODE_PRIVATE);
+            SharedPreferences.Editor editor=preferences.edit();
+            editor.clear();
+            editor.commit();
+            Intent intent=new Intent(getBaseContext(),LogInActivity.class);
             startActivity(intent);
+            finish();
+
+
         }
+        return true;
     }
 }

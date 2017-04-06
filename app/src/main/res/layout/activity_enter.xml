@@ -63,6 +63,12 @@
             android:onClick="onClick"
              />
 
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox"
+            android:text="keep sign in" />
+
     </LinearLayout>
 
     </ScrollView>

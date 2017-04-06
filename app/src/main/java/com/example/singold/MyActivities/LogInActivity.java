@@ -1,10 +1,12 @@
 package com.example.singold.MyActivities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
@@ -15,6 +17,9 @@ public class LogInActivity extends AppCompatActivity
 {
     private Button login,sign;
     private EditText username,id;
+    private CheckBox checkBox;
+
+
 
     @Override
 
@@ -25,8 +30,15 @@ public class LogInActivity extends AppCompatActivity
         sign=(Button)findViewById(R.id.sign);
         username=(EditText)findViewById(R.id.username);
         id=(EditText)findViewById(R.id.id1);
+        checkBox=(CheckBox) findViewById(R.id.checkBox);
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
     private void dataHandler() {
         String stUsername = username.getText().toString();
         String stId = id.getText().toString();
@@ -44,7 +56,8 @@ public class LogInActivity extends AppCompatActivity
         }
         if (isok == true) {
             ConnectToServer.connect(this);
-            ConnectToServer.login(stUsername,stId,(ProgressBar)findViewById(R.id.progressBar));
+            ConnectToServer.login(stUsername,stId,(ProgressBar)findViewById(R.id.progressBar),checkBox.isChecked());
+
         }
     }
     public void onClick(View v)
@@ -63,7 +76,5 @@ public class LogInActivity extends AppCompatActivity
         }
 
     }
-
-
 
 }

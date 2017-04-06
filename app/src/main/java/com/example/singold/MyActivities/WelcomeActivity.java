@@ -2,6 +2,7 @@ package com.example.singold.MyActivities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -34,6 +35,15 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences preferences=getSharedPreferences("myfile",MODE_PRIVATE);
+        String restoredText = preferences.getString("username", null);
+
+        if (preferences.contains("username")) {
+            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
 
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);
