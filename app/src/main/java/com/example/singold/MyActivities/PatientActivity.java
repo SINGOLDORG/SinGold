@@ -20,7 +20,8 @@ import com.example.singold.data.PatientDetails;
 public class PatientActivity extends AppCompatActivity implements View.OnClickListener
 {
     private Button playList;
-    private Button newMatching;
+    private Button newMatching,save;
+
     private PatientDetails patientDetails;
     private TextView tvname;
 //    private TextView tvLName;
@@ -55,6 +56,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         year=(EditText)findViewById(R.id.year);
         familyPhone=(EditText)findViewById(R.id.familyPhone);
         pId=(EditText)findViewById(R.id.pId);
+        save=(Button)findViewById(R.id.save);
 
 
          btnMusic = (ImageButton) findViewById(R.id.btnMusic);
@@ -97,6 +99,13 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         {
             Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
             intent.putExtra("patient", patientDetails);
+            startActivity(intent);
+
+        }
+        if(v==save)
+        {
+
+            Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
             startActivity(intent);
 
         }
