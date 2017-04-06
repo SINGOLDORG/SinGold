@@ -127,4 +127,5 @@
     <string name="eduction">culture</string>
     <string name="culture">culture</string>
     <string name="selelct">Select</string>
+    <string name="keep_sign_in">keep signed in</string>
 </resources>
