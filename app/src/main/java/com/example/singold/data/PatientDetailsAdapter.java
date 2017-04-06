@@ -36,12 +36,11 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
         }
         TextView textLName = (TextView) convertView.findViewById(R.id.textLName);
         TextView textFName = (TextView) convertView.findViewById(R.id.textFName);
-
         TextView textFamilyPhone = (TextView) convertView.findViewById(R.id.textFamilyPhone);
-
         TextView textAddress = (TextView) convertView.findViewById(R.id.textAddress);
         TextView textPId = (TextView) convertView.findViewById(R.id.textPid);
         TextView textYear = (TextView) convertView.findViewById(R.id.textYear);
+
         final ImageButton btnInfo = (ImageButton) convertView.findViewById(R.id.btnInfo);
         final ImageButton btnMusic = (ImageButton) convertView.findViewById(R.id.btnMusic);
         final ImageButton btnMatch = (ImageButton) convertView.findViewById(R.id.newMatching);
