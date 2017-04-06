@@ -47,7 +47,7 @@ public class FoundSongActivity extends AppCompatActivity implements View.OnClick
             FoundSongAdapter = new SongAdapter(this, R.layout.item_song,true);
         foundList.setAdapter(FoundSongAdapter);
        ConnectToServer.connect(this);
-        ConnectToServer.refreshItemsFromTable(FoundSongAdapter,patientProfile,(ProgressBar)findViewById(R.id.progressBar));
+        ConnectToServer.refreshItemsFromTable2(FoundSongAdapter,patientProfile,(ProgressBar)findViewById(R.id.progressBar));
 
     }
 
