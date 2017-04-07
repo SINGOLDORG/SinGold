@@ -19,6 +19,7 @@ import com.example.singold.data.MatchingSurvey;
 import com.example.singold.data.PatientDetails;
 import com.example.singold.data.PatientDetailsAdapter;
 import com.example.singold.data.PatientProfile;
+import com.example.singold.data.PrefManager;
 
 public class PatientActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -39,7 +40,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private EditText familyPhone;
     private EditText pId;
 
-
+    private PatientDetailsAdapter detailsAdapter;
 
     private Button Questionaire;
     private ImageButton btnMatch;
@@ -114,7 +115,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
 //            String stFamilyPhone=familyPhone.getText().toString();
 //            String stYear=year.getText().toString();
 //            String stPId=pId.getText().toString();
-//
+
 //            patientDetails.setfName(stFName);
 //            patientDetails.setlName(stlName);
 //            patientDetails.setFamilyPhone(stFamilyPhone);
