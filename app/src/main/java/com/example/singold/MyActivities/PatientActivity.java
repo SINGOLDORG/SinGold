@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.example.singold.R;
 import com.example.singold.data.MatchingSurvey;
 import com.example.singold.data.PatientDetails;
+import com.example.singold.data.PatientProfile;
 
 public class PatientActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -105,7 +106,21 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         if(v==save)
         {
 
-            Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
+            String stFName=firstName.getText().toString();
+            String stlName=lastName.getText().toString();
+            String stAddress=address.getText().toString();
+            String stFamilyPhone=familyPhone.getText().toString();
+            String stYear=year.getText().toString();
+            String stPId=pId.getText().toString();
+
+
+            patientDetails.setfName(stFName);
+            patientDetails.setlName(stlName);
+            patientDetails.setFamilyPhone(stFamilyPhone);
+            patientDetails.setAddress(stAddress);
+            patientDetails.setpId(stPId);
+            patientDetails.setYear(stYear);
+            Intent intent = new Intent(getBaseContext(), PatientListActivity.class);
             startActivity(intent);
 
         }

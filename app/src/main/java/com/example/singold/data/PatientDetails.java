@@ -1,5 +1,7 @@
 package com.example.singold.data;
 
+import android.widget.EditText;
+
 import java.io.Serializable;
 
 /**
@@ -102,4 +104,6 @@ public class PatientDetails implements Serializable {
                 ", fName='" + fName + '\'' +
                 '}';
     }
+
+
 }
