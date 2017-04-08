@@ -110,8 +110,11 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
             Intent intent=new Intent(getBaseContext(),LogInActivity.class);
             startActivity(intent);
             finish();
-
-
+        }
+        if (item.getItemId()==R.id.mnItmIcons){
+            Intent intent = new Intent(getBaseContext(), icons_explainActivity.class);
+            startActivity(intent);
+            finish();
         }
         return true;
     }

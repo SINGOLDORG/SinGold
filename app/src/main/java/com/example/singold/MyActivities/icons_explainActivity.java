@@ -25,12 +25,13 @@ import com.example.singold.data.PrefManager;
 
 public class icons_explainActivity extends AppCompatActivity {
     private ViewPager viewPager;
-    private WelcomeActivity.MyViewPagerAdapter myViewPagerAdapter;
+
     private LinearLayout dotsLayout;
     private TextView[] dots;
     private int[] layouts;
     private Button btnSkip, btnNext;
     private PrefManager prefManager;
+    private MyViewPagerAdapter myViewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +44,16 @@ public class icons_explainActivity extends AppCompatActivity {
 //            finish();
 //        }
 
-        // Making notification bar transparent
         if (Build.VERSION.SDK_INT >= 21) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
+           getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            }
+
+        setContentView(R.layout.activity_welcome);
+
+        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
+        btnSkip = (Button) findViewById(R.id.btn_skip);
+        btnNext = (Button) findViewById(R.id.btn_next);
 
         setContentView(R.layout.activity_icons_explain);
 
@@ -64,13 +71,13 @@ public class icons_explainActivity extends AppCompatActivity {
                 R.layout.icon_matching,
                 R.layout.icon_ques};
 
+
         // adding bottom dots
         addBottomDots(0);
 
         // making notification bar transparent
         changeStatusBarColor();
-
-        myViewPagerAdapter = new icons_explainActivity().myViewPagerAdapter;
+        myViewPagerAdapter=new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
@@ -124,7 +131,9 @@ public class icons_explainActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         // prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(icons_explainActivity.this, Sin_goldActivity.class));
+
+            Intent intent = new Intent(getBaseContext(), PatientListActivity.class);
+            startActivity(intent);
         finish();
     }
 

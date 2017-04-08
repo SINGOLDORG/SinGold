@@ -88,6 +88,11 @@ public class FoundSongActivity extends AppCompatActivity implements View.OnClick
             startActivity(intent);
             finish();
         }
+        if (item.getItemId()==R.id.mnItmIcons){
+            Intent intent = new Intent(getBaseContext(), icons_explainActivity.class);
+            startActivity(intent);
+            finish();
+        }
         return true;
     }
 }

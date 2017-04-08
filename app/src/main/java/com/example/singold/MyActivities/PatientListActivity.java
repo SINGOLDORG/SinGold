@@ -100,7 +100,11 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
             Intent intent=new Intent(getBaseContext(),LogInActivity.class);
             startActivity(intent);
             finish();
-
+        }
+        if (item.getItemId()==R.id.mnItmIcons){
+            Intent intent = new Intent(getBaseContext(), icons_explainActivity.class);
+            startActivity(intent);
+            finish();
         }
         return true;
     }

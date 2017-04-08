@@ -92,8 +92,11 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
             Intent intent=new Intent(getBaseContext(),LogInActivity.class);
             startActivity(intent);
             finish();
-
-
+        }
+        if (item.getItemId()==R.id.mnItmIcons){
+            Intent intent = new Intent(getBaseContext(), icons_explainActivity.class);
+            startActivity(intent);
+            finish();
         }
         return true;
     }
