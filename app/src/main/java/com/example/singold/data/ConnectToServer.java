@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.singold.MyActivities.PatientListActivity;
 import com.example.singold.MyActivities.PlaylistActivity;
+import com.example.singold.R;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -295,9 +296,8 @@ public  class ConnectToServer {
                     Intent intent=new Intent(context, PatientListActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    PrefManager.setFirstTimeLaunch(context,true,user);
+                   // PrefManager.setFirstTimeLaunch(context,true,user);
                     context.startActivity(intent);
-                    progressBar.setVisibility(View.GONE);
 
                     Toast.makeText(context, "WELCOME " , Toast.LENGTH_SHORT).show();
                     if(tosave) {
@@ -313,7 +313,8 @@ public  class ConnectToServer {
 
                 } else {
                     //signinDialog.dismiss();
-                    createAndShowDialog("EMAIL OR PASSWORD WRONG", "");
+                    progressBar.setVisibility(View.GONE);
+                    createAndShowDialog(context.getString(R.string.wrong_email_password), "");
 
                 }
             }

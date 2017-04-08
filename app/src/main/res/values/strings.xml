@@ -128,4 +128,6 @@
     <string name="culture">culture</string>
     <string name="selelct">Select</string>
     <string name="keep_sign_in">keep signed in</string>
+    <string name="wrong_email_password">EMAIL OR PASSWORD WRONG</string>
+    <string name="familyphone">Family Phone:</string>
 </resources>

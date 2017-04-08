@@ -81,7 +81,7 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
         btnQuest.setOnClickListener(onClickListener);
 
 
-        textFamilyPhone.setText("Family Phone:"+"  "+patientDetails.getFamilyPhone());
+        textFamilyPhone.setText(getContext().getString(R.string.familyphone)+"  "+patientDetails.getFamilyPhone());
 //        textAddress.setText("Address:"+patientDetails.getAddress());
         textPId.setText("Id:"+"  "+patientDetails.getpId());
         textFName.setText("First Name:"+"  "+patientDetails.getfName());
