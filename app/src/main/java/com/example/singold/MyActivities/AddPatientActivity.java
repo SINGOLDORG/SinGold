@@ -119,6 +119,10 @@ public boolean onOptionsItemSelected(MenuItem item) {
         finish();
 
     }
+    if (item.getItemId()==R.id.mnItmIcons){
+        Intent intent = new Intent(getBaseContext(), icons_explainActivity.class);
+        getBaseContext().startActivity(intent);
+    }
     return true;
 }
 

@@ -2,4 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
         <item android:id="@+id/mnItmLogOutOut"
             android:title="Log Out" />
+
+        <item android:id="@+id/mnItmIcons"
+            android:title="help" />
+
 </menu>

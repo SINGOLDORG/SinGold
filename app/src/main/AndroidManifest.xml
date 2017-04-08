@@ -14,9 +14,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/MyTheme">
-        <activity
-            android:name=".MyActivities.ListMainActivity"
-             />
+        <activity android:name=".MyActivities.ListMainActivity" />
         <activity android:name=".MyActivities.ToDoActivity" />
         <activity android:name=".MyActivities.LogInActivity" />
         <activity android:name=".MyActivities.SignUpActivity" />
@@ -35,7 +33,8 @@
         <activity android:name=".MyActivities.PatientActivity" />
         <activity android:name=".MyActivities.PlaylistActivity" />
         <activity android:name=".MyActivities.MatchingSurveyActivity" />
-        <activity android:name=".MyActivities.FoundSongActivity"></activity>
+        <activity android:name=".MyActivities.FoundSongActivity" />
+        <activity android:name=".MyActivities.icons_explainActivity"></activity>
     </application>
 
 </manifest>
