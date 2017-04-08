@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -85,7 +84,7 @@ public class AddPatientActivity extends AppCompatActivity {
             patientDetails.setYear(stYear);
             try {
                 ConnectToServer.connect(this);
-                ConnectToServer.addInTable(patientDetails,(ProgressBar)findViewById(R.id.progressBar));
+                ConnectToServer.addPatientDetails(patientDetails,(ProgressBar)findViewById(R.id.progressBar));
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {

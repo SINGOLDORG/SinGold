@@ -264,7 +264,7 @@ public class QuestionaireActivity extends AppCompatActivity {
 
             ConnectToServer.connect(this);
             try {
-                ConnectToServer.addInTable(patientProfile,(ProgressBar)findViewById(R.id.progressBar));
+                ConnectToServer.addPatientProfile(patientProfile,(ProgressBar)findViewById(R.id.progressBar));
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {

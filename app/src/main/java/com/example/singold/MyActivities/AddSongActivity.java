@@ -77,7 +77,7 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
             song.setLink(stLink);
             try {
                 ConnectToServer.connect(this);
-                ConnectToServer.addInTable(song,(ProgressBar)findViewById(R.id.progressBar));
+                ConnectToServer.addSongForPatient(song,(ProgressBar)findViewById(R.id.progressBar));
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {

@@ -224,7 +224,7 @@ public class ToDoActivity extends Activity {
 //        item.setComplete(false);
 //        ConnectToServer.connect(this);
 //        try {
-//            ConnectToServer.addInTable(item);
+//            ConnectToServer.addUserInTable(item);
 //        } catch (ExecutionException e) {
 //            e.printStackTrace();
 //        } catch (InterruptedException e) {

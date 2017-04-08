@@ -8,7 +8,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -17,7 +16,6 @@ import android.widget.TextView;
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.PatientDetails;
-import com.example.singold.data.PatientDetailsAdapter;
 import com.example.singold.data.SongAdapter;
 
 public class PlaylistActivity extends AppCompatActivity implements View.OnClickListener {
@@ -51,7 +49,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
             songAdapter=new SongAdapter(this, R.layout.item_song,false);
         list.setAdapter(songAdapter);
         ConnectToServer.connect(this);
-        ConnectToServer.refreshItemsFromTable(songAdapter,patientDetails.getId(),(ProgressBar)findViewById(R.id.progressBar));
+        ConnectToServer.refreshSongsByPatient(songAdapter,patientDetails.getId(),(ProgressBar)findViewById(R.id.progressBar));
 
     }
 

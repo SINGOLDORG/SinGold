@@ -75,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 //            toDoItem.setText(stFirst);
 //            ConnectToServer.connect(this);
 //            try {
-//                ConnectToServer.addInTable(toDoItem);
+//                ConnectToServer.addUserInTable(toDoItem);
 //            } catch (ExecutionException e) {
 //                e.printStackTrace();
 //            } catch (InterruptedException e) {
@@ -88,7 +88,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             u.setEnterId(stId);
             try {
                 ConnectToServer.connect(this);
-                ConnectToServer.addInTable(u);
+                ConnectToServer.addUserInTable(u);
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
