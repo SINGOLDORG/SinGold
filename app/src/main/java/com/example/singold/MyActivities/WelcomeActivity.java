@@ -133,7 +133,11 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
        // prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeActivity.this, Sin_goldActivity.class));
+
+//        startActivity(new Intent(WelcomeActivity.this, Sin_goldActivity.class));
+//        finish();
+        Intent intent = new Intent(getBaseContext(), icons_explainActivity.class);
+        startActivity(intent);
         finish();
     }
 
