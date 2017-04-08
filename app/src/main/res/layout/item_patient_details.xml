@@ -21,45 +21,26 @@
             android:layout_height="wrap_content">
 
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+        android:text="First_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFName"
+                android:layout_weight="1" />
 
-                <TextView
-            android:text="Last_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textLName"
-                    android:layout_weight="1" />
+            <TextView
+        android:text="Last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textLName"
+                android:layout_weight="1" />
 
-                <TextView
-            android:text="First_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textFName"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-            android:text="Year"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textYear"
-                    android:layout_weight="1" />
-
-                <TextView
-            android:text="PId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textPid"
-                    android:layout_weight="1" />
-            </LinearLayout>
+            <TextView
+        android:text="PId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textPid"
+                android:layout_weight="1" />
 
             <TextView
         android:text="Family_phone"
@@ -68,12 +49,33 @@
         android:id="@+id/textFamilyPhone"
                 android:layout_weight="1" />
 
-            <TextView
-        android:text="Address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textAddress"
-                android:layout_weight="1" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+            <!--android:text="Year"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/textYear"-->
+                    <!--android:layout_weight="1" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+        <!--android:text="Address"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/textAddress"-->
+                <!--android:layout_weight="1" />-->
 
             <LinearLayout
         android:orientation="horizontal"
@@ -130,5 +132,6 @@
                     android:scaleType="centerInside" />
             </LinearLayout>
         </LinearLayout>
+
     </android.support.v7.widget.CardView>
 </LinearLayout>

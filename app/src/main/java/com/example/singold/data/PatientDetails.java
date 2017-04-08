@@ -26,6 +26,7 @@ public class PatientDetails implements Serializable {
     @com.google.gson.annotations.SerializedName("year")
     private String year;
 
+
     public PatientDetails(){
     }
 

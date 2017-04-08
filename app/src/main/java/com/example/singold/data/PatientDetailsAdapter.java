@@ -37,9 +37,9 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
         TextView textLName = (TextView) convertView.findViewById(R.id.textLName);
         TextView textFName = (TextView) convertView.findViewById(R.id.textFName);
         TextView textFamilyPhone = (TextView) convertView.findViewById(R.id.textFamilyPhone);
-        TextView textAddress = (TextView) convertView.findViewById(R.id.textAddress);
+//        TextView textAddress = (TextView) convertView.findViewById(R.id.textAddress);
         TextView textPId = (TextView) convertView.findViewById(R.id.textPid);
-        TextView textYear = (TextView) convertView.findViewById(R.id.textYear);
+//        TextView textYear = (TextView) convertView.findViewById(R.id.textYear);
 
         final ImageButton btnInfo = (ImageButton) convertView.findViewById(R.id.btnInfo);
         final ImageButton btnMusic = (ImageButton) convertView.findViewById(R.id.btnMusic);
@@ -80,12 +80,13 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
         btnMatch.setOnClickListener(onClickListener);
         btnQuest.setOnClickListener(onClickListener);
 
-        textFamilyPhone.setText(patientDetails.getFamilyPhone());
-        textAddress.setText(patientDetails.getAddress());
-        textPId.setText(patientDetails.getpId());
-        textFName.setText(patientDetails.getfName());
-        textLName.setText(patientDetails.getlName());
-        textYear.setText(patientDetails.getYear());
+
+        textFamilyPhone.setText("Family Phone:"+"  "+patientDetails.getFamilyPhone());
+//        textAddress.setText("Address:"+patientDetails.getAddress());
+        textPId.setText("Id:"+"  "+patientDetails.getpId());
+        textFName.setText("First Name:"+"  "+patientDetails.getfName());
+        textLName.setText("Last Name:"+"  "+patientDetails.getlName());
+//        textYear.setText("Year Of Birth:"+patientDetails.getYear());
 
         return convertView;
     }
