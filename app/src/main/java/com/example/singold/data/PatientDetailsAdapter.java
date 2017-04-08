@@ -83,9 +83,9 @@ public class PatientDetailsAdapter extends ArrayAdapter<PatientDetails> {
 
         textFamilyPhone.setText(getContext().getString(R.string.familyphone)+"  "+patientDetails.getFamilyPhone());
 //        textAddress.setText("Address:"+patientDetails.getAddress());
-        textPId.setText("Id:"+"  "+patientDetails.getpId());
-        textFName.setText("First Name:"+"  "+patientDetails.getfName());
-        textLName.setText("Last Name:"+"  "+patientDetails.getlName());
+        textPId.setText(getContext().getString(R.string.pId)+"  "+patientDetails.getpId());
+        textFName.setText(getContext().getString(R.string.firstName)+"  "+patientDetails.getfName());
+        textLName.setText(getContext().getString(R.string.lastName)+"  "+patientDetails.getlName());
 //        textYear.setText("Year Of Birth:"+patientDetails.getYear());
 
         return convertView;
