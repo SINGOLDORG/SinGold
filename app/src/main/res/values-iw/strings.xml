@@ -110,7 +110,6 @@
     <string name="selelct">בחר</string>
     <string name="keep_sign_in">הישאר רשום</string>
     <string name="culture1">culture</string>
-    <string name="culture1">רק תרבותי(מזרחי,אשכנזי,בידווי...)</string>
     <string name="eduction">רק תרבותי(מזרחי,אשכנזי,בידווי...)</string>
     <string name="familyphone">טלפון המשפחה:</string>
     <string name="firstName">שם פרטי</string>
@@ -119,4 +118,5 @@
     <string name="pId">ת.ז</string>
     <string name="play_again">התחך מחדש</string>
     <string name="wrong_email_password">"האימיל או הסיסמה לא נכון "</string>
+    <string name="culture1"></string>
 </resources>
