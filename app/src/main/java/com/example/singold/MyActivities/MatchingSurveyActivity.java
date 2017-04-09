@@ -51,6 +51,12 @@ public class MatchingSurveyActivity extends AppCompatActivity implements View.On
         {
             patientDetails= (PatientDetails) i.getExtras().get("patient");
         }
+        rgQ3language.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                language.setText(((RadioButton)findViewById(checkedId)).getText().toString());
+            }
+        });
     }
 
     private void dataHandler() {
