@@ -25,10 +25,9 @@
 
             <RadioGroup
 
-                android:layout_width="88dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="center"
                 android:id="@+id/rgQ3language">
                 <TextView
                     android:text="@string/languages"
@@ -87,20 +86,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></LinearLayout>
-
+                <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+                    android:ems="10"
+        android:id="@+id/year"
+        android:hint="@string/Year_of_birth"
+                    android:inputType="number"
+                    android:layout_weight="1" />
             </android.support.design.widget.TextInputLayout>
-
-            <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-                android:ems="10"
-    android:id="@+id/year"
-    android:hint="@string/Year_of_birth"
-                android:inputType="number" />
 
             <android.support.design.widget.TextInputLayout
         android:paddingTop="0dp"
@@ -140,27 +134,6 @@
                     android:hint="@string/culture"
                     android:layout_width="match_parent" />
             </android.support.design.widget.TextInputLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </LinearLayout>
 
             <Button
         android:text="@string/search"
