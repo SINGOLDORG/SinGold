@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.singold.R;
@@ -53,6 +55,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private TextView Q4;
     private TextView Q5;
     private TextView Q6;
+
     private RadioGroup rgQ1;
     private RadioGroup rgQ2;
     private RadioGroup rgQ3;
