@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.singold.R;
@@ -42,6 +41,46 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private EditText year;
     private EditText familyPhone;
     private EditText pId;
+    private EditText country;
+    private EditText culture;
+    private EditText homemusic;
+    private EditText favoritesinger;
+    private EditText youngmusic;
+    private EditText favoritesong;
+    private TextView Q1;
+    private TextView Q2;
+    private TextView Q3;
+    private TextView Q4;
+    private TextView Q5;
+    private TextView Q6;
+    private RadioGroup rgQ1;
+    private RadioGroup rgQ2;
+    private RadioGroup rgQ3;
+    private RadioGroup rgQ4;
+    private RadioGroup rgQ5;
+    private RadioGroup rgQ6;
+    private RadioButton opera;
+    private RadioButton classical;
+    private RadioButton armyBands;
+    private RadioButton songs;
+    private RadioButton folkDances;
+    private RadioButton yiddish;
+    private RadioButton hebrew;
+    private RadioButton english;
+    private RadioButton russian;
+    private RadioButton arabic;
+    private RadioButton waltz;
+    private RadioButton tango;
+    private RadioButton samba;
+    private RadioButton runningwater;
+    private RadioButton insteumental;
+    private RadioButton jaz;
+    private RadioButton rock;
+    private RadioButton pollack;
+    private RadioButton chazanout;
+    private RadioButton fromPray;
+    private RadioButton propnents;
+
 
     private PatientDetailsAdapter detailsAdapter;
 
@@ -107,33 +146,24 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
             intent.putExtra("patient", patientDetails);
             startActivity(intent);
+
         }
         if(v==save)
         {
 
-            String stFName=firstName.getText().toString();
-            String stlName=lastName.getText().toString();
-            String stAddress=address.getText().toString();
-            String stFamilyPhone=familyPhone.getText().toString();
-            String stYear=year.getText().toString();
-            String stPId=pId.getText().toString();
+//            String stFName=firstName.getText().toString();
+//            String stlName=lastName.getText().toString();
+//            String stAddress=address.getText().toString();
+//            String stFamilyPhone=familyPhone.getText().toString();
+//            String stYear=year.getText().toString();
+//            String stPId=pId.getText().toString();
 
-            patientDetails.setfName(stFName);
-            patientDetails.setlName(stlName);
-            patientDetails.setFamilyPhone(stFamilyPhone);
-            patientDetails.setAddress(stAddress);
-            patientDetails.setpId(stPId);
-            patientDetails.setYear(stYear);
-            ConnectToServer.connect(this);
-
-            try {
-                ConnectToServer.updatePatientDetails(patientDetails,(ProgressBar)findViewById(R.id.progressBar));
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
+//            patientDetails.setfName(stFName);
+//            patientDetails.setlName(stlName);
+//            patientDetails.setFamilyPhone(stFamilyPhone);
+//            patientDetails.setAddress(stAddress);
+//            patientDetails.setpId(stPId);
+//            patientDetails.setYear(stYear);
 
             Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
             startActivity(intent);

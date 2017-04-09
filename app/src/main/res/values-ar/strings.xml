@@ -111,4 +111,13 @@
     <string name="culture">خلفية ثقافية</string>
     <string name="selelct">اختر</string>
     <string name="keep_sign_in">ابقي مسجل</string>
+    <string name="culture1">culture</string>
+    <string name="eduction">خلفية ثقافية</string>
+    <string name="familyphone">هاتف العائلة:</string>
+    <string name="firstName">الاسم الشخصي</string>
+    <string name="lastName">اسم العائلة</string>
+    <string name="menu_refresh">تحديث</string>
+    <string name="pId">رقم الهوية</string>
+    <string name="play_again">ابدا من جديد</string>
+    <string name="wrong_email_password">البريد الكتروني او كلمة المرور غير صحيحة</string>
 </resources>
