@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.singold.R;
@@ -39,6 +41,46 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private EditText year;
     private EditText familyPhone;
     private EditText pId;
+    private EditText country;
+    private EditText culture;
+    private EditText homemusic;
+    private EditText favoritesinger;
+    private EditText youngmusic;
+    private EditText favoritesong;
+    private TextView Q1;
+    private TextView Q2;
+    private TextView Q3;
+    private TextView Q4;
+    private TextView Q5;
+    private TextView Q6;
+    private RadioGroup rgQ1;
+    private RadioGroup rgQ2;
+    private RadioGroup rgQ3;
+    private RadioGroup rgQ4;
+    private RadioGroup rgQ5;
+    private RadioGroup rgQ6;
+    private RadioButton opera;
+    private RadioButton classical;
+    private RadioButton armyBands;
+    private RadioButton songs;
+    private RadioButton folkDances;
+    private RadioButton yiddish;
+    private RadioButton hebrew;
+    private RadioButton english;
+    private RadioButton russian;
+    private RadioButton arabic;
+    private RadioButton waltz;
+    private RadioButton tango;
+    private RadioButton samba;
+    private RadioButton runningwater;
+    private RadioButton insteumental;
+    private RadioButton jaz;
+    private RadioButton rock;
+    private RadioButton pollack;
+    private RadioButton chazanout;
+    private RadioButton fromPray;
+    private RadioButton propnents;
+
 
     private PatientDetailsAdapter detailsAdapter;
 
@@ -49,17 +91,56 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient);
 //        tvname= (TextView) findViewById(R.id.tvname);
-        firstName=(EditText) findViewById(R.id.firstName);
-        lastName=(EditText)findViewById(R.id.lastName);
-        address=(EditText)findViewById((R.id.address));
-        year=(EditText)findViewById(R.id.year);
-        familyPhone=(EditText)findViewById(R.id.familyPhone);
-        pId=(EditText)findViewById(R.id.pId);
+        firstName = (EditText) findViewById(R.id.firstName);
+        lastName = (EditText) findViewById(R.id.lastName);
+        address = (EditText) findViewById((R.id.address));
+        year = (EditText) findViewById(R.id.year);
+        familyPhone = (EditText) findViewById(R.id.familyPhone);
+        pId = (EditText) findViewById(R.id.pId);
+        country = (EditText) findViewById(R.id.country);
+        culture = (EditText) findViewById(R.id.etCultutre);
+        homemusic = (EditText) findViewById(R.id.homemusic);
+        favoritesinger = (EditText) findViewById(R.id.favoritesinger);
+        youngmusic = (EditText) findViewById(R.id.youngmusic);
+        favoritesong = (EditText) findViewById(R.id.favoritesong);
+        Q1 = (TextView) findViewById(R.id.Q1);
+        Q2 = (TextView) findViewById(R.id.Q2);
+        Q3 = (TextView) findViewById(R.id.Q3);
+        Q4 = (TextView) findViewById(R.id.Q4);
+        Q5 = (TextView) findViewById(R.id.Q5);
+        Q6 = (TextView) findViewById(R.id.Q6);
+        rgQ1 = (RadioGroup) findViewById(R.id.rgQ1);
+        rgQ2 = (RadioGroup) findViewById(R.id.rgQ2);
+        rgQ3 = (RadioGroup) findViewById(R.id.rgQ3);
+        rgQ4 = (RadioGroup) findViewById(R.id.rgQ4);
+        rgQ5 = (RadioGroup) findViewById(R.id.rgQ5);
+        rgQ6 = (RadioGroup) findViewById(R.id.rgQ6);
+        opera = (RadioButton) findViewById(R.id.opera);
+        classical = (RadioButton) findViewById(R.id.classical);
+        armyBands = (RadioButton) findViewById(R.id.armyBands);
+        songs = (RadioButton) findViewById(R.id.songs);
+        folkDances = (RadioButton) findViewById(R.id.folkDances);
+        yiddish = (RadioButton) findViewById(R.id.yiddish);
+        hebrew = (RadioButton) findViewById(R.id.hebrew);
+        english = (RadioButton) findViewById(R.id.english);
+        russian = (RadioButton) findViewById(R.id.russian);
+        arabic = (RadioButton) findViewById(R.id.arabic);
+        waltz = (RadioButton) findViewById(R.id.waltz);
+        tango = (RadioButton) findViewById(R.id.tango);
+        samba = (RadioButton) findViewById(R.id.samba);
+        runningwater = (RadioButton) findViewById(R.id.runningwater);
+        insteumental = (RadioButton) findViewById(R.id.insteumental);
+        jaz = (RadioButton) findViewById(R.id.jaz);
+        rock = (RadioButton) findViewById(R.id.rock);
+        pollack = (RadioButton) findViewById(R.id.pollack);
+        chazanout = (RadioButton) findViewById(R.id.chazanout);
+        fromPray = (RadioButton) findViewById(R.id.fromPray);
+        propnents = (RadioButton) findViewById(R.id.propnents);
+
         save=(Button)findViewById(R.id.save);
 
 
