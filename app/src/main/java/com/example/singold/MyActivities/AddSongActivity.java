@@ -16,32 +16,13 @@ import android.widget.Toast;
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.Song;
-import com.google.api.client.http.HttpRequest;
-import com.google.api.client.http.HttpRequestInitializer;
-import com.google.api.client.http.HttpTransport;
-import com.google.api.client.http.LowLevelHttpRequest;
-import com.google.api.client.json.JsonFactory;
-import com.google.api.client.json.JsonGenerator;
-import com.google.api.client.json.JsonParser;
-import com.google.api.services.youtube.YouTube;
-import com.google.api.services.youtube.model.SearchListResponse;
-import com.google.api.services.youtube.model.SearchResult;
 
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.Reader;
-import java.io.Writer;
-import java.nio.charset.Charset;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class AddSongActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText theSongName, singer, link;
     private Button save;
-    private YouTube youtubeSearch;
-    private List<SearchResult> searchResultList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

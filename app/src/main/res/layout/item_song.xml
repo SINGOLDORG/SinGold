@@ -33,6 +33,8 @@
         android:id="@+id/textName" />
 </android.support.design.widget.TextInputLayout>
 
+
+
     <TextView
         android:text="Singer"
         android:layout_width="match_parent"
