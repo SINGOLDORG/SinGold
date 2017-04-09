@@ -720,7 +720,7 @@ public  class ConnectToServer {
         runAsyncTask(task);
 
     }
-    public static void addPatientProfile(final PatientProfile item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
+    public static void updatePatientProfile(final PatientProfile item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
         if(progressBar!=null)
             progressBar.setVisibility(View.VISIBLE);
         if (patientProfileTable == null)
@@ -729,7 +729,7 @@ public  class ConnectToServer {
             @Override
             protected Void doInBackground(Void... params) {
                 try {
-                    final PatientProfile entity = patientProfileTable.insert(item).get();
+                    final PatientProfile entity = patientProfileTable.update(item).get();
 
                     context.runOnUiThread(new Runnable() {
                         @Override
@@ -750,6 +750,85 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                // dismissProProgressDialog();
+                if(progressBar!=null)
+                    progressBar.setVisibility(View.GONE);
+                context.finish();
+
+            }
+        };
+
+        runAsyncTask(task);
+    }
+
+    public static void updatePatientDetails(final PatientDetails item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
+        if(progressBar!=null)
+            progressBar.setVisibility(View.VISIBLE);
+        if (patientDetailsTable == null)
+            patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                try {
+                    final PatientDetails entity = patientDetailsTable.update(item).get();
+
+                    context.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+//                            if(!entity.isComplete()){
+//                                ///mAdapter.add(entity);
+//                            }
+                            ///showProProgressDialog("Saving PatientDetails");
+
+                        }
+                    });
+                } catch (final Exception e) {
+                    createAndShowDialogFromTask(e, "Error");
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+               // dismissProProgressDialog();
+                if(progressBar!=null)
+                    progressBar.setVisibility(View.GONE);
+                context.finish();
+            }
+        };
+
+        runAsyncTask(task);
+    }
+
+    public static void addPatientProfile(final PatientProfile item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
+        if(progressBar!=null)
+            progressBar.setVisibility(View.VISIBLE);
+        if (patientProfileTable == null)
+            patientProfileTable = azureDBClient.getTable(PatientProfile.class);
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                try {
+                    final PatientProfile entity = patientProfileTable.insert(item).get();
+
+                    context.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+//                            if(!entity.isComplete()){
+//                                ///mAdapter.add(entity);
+//                            }
+                            //   showProProgressDialog("Saving PatientProfile");
+
+                        }
+                    });
+                } catch (final Exception e) {
+                    createAndShowDialogFromTask(e, "Error");
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                // dismissProProgressDialog();
                 if(progressBar!=null)
                     progressBar.setVisibility(View.GONE);
                 context.finish();
@@ -789,7 +868,7 @@ public  class ConnectToServer {
 
             @Override
             protected void onPostExecute(Void aVoid) {
-               // dismissProProgressDialog();
+                // dismissProProgressDialog();
                 if(progressBar!=null)
                     progressBar.setVisibility(View.GONE);
                 context.finish();
@@ -798,6 +877,5 @@ public  class ConnectToServer {
 
         runAsyncTask(task);
     }
-
 
 }

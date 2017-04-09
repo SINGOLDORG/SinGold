@@ -1,14 +1,17 @@
 package com.example.singold.data;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.singold.MyActivities.PatientActivity;
 import com.example.singold.R;
 
 import java.util.ArrayList;
@@ -20,6 +23,7 @@ import java.util.ArrayList;
 public class SongAdapter extends ArrayAdapter<Song> {
     private boolean chbx=false;
     private ArrayList<Song> selectedSongs;
+    private ImageButton btnPlay;
     public SongAdapter(Context context, int resource,boolean chbx) {
         super(context, resource);
         this.chbx=chbx;
@@ -39,6 +43,13 @@ public class SongAdapter extends ArrayAdapter<Song> {
         TextView textSinger = (TextView) convertView.findViewById(R.id.textSinger);
         TextView textLink = (TextView) convertView.findViewById(R.id.textLink);
         CheckBox checkBox=(CheckBox)convertView.findViewById(R.id.chbSelect);
+        ImageButton btnPlay=(ImageButton)convertView.findViewById(R.id.btnPlay);
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         if(chbx)
         {
             checkBox.setVisibility(View.VISIBLE);
@@ -68,9 +79,11 @@ public class SongAdapter extends ArrayAdapter<Song> {
         return convertView;
     }
 
+
     public ArrayList<Song> getSelectedSongs() {
         return selectedSongs;
     }
+
 }
 
 

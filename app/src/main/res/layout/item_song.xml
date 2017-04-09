@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -33,18 +34,39 @@
         android:id="@+id/textName" />
 </android.support.design.widget.TextInputLayout>
 
-    <TextView
-        android:text="Singer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textSinger" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:text="@string/singer"
+                    android:hint="@string/singer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-    <TextView
-        android:text="Link"
-        android:autoLink="web"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textLink" />
+                    android:enabled="false"
+                    android:id="@+id/textSinger" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:text="@string/link"
+                    android:hint="@string/link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:id="@+id/textLink" />
+
+                <ImageButton
+                    android:layout_width="36dp"
+                    android:layout_height="34dp"
+                    app:srcCompat="@drawable/ic_play"
+                    android:id="@+id/btnPlay"
+                    android:background="@color/shafaf" />
+            </android.support.design.widget.TextInputLayout>
 
             <CheckBox
                 android:text="@string/selelct"

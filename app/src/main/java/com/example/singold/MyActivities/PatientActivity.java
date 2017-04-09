@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.singold.R;
@@ -20,6 +21,8 @@ import com.example.singold.data.PatientDetails;
 import com.example.singold.data.PatientDetailsAdapter;
 import com.example.singold.data.PatientProfile;
 import com.example.singold.data.PrefManager;
+
+import java.util.concurrent.ExecutionException;
 
 public class PatientActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -104,24 +107,33 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
             intent.putExtra("patient", patientDetails);
             startActivity(intent);
-
         }
         if(v==save)
         {
 
-//            String stFName=firstName.getText().toString();
-//            String stlName=lastName.getText().toString();
-//            String stAddress=address.getText().toString();
-//            String stFamilyPhone=familyPhone.getText().toString();
-//            String stYear=year.getText().toString();
-//            String stPId=pId.getText().toString();
+            String stFName=firstName.getText().toString();
+            String stlName=lastName.getText().toString();
+            String stAddress=address.getText().toString();
+            String stFamilyPhone=familyPhone.getText().toString();
+            String stYear=year.getText().toString();
+            String stPId=pId.getText().toString();
 
-//            patientDetails.setfName(stFName);
-//            patientDetails.setlName(stlName);
-//            patientDetails.setFamilyPhone(stFamilyPhone);
-//            patientDetails.setAddress(stAddress);
-//            patientDetails.setpId(stPId);
-//            patientDetails.setYear(stYear);
+            patientDetails.setfName(stFName);
+            patientDetails.setlName(stlName);
+            patientDetails.setFamilyPhone(stFamilyPhone);
+            patientDetails.setAddress(stAddress);
+            patientDetails.setpId(stPId);
+            patientDetails.setYear(stYear);
+            ConnectToServer.connect(this);
+
+            try {
+                ConnectToServer.updatePatientDetails(patientDetails,(ProgressBar)findViewById(R.id.progressBar));
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
 
             Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
             startActivity(intent);

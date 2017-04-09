@@ -106,9 +106,10 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/year"
-                android:hint="Year Of Birth" />
+                android:hint="@string/year_of_birth" />
             </android.support.design.widget.TextInputLayout>
         </android.support.design.widget.TextInputLayout>
+
 
         <Button
             android:text="@string/save"

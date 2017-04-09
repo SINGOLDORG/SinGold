@@ -112,9 +112,9 @@
     <string name="r1">religion</string>
     <string name="l1">languages</string>
     <string name="idP">patient id</string>
-    <string name="songN">the song name</string>
-    <string name="singer">singer</string>
-    <string name="link">link</string>
+    <string name="songN">The Song Name</string>
+    <string name="singer">Singer</string>
+    <string name="link">Link</string>
     <string name="slide_1_desc">That help finding approprite song personlly for every Alzheimer \'s patient.</string>
     <string name="slide_2_desc">According to studies In the field of music history, The most influential music is the music we hear in the time we were teenagers until  the twenties.</string>
     <string name="slide_2_title">" What is the most influential music in our lives?"</string>
@@ -133,4 +133,6 @@
     <string name="pId">Id:</string>
     <string name="firstName">First Name:</string>
     <string name="lastName">Last Name:</string>
+    <string name="year_of_birth">Year Of Birth</string>
+    <string name="singer_name">Singer</string>
 </resources>
