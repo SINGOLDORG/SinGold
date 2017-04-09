@@ -109,4 +109,5 @@
     <string name="culture">רק תרבותי (מזרחי, אשכנזי, בידווי...)</string>
     <string name="selelct">בחר</string>
     <string name="keep_sign_in">הישאר רשום</string>
+    <string name="culture1">culture</string>
 </resources>

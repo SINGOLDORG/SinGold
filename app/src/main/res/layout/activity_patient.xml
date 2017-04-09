@@ -95,6 +95,7 @@
             android:ems="10"
             android:id="@+id/address"
             android:hint="Address" />
+            </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/id5rapper"
@@ -108,8 +109,314 @@
                 android:id="@+id/year"
                 android:hint="Year Of Birth" />
             </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ma7azotrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/country"
+                android:hint="@string/country"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etCultutre"
+                android:hint="@string/culture1"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/diskrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/homemusic"
+                android:hint="@string/homemusic"
+                android:layout_width="match_parent" />
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/favoritesingerrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/youngmusic"
+                android:hint="@string/young"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/countryrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:hint="@string/favorite_singer"
+                android:id="@+id/favoritesinger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/youngmusicrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/favoritesong"
+                android:hint="@string/favorite_song"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:text="@string/classic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Q1"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgQ1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:text="@string/opera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/opera" />
+
+            <RadioButton
+                android:text="@string/classical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/classical" />
+
+        </RadioGroup>
+
+        <TextView
+            android:text="@string/Israel"
+            android:layout_width="match_parent"
+            android:id="@+id/Q2"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgQ2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:text="@string/army_bands"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/armyBands"
+                />
+
+            <RadioButton
+                android:text="@string/songs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/songs"
+                />
+
+            <RadioButton
+                android:text="@string/folk_dance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/folkDances" />
+
+        </RadioGroup>
+
+
+        <RadioGroup
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/rgQ3">
+            <TextView
+                android:text="@string/languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Q3"
+                />
+            <RadioButton
+                android:text="@string/yiddish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/yiddish" />
+
+            <RadioButton
+                android:text="@string/hebrew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hebrew" />
+
+            <RadioButton
+                android:text="@string/english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/english" />
+
+            <RadioButton
+                android:text="@string/russian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/russian" />
+
+            <RadioButton
+                android:text="@string/arabic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/arabic" />
+
+        </RadioGroup>
+        <TextView
+            android:text="@string/dance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Q4"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgQ4"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:text="@string/waltz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/waltz" />
+
+            <RadioButton
+                android:text="@string/tango"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tango" />
+
+            <RadioButton
+                android:text="@string/samba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/samba" />
+
+        </RadioGroup>
+
+        <TextView
+            android:text="@string/relaxing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Q7" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgQ7"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:text="@string/runnig_water"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/runningwater" />
+
+            <RadioButton
+                android:text="@string/insteumental"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/insteumental" />
+
+        </RadioGroup>
+        <TextView
+            android:text="@string/loazi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Q5" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgQ5"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:text="@string/jaz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/jaz" />
+
+            <RadioButton
+                android:text="@string/rock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rock" />
+
+            <RadioButton
+                android:text="@string/pollack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pollack" />
+
+        </RadioGroup>
+
+        <TextView
+            android:text="@string/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Q6" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgQ6"
+            android:textDirection="locale"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:text="@string/chazanout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chazanout" />
+
+            <RadioButton
+                android:text="@string/from_pray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fromPray" />
+
+            <RadioButton
+                android:text="@string/propnents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/propnents" />
+
+        </RadioGroup>
         <Button
             android:text="@string/save"
             android:layout_width="match_parent"
