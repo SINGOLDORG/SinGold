@@ -36,12 +36,13 @@
             android:id="@+id/id1rapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/firstName"
-            android:hint="First Name"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/firstName"
+                android:hint="First Name"/>
         </android.support.design.widget.TextInputLayout>
 
 
@@ -95,6 +96,7 @@
             android:ems="10"
             android:id="@+id/address"
             android:hint="Address" />
+        </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/id5rapper"
@@ -108,8 +110,8 @@
                 android:id="@+id/year"
                 android:hint="@string/year_of_birth" />
             </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/ma7azotrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
@@ -120,6 +122,7 @@
                 android:hint="@string/country"
                 android:layout_height="wrap_content" />
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -131,6 +134,7 @@
                 android:hint="@string/culture1"
                 android:layout_width="match_parent" />
         </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/homemusicrapper"
             android:layout_width="match_parent"
@@ -140,10 +144,148 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/homemusic"
-                android:hint="@string/homemusic"
+                android:hint="@string/music_he_listen_at_home"
                 android:layout_width="match_parent" />
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:hint="@string/music_he_listened_when_he_was_young"
+                android:id="@+id/youngmusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:hint="@string/favorite_singer"
+                android:id="@+id/favoritesinger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/favoritesong"
+                android:hint="@string/favorite_song"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/textClassic"
+                android:hint="@string/classic"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/textIsrael"
+                android:hint="@string/Israel"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/language"
+                android:hint="@string/language"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/textDance"
+                android:hint="@string/favorite_song"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/textRelaxing"
+                android:hint="@string/relaxing"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/textReligion"
+                android:hint="@string/religion"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/textLoazi"
+                android:hint="@string/loazi"
+                android:layout_width="match_parent" />
+        </android.support.design.widget.TextInputLayout>
         <Button
             android:text="@string/save"
             android:layout_width="match_parent"

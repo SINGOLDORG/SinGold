@@ -87,7 +87,7 @@
     <string name="country">country</string>
     <string name="answer">answer</string>
     <string name="homemusic">What music did he here in his home?</string>
-    <string name="young">what music he listened whan he wae young?</string>
+    <string name="young">What music he listened when he was young?</string>
     <string name="ma7azot">ma7zaot</string>
     <string name="disk">disk</string>
     <string name="favorite_singer">favorite singer</string>
@@ -135,4 +135,6 @@
     <string name="lastName">Last Name:</string>
     <string name="year_of_birth">Year Of Birth</string>
     <string name="singer_name">Singer</string>
+    <string name="music_he_listen_at_home">Music he listen at home</string>
+    <string name="music_he_listened_when_he_was_young">Music he listened when he was young</string>
 </resources>
