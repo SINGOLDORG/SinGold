@@ -61,7 +61,7 @@
     <string name="ma7azot">מחזות</string>
     <string name="disk">דיסק</string>
     <string name="favorite_singer">הזמר הכי אהוב</string>
-    <string name="weeding_song">שיר של חתונה</string>
+    <string name="weeding_song">שיר חתונתו</string>
     <string name="favorite_song">השיר הכי אהוב</string>
     <string name="army_bands">להקות צבאיות</string>
     <string name="Last_name">שם משפחה</string>
@@ -115,13 +115,13 @@
     <string name="lastName">שם משפחה</string>
     <string name="menu_refresh">רענון</string>
     <string name="pId">ת.ז</string>
-    <string name="play_again">התחיל מחדש</string>
+    <string name="play_again">התחל מחדש</string>
     <string name="music_he_listen_at_home">מוזיקה ששמע בבית</string>
     <string name="music_he_listened_when_he_was_young">מוזיקה ששמע כשהיה צעיר</string>
     <string name="patient_details">פרטים על המטופל</string>
     <string name="Questionnaire">שאלון</string>
     <string name="patient_s_playlist">רשימת מוזיקה למטופל</string>
-    <string name="wrong_email_password">אימייל או סיסמה אינם נכונים</string>
+    <string name="wrong_email_password">האימייל או הסיסמה אינם נכונים</string>
     <string name="singer_name">זמר</string>
     <string name="matching_survey">סקר תיאום</string>
     <string name="play_again_desc">" אהלן"</string>
