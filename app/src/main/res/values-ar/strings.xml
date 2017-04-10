@@ -110,7 +110,6 @@
     <string name="culture">خلفية ثقافية</string>
     <string name="selelct">اختر</string>
     <string name="keep_sign_in">ابقي مسجل</string>
-    <string name="culture1">culture</string>
     <string name="eduction">خلفية ثقافية</string>
     <string name="familyphone">هاتف العائلة:</string>
     <string name="firstName">الاسم الشخصي</string>
@@ -125,4 +124,6 @@
     <string name="Questionnaire">استمارة</string>
     <string name="singer_name">المغني</string>
     <string name="r1">الديانة</string>
+    <string name="culture1">ثقافة</string>
+    <string name="music_he_listen_at_home"></string>
 </resources>
