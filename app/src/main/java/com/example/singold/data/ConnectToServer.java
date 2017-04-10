@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.singold.MyActivities.PatientActivity;
 import com.example.singold.MyActivities.PatientListActivity;
 import com.example.singold.MyActivities.PlaylistActivity;
 import com.example.singold.R;
@@ -19,6 +20,7 @@ import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.MobileServiceList;
 import com.microsoft.windowsazure.mobileservices.http.NextServiceFilterCallback;
 import com.microsoft.windowsazure.mobileservices.http.OkHttpClientFactory;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilter;
@@ -55,7 +57,6 @@ public  class ConnectToServer {
     private static MobileServiceTable<Song> songTable;
     private static MobileServiceTable<PatientDetails> patientDetailsTable;
     private static MobileServiceTable<PatientProfile> patientProfileTable;
-    private static MobileServiceTable<MatchingSurvey> HalfSurveyTable;
 
 
 
@@ -537,16 +538,18 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
-    public static void refreshPatienProfiletFromTable( final String userId, final String toSearch) {
+    public static void refreshPatienProfiletFromTable(final String patientID, final PatientActivity patientActivity, final ProgressBar progressBar) {
 
         // Get the items that weren't marked as completed and add them in the
         // adapter
         AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
+            MobileServiceList<PatientProfile> results;
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                if (patientDetailsTable == null)
-                    patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
+                progressBar.setVisibility(View.VISIBLE);
+                if ( patientProfileTable== null)
+                    patientProfileTable = azureDBClient.getTable(PatientProfile.class);
 //                showProProgressDialog("Downloading Details..");
             }
 
@@ -555,17 +558,15 @@ public  class ConnectToServer {
 
                 try {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
-                    final List<PatientDetails> results;
-                    if(toSearch.length()==0) {
-                         results = patientDetailsTable.where().field("idUser").eq(userId).execute().get();
-                    }
-                    else
-                    {
-                        results = patientDetailsTable.where().field("idUser").eq(userId)
-                                .and(field("fName").eq(toSearch).or().field("pId").eq(toSearch))
-                                .execute().get();
 
-                    }
+
+                         results = patientProfileTable.where().field("idPatient").eq(patientID).execute().get();
+
+//                        results = patientDetailsTable.where().field("idUser").eq(userId)
+//                                .and(field("fName").eq(toSearch).or().field("pId").eq(toSearch))
+//                                .execute().get();
+
+
                     //Offline Sync
                     //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
 
@@ -585,7 +586,17 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                dismissProProgressDialog();            }
+                progressBar.setVisibility(View.GONE);
+                if(results !=null && results.size()>0)
+                {
+                    patientActivity.updatePatientProfile(results.get(0));
+                }
+                else
+                    patientActivity.updatePatientProfile(null);
+
+
+                //dismissProProgressDialog();
+            }
         };
 
         runAsyncTask(task);
@@ -811,7 +822,7 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
-    public static void updatePatientDetails(final PatientDetails item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
+    public static void updatePatientDetails(final PatientDetails item, final PatientProfile patientProfile, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
         if(progressBar!=null)
             progressBar.setVisibility(View.VISIBLE);
         if (patientDetailsTable == null)
@@ -841,9 +852,33 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                // dismissProProgressDialog();
+                Toast.makeText(context,"Patient Details Updated",Toast.LENGTH_LONG).show();
+
                 if(progressBar!=null)
                     progressBar.setVisibility(View.GONE);
-                context.finish();
+                if(patientProfile.getId()!=null && patientProfile.getId().length()>0)
+                {
+                    try {
+                        ConnectToServer.updatePatientProfile(patientProfile,progressBar);
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    };
+
+                }
+                else
+                {
+                    try {
+                        ConnectToServer.addPatientProfile(patientProfile,progressBar);
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    };
+                }
+                Toast.makeText(context,"Patient Profile Updated",Toast.LENGTH_LONG).show();
+                //context.finish();
             }
         };
 

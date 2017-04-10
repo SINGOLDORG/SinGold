@@ -14,13 +14,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.singold.R;
-import com.example.singold.data.ConnectToServer;
-import com.example.singold.data.MatchingSurvey;
 import com.example.singold.data.PatientDetails;
 import com.example.singold.data.PatientProfile;
-import com.example.singold.data.Song;
-
-import java.util.concurrent.ExecutionException;
 
 /**
  * Created by user on 01/04/2017.
