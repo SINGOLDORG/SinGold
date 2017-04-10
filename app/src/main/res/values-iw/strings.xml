@@ -7,7 +7,7 @@
     <string name="Password1">סיסמה</string>
     <string name="Username">שם משתמש</string>
     <string name="Username1">שם משתמש</string>
-    <string name="help1">הספר על האפליקציה</string>
+    <string name="help1">הסבר על האפליקציה</string>
     <string name="id">ת.ז</string>
     <string name="id1">אשר ת.ז</string>
     <string name="Username2">שם משתמש</string>
@@ -60,9 +60,9 @@
     <string name="young">לאיזו מוזיקה האזין כשהיה צעיר?</string>
     <string name="ma7azot">מחזות</string>
     <string name="disk">דיסק</string>
-    <string name="favorite_singer">זמר הכי אהוב</string>
+    <string name="favorite_singer">הזמר הכי אהוב</string>
     <string name="weeding_song">שיר של חתונה</string>
-    <string name="favorite_song">שיר הכי אהוב</string>
+    <string name="favorite_song">השיר הכי אהוב</string>
     <string name="army_bands">להקות צבאיות</string>
     <string name="Last_name">שם משפחה</string>
     <string name="Login2">כניסה</string>
@@ -77,13 +77,13 @@
     <string name="search">חפש</string>
     <string name="AtLeast10Numbers">לפחות 10 מספרים</string>
     <string name="enterYourAdress">הכנס את המיקום שלך</string>
-    <string name="enterYourYearOfBirth">הכנס שנה לידה</string>
+    <string name="enterYourYearOfBirth">הכנס שנת הלידה</string>
     <string name="slide_1_desc">שעוזרת במציאת מוזיקה מותאמת אישית לחולי דמנציה</string>
     <string name="slide_2_desc">על פי מחקרים בתחום ההיסטוריה התרבותית-מוזיקלית, המוזיקה המשמעותית ביותר  היא המוזיקה שנהגנו לשמוע בגיל ההתבגרות ועד שנות העשרים המאוחרות של חיינו.</string>
     <string name="slide_3_desc">באנו לבחור מוזיקה עבור האדם עם דמנציה,נחפש  מוזיקה ששמע כשהיה צעיר.</string>
     <string name="slide_2_title">מה המוזיקה היותר משמעותית בחיינו?</string>
     <string name="slide_4_desc">אפליקציה שמסתמכת על עיקרון חכמת ההמונים שדרכה מתבצע בניית מאגר נתונים שמאחסן נתוני חולי דמנציה שאובחנה להם מוזיקה מותאמת אישית שמזינים מטפלים ברחבי הארץ, אותה אפליקציה מספקת  מנגנון חיפוש ואיתור למטופלים חדשים לפי מאפייני מפתח מינימליים לכל מטופל.</string>
-    <string name="slide_3_title">מה המוזיקה שתצריך לבחור לחולי אלצהיימר?</string>
+    <string name="slide_3_title">מה המוזיקה שצריך לבחור לחולי אלצהיימר?</string>
     <string name="slide_4_title">איך האפליקציה עובדת?</string>
     <string name="Login7">כניסה</string>
     <string name="Next">הבא</string>
