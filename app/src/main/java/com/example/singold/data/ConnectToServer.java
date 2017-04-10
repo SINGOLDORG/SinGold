@@ -539,7 +539,7 @@ public  class ConnectToServer {
         runAsyncTask(task);
     }
 
-    public static void refreshPatientDetailsFromTable(final PatientDetailsAdapter adapter, final String userId, final String toSearch) {
+    public static void refreshPatienProfiletFromTable( final String userId, final String toSearch) {
 
         // Get the items that weren't marked as completed and add them in the
         // adapter
@@ -560,6 +560,59 @@ public  class ConnectToServer {
                     final List<PatientDetails> results;
                     if(toSearch.length()==0) {
                          results = patientDetailsTable.where().field("idUser").eq(userId).execute().get();
+                    }
+                    else
+                    {
+                        results = patientDetailsTable.where().field("idUser").eq(userId)
+                                .and(field("fName").eq(toSearch).or().field("pId").eq(toSearch))
+                                .execute().get();
+
+                    }
+                    //Offline Sync
+                    //final List<ToDoItem> results = refreshItemsFromMobileServiceTableSyncTable();
+
+                    context.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+
+                        }
+                    });
+                } catch (final Exception e){
+                    createAndShowDialogFromTask(e, "Error");
+                }
+
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
+                dismissProProgressDialog();            }
+        };
+
+        runAsyncTask(task);
+    }
+    public static void refreshPatientDetailsFromTable(final PatientDetailsAdapter adapter, final String userId, final String toSearch) {
+
+        // Get the items that weren't marked as completed and add them in the
+        // adapter
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>(){
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                if (patientDetailsTable == null)
+                    patientDetailsTable = azureDBClient.getTable(PatientDetails.class);
+//                showProProgressDialog("Downloading Details..");
+            }
+
+            @Override
+            protected Void doInBackground(Void... params) {
+
+                try {
+                    //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
+                    final List<PatientDetails> results;
+                    if(toSearch.length()==0) {
+                        results = patientDetailsTable.where().field("idUser").eq(userId).execute().get();
                     }
                     else
                     {
