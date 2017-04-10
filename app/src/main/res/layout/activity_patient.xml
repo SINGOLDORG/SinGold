@@ -113,7 +113,8 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/id7rapper">
             <EditText
                 android:layout_width="match_parent"
                 android:inputType="textPersonName"
@@ -125,7 +126,8 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/id8rapper">
             <EditText
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"

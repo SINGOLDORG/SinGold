@@ -144,18 +144,18 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             address.setText(patientDetails.getAddress());
             year.setText(patientDetails.getYear());
 
-            patientProfile=(PatientProfile) i.getExtras().get("profile") ;
-            homemusic.setText(patientProfile.getHomeMusic());
-            youngmusic.setText(patientProfile.getYoungMusic());
-            favoritesinger.setText(patientProfile.getfSinger());
-            favoritesong.setText(patientProfile.getfSongs());
-            textClassic.setText(patientProfile.getClassic());
-            textIsrael.setText(patientProfile.getIsrael());
-            language.setText(patientProfile.getLanguage());
-            textLoazi.setText(patientProfile.getLoazi());
-            textRelaxing.setText(patientProfile.getRelaxing());
-            textReligion.setText(patientProfile.getReligion());
-            textDance.setText(patientProfile.getDance());
+//            patientProfile=(PatientProfile) i.getExtras().get("profile") ;
+//            homemusic.setText(patientProfile.getHomeMusic());
+//            youngmusic.setText(patientProfile.getYoungMusic());
+//            favoritesinger.setText(patientProfile.getfSinger());
+//            favoritesong.setText(patientProfile.getfSongs());
+//            textClassic.setText(patientProfile.getClassic());
+//            textIsrael.setText(patientProfile.getIsrael());
+//            language.setText(patientProfile.getLanguage());
+//            textLoazi.setText(patientProfile.getLoazi());
+//            textRelaxing.setText(patientProfile.getRelaxing());
+//            textReligion.setText(patientProfile.getReligion());
+//            textDance.setText(patientProfile.getDance());
         }
 
         btnMusic.setOnClickListener(this);
@@ -265,6 +265,10 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
 
 
         }
+        if (item.getItemId()==R.id.mnItmIcons){
+            Intent intent = new Intent(getBaseContext(), icons_explainActivity.class);
+            getBaseContext().startActivity(intent);
+}
         return true;
     }
 }

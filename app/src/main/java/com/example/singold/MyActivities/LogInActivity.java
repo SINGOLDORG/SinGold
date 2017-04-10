@@ -37,6 +37,13 @@ public class LogInActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
+        SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
+        String user=preferences.getString("username", null);
+        if(preferences.contains("username"))
+        {
+            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
+            startActivity(intent);
+        }
     }
 
     private void dataHandler() {
@@ -57,16 +64,18 @@ public class LogInActivity extends AppCompatActivity
         if (isok == true) {
             ConnectToServer.connect(this);
             ConnectToServer.login(stUsername,stId,(ProgressBar)findViewById(R.id.progressBar),checkBox.isChecked());
-
+//            Intent intent=new Intent(getBaseContext(),icons_explainActivity.class);
+//            startActivity(intent);
         }
     }
     public void onClick(View v)
     {
         if(v==login)
         {
-//            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
-//            startActivity(intent);
                 dataHandler();
+//            Intent intent=new Intent(getBaseContext(),icons_explainActivity.class);
+//            startActivity(intent);
+
         }
 
         if (v==sign)

@@ -2,6 +2,7 @@ package com.example.singold.MyActivities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -95,6 +96,16 @@ public class WelcomeActivity extends AppCompatActivity {
             }
         });
     }
+    protected void onStart() {
+        super.onStart();
+        SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
+        String user=preferences.getString("username", null);
+        if(preferences.contains("username"))
+        {
+            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
+            startActivity(intent);
+        }
+    }
 
     private void addBottomDots(int currentPage) {
         dots = new TextView[layouts.length];
@@ -125,8 +136,13 @@ public class WelcomeActivity extends AppCompatActivity {
         //
         //
         // prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeActivity.this, Sin_goldActivity.class));
+//        startActivity(new Intent(WelcomeActivity.this, Sin_goldActivity.class));
+
+        Intent intent=new Intent(getBaseContext(),icons_explainActivity.class);
+        startActivity(intent);
         finish();
+
+
     }
 
     //  viewpager change listener
