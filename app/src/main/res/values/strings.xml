@@ -142,4 +142,5 @@
     <string name="Questionnaire">Questionnaire</string>
     <string name="type_of_israel_music">"Type of Israel "</string>
     <string name="foreign_music">Foreign music</string>
+    <string name="personal_id">Personal Id</string>
 </resources>
