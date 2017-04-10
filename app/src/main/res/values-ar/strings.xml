@@ -47,7 +47,6 @@
     <string name="waltz">والس</string>
     <string name="tango">تانجو</string>
     <string name="samba">سامبا</string>
-    <string name="loazi">اجنبي</string>
     <string name="jaz">جاز</string>
     <string name="rock">روك</string>
     <string name="pollack">رقصة الفولك</string>
@@ -129,4 +128,6 @@
     <string name="culture1">ثقافة</string>
     <string name="year_of_birth">سنة الولادة</string>
     <string name="UsernameIsAlredyThere">تم استخدام هذا الاسم</string>
+    <string name="type_of_israel_music">موسيقى اسرائيلية</string>
+    <string name="foreign_music">موسيقى غير عربية</string>
 </resources>

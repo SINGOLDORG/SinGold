@@ -72,7 +72,6 @@
     <string name="waltz">waltz</string>
     <string name="tango">tango</string>
     <string name="samba">samba</string>
-    <string name="loazi">loazi</string>
     <string name="jaz">jaz</string>
     <string name="rock">rock</string>
     <string name="pollack">pollack</string>
@@ -141,4 +140,6 @@
     <string name="patient_details">Patient Details</string>
     <string name="patient_s_playlist">Playlist</string>
     <string name="Questionnaire">Questionnaire</string>
+    <string name="type_of_israel_music">"Type of Israel "</string>
+    <string name="foreign_music">Foreign music</string>
 </resources>

@@ -129,4 +129,6 @@
     <string name="add_button_text">הוספה</string>
     <string name="Text1">טקסט</string>
     <string name="year_of_birth">שנת לידה</string>
+    <string name="type_of_israel_music">מוזיקה ישראלית</string>
+    <string name="foreign_music">מוזיקה לועזית</string>
 </resources>
