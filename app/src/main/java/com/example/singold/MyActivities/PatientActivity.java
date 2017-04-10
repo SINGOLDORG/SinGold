@@ -86,7 +86,6 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private PatientProfile patientProfile;
 
 
-    private PatientDetailsAdapter detailsAdapter;
 
     private Button Questionaire;
     private ImageButton btnMatch;
@@ -123,6 +122,10 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         textRelaxing=(EditText) findViewById(R.id.textRelaxing);
         textReligion=(EditText)findViewById(R.id.textReligion);
         textDance=(EditText)findViewById(R.id.textDance);
+        country=(EditText)findViewById(R.id.country);
+        culture=(EditText)findViewById(R.id.etCultutre);
+
+
 
 
         save=(Button)findViewById(R.id.save);
@@ -213,6 +216,8 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             patientProfile.setLoazi(stloazi);
             patientProfile.setRelaxing(stRelaxing);
             patientProfile.setReligion(stReligion);
+            patientProfile.setCountry(country.getText().toString());
+            patientProfile.setCulture(culture.getText().toString());
             ConnectToServer.connect(this);
             try {
                 ConnectToServer.updatePatientDetails(patientDetails,patientProfile,(ProgressBar)findViewById(R.id.progressBar));
@@ -284,6 +289,8 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             textRelaxing.setText(patientProfile.getRelaxing());
             textReligion.setText(patientProfile.getReligion());
             textDance.setText(patientProfile.getDance());
+            culture.setText(patientProfile.getCulture());
+            country.setText(patientProfile.getCountry());
         }
     }
 }
