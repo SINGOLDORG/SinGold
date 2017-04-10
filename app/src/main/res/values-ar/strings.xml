@@ -75,7 +75,6 @@
     <string name="Login7">تسحيل الدخول</string>
     <string name="slide_1_title">اهلا وسهلا الى SinGold!</string>
     <string name="atLeast3">على الاقل 3 احرف</string>
-    <string name="UsernameIsAlredyThere">اسم المسخدم هذا مستعمل</string>
     <string name="AtLeast10Number">على الاقل 9  ارقام</string>
     <string name="slide_3_desc">عندما نختار الموسيقى لمريض الزهايمر,نختار الموسيقى التي كان يسمعها فترة شبابه.</string>
     <string name="slide_2_desc">وفقا لدراسات في مجال تاريخ الموسيقى,الموسيقى الاكثر تاثيرا في حياتنا هي التي نسمعها في فترة المراهقة حتى العشرينات.</string>
@@ -129,4 +128,5 @@
     <string name="play_again_desc">اهلا</string>
     <string name="culture1">ثقافة</string>
     <string name="year_of_birth">سنة الولادة</string>
+    <string name="UsernameIsAlredyThere">تم استخدام هذا الاسم</string>
 </resources>
