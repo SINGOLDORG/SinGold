@@ -28,19 +28,18 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
-
-    </ScrollView>
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="1"
-        android:layout_below="@+id/imageView2"
-        android:layout_toEndOf="@+id/progressBar"
-        android:layout_marginTop="18dp">
+        android:layout_marginTop="0dp">
+
+
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/loginrapper"
@@ -66,8 +65,7 @@
                 android:ems="10"
                 android:id="@+id/id1"
                 android:hint="@string/id2"
-                android:layout_below="@+id/username"
-                android:inputType="textPassword|number" />
+                android:inputType="numberPassword" />
         </android.support.design.widget.TextInputLayout>
 
         <Button
@@ -93,5 +91,6 @@
             android:text="@string/keep_sign_in" />
 
     </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

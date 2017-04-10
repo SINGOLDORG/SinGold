@@ -25,6 +25,14 @@ public class LogInActivity extends AppCompatActivity
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
+        if(preferences.contains("username"))
+        {
+            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
         setContentView(R.layout.activity_enter);
         login=(Button)findViewById(R.id.login);
         sign=(Button)findViewById(R.id.sign);
@@ -38,11 +46,11 @@ public class LogInActivity extends AppCompatActivity
     protected void onStart() {
         super.onStart();
         SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
-        String user=preferences.getString("username", null);
         if(preferences.contains("username"))
         {
             Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 

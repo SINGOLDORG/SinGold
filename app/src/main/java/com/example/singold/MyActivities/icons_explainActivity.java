@@ -134,7 +134,7 @@ public class icons_explainActivity extends AppCompatActivity {
 
             Intent intent = new Intent(getBaseContext(), LogInActivity.class);
             startActivity(intent);
-        finish();
+            finish();
     }
 
     //  viewpager change listener

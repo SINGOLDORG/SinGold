@@ -285,7 +285,6 @@ public  class ConnectToServer {
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                    // PrefManager.setFirstTimeLaunch(context,true,user);
-                    context.startActivity(intent);
 
                     Toast.makeText(context, "WELCOME " , Toast.LENGTH_SHORT).show();
                     if(tosave) {
@@ -295,9 +294,8 @@ public  class ConnectToServer {
                         editor.putString("id", passw);
                         editor.commit();
                     }
-
-
-                    //    finish();
+                    context.startActivity(intent);
+                    context.finish();
 
                 } else {
                     //signinDialog.dismiss();
