@@ -131,4 +131,5 @@
     <string name="year_of_birth">שנת לידה</string>
     <string name="type_of_israel_music">מוזיקה ישראלית</string>
     <string name="foreign_music">מוזיקה לועזית</string>
+    <string name="personal_id">תעודת זהות</string>
 </resources>

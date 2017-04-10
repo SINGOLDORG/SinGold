@@ -140,7 +140,7 @@
     <string name="patient_details">Patient Details</string>
     <string name="patient_s_playlist">Playlist</string>
     <string name="Questionnaire">Questionnaire</string>
-    <string name="type_of_israel_music">"Type of Israel "</string>
-    <string name="foreign_music">Foreign music</string>
     <string name="personal_id">Personal Id</string>
+    <string name="foreign_music">Forien Music</string>
+    <string name="type_of_israel_music">Israely Music</string>
 </resources>

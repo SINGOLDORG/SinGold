@@ -119,7 +119,7 @@
     <string name="patient_details">تفاصيل عن المريض</string>
     <string name="patient_s_playlist">فائمة الاغاني الخاصة بالمريض</string>
     <string name="matching_survey">ملائمة</string>
-    <string name="Questionnaire">استمارة</string>
+    <string name="Questionnaire">" استمارة ملف مريض"</string>
     <string name="singer_name">المغني</string>
     <string name="r1">الديانة</string>
     <string name="music_he_listen_at_home">موسيقى استمع لها في البيت</string>
@@ -128,6 +128,8 @@
     <string name="culture1">ثقافة</string>
     <string name="year_of_birth">سنة الولادة</string>
     <string name="UsernameIsAlredyThere">تم استخدام هذا الاسم</string>
-    <string name="type_of_israel_music">موسيقى اسرائيلية</string>
     <string name="foreign_music">موسيقى غير عربية</string>
+    <string name="type_of_israel_music">موسيقى اسرائيلية</string>
+    <string name="loazi">اجنبي</string>
+    <string name="personal_id">هويةشخصية</string>
 </resources>
