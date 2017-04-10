@@ -137,4 +137,8 @@
     <string name="singer_name">Singer</string>
     <string name="music_he_listen_at_home">Music he listen at home</string>
     <string name="music_he_listened_when_he_was_young">Music he listened when he was young</string>
+    <string name="matching_survey">Matching Survey</string>
+    <string name="patient_details">Patient Details</string>
+    <string name="patient_s_playlist">Patient\'s Playlist</string>
+    <string name="Questionnaire">Questionnaire</string>
 </resources>

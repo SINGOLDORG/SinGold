@@ -28,7 +28,7 @@
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
             android:textColor="@android:color/white"
-            android:text=""
+            android:text="@string/Questionnaire"
             android:textAlignment="center"
             android:gravity="center_horizontal"
 
