@@ -132,7 +132,7 @@ public class icons_explainActivity extends AppCompatActivity {
     private void launchHomeScreen() {
         // prefManager.setFirstTimeLaunch(false);
 
-            Intent intent = new Intent(getBaseContext(), PatientListActivity.class);
+            Intent intent = new Intent(getBaseContext(), LogInActivity.class);
             startActivity(intent);
         finish();
     }

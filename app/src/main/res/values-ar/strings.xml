@@ -8,7 +8,7 @@
     <string name="Login2">تسجيل الدخول</string>
     <string name="Next">التالي</string>
     <string name="Password1">كلمة المرور</string>
-    <string name="Text1"></string>
+    <string name="Text1">نص</string>
     <string name="introduction">تفاصيل عن التطبيق</string>
     <string name="Username">اسم المستخدم</string>
     <string name="Username1">اسم المستخدم</string>
@@ -39,10 +39,10 @@
     <string name="folk_dance">الرقص الشعبي</string>
     <string name="languages">لغات</string>
     <string name="yiddish">ييديش</string>
-    <string name="hebrew">عبراني</string>
-    <string name="english">انجليزي</string>
+    <string name="hebrew">اللغة العبرية</string>
+    <string name="english">اللغة الانجليزية</string>
     <string name="russian">روسي</string>
-    <string name="arabic">عربي</string>
+    <string name="arabic">اللغة العربية</string>
     <string name="dance">رقص</string>
     <string name="waltz">والس</string>
     <string name="tango">تانجو</string>
@@ -51,7 +51,7 @@
     <string name="jaz">جاز</string>
     <string name="rock">روك</string>
     <string name="pollack">رقصة الفولك</string>
-    <string name="religion">دين</string>
+    <string name="religion">الديانة</string>
     <string name="chazanout">اغاني دينية</string>
     <string name="from_pray">من الصلاة</string>
     <string name="propnrmts">propnrmts</string>
@@ -90,7 +90,6 @@
     <string name="City">مدينة</string>
     <string name="add_button_text">اضافة</string>
     <string name="sign_up">حساب جديد</string>
-    <string name="r1">دين</string>
     <string name="l1">لغات</string>
     <string name="skip">تخطي</string>
     <string name="idP">رقم هوية المريض</string>
@@ -111,7 +110,6 @@
     <string name="culture">خلفية ثقافية</string>
     <string name="selelct">اختر</string>
     <string name="keep_sign_in">ابقي مسجل</string>
-    <string name="culture1">culture</string>
     <string name="eduction">خلفية ثقافية</string>
     <string name="familyphone">هاتف العائلة:</string>
     <string name="firstName">الاسم الشخصي</string>
@@ -120,4 +118,15 @@
     <string name="pId">رقم الهوية</string>
     <string name="play_again">ابدا من جديد</string>
     <string name="wrong_email_password">البريد الكتروني او كلمة المرور غير صحيحة</string>
+    <string name="patient_details">تفاصيل عن المريض</string>
+    <string name="patient_s_playlist">فائمة الاغاني الخاصة بالمريض</string>
+    <string name="matching_survey">ملائمة</string>
+    <string name="Questionnaire">استمارة</string>
+    <string name="singer_name">المغني</string>
+    <string name="r1">الديانة</string>
+    <string name="music_he_listen_at_home">موسيقى استمع لها في البيت</string>
+    <string name="music_he_listened_when_he_was_young">موسيقى اصغى عند شبابه</string>
+    <string name="play_again_desc">اهلا</string>
+    <string name="culture1">ثقافة</string>
+    <string name="year_of_birth">سنة الولادة</string>
 </resources>

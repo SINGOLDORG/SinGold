@@ -93,7 +93,7 @@
     <string name="r1">שירים דתיים</string>
     <string name="l1">שפה</string>
     <string name="skip">דלג</string>
-    <string name="idP">"ת.ז לחולה "</string>
+    <string name="idP">\"ת.ז למטופל \"</string>
     <string name="songN">שם השיר</string>
     <string name="singer">זמר</string>
     <string name="link">קישור</string>
@@ -115,6 +115,18 @@
     <string name="lastName">שם משפחה</string>
     <string name="menu_refresh">רענון</string>
     <string name="pId">ת.ז</string>
-    <string name="play_again">התחך מחדש</string>
-    <string name="wrong_email_password">"האימיל או הסיסמה לא נכון "</string>
+    <string name="play_again">התחיל מחדש</string>
+    <string name="music_he_listen_at_home">מוזיקה ששמע בבית</string>
+    <string name="music_he_listened_when_he_was_young">מוזיקה ששמע כשהיה צעיר</string>
+    <string name="patient_details">פרטים על המטופל</string>
+    <string name="Questionnaire">שאלאון</string>
+    <string name="patient_s_playlist">רשימת מוזיקה למטופל</string>
+    <string name="wrong_email_password">אימייל או סיסמה אינם נכונים</string>
+    <string name="singer_name">זמר</string>
+    <string name="matching_survey">סקר תיאום</string>
+    <string name="play_again_desc">" אהלן"</string>
+    <string name="culture1">תרבות</string>
+    <string name="add_button_text">הוספה</string>
+    <string name="Text1">טקסט</string>
+    <string name="year_of_birth">שנת לידה</string>
 </resources>

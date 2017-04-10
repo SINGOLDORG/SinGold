@@ -1,14 +1,14 @@
 <resources>
 
-    <string name="app_name">SinGold</string>
-    <string name="add_textbox_hint">Add a ToDo item</string>
+    <string name="app_name" translatable="false">SinGold</string>
+    <string name="add_textbox_hint" translatable="false">Add a ToDo item</string>
     <string name="add_button_text">Add</string>
     <string name="service_title" translatable="false">Mobile Apps </string>
     <string name="menu_refresh">Refresh</string>
-    <string name="checkbox_text">Item Text</string>
+    <string name="checkbox_text" translatable="false">Item Text</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="login">Login another account</string>
     <string name="sign_up">Sign up to SinGold</string>
     <string name="help">help</string>
@@ -42,7 +42,7 @@
 
 
     //intro//
-    <string name="title_activity_welcome">Home Screen</string>
+    <string name="title_activity_welcome" translatable="false">Home Screen</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
@@ -98,7 +98,6 @@
     <string name="Login">login7</string>
     <string name="Login7">Login</string>
     <string name="atLeast3">at least 3</string>
-    <string name="hhh">kkkk</string>
     <string name="UsernameIsAlredyThere">username is already there</string>
     <string name="AtLeast10Number">at least 9 number</string>
     <string name="pleaseAnswerTheQuestion">please answer the question!</string>
@@ -137,4 +136,9 @@
     <string name="singer_name">Singer</string>
     <string name="music_he_listen_at_home">Music he listen at home</string>
     <string name="music_he_listened_when_he_was_young">Music he listened when he was young</string>
+    <string name="logiin_another">anothr acount</string>
+    <string name="matching_survey">matching survey</string>
+    <string name="patient_details">Patient Details</string>
+    <string name="patient_s_playlist">Playlist</string>
+    <string name="Questionnaire">Questionnaire</string>
 </resources>
