@@ -124,4 +124,9 @@
     <string name="wrong_email_password">אימייל או סיסמה אינם נכונים</string>
     <string name="singer_name">זמר</string>
     <string name="matching_survey">סקר תיאום</string>
+    <string name="play_again_desc">" אהלן"</string>
+    <string name="culture1">תרבות</string>
+    <string name="add_button_text">הוספה</string>
+    <string name="Text1">טקסט</string>
+    <string name="year_of_birth">שנת לידה</string>
 </resources>

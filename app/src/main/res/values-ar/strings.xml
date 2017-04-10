@@ -8,7 +8,7 @@
     <string name="Login2">تسجيل الدخول</string>
     <string name="Next">التالي</string>
     <string name="Password1">كلمة المرور</string>
-    <string name="Text1"></string>
+    <string name="Text1">نص</string>
     <string name="introduction">تفاصيل عن التطبيق</string>
     <string name="Username">اسم المستخدم</string>
     <string name="Username1">اسم المستخدم</string>
@@ -124,6 +124,9 @@
     <string name="Questionnaire">استمارة</string>
     <string name="singer_name">المغني</string>
     <string name="r1">الديانة</string>
+    <string name="music_he_listen_at_home">موسيقى استمع لها في البيت</string>
+    <string name="music_he_listened_when_he_was_young">موسيقى اصغى عند شبابه</string>
+    <string name="play_again_desc">اهلا</string>
     <string name="culture1">ثقافة</string>
-    <string name="music_he_listen_at_home"></string>
+    <string name="year_of_birth">سنة الولادة</string>
 </resources>
