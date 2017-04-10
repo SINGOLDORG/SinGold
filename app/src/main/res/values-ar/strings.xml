@@ -62,7 +62,7 @@
     <string name="country">دولة</string>
     <string name="answer">جواب</string>
     <string name="homemusic">ما هي الموسيقى التي سمعتها في البيت؟</string>
-    <string name="young">ما هي الموسيقى التي سمعها عندماكان صغيرا؟</string>
+    <string name="young">ما هي الموسيقى التي استمع اليها في صغره؟</string>
     <string name="ma7azot">مسرحيات موسيقية</string>
     <string name="disk">ديسك</string>
     <string name="favorite_singer">المغني المحبوب</string>
@@ -115,7 +115,7 @@
     <string name="lastName">اسم العائلة</string>
     <string name="menu_refresh">تحديث</string>
     <string name="pId">رقم الهوية</string>
-    <string name="play_again">ابدا من جديد</string>
+    <string name="play_again">ابدأ من جديد</string>
     <string name="wrong_email_password">البريد الكتروني او كلمة المرور غير صحيحة</string>
     <string name="patient_details">تفاصيل عن المريض</string>
     <string name="patient_s_playlist">فائمة الاغاني الخاصة بالمريض</string>
@@ -124,7 +124,7 @@
     <string name="singer_name">المغني</string>
     <string name="r1">الديانة</string>
     <string name="music_he_listen_at_home">موسيقى استمع لها في البيت</string>
-    <string name="music_he_listened_when_he_was_young">موسيقى اصغى عند شبابه</string>
+    <string name="music_he_listened_when_he_was_young">موسيقى استمع اليها في شبابه</string>
     <string name="play_again_desc">اهلا</string>
     <string name="culture1">ثقافة</string>
     <string name="year_of_birth">سنة الولادة</string>
