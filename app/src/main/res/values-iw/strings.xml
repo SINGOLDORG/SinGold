@@ -121,7 +121,7 @@
     <string name="patient_details">פרטים על המטופל</string>
     <string name="Questionnaire">שאלאון</string>
     <string name="patient_s_playlist">רשימת מוזיקה למטופל</string>
-    <string name="matching_survey">תיאום</string>
     <string name="wrong_email_password">אימייל או סיסמה אינם נכונים</string>
     <string name="singer_name">זמר</string>
+    <string name="matching_survey">סקר תיאום</string>
 </resources>
