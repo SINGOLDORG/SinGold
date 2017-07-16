@@ -36,8 +36,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
-        String user=preferences.getString("username", null);
-        if(preferences.contains("username"))
+        if(PrefManager.isStayLogIn(this))
         {
             Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
             startActivity(intent);
@@ -106,8 +105,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
     protected void onStart() {
         super.onStart();
-        SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
-        if(preferences.contains("username"))
+        if(PrefManager.isStayLogIn(this))
         {
             Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
             startActivity(intent);

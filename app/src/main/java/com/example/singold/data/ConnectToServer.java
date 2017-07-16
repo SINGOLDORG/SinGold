@@ -230,42 +230,63 @@ public  class ConnectToServer {
      *
      * @param item The item to Add
      */
-    public static void addUserInTable(final MyUser item) throws ExecutionException, InterruptedException {
+    public static void addUserInTable(final MyUser item, final ProgressBar progressBar) throws ExecutionException, InterruptedException {
         final MyUser[] entity = {null};
+        progressBar.setVisibility(View.VISIBLE);
+
         if (userTable == null)
             userTable = azureDBClient.getTable(MyUser.class);
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
+        userTable.where().field("username").eq(item.getUsername()).execute(new TableQueryCallback<MyUser>() {
             @Override
-            protected Void doInBackground(Void... params) {
-                try {
-                    entity[0] = userTable.insert(item).get();
+            public void onCompleted(List<MyUser> result, int count, Exception exception, ServiceFilterResponse response) {
 
-                    context.runOnUiThread(new Runnable() {
+                // it appears for me and error here, ** remember to ask about it
+                if (result==null || result.size() == 0) {
+
+                    Toast.makeText(context, "Signing up " , Toast.LENGTH_SHORT).show();
+                    AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
                         @Override
-                        public void run() {
-                            if(dialog!=null){
-                                dialog.setMessage("Saving...");
-                                dialog.show();
+                        protected Void doInBackground(Void... params) {
+                            try {
+                                entity[0] = userTable.insert(item).get();
+                              //  PrefManager.setUserLogin(context,entity[0]);
+                                context.runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if(dialog!=null){
+                                            dialog.setMessage("Saving...");
+                                            dialog.show();
+                                        }
+
+                                    }
+                                });
+                            } catch (final Exception e) {
+                                createAndShowDialogFromTask(e, "Error");
                             }
+                            return null;
+                        }
+
+                        @Override
+                        protected void onPostExecute(Void aVoid) {
+                            dismissProProgressDialog();
+                            context.finish();
+
 
                         }
-                    });
-                } catch (final Exception e) {
-                    createAndShowDialogFromTask(e, "Error");
+                    };
+
+                    runAsyncTask(task);
+
+                } else {
+                    //signinDialog.dismiss();
+                    progressBar.setVisibility(View.GONE);
+                    createAndShowDialog("User Alresdy Found", "");
+
                 }
-                return null;
             }
-
-            @Override
-            protected void onPostExecute(Void aVoid) {
-                dismissProProgressDialog();
-                context.finish();
+        });
 
 
-            }
-        };
-
-        runAsyncTask(task);
     }
 
     public static  void login(final String user, final String passw, final ProgressBar progressBar, final boolean tosave)
@@ -288,13 +309,10 @@ public  class ConnectToServer {
                    // PrefManager.setFirstTimeLaunch(context,true,user);
 
                     Toast.makeText(context, "WELCOME " , Toast.LENGTH_SHORT).show();
-                    if(tosave) {
-                        SharedPreferences preferences = context.getSharedPreferences("myfile", context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = preferences.edit();
-                        editor.putString("username", user);
-                        editor.putString("id", passw);
-                        editor.commit();
-                    }
+
+                        PrefManager.setUserLogin(context,result.get(0),tosave);
+
+
                     context.startActivity(intent);
                     context.finish();
 
@@ -411,10 +429,10 @@ public  class ConnectToServer {
                         public void run() {
                             // adapter.clear();
 
-                            for (PatientProfile item  : results) {
-                                // adapter.add(item);
-
-                            }
+//                            for (PatientProfile item  : results) {
+//                                adapter.add(item);
+//
+//                            }
                         }
                     });
                 } catch (final Exception e){

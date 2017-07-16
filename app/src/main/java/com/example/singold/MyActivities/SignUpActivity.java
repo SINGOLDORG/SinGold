@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
@@ -88,7 +89,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             u.setEnterId(stId);
             try {
                 ConnectToServer.connect(this);
-                ConnectToServer.addUserInTable(u);
+                ConnectToServer.addUserInTable(u,(ProgressBar)findViewById(R.id.progressBar));
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
