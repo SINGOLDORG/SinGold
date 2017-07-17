@@ -55,7 +55,7 @@ public  class ConnectToServer {
     private static MobileServiceTable<Song> songTable;
     private static MobileServiceTable<PatientDetails> patientDetailsTable;
     private static MobileServiceTable<PatientProfile> patientProfileTable;
-    private static MobileServiceTable<MatchingSurvey> HalfSurveyTable;
+   // private static MobileServiceTable<MatchingSurvey> HalfSurveyTable;
 
 
     private static MobileServiceTable<ToDoItem> mToDoTable;
