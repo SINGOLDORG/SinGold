@@ -35,6 +35,13 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
+        if(PrefManager.isStayLogIn(this))
+        {
+            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);
@@ -98,13 +105,13 @@ public class WelcomeActivity extends AppCompatActivity {
     }
     protected void onStart() {
         super.onStart();
-        SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
-        String user=preferences.getString("username", null);
-        if(preferences.contains("username"))
+        if(PrefManager.isStayLogIn(this))
         {
             Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
             startActivity(intent);
+            finish();
         }
+
     }
 
     private void addBottomDots(int currentPage) {

@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <application
         android:allowBackup="true"
@@ -34,7 +36,10 @@
         <activity android:name=".MyActivities.PlaylistActivity" />
         <activity android:name=".MyActivities.MatchingSurveyActivity" />
         <activity android:name=".MyActivities.FoundSongActivity" />
-        <activity android:name=".MyActivities.icons_explainActivity"></activity>
+        <activity android:name=".MyActivities.icons_explainActivity" />
+        <activity android:name=".MyActivities.TestYoutubeActv">
+
+        </activity>
     </application>
 
 </manifest>

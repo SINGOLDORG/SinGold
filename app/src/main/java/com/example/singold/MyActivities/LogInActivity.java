@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
+import com.example.singold.data.PrefManager;
 
 public class LogInActivity extends AppCompatActivity
 {
@@ -25,6 +26,13 @@ public class LogInActivity extends AppCompatActivity
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(PrefManager.isStayLogIn(this))
+        {
+            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
+            startActivity(intent);
+            finish();
+        }
         setContentView(R.layout.activity_enter);
         login=(Button)findViewById(R.id.login);
         sign=(Button)findViewById(R.id.sign);
@@ -38,11 +46,11 @@ public class LogInActivity extends AppCompatActivity
     protected void onStart() {
         super.onStart();
         SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
-        String user=preferences.getString("username", null);
-        if(preferences.contains("username"))
+        if(PrefManager.isStayLogIn(this))
         {
             Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 

@@ -15,14 +15,13 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
-import com.example.singold.data.MatchingSurvey;
 import com.example.singold.data.PatientDetails;
 import com.example.singold.data.PatientDetailsAdapter;
 import com.example.singold.data.PatientProfile;
-import com.example.singold.data.PrefManager;
 
 import java.util.concurrent.ExecutionException;
 
@@ -87,7 +86,6 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private PatientProfile patientProfile;
 
 
-    private PatientDetailsAdapter detailsAdapter;
 
     private Button Questionaire;
     private ImageButton btnMatch;
@@ -124,6 +122,10 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         textRelaxing=(EditText) findViewById(R.id.textRelaxing);
         textReligion=(EditText)findViewById(R.id.textReligion);
         textDance=(EditText)findViewById(R.id.textDance);
+        country=(EditText)findViewById(R.id.country);
+        culture=(EditText)findViewById(R.id.etCultutre);
+
+
 
 
         save=(Button)findViewById(R.id.save);
@@ -136,6 +138,8 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         if(i!=null)
         {
             patientDetails = (PatientDetails) i.getExtras().get("patient");
+            ConnectToServer.connect(this);
+            ConnectToServer.refreshPatienProfiletFromTable(patientDetails.getId(),this,(ProgressBar)findViewById(R.id.progressBar));
 //           tvname.setText(patientDetails.getfName());
             firstName.setText(patientDetails.getfName());
             lastName.setText(patientDetails.getlName());
@@ -144,18 +148,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             address.setText(patientDetails.getAddress());
             year.setText(patientDetails.getYear());
 
-//            patientProfile=(PatientProfile) i.getExtras().get("profile") ;
-//            homemusic.setText(patientProfile.getHomeMusic());
-//            youngmusic.setText(patientProfile.getYoungMusic());
-//            favoritesinger.setText(patientProfile.getfSinger());
-//            favoritesong.setText(patientProfile.getfSongs());
-//            textClassic.setText(patientProfile.getClassic());
-//            textIsrael.setText(patientProfile.getIsrael());
-//            language.setText(patientProfile.getLanguage());
-//            textLoazi.setText(patientProfile.getLoazi());
-//            textRelaxing.setText(patientProfile.getRelaxing());
-//            textReligion.setText(patientProfile.getReligion());
-//            textDance.setText(patientProfile.getDance());
+
         }
 
         btnMusic.setOnClickListener(this);
@@ -223,25 +216,28 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             patientProfile.setLoazi(stloazi);
             patientProfile.setRelaxing(stRelaxing);
             patientProfile.setReligion(stReligion);
+            patientProfile.setCountry(country.getText().toString());
+            patientProfile.setCulture(culture.getText().toString());
             ConnectToServer.connect(this);
             try {
-                ConnectToServer.updatePatientDetails(patientDetails,(ProgressBar)findViewById(R.id.progressBar));
+                ConnectToServer.updatePatientDetails(patientDetails,patientProfile,(ProgressBar)findViewById(R.id.progressBar));
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            ConnectToServer.connect(this);
-            try {
-                ConnectToServer.updatePatientProfile(patientProfile,(ProgressBar)findViewById(R.id.progressBar));
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
-            startActivity(intent);
+//            ConnectToServer.connect(this);
+//            try {
+//                ConnectToServer.updatePatientProfile(patientProfile,(ProgressBar)findViewById(R.id.progressBar));
+//            } catch (ExecutionException e) {
+//                e.printStackTrace();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            Intent intent=new Intent(getBaseContext(),PatientListActivity.class);
+//            startActivity(intent);
+            //finish();
         }
     }
     @Override
@@ -270,5 +266,31 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             getBaseContext().startActivity(intent);
 }
         return true;
+    }
+
+    public void updatePatientProfile(PatientProfile patientProfile)
+    {
+        if(patientProfile==null)
+        {
+            this.patientProfile = new PatientProfile();
+            this.patientProfile.setIdPatient(patientDetails.getId());
+            Toast.makeText(this,"Empty Patient Profile",Toast.LENGTH_LONG).show();
+        }
+        else {
+            this.patientProfile = patientProfile;
+            homemusic.setText(patientProfile.getHomeMusic());
+            youngmusic.setText(patientProfile.getYoungMusic());
+            favoritesinger.setText(patientProfile.getfSinger());
+            favoritesong.setText(patientProfile.getfSongs());
+            textClassic.setText(patientProfile.getClassic());
+            textIsrael.setText(patientProfile.getIsrael());
+            language.setText(patientProfile.getLanguage());
+            textLoazi.setText(patientProfile.getLoazi());
+            textRelaxing.setText(patientProfile.getRelaxing());
+            textReligion.setText(patientProfile.getReligion());
+            textDance.setText(patientProfile.getDance());
+            culture.setText(patientProfile.getCulture());
+            country.setText(patientProfile.getCountry());
+        }
     }
 }

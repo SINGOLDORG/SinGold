@@ -50,7 +50,7 @@
             </RadioGroup>
 
             <TextView
-                android:text="@string/Israel"
+                android:text="@string/type_of_israel_music"
                 android:layout_width="match_parent"
                 android:id="@+id/Q2"
                 android:layout_height="wrap_content" />
@@ -93,7 +93,7 @@
                 android:gravity="center"
                 android:id="@+id/rgQ3">
                 <TextView
-                    android:text="@string/languages"
+                    android:text="@string/language"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/Q3"

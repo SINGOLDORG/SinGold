@@ -29,7 +29,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true">
 
         <android.support.design.widget.TextInputLayout
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/firstName"
-                android:hint="First Name"/>
+                android:hint="@string/First_name1"/>
         </android.support.design.widget.TextInputLayout>
 
 
@@ -55,7 +55,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/lastName"
-            android:hint="Last Name" />
+            android:hint="@string/Last_name1" />
     </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -68,7 +68,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/pId"
-            android:hint="Personal Id" />
+            android:hint="@string/Personal_id1" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -81,7 +81,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/familyPhone"
-            android:hint="Family Phone" />
+            android:hint="@string/familyphone" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -94,7 +94,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/address"
-            android:hint="Address" />
+            android:hint="@string/Address1" />
         </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout

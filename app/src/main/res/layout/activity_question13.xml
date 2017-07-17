@@ -91,7 +91,7 @@
 
 
         <TextView
-            android:text="@string/loazi"
+            android:text="@string/foreign_music"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Q5" />
