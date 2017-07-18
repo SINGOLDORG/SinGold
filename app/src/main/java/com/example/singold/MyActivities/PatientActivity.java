@@ -314,7 +314,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
+//        client.connect();
 //        AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
 
