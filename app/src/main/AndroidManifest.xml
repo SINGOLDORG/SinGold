@@ -12,10 +12,10 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name="android.support.multidex.MultiDexApplication"
         android:theme="@style/MyTheme">
         <activity android:name=".MyActivities.ListMainActivity" />
         <activity android:name=".MyActivities.ToDoActivity" />
@@ -24,9 +24,14 @@
         <activity android:name=".MyActivities.Sin_goldActivity" />
         <activity android:name=".MyActivities.AddPatientActivity" />
         <activity android:name=".MyActivities.QuestionaireActivity" />
-        <activity android:name=".MyActivities.WelcomeActivity">
+        <activity android:name=".MyActivities.WelcomeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
         <activity android:name=".MyActivities.AddSongActivity" />
         <activity android:name=".MyActivities.PatientListActivity" />
         <activity android:name=".MyActivities.PatientActivity" />
@@ -34,13 +39,11 @@
         <activity android:name=".MyActivities.MatchingSurveyActivity" />
         <activity android:name=".MyActivities.FoundSongActivity" />
         <activity android:name=".MyActivities.icons_explainActivity" />
+        <activity android:name=".MyActivities.SearchSongActivity" />
         <activity android:name=".MyActivities.TestYoutubeActv">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <activity android:name=".MyActivities.PlayerActivity"></activity>
     </application>
 
 </manifest>

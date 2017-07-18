@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ import java.util.concurrent.ExecutionException;
 public class AddSongActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText theSongName, singer, link;
     private Button save;
+    private ImageButton sear;
 
 
     @Override
@@ -31,10 +33,12 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
         theSongName = (EditText) findViewById(R.id.theSongName);
         singer = (EditText) findViewById(R.id.singer);
         link = (EditText) findViewById(R.id.link);
+        sear=(ImageButton) findViewById(R.id.sear);
        // idPatient =(EditText) findViewById(R.id.idPatient);
 
         save = (Button) findViewById(R.id.save);
         save.setOnClickListener(this);
+        sear.setOnClickListener(this);
     }
 
     private void dataHandler() {
@@ -92,6 +96,14 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v){
         if (v==save)
             dataHandler();
+        if(v ==sear)
+        {
+            Intent intent=new Intent (getBaseContext(),SearchSongActivity.class);
+            intent.putExtra("toSearch",theSongName.getText().toString());
+            startActivityForResult(intent,99);
+        }
+            
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
