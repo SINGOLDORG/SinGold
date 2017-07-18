@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.singold.MyActivities.PatientActivity;
+import com.example.singold.MyActivities.TestYoutubeActv;
 import com.example.singold.R;
 
 import java.util.ArrayList;
@@ -47,6 +48,9 @@ public class SongAdapter extends ArrayAdapter<Song> {
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent= new Intent(getContext(), TestYoutubeActv.class);
+                intent.putExtra("Link",song.getLink());
+                getContext().startActivity(intent);
 
             }
         });

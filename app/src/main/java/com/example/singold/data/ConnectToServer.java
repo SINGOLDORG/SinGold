@@ -762,11 +762,18 @@ public  class ConnectToServer {
             protected Void doInBackground(Void... params) {
                 try {
                     for (Song item:selectedSongs) {
-                        item.setId("");
-                        item.setIdPatient(patientDetails.getId());
-                      songTable.insert(item).get();
-                    }
+                        //TODO add song
+                        if (songTable == null)
+                            songTable = azureDBClient.getTable(Song.class);
+                        final List<Song> results = songTable.where().field("idPatient").eq(patientDetails.getId()).and().field("id").eq(item.getId()).execute().get();
+                        if(results == null || results.size() == 0)
+                        {
+                            item.setId("");
+                            item.setIdPatient(patientDetails.getId());
+                            songTable.insert(item).get();
+                        }
 
+                    }
 //                    context.runOnUiThread(new Runnable() {
 //                        @Override
 //                        public void run() {
