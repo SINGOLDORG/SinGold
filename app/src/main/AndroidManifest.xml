@@ -25,7 +25,11 @@
         <activity android:name=".MyActivities.AddPatientActivity" />
         <activity android:name=".MyActivities.QuestionaireActivity" />
         <activity android:name=".MyActivities.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".MyActivities.AddSongActivity" />
         <activity android:name=".MyActivities.PatientListActivity" />

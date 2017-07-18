@@ -54,16 +54,20 @@ import java.util.List;
 //import pub.devrel.easypermissions.EasyPermissions;
 public class TestYoutubeActv extends YouTubeBaseActivity{
    private Button button2;
+    private String Link=null;
     private YouTubePlayerView youTubePlayerView;
     private YouTubePlayer.OnInitializedListener onInitializedListener;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_youtube_actv);
+
+
+
         youTubePlayerView= (YouTubePlayerView) findViewById(R.id.youtube__view);
         onInitializedListener= new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.loadVideo("a4NT5iBFuZs");
+                youTubePlayer.loadVideo(Link.substring(Link.length()-11));
 
             }
 
@@ -77,7 +81,10 @@ public class TestYoutubeActv extends YouTubeBaseActivity{
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                youTubePlayerView.initialize("AIzaSyAtXYaHf2kjeGxwe7Tq_p8_hp6zREqeGMo",onInitializedListener);
+                if(Link!=null && Link.length()>0)
+                {
+                    youTubePlayerView.initialize("AIzaSyAtXYaHf2kjeGxwe7Tq_p8_hp6zREqeGMo",onInitializedListener);
+                }
             }
         });
 
@@ -86,7 +93,17 @@ public class TestYoutubeActv extends YouTubeBaseActivity{
 
     }
 
-        //implements EasyPermissions.PermissionCallbacks {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent i=getIntent();
+        if(i!=null)
+        {
+             Link=i.getStringExtra("Link");
+
+        }
+    }
+    //implements EasyPermissions.PermissionCallbacks {
 //    GoogleAccountCredential mCredential;
 //    private TextView mOutputText;
 //    private Button mCallApiButton;

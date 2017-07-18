@@ -2,6 +2,7 @@ package com.example.singold.MyActivities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,16 +24,17 @@ import com.example.singold.data.PatientDetails;
 import com.example.singold.data.PatientDetailsAdapter;
 import com.example.singold.data.PatientProfile;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+
 import java.util.concurrent.ExecutionException;
 
-public class PatientActivity extends AppCompatActivity implements View.OnClickListener
-{
+public class PatientActivity extends AppCompatActivity implements View.OnClickListener {
     private Button playList;
-    private Button newMatching,save;
+    private Button newMatching, save;
 
     private PatientDetails patientDetails;
     private TextView tvname;
-//    private TextView tvLName;
+    //    private TextView tvLName;
 //    private TextView tvFamilyPhone;
 //    private TextView tvAddress;
 //    private TextView tvPId;
@@ -86,7 +88,6 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private PatientProfile patientProfile;
 
 
-
     private Button Questionaire;
     private ImageButton btnMatch;
     private ImageButton btnMusic;
@@ -98,48 +99,49 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
     private EditText textReligion;
     private EditText textLoazi;
     private EditText textDance;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient);
 //        tvname= (TextView) findViewById(R.id.tvname);
-        firstName=(EditText) findViewById(R.id.firstName);
-        lastName=(EditText)findViewById(R.id.lastName);
-        address=(EditText)findViewById((R.id.address));
-        year=(EditText)findViewById(R.id.year);
-        familyPhone=(EditText)findViewById(R.id.familyPhone);
-        pId=(EditText)findViewById(R.id.pId);
-        homemusic=(EditText)findViewById(R.id.homemusic);
-        youngmusic=(EditText)findViewById(R.id.youngmusic);
-        favoritesinger=(EditText)findViewById(R.id.favoritesinger);
-        favoritesong=(EditText)findViewById(R.id.favoritesong);
-        textClassic=(EditText) findViewById(R.id.textClassic);
-        textIsrael=(EditText) findViewById(R.id.textIsrael);
-        language=(EditText)findViewById(R.id.language);
-        textLoazi=(EditText)findViewById(R.id.textLoazi);
-        textRelaxing=(EditText) findViewById(R.id.textRelaxing);
-        textReligion=(EditText)findViewById(R.id.textReligion);
-        textDance=(EditText)findViewById(R.id.textDance);
-        country=(EditText)findViewById(R.id.country);
-        culture=(EditText)findViewById(R.id.etCultutre);
+        firstName = (EditText) findViewById(R.id.firstName);
+        lastName = (EditText) findViewById(R.id.lastName);
+        address = (EditText) findViewById((R.id.address));
+        year = (EditText) findViewById(R.id.year);
+        familyPhone = (EditText) findViewById(R.id.familyPhone);
+        pId = (EditText) findViewById(R.id.pId);
+        homemusic = (EditText) findViewById(R.id.homemusic);
+        youngmusic = (EditText) findViewById(R.id.youngmusic);
+        favoritesinger = (EditText) findViewById(R.id.favoritesinger);
+        favoritesong = (EditText) findViewById(R.id.favoritesong);
+        textClassic = (EditText) findViewById(R.id.textClassic);
+        textIsrael = (EditText) findViewById(R.id.textIsrael);
+        language = (EditText) findViewById(R.id.language);
+        textLoazi = (EditText) findViewById(R.id.textLoazi);
+        textRelaxing = (EditText) findViewById(R.id.textRelaxing);
+        textReligion = (EditText) findViewById(R.id.textReligion);
+        textDance = (EditText) findViewById(R.id.textDance);
+        country = (EditText) findViewById(R.id.country);
+        culture = (EditText) findViewById(R.id.etCultutre);
 
 
+        save = (Button) findViewById(R.id.save);
 
 
-        save=(Button)findViewById(R.id.save);
-
-
-         btnMusic = (ImageButton) findViewById(R.id.btnMusic);
-         btnMatch = (ImageButton) findViewById(R.id.newMatching);
-         btnQuest = (ImageButton) findViewById(R.id.Questionaire);
-        Intent i=getIntent();
-        if(i!=null)
-        {
+        btnMusic = (ImageButton) findViewById(R.id.btnMusic);
+        btnMatch = (ImageButton) findViewById(R.id.newMatching);
+        btnQuest = (ImageButton) findViewById(R.id.Questionaire);
+        Intent i = getIntent();
+        if (i != null) {
             patientDetails = (PatientDetails) i.getExtras().get("patient");
             ConnectToServer.connect(this);
-            ConnectToServer.refreshPatienProfiletFromTable(patientDetails.getId(),this,(ProgressBar)findViewById(R.id.progressBar));
+            ConnectToServer.refreshPatienProfiletFromTable(patientDetails.getId(), this, (ProgressBar) findViewById(R.id.progressBar));
 //           tvname.setText(patientDetails.getfName());
             firstName.setText(patientDetails.getfName());
             lastName.setText(patientDetails.getlName());
@@ -155,37 +157,36 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
         btnMatch.setOnClickListener(this);
         btnQuest.setOnClickListener(this);
 
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+//        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-    public void onClick(View v)
-    {
-        if(v==btnMusic)
-        {
+
+    public void onClick(View v) {
+        if (v == btnMusic) {
             Intent intent = new Intent(getBaseContext(), PlaylistActivity.class);
             intent.putExtra("patient", patientDetails);
             startActivity(intent);
         }
-        if(v==btnMatch)
-        {
+        if (v == btnMatch) {
             Intent intent = new Intent(getBaseContext(), MatchingSurveyActivity.class);
             intent.putExtra("patient", patientDetails);
             startActivity(intent);
         }
-        if(v==btnQuest)
-        {
+        if (v == btnQuest) {
             Intent intent = new Intent(getBaseContext(), QuestionaireActivity.class);
             intent.putExtra("patient", patientDetails);
             startActivity(intent);
 
         }
-        if(v==save)
-        {
+        if (v == save) {
 
-            String stFName=firstName.getText().toString();
-            String stlName=lastName.getText().toString();
-            String stAddress=address.getText().toString();
-            String stFamilyPhone=familyPhone.getText().toString();
-            String stYear=year.getText().toString();
-            String stPId=pId.getText().toString();
+            String stFName = firstName.getText().toString();
+            String stlName = lastName.getText().toString();
+            String stAddress = address.getText().toString();
+            String stFamilyPhone = familyPhone.getText().toString();
+            String stYear = year.getText().toString();
+            String stPId = pId.getText().toString();
 
             patientDetails.setfName(stFName);
             patientDetails.setlName(stlName);
@@ -194,17 +195,17 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             patientDetails.setpId(stPId);
             patientDetails.setYear(stYear);
 
-            String stHomemusic=homemusic.getText().toString();
-            String stYoungmusic=youngmusic.getText().toString();
-            String stfavotitesinger=favoritesinger.getText().toString();
-            String stfavoritesong=favoritesong.getText().toString();
-            String stclassic=textClassic.getText().toString();
-            String stisrael=textIsrael.getText().toString();
-            String stlanguage=language.getText().toString();
-            String stDance=textDance.getText().toString();
-            String stloazi=textLoazi.getText().toString();
-            String stRelaxing=textRelaxing.getText().toString();
-            String stReligion=textReligion.getText().toString();
+            String stHomemusic = homemusic.getText().toString();
+            String stYoungmusic = youngmusic.getText().toString();
+            String stfavotitesinger = favoritesinger.getText().toString();
+            String stfavoritesong = favoritesong.getText().toString();
+            String stclassic = textClassic.getText().toString();
+            String stisrael = textIsrael.getText().toString();
+            String stlanguage = language.getText().toString();
+            String stDance = textDance.getText().toString();
+            String stloazi = textLoazi.getText().toString();
+            String stRelaxing = textRelaxing.getText().toString();
+            String stReligion = textReligion.getText().toString();
             patientProfile.setHomeMusic(stHomemusic);
             patientProfile.setYoungMusic(stYoungmusic);
             patientProfile.setfSinger(stfavotitesinger);
@@ -220,7 +221,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             patientProfile.setCulture(culture.getText().toString());
             ConnectToServer.connect(this);
             try {
-                ConnectToServer.updatePatientDetails(patientDetails,patientProfile,(ProgressBar)findViewById(R.id.progressBar));
+                ConnectToServer.updatePatientDetails(patientDetails, patientProfile, (ProgressBar) findViewById(R.id.progressBar));
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {
@@ -240,6 +241,7 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             //finish();
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -249,34 +251,30 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==R.id.mnItmLogOutOut)
-        {
-            SharedPreferences preferences=getSharedPreferences("myfile",MODE_PRIVATE);
-            SharedPreferences.Editor editor=preferences.edit();
+        if (item.getItemId() == R.id.mnItmLogOutOut) {
+            SharedPreferences preferences = getSharedPreferences("myfile", MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
             editor.clear();
             editor.commit();
-            Intent intent=new Intent(getBaseContext(),LogInActivity.class);
+            Intent intent = new Intent(getBaseContext(), LogInActivity.class);
             startActivity(intent);
             finish();
 
 
         }
-        if (item.getItemId()==R.id.mnItmIcons){
+        if (item.getItemId() == R.id.mnItmIcons) {
             Intent intent = new Intent(getBaseContext(), icons_explainActivity.class);
             getBaseContext().startActivity(intent);
-}
+        }
         return true;
     }
 
-    public void updatePatientProfile(PatientProfile patientProfile)
-    {
-        if(patientProfile==null)
-        {
+    public void updatePatientProfile(PatientProfile patientProfile) {
+        if (patientProfile == null) {
             this.patientProfile = new PatientProfile();
             this.patientProfile.setIdPatient(patientDetails.getId());
-            Toast.makeText(this,"Empty Patient Profile",Toast.LENGTH_LONG).show();
-        }
-        else {
+            Toast.makeText(this, "Empty Patient Profile", Toast.LENGTH_LONG).show();
+        } else {
             this.patientProfile = patientProfile;
             homemusic.setText(patientProfile.getHomeMusic());
             youngmusic.setText(patientProfile.getYoungMusic());
@@ -292,5 +290,41 @@ public class PatientActivity extends AppCompatActivity implements View.OnClickLi
             culture.setText(patientProfile.getCulture());
             country.setText(patientProfile.getCountry());
         }
+    }
+
+//    /**
+//     * ATTENTION: This was auto-generated to implement the App Indexing API.
+//     * See https://g.co/AppIndexing/AndroidStudio for more information.
+//     */
+//    public Action getIndexApiAction() {
+//        Thing object = new Thing.Builder()
+//                .setName("Patient Page") // TODO: Define a title for the content shown.
+//                // TODO: Make sure this auto-generated URL is correct.
+//                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+//                .build();
+//        return new Action.Builder(Action.TYPE_VIEW)
+//                .setObject(object)
+//                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+//                .build();
+//    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+//        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+//        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+//        client.disconnect();
     }
 }
