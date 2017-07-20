@@ -2,6 +2,7 @@ package com.example.singold.MyActivities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.singold.R;
@@ -11,18 +12,19 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-public class PlayerActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
+public class PlayerYouTubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     private YouTubePlayerView playerView;
+    private YouTubePlayer myPlayer;
 
 
-
-        @Override
+    @Override
         protected void onCreate(Bundle bundle) {
             super.onCreate(bundle);
 
             setContentView(R.layout.activity_player);
 
             playerView = (YouTubePlayerView)findViewById(R.id.player_view);
+           // playerView.setVisibility(View.GONE);
             playerView.initialize(YoutubeConnector.KEY, this);
         }
 
@@ -36,10 +38,15 @@ public class PlayerActivity extends YouTubeBaseActivity implements YouTubePlayer
         public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player,
                                             boolean restored) {
             if(!restored){
-                player.cueVideo(getIntent().getStringExtra("VIDEO_ID"));
+                myPlayer=player;
+                myPlayer.loadVideo(getIntent().getStringExtra("VIDEO_ID"));
+               // myPlayer.play();
             }
         }
 
-
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+        myPlayer.pause();
+    }
 }

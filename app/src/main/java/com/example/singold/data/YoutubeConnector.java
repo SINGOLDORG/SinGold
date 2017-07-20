@@ -26,7 +26,7 @@ public class YoutubeConnector {
     private YouTube.Search.List query;
     // Your developer key goes here
     public static final String KEY
-            = "AIzaSyAtXYaHf2kjeGxwe7Tq_p8_hp6zREqeGMo";
+            = "AIzaSyAxZrdrzNYQLLKEq9F04eNkavtn_DWjCZE";
 
     public YoutubeConnector(Context context) {
         ResourceBundle content = null;
@@ -62,7 +62,7 @@ public class YoutubeConnector {
             }
             return items;
         }catch(IOException e){
-            Log.d("YC", "Could not search: "+e);
+            Log.d("YC", "Could not searchOnYoutube: "+e);
             return null;
         }
     }

@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.singold.R;
+import com.example.singold.data.YoutubeConnector;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -67,8 +68,8 @@ public class TestYoutubeActv extends YouTubeBaseActivity{
         onInitializedListener= new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+              //  youTubePlayer.loadVideo(Link.substring(Link.length()-11));
                 youTubePlayer.loadVideo(Link.substring(Link.length()-11));
-
             }
 
 
@@ -83,7 +84,7 @@ public class TestYoutubeActv extends YouTubeBaseActivity{
             public void onClick(View v) {
                 if(Link!=null && Link.length()>0)
                 {
-                    youTubePlayerView.initialize("AIzaSyAtXYaHf2kjeGxwe7Tq_p8_hp6zREqeGMo",onInitializedListener);
+                    youTubePlayerView.initialize(YoutubeConnector.KEY,onInitializedListener);
                 }
             }
         });
@@ -102,6 +103,7 @@ public class TestYoutubeActv extends YouTubeBaseActivity{
              Link=i.getStringExtra("Link");
 
         }
+        Link="https://www.youtube.com/watch?v=a4NT5iBFuZs";
     }
     //implements EasyPermissions.PermissionCallbacks {
 //    GoogleAccountCredential mCredential;

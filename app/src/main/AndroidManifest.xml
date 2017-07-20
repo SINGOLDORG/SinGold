@@ -39,11 +39,13 @@
         <activity android:name=".MyActivities.MatchingSurveyActivity" />
         <activity android:name=".MyActivities.FoundSongActivity" />
         <activity android:name=".MyActivities.icons_explainActivity" />
-        <activity android:name=".MyActivities.SearchSongActivity" />
+        <activity android:name=".MyActivities.SearchSongActivity" >
+
+        </activity>
         <activity android:name=".MyActivities.TestYoutubeActv">
 
         </activity>
-        <activity android:name=".MyActivities.PlayerActivity"></activity>
+        <activity android:name=".MyActivities.PlayerYouTubeActivity"></activity>
     </application>
 
 </manifest>

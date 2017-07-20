@@ -22,11 +22,11 @@
         <android.support.design.widget.TextInputLayout
             android:paddingTop="0dp"
             android:id="@+id/theSongNamerapper"
-            android:layout_width="204dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
@@ -42,7 +42,8 @@
             android:background="@color/shafaf"
             android:id="@+id/sear"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerInside" />
 
 
 

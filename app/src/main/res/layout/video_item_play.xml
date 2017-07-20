@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:contentPadding="10dp"
+    android:layout_margin="5dp"
+    card_view:cardElevation="5dp"
+    card_view:cardBackgroundColor="@color/cardview_shadow_end_color"
+    card_view:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp"
+        >
+
+        <TextView android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/video_thumbnail"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <TextView android:id="@+id/video_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/video_thumbnail"
+            android:layout_below="@+id/video_title"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/video_thumbnail"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="@string/choise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnChoise"
+            android:layout_below="@+id/video_thumbnail"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            card_view:srcCompat="@drawable/ic_play"
+            android:id="@+id/itmBtnPlay"
+            android:background="@color/shafaf"
+            android:cropToPadding="false"
+            android:adjustViewBounds="false"
+            android:scaleType="fitXY"
+            android:layout_below="@+id/video_thumbnail"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

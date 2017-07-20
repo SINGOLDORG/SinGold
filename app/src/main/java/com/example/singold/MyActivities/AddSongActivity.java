@@ -139,29 +139,29 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
 //                    public void initialize(HttpRequest request)
 //                            throws IOException {
 //                    }
-//                }).setApplicationName("youtube-cmdline-search-sample").build();
+//                }).setApplicationName("youtube-cmdline-searchOnYoutube-sample").build();
 //
-//        YouTube.Search.List search = null;
+//        YouTube.Search.List searchOnYoutube = null;
 //
 //        try {
-//            search = youtubeSearch.search().list("id,snippet");
+//            searchOnYoutube = youtubeSearch.searchOnYoutube().list("id,snippet");
 //        } catch (IOException e) {
 //            // TODO Auto-generated catch block
 //            e.printStackTrace();
 //        }
 //
-//        search.setKey("YOUT_KEY");
+//        searchOnYoutube.setKey("YOUT_KEY");
 //
-//        search.setQ(link.getText().toString());
+//        searchOnYoutube.setQ(link.getText().toString());
 //
-//        search.setType("video");
+//        searchOnYoutube.setType("video");
 //
-//        search.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)");
-//        search.setMaxResults((long) NUMBER_OF_VIDEOS_RETURNED);
+//        searchOnYoutube.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)");
+//        searchOnYoutube.setMaxResults((long) NUMBER_OF_VIDEOS_RETURNED);
 //
 //        SearchListResponse searchResponse = null;
 //        try {
-//            searchResponse = search.execute();
+//            searchResponse = searchOnYoutube.execute();
 //        } catch (IOException e) {
 //            // TODO Auto-generated catch block
 //            e.printStackTrace();

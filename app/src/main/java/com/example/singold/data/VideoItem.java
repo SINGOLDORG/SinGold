@@ -1,10 +1,12 @@
 package com.example.singold.data;
 
+import java.io.Serializable;
+
 /**
  * Created by samih on 18/07/2017.
  */
 
-public class VideoItem {
+public class VideoItem implements Serializable {
     private String title;
     private String description;
     private String thumbnailURL;
