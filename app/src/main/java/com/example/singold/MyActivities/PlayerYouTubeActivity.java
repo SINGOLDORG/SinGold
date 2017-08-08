@@ -40,7 +40,7 @@ public class PlayerYouTubeActivity extends YouTubeBaseActivity implements YouTub
             if(!restored){
                 myPlayer=player;
                 myPlayer.loadVideo(getIntent().getStringExtra("VIDEO_ID"));
-               // myPlayer.play();
+                myPlayer.play();
             }
         }
 
