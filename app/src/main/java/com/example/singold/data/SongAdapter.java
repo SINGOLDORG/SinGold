@@ -56,6 +56,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
             }
         });
 
+
         if(chbx)
         {
             checkBox.setVisibility(View.VISIBLE);
