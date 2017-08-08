@@ -51,8 +51,8 @@ public class SongAdapter extends ArrayAdapter<Song> {
             public void onClick(View view) {
                     Intent intent = new Intent(getContext(),
                             PlayerYouTubeActivity.class);
-                    intent.putExtra("VIDEO_ID",song.getLink());
-                intent.putExtra("VIDEO_ID",song.getName());
+//                    intent.putExtra("VIDEO_ID",song.getLink());
+                    intent.putExtra("VIDEO_ID",song.getName());
                 getContext().startActivity(intent);
             }
         });
