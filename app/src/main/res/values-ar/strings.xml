@@ -134,4 +134,5 @@
     <string name="personal_id">هويةشخصية</string>
     <string name="Play">البدء بالتشغيل</string>
     <string name="choose">choose</string>
+    <string name="enterIcon">if you don\'t have any patients enter the icon to add patient</string>
 </resources>
