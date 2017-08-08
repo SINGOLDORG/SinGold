@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.Song;
+import com.example.singold.data.VideoItem;
 
 import java.util.concurrent.ExecutionException;
 
@@ -132,7 +133,18 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
         return true;
     }
 
-//    public void getVideos() {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode==RESULT_OK && requestCode==99)
+        {
+            VideoItem videoItem= (VideoItem) data.getExtras().get("CHOISED");
+
+            link.setText(videoItem.getId());
+        }
+
+    }
+    //    public void getVideos() {
 //
 //        youtubeSearch = new YouTube.Builder(HTTP_TRANSPORT, JSON_FACTORY,
 //                new HttpRequestInitializer() {

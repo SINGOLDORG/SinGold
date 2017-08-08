@@ -290,7 +290,7 @@ private EditText etSearch;
 
 
 //                ImageButton btnPlay = (ImageButton)convertView.findViewById(R.id.itmBtnPlay);
-//                Button btnChoise = (Button)convertView.findViewById(R.id.btnChoise);
+                Button btnChoise = (Button)convertView.findViewById(R.id.btnChoise);
 //                btnPlay.setOnClickListener(new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View v) {
@@ -300,15 +300,15 @@ private EditText etSearch;
 //                        startActivity(intent);
 //                    }
 //                });
-//                btnChoise.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Intent intent= new Intent();
-//                        intent.putExtra("CHOISED",searchResult);
-//                        setResult(RESULT_OK,intent);
-//                        finish();
-//                    }
-//                });
+                btnChoise.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent= new Intent();
+                        intent.putExtra("CHOISED",searchResult);
+                        setResult(RESULT_OK,intent);
+                        finish();
+                   }
+                });
                 return convertView;
             }
 
