@@ -80,7 +80,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <TextView
-            android:text="@string/enterIcon"
+            android:text="@string/addpatient"
             android:id="@+id/enterIcon"
             android:layout_width="217dp"
             android:layout_height="341dp"
