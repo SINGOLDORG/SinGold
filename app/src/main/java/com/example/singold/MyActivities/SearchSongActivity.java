@@ -247,17 +247,42 @@ private EditText etSearch;
 
     }
     private void updateVideosFound(){
-        ArrayAdapter<VideoItem> adapter = new ArrayAdapter<VideoItem>(getApplicationContext(), R.layout.video_item, searchResults){
+        ArrayAdapter<VideoItem> adapter = new ArrayAdapter<VideoItem>(getApplicationContext(), R.layout.video_item_play, searchResults) {
             @Override
             public View getView(final int position, View convertView, ViewGroup parent) {
-                if(convertView == null){
-                    convertView = getLayoutInflater().inflate(R.layout.video_item, parent, false);
+                if (convertView == null) {
+                    convertView = getLayoutInflater().inflate(R.layout.video_item_play, parent, false);
                 }
-                ImageView thumbnail = (ImageView)convertView.findViewById(R.id.video_thumbnail);
-                TextView title = (TextView)convertView.findViewById(R.id.video_title);
-                TextView description = (TextView)convertView.findViewById(R.id.video_description);
-
+                ImageView thumbnail = (ImageView) convertView.findViewById(R.id.video_thumbnail);
+                TextView title = (TextView) convertView.findViewById(R.id.video_title);
+                TextView description = (TextView) convertView.findViewById(R.id.video_description);
+                ImageButton itemBtnPlay = (ImageButton) convertView.findViewById(R.id.itmBtnPlay);
+                Button btnChoise = (Button) convertView.findViewById(R.id.btnChoise);
                 final VideoItem searchResult = searchResults.get(position);
+
+                itemBtnPlay.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View V) {
+                        Intent intent = new Intent(getApplicationContext(),
+                                PlayerYouTubeActivity.class);
+                        intent.putExtra("VIDEO_ID", searchResults.get(position).getId());
+                        startActivity(intent);
+                    }
+                });
+                btnChoise.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent();
+                        intent.putExtra("CHOISED", searchResult);
+                        setResult(RESULT_OK, intent);
+                        finish();
+                    }
+                });
+
+
+
+
+
 
                 Picasso.with(getApplicationContext()).load(searchResult.getThumbnailURL()).into(thumbnail);
                 title.setText(searchResult.getTitle());
