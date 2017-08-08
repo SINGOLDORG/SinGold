@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.singold.MyActivities.PatientActivity;
+import com.example.singold.MyActivities.PlayerYouTubeActivity;
 import com.example.singold.MyActivities.TestYoutubeActv;
 import com.example.singold.R;
 
@@ -48,12 +49,13 @@ public class SongAdapter extends ArrayAdapter<Song> {
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getContext(), TestYoutubeActv.class);
-                intent.putExtra("Link",song.getLink());
+                    Intent intent = new Intent(getContext(),
+                            PlayerYouTubeActivity.class);
+                    intent.putExtra("VIDEO_ID",song.getLink());
                 getContext().startActivity(intent);
-
             }
         });
+
         if(chbx)
         {
             checkBox.setVisibility(View.VISIBLE);
