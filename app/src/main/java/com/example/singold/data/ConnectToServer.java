@@ -407,6 +407,9 @@ public  class ConnectToServer {
                 try {
                     //   final List<ToDoItem> results = refreshItemsFromMobileServiceTable();
 
+                    int [] grade=new int[100];
+                    int i=0;
+                    int sum=15;
                     final List<PatientProfile> results =
                             patientProfileTable.where().
                                     field("language").eq(patientProfile.getLanguage())
