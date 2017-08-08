@@ -44,6 +44,7 @@ public class PlayerYouTubeActivity extends YouTubeBaseActivity implements YouTub
             }
         }
 
+
     @Override
     protected void onPause() {
         super.onPause();
