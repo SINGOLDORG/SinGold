@@ -138,8 +138,8 @@
     <string name="addpatient">اذا لم يكن لديك بعد قائمة مرضاء اضغط على الايقونة لاضافة مريض</string>
     <string name="addpatient2">enter the icon at the bottom to add patient</string>
     <string name="addpatient3">Click on the icon at the bottom to add patient</string>
-    <string name="sure">Are you sure want to delete this song?</string>
-    <string name="yes">Yes</string>
-    <string name="No">No</string>
-    <string name="deleteSong">Delete Song</string>
+    <string name="sure">هل انت متاكد؟</string>
+    <string name="yes">نعم</string>
+    <string name="No">لا</string>
+    <string name="deleteSong">حذف الأغنية</string>
 </resources>
