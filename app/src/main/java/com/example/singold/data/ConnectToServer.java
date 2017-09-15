@@ -134,7 +134,7 @@ public  class ConnectToServer {
      * @param title   The dialog title
      */
     private static void createAndShowDialog(final String message, final String title) {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(context,R.style.YourDialogStyle);
 
         builder.setMessage(message);
         builder.setTitle(title);
