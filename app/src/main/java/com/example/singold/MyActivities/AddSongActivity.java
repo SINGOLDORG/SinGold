@@ -136,7 +136,7 @@ public class AddSongActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        if (requestCode==RESULT_OK && requestCode==99)
+        if (resultCode==RESULT_OK && requestCode==99)
         {
             VideoItem videoItem= (VideoItem) data.getExtras().get("CHOISED");
 

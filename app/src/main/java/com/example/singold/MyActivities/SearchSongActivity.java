@@ -290,7 +290,7 @@ private EditText etSearch;
 
 
 //                ImageButton btnPlay = (ImageButton)convertView.findViewById(R.id.itmBtnPlay);
-                Button btnChoise = (Button)convertView.findViewById(R.id.btnChoise);
+           //     Button btnChoise = (Button)convertView.findViewById(R.id.btnChoise);
 //                btnPlay.setOnClickListener(new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View v) {
