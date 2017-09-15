@@ -137,4 +137,8 @@
     <string name="addpatient">אם כבר אין לך רשימת חולים תלחץ על הסמל להוספת חולה</string>
     <string name="addpatient2">enter the icon at the bottom to add patient</string>
     <string name="addpatient3">Click on the icon at the bottom to add patient</string>
+    <string name="sure">Are you sure want to delete this song?</string>
+    <string name="yes">Yes</string>
+    <string name="No">No</string>
+    <string name="deleteSong">Delete Song</string>
 </resources>

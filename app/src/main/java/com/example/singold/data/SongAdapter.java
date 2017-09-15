@@ -1,7 +1,9 @@
 package com.example.singold.data;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +19,8 @@ import com.example.singold.MyActivities.TestYoutubeActv;
 import com.example.singold.R;
 
 import java.util.ArrayList;
+
+import static com.example.singold.data.ConnectToServer.context;
 
 /**
  * Created by user on 16/03/2017.
@@ -62,6 +66,38 @@ public class SongAdapter extends ArrayAdapter<Song> {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        context);
+
+                // set title
+                alertDialogBuilder.setTitle(R.string.deleteSong);
+
+                // set dialog message
+                alertDialogBuilder
+                        .setMessage(R.string.sure)
+                        .setCancelable(false)
+                        .setPositiveButton(R.string.yes,new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                // if this button is clicked, close
+                                // current activity
+                                //ConnectToServer.connect();
+                                ConnectToServer.delSong(song);
+                            }
+                        })
+                        .setNegativeButton(R.string.No,new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                // if this button is clicked, just close
+                                // the dialog box and do nothing
+                                dialog.cancel();
+                            }
+                        });
+
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+
+                // show it
+                alertDialog.show();
 
             }
         });
