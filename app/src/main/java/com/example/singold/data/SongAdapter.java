@@ -68,7 +68,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
             public void onClick(View v) {
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                        context);
+                        context,R.style.YourDialogStyle);
 
                 // set title
                 alertDialogBuilder.setTitle(R.string.deleteSong);

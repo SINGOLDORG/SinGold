@@ -63,8 +63,8 @@
 
     <style name="YourDialogStyle" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:colorAccent">@color/accent_material_light_1</item>
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/accent_material_light_1</item>
+        <item name="android:textColorPrimary">@color/colorPurple</item>
     </style>
 
 </resources>
