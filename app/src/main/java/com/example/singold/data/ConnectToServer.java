@@ -97,6 +97,10 @@ public  class ConnectToServer {
         }
 
     }
+    public static void delSong(Song song)
+    {
+        songTable.delete(song);
+    }
 
     private static void createAndShowDialogFromTask(final Exception exception, String title) {
         exception.printStackTrace();

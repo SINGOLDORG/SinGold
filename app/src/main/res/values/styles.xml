@@ -55,4 +55,9 @@
     <style name="CMOptionsMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
         <item name="android:popupBackground">@color/colorPurple</item>
     </style>
+
+    <style name="delete">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>
