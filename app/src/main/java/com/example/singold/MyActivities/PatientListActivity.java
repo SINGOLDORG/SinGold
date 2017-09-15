@@ -18,6 +18,7 @@ import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.PatientDetailsAdapter;
 import com.example.singold.data.PrefManager;
+import com.google.gson.annotations.Expose;
 
 public class PatientListActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText search1;
@@ -52,7 +53,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
             }
         });
 
-        if(patientList!= null)
+        if(patientList == null)
         {
 //        enterIcon.setVisible(GONE);
             findViewById(R.id.enterIcon).setVisibility(View.GONE);

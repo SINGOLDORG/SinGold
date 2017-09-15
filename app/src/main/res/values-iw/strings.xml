@@ -135,4 +135,6 @@
     <string name="Play">הפעל</string>
     <string name="choose">בחירה</string>
     <string name="addpatient">אם כבר אין לך רשימת חולים תלחץ על הסמל להוספת חולה</string>
+    <string name="addpatient2">enter the icon at the bottom to add patient</string>
+    <string name="addpatient3">Click on the icon at the bottom to add patient</string>
 </resources>

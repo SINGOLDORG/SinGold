@@ -88,4 +88,6 @@
     <string name="choose">choose</string>
     <string name="enterIcon">if you don\'t have any patients enter the icon to add patient</string>
     <string name="addpatient">if you don\'t have a list of patients enter the icon to add patient</string>
+    <string name="addpatient2">enter the icon at the bottom to add patient</string>
+    <string name="addpatient3">Click on the icon at the bottom to add patient</string>
 </resources>

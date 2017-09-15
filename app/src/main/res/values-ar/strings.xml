@@ -136,4 +136,6 @@
     <string name="choose">الاختيار</string>
     <string name="enterIcon">اذا لم يكن لديك قائمة مرضاء انقر على الايقونة لاضافة مريض</string>
     <string name="addpatient">اذا لم يكن لديك بعد قائمة مرضاء اضغط على الايقونة لاضافة مريض</string>
+    <string name="addpatient2">enter the icon at the bottom to add patient</string>
+    <string name="addpatient3">Click on the icon at the bottom to add patient</string>
 </resources>
