@@ -83,6 +83,8 @@ public class SongAdapter extends ArrayAdapter<Song> {
                                 // current activity
                                 //ConnectToServer.connect();
                                 ConnectToServer.delSong(song);
+                                notifyDataSetChanged();
+
                             }
                         })
                         .setNegativeButton(R.string.No,new DialogInterface.OnClickListener() {
