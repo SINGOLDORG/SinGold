@@ -133,5 +133,6 @@
     <string name="foreign_music">מוזיקה לועזית</string>
     <string name="personal_id">תעודת זהות</string>
     <string name="Play">הפעל</string>
-    <string name="choose">choose</string>
+    <string name="choose">בחירה</string>
+    <string name="addpatient">אם כבר אין לך רשימת חולים תלחץ על הסמל להוספת חולה</string>
 </resources>

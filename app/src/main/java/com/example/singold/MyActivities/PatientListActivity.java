@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
@@ -25,6 +26,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
     private ImageButton addPatient;
     private Button patientX;
     private PatientDetailsAdapter detailsAdapter;
+    private TextView enterIcon;
 
 
     @Override
@@ -40,6 +42,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
 //        patientX.setOnClickListener(this);
         addPatient.setOnClickListener(this);
         patientList = (ListView) findViewById(R.id.patientList);
+        enterIcon=(TextView) findViewById(R.id.enterIcon);
 
 
         Search.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +51,16 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
                 searchPatientDetails(search1.getText().toString());
             }
         });
+
+        if(patientList!= null)
+        {
+//        enterIcon.setVisible(GONE);
+            findViewById(R.id.enterIcon).setVisibility(View.GONE);
+
+        }
     }
+
+
 
 
     private void initListView() {
@@ -88,6 +100,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
         inflater.inflate(R.menu.logout, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

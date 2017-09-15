@@ -86,4 +86,6 @@
     <string name="culture1">culture</string>
     <string name="Play">Play</string>
     <string name="choose">choose</string>
+    <string name="enterIcon">if you don\'t have any patients enter the icon to add patient</string>
+    <string name="addpatient">if you don\'t have a list of patients enter the icon to add patient</string>
 </resources>

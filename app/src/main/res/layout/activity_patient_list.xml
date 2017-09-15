@@ -28,46 +28,6 @@
         android:onClick="onClick" />
 
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true">
-
-        <android.support.design.widget.TextInputLayout
-            android:paddingTop="0dp"
-            android:id="@+id/search1rapper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/patientList"
-            android:layout_alignParentStart="true">
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/search1"
-                android:layout_toStartOf="@+id/Saerch"
-                android:hint="@string/search" >
-            </EditText>
-        </android.support.design.widget.TextInputLayout>
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:id="@+id/patientList"
-        android:layout_toStartOf="@+id/Saerch"
-        android:layout_below="@+id/Saerch"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@+id/addPatient" ></ListView>
-
-
-    </LinearLayout>
-
-
     <ImageButton
         android:id="@+id/addPatient"
 
@@ -79,6 +39,56 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:scaleType="centerCrop" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/patientList"
+        android:layout_below="@+id/Saerch"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="245dp"
+        android:layout_marginTop="368dp"></ListView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="0dp"
+            android:id="@+id/search1rapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/patientList"
+            android:layout_alignParentStart="true"
+            android:weightSum="1">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/search1"
+                android:layout_toStartOf="@+id/Saerch"
+                android:hint="@string/search" >
+            </EditText>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:text="@string/addpatient"
+            android:id="@+id/enterIcon"
+            android:layout_width="217dp"
+            android:layout_height="341dp"
+            android:textSize="@dimen/desc_padding"
+            android:layout_margin="100dp" />
+
+
+    </LinearLayout>
 
 
 </RelativeLayout>

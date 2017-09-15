@@ -133,5 +133,7 @@
     <string name="loazi">اجنبي</string>
     <string name="personal_id">هويةشخصية</string>
     <string name="Play">البدء بالتشغيل</string>
-    <string name="choose">choose</string>
+    <string name="choose">الاختيار</string>
+    <string name="enterIcon">اذا لم يكن لديك قائمة مرضاء انقر على الايقونة لاضافة مريض</string>
+    <string name="addpatient">اذا لم يكن لديك بعد قائمة مرضاء اضغط على الايقونة لاضافة مريض</string>
 </resources>
