@@ -18,7 +18,6 @@ import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.PatientDetailsAdapter;
 import com.example.singold.data.PrefManager;
-import com.google.gson.annotations.Expose;
 
 public class PatientListActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText search1;
@@ -43,7 +42,9 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
 //        patientX.setOnClickListener(this);
         addPatient.setOnClickListener(this);
         patientList = (ListView) findViewById(R.id.patientList);
-        enterIcon=(TextView) findViewById(R.id.enterIcon);
+       enterIcon= (TextView) findViewById(R.id.enterIcon);
+
+
 
 
         Search.setOnClickListener(new View.OnClickListener() {
@@ -53,12 +54,6 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
             }
         });
 
-        if(patientList == null)
-        {
-//        enterIcon.setVisible(GONE);
-            findViewById(R.id.enterIcon).setVisibility(View.GONE);
-
-        }
     }
 
 
@@ -69,7 +64,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
             detailsAdapter=new PatientDetailsAdapter(this, R.layout.item_patient_details);
         patientList.setAdapter(detailsAdapter);
         ConnectToServer.connect(this);
-        ConnectToServer.refreshPatientDetailsFromTable(detailsAdapter, PrefManager.getUserId(this), "");
+        ConnectToServer.refreshPatientDetailsFromTable(detailsAdapter, PrefManager.getUserId(this), "", enterIcon);
 
     }
     private void searchPatientDetails(String toSearch) {
@@ -77,7 +72,7 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
             detailsAdapter=new PatientDetailsAdapter(this, R.layout.item_patient_details);
         patientList.setAdapter(detailsAdapter);
         ConnectToServer.connect(this);
-        ConnectToServer.refreshPatientDetailsFromTable(detailsAdapter, PrefManager.getUserId(this),toSearch);
+        ConnectToServer.refreshPatientDetailsFromTable(detailsAdapter, PrefManager.getUserId(this),toSearch, enterIcon);
 
     }
 
@@ -85,6 +80,13 @@ public class PatientListActivity extends AppCompatActivity implements View.OnCli
     protected void onStart() {
         super.onStart();
         initListView();
+
+        if(patientList != null && patientList.getAdapter().getCount()> 0)
+        {
+//        enterIcon.setVisible(GONE);
+            findViewById(R.id.enterIcon).setVisibility(View.GONE);
+
+        }
     }
 
 

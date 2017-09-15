@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.singold.MyActivities.PatientActivity;
@@ -620,7 +621,7 @@ public  class ConnectToServer {
 
         runAsyncTask(task);
     }
-    public static void refreshPatientDetailsFromTable(final PatientDetailsAdapter adapter, final String userId, final String toSearch) {
+    public static void refreshPatientDetailsFromTable(final PatientDetailsAdapter adapter, final String userId, final String toSearch, final TextView enterIcon) {
 
         // Get the items that weren't marked as completed and add them in the
         // adapter
@@ -672,6 +673,8 @@ public  class ConnectToServer {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
+                if(adapter.getCount()>0)
+                    enterIcon.setVisibility(View.GONE);
                 dismissProProgressDialog();            }
         };
 
