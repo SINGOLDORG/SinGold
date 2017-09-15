@@ -46,6 +46,8 @@ public class SongAdapter extends ArrayAdapter<Song> {
         TextView textLink = (TextView) convertView.findViewById(R.id.textLink);
         CheckBox checkBox=(CheckBox)convertView.findViewById(R.id.chbSelect);
         ImageButton btnPlay=(ImageButton)convertView.findViewById(R.id.btnPlay);
+        ImageButton delete=(ImageButton) convertView.findViewById(R.id.delete);
+
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +56,13 @@ public class SongAdapter extends ArrayAdapter<Song> {
                     intent.putExtra("VIDEO_ID",song.getLink());
 //                    intent.putExtra("VIDEO_ID",song.getName());
                 getContext().startActivity(intent);
+            }
+        });
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

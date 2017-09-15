@@ -63,24 +63,26 @@
 
             <ImageButton
                 android:id="@+id/btnPlay"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="34dp"
                 android:background="@color/shafaf"
                 app:srcCompat="@drawable/ic_play" />
 
-            <LinearLayout
+            <CheckBox
+                android:id="@+id/chbSelect"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:duplicateParentState="false"
+                android:text="@string/selelct" />
 
-                <CheckBox
-                    android:id="@+id/chbSelect"
-                    android:layout_width="182dp"
-                    android:layout_height="wrap_content"
-                    android:duplicateParentState="false"
-                    android:text="@string/selelct" />
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/shafaf"
 
-            </LinearLayout>
+                app:srcCompat="@drawable/delete" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
