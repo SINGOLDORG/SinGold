@@ -45,15 +45,17 @@
         android:layout_height="match_parent"
         android:id="@+id/patientList"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"></ListView>
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/addPatient"></ListView>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="1"
-        android:layout_alignTop="@+id/progressBar"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/addPatient">
 
         <android.support.design.widget.TextInputLayout
             android:paddingTop="0dp"
@@ -85,7 +87,7 @@
             <TextView
                 android:id="@+id/enterIcon"
                 android:layout_width="wrap_content"
-                android:layout_height="282dp"
+                android:layout_height="match_parent"
                 android:freezesText="true"
                 android:text="@string/addpatient3"
                 android:textSize="50sp" />
