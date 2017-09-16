@@ -44,7 +44,7 @@ public class FoundSongActivity extends AppCompatActivity implements View.OnClick
 
     private void initListView() {
         if (FoundSongAdapter == null)
-            FoundSongAdapter = new SongAdapter(this, R.layout.item_song,true);
+            FoundSongAdapter = new SongAdapter(this, R.layout.item_song,true,false);
         foundList.setAdapter(FoundSongAdapter);
        ConnectToServer.connect(this);
         ConnectToServer.matchingFromTable(FoundSongAdapter,patientProfile,(ProgressBar)findViewById(R.id.progressBar));

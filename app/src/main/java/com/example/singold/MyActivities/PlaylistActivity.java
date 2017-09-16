@@ -17,6 +17,7 @@ import com.example.singold.R;
 import com.example.singold.data.ConnectToServer;
 import com.example.singold.data.PatientDetails;
 import com.example.singold.data.SongAdapter;
+import com.google.api.services.youtube.model.Playlist;
 
 public class PlaylistActivity extends AppCompatActivity implements View.OnClickListener {
     private ListView list;
@@ -25,6 +26,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
 
     private SongAdapter songAdapter;
     private PatientDetails patientDetails;
+    private Playlist playlist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -46,7 +48,7 @@ public class PlaylistActivity extends AppCompatActivity implements View.OnClickL
     }
     private void initListView() {
         if(songAdapter==null)
-            songAdapter=new SongAdapter(this, R.layout.item_song,false);
+            songAdapter=new SongAdapter(this, R.layout.item_song,false,true);
         list.setAdapter(songAdapter);
         ConnectToServer.connect(this);
         ConnectToServer.refreshSongsByPatient(songAdapter,patientDetails.getId(),(ProgressBar)findViewById(R.id.progressBar));

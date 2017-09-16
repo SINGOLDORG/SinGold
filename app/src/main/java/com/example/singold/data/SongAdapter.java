@@ -13,9 +13,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.singold.MyActivities.PatientActivity;
 import com.example.singold.MyActivities.PlayerYouTubeActivity;
-import com.example.singold.MyActivities.TestYoutubeActv;
 import com.example.singold.R;
 
 import java.util.ArrayList;
@@ -30,9 +28,12 @@ public class SongAdapter extends ArrayAdapter<Song> {
     private boolean chbx=false;
     private ArrayList<Song> selectedSongs;
     private ImageButton btnPlay;
-    public SongAdapter(Context context, int resource,boolean chbx) {
+    private boolean toDelete =false;
+
+    public SongAdapter(Context context, int resource,boolean chbx, boolean toDelete) {
         super(context, resource);
         this.chbx=chbx;
+        this.toDelete = toDelete;
         selectedSongs=new ArrayList<Song>();
     }
 
@@ -52,58 +53,66 @@ public class SongAdapter extends ArrayAdapter<Song> {
         ImageButton btnPlay=(ImageButton)convertView.findViewById(R.id.btnPlay);
         ImageButton delete=(ImageButton) convertView.findViewById(R.id.delete);
 
-        btnPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                    Intent intent = new Intent(getContext(),
-                            PlayerYouTubeActivity.class);
-                    intent.putExtra("VIDEO_ID",song.getLink());
-//                    intent.putExtra("VIDEO_ID",song.getName());
-                getContext().startActivity(intent);
-            }
-        });
 
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                        context,R.style.YourDialogStyle);
 
-                // set title
-                alertDialogBuilder.setTitle(R.string.deleteSong);
+            btnPlay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                        Intent intent = new Intent(getContext(),
+                                PlayerYouTubeActivity.class);
+                        intent.putExtra("VIDEO_ID",song.getLink());
+    //                    intent.putExtra("VIDEO_ID",song.getName());
+                    getContext().startActivity(intent);
+                }
+            });
 
-                // set dialog message
-                alertDialogBuilder
-                        .setMessage(R.string.sure)
-                        .setCancelable(false)
-                        .setPositiveButton(R.string.yes,new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
-                                // if this button is clicked, close
-                                // current activity
-                                //ConnectToServer.connect();
-                                ConnectToServer.delSong(song);
-                                remove(song);
-                                notifyDataSetChanged();
+        if (toDelete) {
+            delete.setVisibility(View.VISIBLE);
+            delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-                            }
-                        })
-                        .setNegativeButton(R.string.No,new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
-                                // if this button is clicked, just close
-                                // the dialog box and do nothing
-                                dialog.cancel();
-                            }
-                        });
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                            context,R.style.YourDialogStyle);
 
-                // create alert dialog
-                AlertDialog alertDialog = alertDialogBuilder.create();
+                    // set title
+                    alertDialogBuilder.setTitle(R.string.deleteSong);
 
-                // show it
-                alertDialog.show();
+                    // set dialog message
+                    alertDialogBuilder
+                            .setMessage(R.string.sure)
+                            .setCancelable(false)
+                            .setPositiveButton(R.string.yes,new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    // if this button is clicked, close
+                                    // current activity
+                                    //ConnectToServer.connect();
+                                    ConnectToServer.delSong(song);
+                                    remove(song);
+                                    notifyDataSetChanged();
 
-            }
-        });
+                                }
+                            })
+                            .setNegativeButton(R.string.No,new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    // if this button is clicked, just close
+                                    // the dialog box and do nothing
+                                    dialog.cancel();
+                                }
+                            });
+
+                    // create alert dialog
+                    AlertDialog alertDialog = alertDialogBuilder.create();
+
+                    // show it
+                    alertDialog.show();
+
+                }
+            });
+        }
+        else
+            delete.setVisibility(View.GONE);
 
 
         if(chbx)
