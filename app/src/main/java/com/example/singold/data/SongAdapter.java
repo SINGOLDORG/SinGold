@@ -83,6 +83,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
                                 // current activity
                                 //ConnectToServer.connect();
                                 ConnectToServer.delSong(song);
+                                remove(song);
                                 notifyDataSetChanged();
 
                             }
